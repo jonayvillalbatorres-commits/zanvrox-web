@@ -1,9 +1,9 @@
-import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
-import defaultVideoUrl from '../../assets/videos/zanvrox-overview.mp4'
-import previewImage from '../../assets/videos/zanvrox-overview-poster.jpg'
-import SectionHeading from '../ui/SectionHeading'
-import { resolvePublicAppLink } from '../../utils/publicApp'
+import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
+import defaultVideoUrl from '../../assets/videos/zanvrox-overview.mp4';
+import previewImage from '../../assets/videos/zanvrox-overview-poster.jpg';
+import SectionHeading from '../ui/SectionHeading';
+import { resolvePublicAppLink } from '../../utils/publicApp';
 
 const DEFAULT_CHAPTERS = [
   'Intro (0:00)',
@@ -13,21 +13,26 @@ const DEFAULT_CHAPTERS = [
   'Production (0:42)',
   'Taxes (0:55)',
   'Reports + CTA (1:22)',
-]
+];
 
 export default function ProductVideo({ video }) {
-  const [videoFailed, setVideoFailed] = useState(false)
-  const resolvedVideoUrl = useMemo(() => video?.videoUrl || defaultVideoUrl, [video?.videoUrl])
-  const canRenderVideo = Boolean(video?.hasRealVideo && resolvedVideoUrl && !videoFailed)
-  const secondaryHref = resolvePublicAppLink(video?.secondaryCta?.path || '/resources#demo-environment')
-  const secondaryIsExternal = /^https?:\/\//i.test(secondaryHref)
+  const [videoFailed, setVideoFailed] = useState(false);
+  const resolvedVideoUrl = useMemo(() => video?.videoUrl || defaultVideoUrl, [video?.videoUrl]);
+  const canRenderVideo = Boolean(video?.hasRealVideo && resolvedVideoUrl && !videoFailed);
+  const secondaryHref = resolvePublicAppLink(
+    video?.secondaryCta?.path || '/resources#demo-environment'
+  );
+  const secondaryIsExternal = /^https?:\/\//i.test(secondaryHref);
 
   return (
     <section className="section-shell" id="product-overview">
       <div className="zx-card">
         <SectionHeading
           title={video?.title || 'See ZANVROX in action'}
-          subtitle={video?.subtitle || 'A 90-second walkthrough of accounting, operations, and Canada tax filing.'}
+          subtitle={
+            video?.subtitle ||
+            'A 90-second walkthrough of accounting, operations, and Canada tax filing.'
+          }
         />
 
         <div className="mt-6 overflow-hidden rounded-2xl border border-zx-border bg-zx-bg/70 shadow-panel">
@@ -37,8 +42,12 @@ export default function ProductVideo({ video }) {
               <span className="h-2.5 w-2.5 rounded-full bg-zx-warning/80" />
               <span className="h-2.5 w-2.5 rounded-full bg-zx-success/80" />
             </div>
-            <p className="text-[10px] uppercase tracking-[0.16em] text-zx-text-muted">{video?.windowLabel || 'Product overview'}</p>
-            <span className="rounded-full border border-zx-border px-2 py-0.5 text-[10px] text-zx-text-muted">{video?.duration || '90 sec'}</span>
+            <p className="text-[10px] uppercase tracking-[0.16em] text-zx-text-muted">
+              {video?.windowLabel || 'Product overview'}
+            </p>
+            <span className="rounded-full border border-zx-border px-2 py-0.5 text-[10px] text-zx-text-muted">
+              {video?.duration || '90 sec'}
+            </span>
           </div>
 
           <div className="relative aspect-video w-full bg-zx-bg">
@@ -75,7 +84,10 @@ export default function ProductVideo({ video }) {
 
         <div className="mt-4 flex flex-wrap gap-2">
           {(video?.chapters || DEFAULT_CHAPTERS).map((chapter) => (
-            <span key={chapter} className="rounded-full border border-zx-border bg-zx-surface-strong px-3 py-1 text-xs text-zx-text-muted">
+            <span
+              key={chapter}
+              className="rounded-full border border-zx-border bg-zx-surface-strong px-3 py-1 text-xs text-zx-text-muted"
+            >
               {chapter}
             </span>
           ))}
@@ -97,5 +109,5 @@ export default function ProductVideo({ video }) {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import Card from '../ui/Card'
-import SectionHeading from '../ui/SectionHeading'
+import Card from '../ui/Card';
+import SectionHeading from '../ui/SectionHeading';
 
 export default function PricingFAQ({ pricing }) {
   return (
@@ -14,5 +14,5 @@ export default function PricingFAQ({ pricing }) {
         ))}
       </div>
     </section>
-  )
+  );
 }

@@ -1,12 +1,12 @@
-import AIPreview from '../previews/AIPreview'
-import AccountingPreview from '../previews/AccountingPreview'
-import ExpensesPreview from '../previews/ExpensesPreview'
-import InventoryPreview from '../previews/InventoryPreview'
-import InvoicesPreview from '../previews/InvoicesPreview'
-import ProductionPreview from '../previews/ProductionPreview'
-import PurchasesPreview from '../previews/PurchasesPreview'
-import ReportsPreview from '../previews/ReportsPreview'
-import WarehousePreview from '../previews/WarehousePreview'
+import AIPreview from '../previews/AIPreview';
+import AccountingPreview from '../previews/AccountingPreview';
+import ExpensesPreview from '../previews/ExpensesPreview';
+import InventoryPreview from '../previews/InventoryPreview';
+import InvoicesPreview from '../previews/InvoicesPreview';
+import ProductionPreview from '../previews/ProductionPreview';
+import PurchasesPreview from '../previews/PurchasesPreview';
+import ReportsPreview from '../previews/ReportsPreview';
+import WarehousePreview from '../previews/WarehousePreview';
 
 const PREVIEW_COMPONENTS = {
   accounting: AccountingPreview,
@@ -18,7 +18,7 @@ const PREVIEW_COMPONENTS = {
   expenses: ExpensesPreview,
   ai: AIPreview,
   reports: ReportsPreview,
-}
+};
 
 const PREVIEW_LABELS = {
   accounting: 'Accounting',
@@ -30,11 +30,15 @@ const PREVIEW_LABELS = {
   expenses: 'Expenses',
   ai: 'AI Insights',
   reports: 'Analytics',
-}
+};
 
-export default function ProductPreview({ type = 'accounting', imageSrc, imageAlt = 'Product preview' }) {
-  const PreviewComponent = PREVIEW_COMPONENTS[type] || AccountingPreview
-  const label = PREVIEW_LABELS[type] || PREVIEW_LABELS.accounting
+export default function ProductPreview({
+  type = 'accounting',
+  imageSrc,
+  imageAlt = 'Product preview',
+}) {
+  const PreviewComponent = PREVIEW_COMPONENTS[type] || AccountingPreview;
+  const label = PREVIEW_LABELS[type] || PREVIEW_LABELS.accounting;
 
   return (
     <div className="overflow-hidden rounded-xl border border-zx-border bg-zx-bg/80 shadow-[0_18px_36px_rgba(2,8,24,0.5)]">
@@ -49,10 +53,18 @@ export default function ProductPreview({ type = 'accounting', imageSrc, imageAlt
       </div>
 
       {imageSrc ? (
-        <img src={imageSrc} alt={imageAlt} width={1600} height={960} className="h-auto w-full object-cover" loading="eager" decoding="async" />
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          width={1600}
+          height={960}
+          className="h-auto w-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
       ) : (
         <PreviewComponent />
       )}
     </div>
-  )
+  );
 }

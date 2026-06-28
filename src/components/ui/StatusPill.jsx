@@ -1,7 +1,7 @@
 ﻿const styles = {
   available: 'zx-success-soft text-zx-success',
   info: 'border-zx-border bg-zx-surface-strong text-zx-text-muted',
-}
+};
 
 export default function StatusPill({ status = 'available', children }) {
   return (
@@ -12,5 +12,5 @@ export default function StatusPill({ status = 'available', children }) {
     >
       {children || status}
     </span>
-  )
+  );
 }

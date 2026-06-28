@@ -1,4 +1,4 @@
-const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://zanvrox.com').replace(/\/$/, '')
+const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://zanvrox.com').replace(/\/$/, '');
 
 export const createFaqSchema = (items = []) => ({
   '@context': 'https://schema.org',
@@ -11,7 +11,7 @@ export const createFaqSchema = (items = []) => ({
       text: item.answer,
     },
   })),
-})
+});
 
 export const organizationSchema = {
   '@context': 'https://schema.org',
@@ -30,7 +30,7 @@ export const organizationSchema = {
       availableLanguage: ['English', 'French', 'Spanish'],
     },
   ],
-}
+};
 
 export const websiteSchema = {
   '@context': 'https://schema.org',
@@ -39,7 +39,7 @@ export const websiteSchema = {
   url: SITE_URL,
   name: 'ZANVROX',
   inLanguage: ['en-CA', 'fr-CA', 'es'],
-}
+};
 
 export const softwareSchema = {
   '@context': 'https://schema.org',
@@ -62,6 +62,6 @@ export const softwareSchema = {
     'Payroll add-on',
     'Multi-company support',
   ],
-}
+};
 
-export const faqSchema = createFaqSchema([])
+export const faqSchema = createFaqSchema([]);

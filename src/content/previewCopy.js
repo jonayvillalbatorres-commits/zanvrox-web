@@ -1,4 +1,4 @@
-import { useLanguage } from '../contexts/LanguageContext'
+import { useLanguage } from '../contexts/LanguageContext';
 
 const PREVIEW_COPY = {
   en: {
@@ -110,9 +110,11 @@ const PREVIEW_COPY = {
     'Revenue momentum': 'Dynamique des revenus',
     '+12.4% projected for next 30 days': '+12,4% prévu pour les 30 prochains jours',
     'Margin pressure': 'Pression sur les marges',
-    'Raw material cost up 3.1% this week': 'Le coût des matières premières en hausse de 3,1% cette semaine',
+    'Raw material cost up 3.1% this week':
+      'Le coût des matières premières en hausse de 3,1% cette semaine',
     'Receivables risk': 'Risque lié aux créances',
-    '4 accounts likely to miss due date': "4 comptes susceptibles de ne pas respecter la date d'échéance",
+    '4 accounts likely to miss due date':
+      "4 comptes susceptibles de ne pas respecter la date d'échéance",
     success: 'succès',
     warning: 'avertissement',
     danger: 'danger',
@@ -199,7 +201,8 @@ const PREVIEW_COPY = {
     'Margin pressure': 'Presión de margen',
     'Raw material cost up 3.1% this week': 'El coste de materias primas subió 3,1% esta semana',
     'Receivables risk': 'Riesgo de cuentas por cobrar',
-    '4 accounts likely to miss due date': '4 cuentas probablemente incumplan la fecha de vencimiento',
+    '4 accounts likely to miss due date':
+      '4 cuentas probablemente incumplan la fecha de vencimiento',
     success: 'éxito',
     warning: 'advertencia',
     danger: 'peligro',
@@ -230,7 +233,8 @@ const PREVIEW_COPY = {
     Overdue: 'Vencido',
     'BOM summary': 'Resumen de BOM',
     '12 components linked to cost rollup': '12 componentes vinculados al cost rollup',
-    '8 components linked to lot traceability': '8 componentes vinculados a la trazabilidad por lote',
+    '8 components linked to lot traceability':
+      '8 componentes vinculados a la trazabilidad por lote',
     'Capacity usage': 'Uso de capacidad',
     '84% this shift': '84% en este turno',
     'Production orders': 'Órdenes de producción',
@@ -541,11 +545,13 @@ const PREVIEW_COPY = {
     'Assistant active': 'Aktibo ang assistant',
     'Sales prediction model': 'Modelo ng prediksyon sa benta',
     Confidence: 'Kumpiyansa',
-    'Model based on current ERP transactions': 'Modelong batay sa kasalukuyang mga transaksyon sa ERP',
+    'Model based on current ERP transactions':
+      'Modelong batay sa kasalukuyang mga transaksyon sa ERP',
     'Revenue momentum': 'Momentum ng kita',
     '+12.4% projected for next 30 days': '+12.4% na inaasahan sa susunod na 30 araw',
     'Margin pressure': 'Presyon sa margin',
-    'Raw material cost up 3.1% this week': 'Tumaas ng 3.1% ang halaga ng hilaw na materyales ngayong linggo',
+    'Raw material cost up 3.1% this week':
+      'Tumaas ng 3.1% ang halaga ng hilaw na materyales ngayong linggo',
     'Receivables risk': 'Panganib sa koleksyon',
     '4 accounts likely to miss due date': '4 na account ang malamang na lumampas sa due date',
     success: 'tagumpay',
@@ -610,13 +616,13 @@ const PREVIEW_COPY = {
     'Stock movement flow': 'Daloy ng paggalaw ng stock',
     units: 'mga yunit',
   },
-}
+};
 
 export function usePreviewCopy() {
-  const { language } = useLanguage()
-  const locale = PREVIEW_COPY[language] ? language : 'en'
-  const active = PREVIEW_COPY[locale]
-  const fallback = PREVIEW_COPY.en
+  const { language } = useLanguage();
+  const locale = PREVIEW_COPY[language] ? language : 'en';
+  const active = PREVIEW_COPY[locale];
+  const fallback = PREVIEW_COPY.en;
 
-  return (key) => active[key] || fallback[key] || key
+  return (key) => active[key] || fallback[key] || key;
 }

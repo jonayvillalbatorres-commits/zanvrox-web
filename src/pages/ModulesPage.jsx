@@ -1,9 +1,9 @@
-﻿import SeoManager from '../components/seo/SeoManager'
-import PageHero from '../components/sections/PageHero'
-import Card from '../components/ui/Card'
-import StatusPill from '../components/ui/StatusPill'
-import { useLanguage } from '../contexts/LanguageContext'
-import { organizationSchema, softwareSchema } from '../content/schema'
+﻿import SeoManager from '../components/seo/SeoManager';
+import PageHero from '../components/sections/PageHero';
+import Card from '../components/ui/Card';
+import StatusPill from '../components/ui/StatusPill';
+import { useLanguage } from '../contexts/LanguageContext';
+import { organizationSchema, softwareSchema } from '../content/schema';
 
 function ModuleList({ title, items }) {
   return (
@@ -18,17 +18,21 @@ function ModuleList({ title, items }) {
         ))}
       </ul>
     </div>
-  )
+  );
 }
 
 export default function ModulesPage() {
-  const { content } = useLanguage()
-  const page = content?.pages?.modules || {}
+  const { content } = useLanguage();
+  const page = content?.pages?.modules || {};
 
   return (
     <>
       <SeoManager meta={content?.seo?.modules} schema={[organizationSchema, softwareSchema]} />
-      <PageHero title={page.heroTitle} subtitle={page.heroSubtitle} preview={{ type: 'inventory' }} />
+      <PageHero
+        title={page.heroTitle}
+        subtitle={page.heroSubtitle}
+        preview={{ type: 'inventory' }}
+      />
 
       <section className="section-shell pb-16">
         <div className="grid gap-6 lg:grid-cols-2">
@@ -38,11 +42,14 @@ export default function ModulesPage() {
                 <h3 className="font-heading text-2xl font-semibold text-zx-text">{module.name}</h3>
                 <StatusPill status="available">{page.activeLabel || 'Active'}</StatusPill>
               </div>
-              <ModuleList title={page.includedTitle || 'Included'} items={module.included || module.available} />
+              <ModuleList
+                title={page.includedTitle || 'Included'}
+                items={module.included || module.available}
+              />
             </Card>
           ))}
         </div>
       </section>
     </>
-  )
+  );
 }

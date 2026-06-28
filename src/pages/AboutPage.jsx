@@ -1,18 +1,21 @@
-import { Link } from 'react-router-dom'
-import SeoManager from '../components/seo/SeoManager'
-import PageHero from '../components/sections/PageHero'
-import Card from '../components/ui/Card'
-import SectionHeading from '../components/ui/SectionHeading'
-import { organizationSchema, softwareSchema, websiteSchema } from '../content/schema'
-import { useLanguage } from '../contexts/LanguageContext'
+import { Link } from 'react-router-dom';
+import SeoManager from '../components/seo/SeoManager';
+import PageHero from '../components/sections/PageHero';
+import Card from '../components/ui/Card';
+import SectionHeading from '../components/ui/SectionHeading';
+import { organizationSchema, softwareSchema, websiteSchema } from '../content/schema';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function AboutPage() {
-  const { content } = useLanguage()
-  const page = content?.pages?.about || {}
+  const { content } = useLanguage();
+  const page = content?.pages?.about || {};
 
   return (
     <>
-      <SeoManager meta={content?.seo?.about} schema={[organizationSchema, websiteSchema, softwareSchema]} />
+      <SeoManager
+        meta={content?.seo?.about}
+        schema={[organizationSchema, websiteSchema, softwareSchema]}
+      />
       <PageHero
         kicker={page.heroKicker}
         title={page.heroTitle}
@@ -62,15 +65,21 @@ export default function AboutPage() {
         <div className="zx-card">
           <SectionHeading title={page.cta?.title} subtitle={page.cta?.subtitle} />
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link to={page.cta?.primary?.path || '/product'} className="zx-button zx-button-primary">
+            <Link
+              to={page.cta?.primary?.path || '/product'}
+              className="zx-button zx-button-primary"
+            >
               {page.cta?.primary?.label}
             </Link>
-            <Link to={page.cta?.secondary?.path || '/contact'} className="zx-button zx-button-secondary">
+            <Link
+              to={page.cta?.secondary?.path || '/contact'}
+              className="zx-button zx-button-secondary"
+            >
               {page.cta?.secondary?.label}
             </Link>
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -1,18 +1,21 @@
-﻿import { Link } from 'react-router-dom'
-import SeoManager from '../components/seo/SeoManager'
-import PageHero from '../components/sections/PageHero'
-import Card from '../components/ui/Card'
-import SectionHeading from '../components/ui/SectionHeading'
-import { useLanguage } from '../contexts/LanguageContext'
-import { organizationSchema, softwareSchema } from '../content/schema'
+﻿import { Link } from 'react-router-dom';
+import SeoManager from '../components/seo/SeoManager';
+import PageHero from '../components/sections/PageHero';
+import Card from '../components/ui/Card';
+import SectionHeading from '../components/ui/SectionHeading';
+import { useLanguage } from '../contexts/LanguageContext';
+import { organizationSchema, softwareSchema } from '../content/schema';
 
 export default function SolutionsManufacturingPage() {
-  const { content } = useLanguage()
-  const page = content?.pages?.solutions?.manufacturing || {}
+  const { content } = useLanguage();
+  const page = content?.pages?.solutions?.manufacturing || {};
 
   return (
     <>
-      <SeoManager meta={content?.seo?.solutionsManufacturing} schema={[organizationSchema, softwareSchema]} />
+      <SeoManager
+        meta={content?.seo?.solutionsManufacturing}
+        schema={[organizationSchema, softwareSchema]}
+      />
       <PageHero
         kicker={content?.pages?.solutions?.kicker}
         title={page.title}
@@ -38,5 +41,5 @@ export default function SolutionsManufacturingPage() {
         </Link>
       </section>
     </>
-  )
+  );
 }

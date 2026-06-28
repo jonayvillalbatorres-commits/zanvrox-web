@@ -1,10 +1,10 @@
-﻿import { Link } from 'react-router-dom'
-import { useLanguage } from '../../contexts/LanguageContext'
+﻿import { Link } from 'react-router-dom';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function SiteFooter() {
-  const { content } = useLanguage()
-  const footer = content?.footer || {}
-  const footerSections = footer.sections || []
+  const { content } = useLanguage();
+  const footer = content?.footer || {};
+  const footerSections = footer.sections || [];
 
   return (
     <footer className="mt-20 border-t border-zx-border bg-zx-surface backdrop-blur">
@@ -22,7 +22,10 @@ export default function SiteFooter() {
           </div>
           <p className="max-w-md text-sm text-zx-text-muted">{footer.companyDescription}</p>
           <p className="text-xs text-zx-text-muted">{footer.headquarters}</p>
-          <a href={`mailto:${footer.email || 'support@zanvrox.com'}`} className="text-xs text-zx-text-muted transition hover:text-zx-text">
+          <a
+            href={`mailto:${footer.email || 'support@zanvrox.com'}`}
+            className="text-xs text-zx-text-muted transition hover:text-zx-text"
+          >
             {footer.email}
           </a>
         </div>
@@ -31,7 +34,9 @@ export default function SiteFooter() {
           <div className="grid gap-5 sm:justify-self-end sm:grid-cols-2">
             {footerSections.map((section) => (
               <div key={section.title} className="space-y-2">
-                <p className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-zx-text-muted">{section.title}</p>
+                <p className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-zx-text-muted">
+                  {section.title}
+                </p>
                 <div className="grid gap-2">
                   {(section.links || []).map((item) => (
                     <Link
@@ -61,5 +66,5 @@ export default function SiteFooter() {
         )}
       </div>
     </footer>
-  )
+  );
 }

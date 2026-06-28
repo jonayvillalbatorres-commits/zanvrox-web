@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import { useLanguage } from '../../contexts/LanguageContext'
-import { createDemoWorkspaceUrl } from '../../utils/publicApp'
+import { useEffect, useRef, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { createDemoWorkspaceUrl } from '../../utils/publicApp';
 
-const PRIMARY_LANGUAGE_CODES = ['en', 'fr']
+const PRIMARY_LANGUAGE_CODES = ['en', 'fr'];
 const FLAG_COUNTRY_BY_LANGUAGE = {
   en: 'ca',
   fr: 'ca',
@@ -12,45 +12,52 @@ const FLAG_COUNTRY_BY_LANGUAGE = {
   pa: 'in',
   ar: 'sa',
   tl: 'ph',
-}
+};
 
 export default function SiteHeader() {
-  const [open, setOpen] = useState(false)
-  const [languageMenuOpen, setLanguageMenuOpen] = useState(false)
-  const languageMenuRef = useRef(null)
+  const [open, setOpen] = useState(false);
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+  const languageMenuRef = useRef(null);
 
-  const { language, setLanguage, content, languages } = useLanguage()
-  const navItems = content?.navItems || []
-  const labels = content?.labels || {}
+  const { language, setLanguage, content, languages } = useLanguage();
+  const navItems = content?.navItems || [];
+  const labels = content?.labels || {};
 
-  const primaryLanguages = PRIMARY_LANGUAGE_CODES.map((code) => languages.find((option) => option.code === code)).filter(Boolean)
-  const secondaryLanguages = languages.filter((option) => !PRIMARY_LANGUAGE_CODES.includes(option.code))
-  const isSecondaryLanguageActive = !PRIMARY_LANGUAGE_CODES.includes(language)
-  const globeActive = languageMenuOpen || isSecondaryLanguageActive
+  const primaryLanguages = PRIMARY_LANGUAGE_CODES.map((code) =>
+    languages.find((option) => option.code === code)
+  ).filter(Boolean);
+  const secondaryLanguages = languages.filter(
+    (option) => !PRIMARY_LANGUAGE_CODES.includes(option.code)
+  );
+  const isSecondaryLanguageActive = !PRIMARY_LANGUAGE_CODES.includes(language);
+  const globeActive = languageMenuOpen || isSecondaryLanguageActive;
 
   const getFlagSrc = (code) => {
-    const countryCode = FLAG_COUNTRY_BY_LANGUAGE[code] || 'ca'
-    return `https://flagcdn.com/w40/${countryCode}.png`
-  }
+    const countryCode = FLAG_COUNTRY_BY_LANGUAGE[code] || 'ca';
+    return `https://flagcdn.com/w40/${countryCode}.png`;
+  };
 
   useEffect(() => {
-    if (!languageMenuOpen) return undefined
+    if (!languageMenuOpen) return undefined;
     const onClick = (event) => {
       if (!languageMenuRef.current?.contains(event.target)) {
-        setLanguageMenuOpen(false)
+        setLanguageMenuOpen(false);
       }
-    }
-    document.addEventListener('mousedown', onClick)
-    return () => document.removeEventListener('mousedown', onClick)
-  }, [languageMenuOpen])
+    };
+    document.addEventListener('mousedown', onClick);
+    return () => document.removeEventListener('mousedown', onClick);
+  }, [languageMenuOpen]);
 
   const changeLanguage = (code) => {
-    setLanguage(code)
-    setLanguageMenuOpen(false)
-  }
+    setLanguage(code);
+    setLanguageMenuOpen(false);
+  };
 
   return (
-    <header dir="ltr" className="sticky top-0 z-40 border-b border-zx-border bg-zx-bg backdrop-blur-xl">
+    <header
+      dir="ltr"
+      className="sticky top-0 z-40 border-b border-zx-border bg-zx-bg backdrop-blur-xl"
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="group flex shrink-0 items-center gap-3">
           <img
@@ -60,7 +67,9 @@ export default function SiteHeader() {
             loading="eager"
             decoding="async"
           />
-          <span className="font-heading text-lg font-bold tracking-[0.14em] text-zx-text">ZANVROX</span>
+          <span className="font-heading text-lg font-bold tracking-[0.14em] text-zx-text">
+            ZANVROX
+          </span>
         </Link>
 
         <button
@@ -93,7 +102,10 @@ export default function SiteHeader() {
         </nav>
 
         <div className="hidden shrink-0 items-center gap-1.5 md:flex">
-          <div className="zx-glass-strip relative flex h-10 items-center gap-0.5 px-1 py-1" ref={languageMenuRef}>
+          <div
+            className="zx-glass-strip relative flex h-10 items-center gap-0.5 px-1 py-1"
+            ref={languageMenuRef}
+          >
             <img
               src={getFlagSrc('ca')}
               alt="Canada"
@@ -107,7 +119,9 @@ export default function SiteHeader() {
                   type="button"
                   onClick={() => changeLanguage(option.code)}
                   className={`h-8 whitespace-nowrap rounded-md px-2 text-[12px] font-semibold leading-none transition xl:px-2.5 ${
-                    option.code === language ? 'bg-zx-accent text-zx-bg' : 'text-zx-text-muted hover:text-zx-text'
+                    option.code === language
+                      ? 'bg-zx-accent text-zx-bg'
+                      : 'text-zx-text-muted hover:text-zx-text'
                   }`}
                 >
                   <span dir="auto">{option.label}</span>
@@ -141,7 +155,9 @@ export default function SiteHeader() {
                     type="button"
                     onClick={() => changeLanguage(option.code)}
                     className={`flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm ${
-                      option.code === language ? 'bg-zx-accent text-zx-bg' : 'text-zx-text-muted hover:bg-zx-surface-strong hover:text-zx-text'
+                      option.code === language
+                        ? 'bg-zx-accent text-zx-bg'
+                        : 'text-zx-text-muted hover:bg-zx-surface-strong hover:text-zx-text'
                     }`}
                   >
                     <img
@@ -157,7 +173,10 @@ export default function SiteHeader() {
               </div>
             ) : null}
           </div>
-          <a href={createDemoWorkspaceUrl({ source: 'site-header' })} className="zx-button zx-button-primary h-9 px-3 py-2 text-xs">
+          <a
+            href={createDemoWorkspaceUrl({ source: 'site-header' })}
+            className="zx-button zx-button-primary h-9 px-3 py-2 text-xs"
+          >
             {labels.tryDemo || labels.reviewResources || 'Try demo'}
           </a>
         </div>
@@ -173,7 +192,9 @@ export default function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   `rounded-lg px-3 py-2 text-sm font-medium transition ${
-                    isActive ? 'bg-zx-accent text-zx-bg' : 'text-zx-text-muted hover:bg-zx-surface hover:text-zx-text'
+                    isActive
+                      ? 'bg-zx-accent text-zx-bg'
+                      : 'text-zx-text-muted hover:bg-zx-surface hover:text-zx-text'
                   }`
                 }
               >
@@ -181,7 +202,9 @@ export default function SiteHeader() {
               </NavLink>
             ))}
             <div className="mt-2 rounded-lg border border-zx-border bg-zx-surface-strong px-3 py-2">
-              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-zx-text-muted">{labels.language || 'Language'}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-zx-text-muted">
+                {labels.language || 'Language'}
+              </p>
               <div className="mt-2 grid grid-cols-2 gap-2">
                 {languages.map((option) => (
                   <button
@@ -215,5 +238,5 @@ export default function SiteHeader() {
         </nav>
       ) : null}
     </header>
-  )
+  );
 }

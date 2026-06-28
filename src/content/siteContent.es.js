@@ -1,6 +1,6 @@
-import siteContentEn from './siteContent.en'
+import siteContentEn from './siteContent.en';
 
-const base = siteContentEn
+const base = siteContentEn;
 
 const siteContentEs = {
   ...base,
@@ -27,16 +27,21 @@ const siteContentEs = {
   brand: {
     name: 'ZANVROX',
     tagline: 'Control ERP integrado para equipos pyme canadienses',
-    oneLiner: 'Finanzas, operaciones, cumplimiento canadiense y nómina en una sola plataforma ERP controlada.',
+    oneLiner:
+      'Finanzas, operaciones, cumplimiento canadiense y nómina en una sola plataforma ERP controlada.',
   },
   pages: {
     home: {
       heroKicker: 'ERP canadiense para finanzas, operaciones y auditabilidad',
-      heroTitle: 'Gestiona finanzas y operaciones en un único ERP controlado en lugar de cinco herramientas desconectadas.',
+      heroTitle:
+        'Gestiona finanzas y operaciones en un único ERP controlado en lugar de cinco herramientas desconectadas.',
       heroSubtitle:
         'ZANVROX ayuda a los equipos pyme canadienses a centralizar contabilidad, facturación, compras, inventario, producción, aprobaciones y cumplimiento sin un proyecto de implementación pesado.',
       heroPrimaryCta: { label: 'Ver resumen del producto', path: '/#product-overview' },
-      heroSecondaryCta: { label: 'Abrir espacio de evaluación', path: '/resources#demo-environment' },
+      heroSecondaryCta: {
+        label: 'Abrir espacio de evaluación',
+        path: '/resources#demo-environment',
+      },
       heroPreview: {
         title: 'Vista previa fiscal y de control',
         caption: 'En vivo dentro del ERP',
@@ -47,7 +52,8 @@ const siteContentEs = {
       },
       video: {
         title: 'Recorrido del producto con contexto real de trabajo',
-        subtitle: 'Un breve recorrido por finanzas, operaciones, flujos fiscales canadienses y preparación de nómina.',
+        subtitle:
+          'Un breve recorrido por finanzas, operaciones, flujos fiscales canadienses y preparación de nómina.',
         windowLabel: 'Video del producto',
         duration: '90 s',
         overlayLabel: 'Ver recorrido del producto',
@@ -81,7 +87,8 @@ const siteContentEs = {
       evaluationPath: {
         eyebrow: 'Embudo orientado al producto',
         title: 'Evalúa sin reservar una reunión primero',
-        subtitle: 'El sitio está diseñado para reducir llamadas innecesarias y permitir que los equipos se autoevalúen.',
+        subtitle:
+          'El sitio está diseñado para reducir llamadas innecesarias y permitir que los equipos se autoevalúen.',
         cards: [
           {
             title: '1. Mira el resumen',
@@ -104,7 +111,8 @@ const siteContentEs = {
       screenshots: {
         eyebrow: 'Pantallas y flujos',
         title: 'Pantallas diseñadas para mostrar cobertura operativa real',
-        subtitle: 'Cada sección inferior está preparada para capturas reales y usa vistas previas del producto cuando una captura final todavía no está disponible.',
+        subtitle:
+          'Cada sección inferior está preparada para capturas reales y usa vistas previas del producto cuando una captura final todavía no está disponible.',
         items: [
           {
             title: 'Panel fiscal canadiense',
@@ -133,20 +141,52 @@ const siteContentEs = {
       howItWorks: {
         eyebrow: 'Incorporación autónoma',
         title: 'Empieza en seis pasos guiados',
-        subtitle: 'El producto está diseñado para que un equipo liderado por fundadores pueda orientarse sin un proyecto de incorporación pesado.',
+        subtitle:
+          'El producto está diseñado para que un equipo liderado por fundadores pueda orientarse sin un proyecto de incorporación pesado.',
         steps: [
-          { icon: '1', title: 'Crear organización', bullets: ['Inicia tu espacio de trabajo', 'Define los datos básicos de la entidad legal'] },
-          { icon: '2', title: 'Seleccionar país', bullets: ['Elegir Canadá', 'Cargar valores predeterminados específicos del país'] },
-          { icon: '3', title: 'Elegir plantilla sectorial', bullets: ['Elegir un modelo de partida', 'Reducir la fricción de configuración'] },
-          { icon: '4', title: 'Configurar impuestos', bullets: ['Definir familias fiscales', 'Confirmar la lógica provincial y los valores predeterminados'] },
-          { icon: '5', title: 'Importar clientes y proveedores', bullets: ['Incorporar datos maestros', 'Usar plantillas y validación'] },
-          { icon: '6', title: 'Crear la primera factura', bullets: ['Validar el flujo operativo', 'Pasar al uso diario'] },
+          {
+            icon: '1',
+            title: 'Crear organización',
+            bullets: [
+              'Inicia tu espacio de trabajo',
+              'Define los datos básicos de la entidad legal',
+            ],
+          },
+          {
+            icon: '2',
+            title: 'Seleccionar país',
+            bullets: ['Elegir Canadá', 'Cargar valores predeterminados específicos del país'],
+          },
+          {
+            icon: '3',
+            title: 'Elegir plantilla sectorial',
+            bullets: ['Elegir un modelo de partida', 'Reducir la fricción de configuración'],
+          },
+          {
+            icon: '4',
+            title: 'Configurar impuestos',
+            bullets: [
+              'Definir familias fiscales',
+              'Confirmar la lógica provincial y los valores predeterminados',
+            ],
+          },
+          {
+            icon: '5',
+            title: 'Importar clientes y proveedores',
+            bullets: ['Incorporar datos maestros', 'Usar plantillas y validación'],
+          },
+          {
+            icon: '6',
+            title: 'Crear la primera factura',
+            bullets: ['Validar el flujo operativo', 'Pasar al uso diario'],
+          },
         ],
       },
       compliance: {
         eyebrow: 'Postura canadiense',
         title: 'Construido para credibilidad, no para exageración',
-        subtitle: 'El sitio explica qué está controlado, qué está automatizado y qué todavía requiere revisión.',
+        subtitle:
+          'El sitio explica qué está controlado, qué está automatizado y qué todavía requiere revisión.',
         bullets: [
           'Los flujos fiscales canadienses se gestionan con una postura explícita de presentación y auditabilidad.',
           'La nómina se presenta como un complemento separado con alcance y nivel de preparación claros por jurisdicción.',
@@ -160,7 +200,8 @@ const siteContentEs = {
       included: {
         eyebrow: 'Qué está integrado',
         title: 'Una sola plataforma entre finanzas y operaciones',
-        subtitle: 'La clave no es tener más funciones sobre el papel. La clave es tener menos flujos fragmentados en la práctica.',
+        subtitle:
+          'La clave no es tener más funciones sobre el papel. La clave es tener menos flujos fragmentados en la práctica.',
         items: [
           'Contabilidad, facturación, gastos e informes financieros',
           'Compras, inventario, almacén y fundamentos de producción',
@@ -173,11 +214,24 @@ const siteContentEs = {
       executiveSnapshot: {
         badge: 'Modelo operativo',
         title: 'Diseñado para autoevaluación primero y ayuda humana después',
-        subtitle: 'Este es un sitio orientado al producto para un ERP serio, no un folleto que obliga a cada prospecto a reservar una llamada.',
+        subtitle:
+          'Este es un sitio orientado al producto para un ERP serio, no un folleto que obliga a cada prospecto a reservar una llamada.',
         metrics: [
-          { label: 'Perfil ideal principal', value: '10-50', note: 'Empleados de pymes canadienses' },
-          { label: 'Postura de soporte', value: 'Correo primero', note: 'Tiempos de respuesta claros por plan' },
-          { label: 'Postura de incorporación', value: 'Configuración autónoma', note: 'Implementación guiada opcional disponible' },
+          {
+            label: 'Perfil ideal principal',
+            value: '10-50',
+            note: 'Empleados de pymes canadienses',
+          },
+          {
+            label: 'Postura de soporte',
+            value: 'Correo primero',
+            note: 'Tiempos de respuesta claros por plan',
+          },
+          {
+            label: 'Postura de incorporación',
+            value: 'Configuración autónoma',
+            note: 'Implementación guiada opcional disponible',
+          },
         ],
       },
       positioning: {
@@ -226,7 +280,8 @@ const siteContentEs = {
       technical: {
         eyebrow: 'Modelo de soporte e incorporación',
         title: 'Autoservicio por defecto, ayuda guiada cuando importa',
-        subtitle: 'El sitio fija expectativas desde el inicio para que los equipos pequeños sepan qué ocurre después del registro.',
+        subtitle:
+          'El sitio fija expectativas desde el inicio para que los equipos pequeños sepan qué ocurre después del registro.',
         items: [
           'Núcleo financiero incluye incorporación autónoma y soporte por correo con respuesta en 48 h.',
           'Operaciones añade soporte prioritario por correo con respuesta en 24 h.',
@@ -237,14 +292,24 @@ const siteContentEs = {
         title: 'Expectativas de soporte por plan',
         subtitle: 'El soporte se define directamente para que la evaluación se mantenga realista.',
         tiers: [
-          { name: 'Núcleo financiero', body: 'Soporte por correo, respuesta en 48 h y guía de incorporación autónoma.' },
-          { name: 'Operaciones', body: 'Soporte prioritario por correo, respuesta en 24 h y orientación operativa reforzada.' },
-          { name: 'Empresarial', body: 'Incorporación dedicada, canal directo de soporte y ayuda acotada para el despliegue.' },
+          {
+            name: 'Núcleo financiero',
+            body: 'Soporte por correo, respuesta en 48 h y guía de incorporación autónoma.',
+          },
+          {
+            name: 'Operaciones',
+            body: 'Soporte prioritario por correo, respuesta en 24 h y orientación operativa reforzada.',
+          },
+          {
+            name: 'Empresarial',
+            body: 'Incorporación dedicada, canal directo de soporte y ayuda acotada para el despliegue.',
+          },
         ],
       },
       demoEnvironment: {
         title: 'Abrir el espacio de evaluación',
-        subtitle: 'Usa un espacio basado en navegador con datos ficticios antes de solicitar un recorrido guiado.',
+        subtitle:
+          'Usa un espacio basado en navegador con datos ficticios antes de solicitar un recorrido guiado.',
         emailLabel: 'Usuario demo',
         emailValue: 'Use your work email',
         passwordLabel: 'Contraseña',
@@ -258,25 +323,30 @@ const siteContentEs = {
         items: [
           {
             question: '¿Podemos evaluar ZANVROX sin reservar una demo primero?',
-            answer: 'Sí. La ruta prevista es ver el resumen, explorar el producto, abrir el espacio de evaluación y solicitar ayuda solo si tu equipo la necesita.',
+            answer:
+              'Sí. La ruta prevista es ver el resumen, explorar el producto, abrir el espacio de evaluación y solicitar ayuda solo si tu equipo la necesita.',
           },
           {
             question: '¿La nómina está incluida en los planes base?',
-            answer: 'No. La nómina es un complemento separado con precio independiente para que los equipos centrados solo en finanzas no paguen por ella por defecto.',
+            answer:
+              'No. La nómina es un complemento separado con precio independiente para que los equipos centrados solo en finanzas no paguen por ella por defecto.',
           },
           {
             question: '¿Necesitamos un proyecto de incorporación de pago?',
-            answer: 'No. La configuración autónoma es la ruta por defecto. La implementación guiada está disponible como paquete opcional de pago cuando tu equipo quiere ayuda con la configuración y la importación de datos.',
+            answer:
+              'No. La configuración autónoma es la ruta por defecto. La implementación guiada está disponible como paquete opcional de pago cuando tu equipo quiere ayuda con la configuración y la importación de datos.',
           },
           {
             question: '¿Qué soporte deberíamos esperar?',
-            answer: 'Núcleo financiero incluye soporte por correo en 48 h, Operaciones incluye soporte prioritario por correo en 24 h y Empresarial incluye ayuda de incorporación más un canal directo de soporte.',
+            answer:
+              'Núcleo financiero incluye soporte por correo en 48 h, Operaciones incluye soporte prioritario por correo en 24 h y Empresarial incluye ayuda de incorporación más un canal directo de soporte.',
           },
         ],
       },
       cta: {
         title: 'Empieza por el producto, no por una llamada comercial',
-        subtitle: 'Explora primero el producto y los precios. Contacta al equipo cuando tengas una pregunta concreta sobre despliegue, nómina o integración.',
+        subtitle:
+          'Explora primero el producto y los precios. Contacta al equipo cuando tengas una pregunta concreta sobre despliegue, nómina o integración.',
         primary: { label: 'Explorar producto', path: '/product' },
         secondary: { label: 'Ver precios', path: '/pricing' },
       },
@@ -287,7 +357,10 @@ const siteContentEs = {
       heroSubtitle:
         'ZANVROX se presenta como una plataforma ERP controlada para equipos pyme canadienses que necesitan visibilidad operativa sin teatralidad empresarial.',
       heroPrimaryCta: { label: 'Ver precios', path: '/pricing' },
-      heroSecondaryCta: { label: 'Abrir espacio de evaluación', path: '/resources#demo-environment' },
+      heroSecondaryCta: {
+        label: 'Abrir espacio de evaluación',
+        path: '/resources#demo-environment',
+      },
       heroPreview: {
         title: 'Vista previa operativa',
         type: 'inventory',
@@ -299,17 +372,31 @@ const siteContentEs = {
       },
       pillars: {
         title: 'Cuatro pilares del producto',
-        subtitle: 'El sitio explica el producto en torno a flujos de trabajo, no a listas desconectadas de funciones.',
+        subtitle:
+          'El sitio explica el producto en torno a flujos de trabajo, no a listas desconectadas de funciones.',
         items: [
-          { title: 'Núcleo financiero', body: 'Contabilidad, facturación, gastos, visibilidad bancaria e informes.' },
-          { title: 'Operaciones', body: 'Inventario, almacén, BOM, fundamentos de producción y aprobaciones.' },
-          { title: 'Cumplimiento canadiense', body: 'Flujos fiscales, complemento de nómina, soporte de remesas y postura de cierre anual.' },
-          { title: 'Gobernanza', body: 'Auditabilidad, aprobaciones, límites de control y ruta de expansión multisociedad.' },
+          {
+            title: 'Núcleo financiero',
+            body: 'Contabilidad, facturación, gastos, visibilidad bancaria e informes.',
+          },
+          {
+            title: 'Operaciones',
+            body: 'Inventario, almacén, BOM, fundamentos de producción y aprobaciones.',
+          },
+          {
+            title: 'Cumplimiento canadiense',
+            body: 'Flujos fiscales, complemento de nómina, soporte de remesas y postura de cierre anual.',
+          },
+          {
+            title: 'Gobernanza',
+            body: 'Auditabilidad, aprobaciones, límites de control y ruta de expansión multisociedad.',
+          },
         ],
       },
       showcase: {
         title: 'Áreas del producto que vale la pena evaluar visualmente',
-        subtitle: 'Estas son las pantallas que la mayoría de los equipos quiere inspeccionar antes de invertir tiempo en conversaciones comerciales más profundas.',
+        subtitle:
+          'Estas son las pantallas que la mayoría de los equipos quiere inspeccionar antes de invertir tiempo en conversaciones comerciales más profundas.',
         items: [
           {
             title: 'Panel fiscal',
@@ -338,7 +425,8 @@ const siteContentEs = {
       stacks: [
         {
           title: 'Finanzas y operaciones integradas',
-          subtitle: 'Diseñado para reducir traspasos entre herramientas en el segmento de 10-50 empleados.',
+          subtitle:
+            'Diseñado para reducir traspasos entre herramientas en el segmento de 10-50 empleados.',
           items: [
             'Contabilidad y facturación viven en el mismo sistema que compras y gastos.',
             'Los datos de inventario, almacén y BOM permanecen vinculados al registro financiero.',
@@ -357,20 +445,46 @@ const siteContentEs = {
       ],
       onboarding: {
         title: 'Cómo funciona la configuración autónoma en la práctica',
-        subtitle: 'La página de producto refuerza que la incorporación se guía dentro del producto y no se oculta detrás de consultoría por defecto.',
+        subtitle:
+          'La página de producto refuerza que la incorporación se guía dentro del producto y no se oculta detrás de consultoría por defecto.',
         steps: [
-          { number: '1', title: 'Crear organización', body: 'Crea tu espacio de trabajo y empieza desde una base operativa limpia.' },
-          { number: '2', title: 'Seleccionar Canadá', body: 'Aplica valores predeterminados del país y supuestos de cumplimiento.' },
-          { number: '3', title: 'Elegir plantilla sectorial', body: 'Empieza desde una línea base práctica en lugar de configurar desde cero.' },
-          { number: '4', title: 'Configurar impuestos', body: 'Confirma el enrutamiento fiscal, registros y controles financieros.' },
-          { number: '5', title: 'Importar datos maestros', body: 'Incorpora clientes, proveedores y registros operativos clave.' },
-          { number: '6', title: 'Ejecutar la primera transacción', body: 'Crea la primera factura y valida el recorrido operativo de extremo a extremo.' },
+          {
+            number: '1',
+            title: 'Crear organización',
+            body: 'Crea tu espacio de trabajo y empieza desde una base operativa limpia.',
+          },
+          {
+            number: '2',
+            title: 'Seleccionar Canadá',
+            body: 'Aplica valores predeterminados del país y supuestos de cumplimiento.',
+          },
+          {
+            number: '3',
+            title: 'Elegir plantilla sectorial',
+            body: 'Empieza desde una línea base práctica en lugar de configurar desde cero.',
+          },
+          {
+            number: '4',
+            title: 'Configurar impuestos',
+            body: 'Confirma el enrutamiento fiscal, registros y controles financieros.',
+          },
+          {
+            number: '5',
+            title: 'Importar datos maestros',
+            body: 'Incorpora clientes, proveedores y registros operativos clave.',
+          },
+          {
+            number: '6',
+            title: 'Ejecutar la primera transacción',
+            body: 'Crea la primera factura y valida el recorrido operativo de extremo a extremo.',
+          },
         ],
         note: 'La implementación guiada está disponible cuando tu equipo quiere ayuda con la configuración, revisión del plan contable, importación de datos y formación.',
       },
       cta: {
         title: 'Comprueba si el alcance del producto encaja con tu empresa hoy',
-        subtitle: 'Usa precios y recursos para decidir si necesitas configuración autónoma, implementación guiada o una conversación empresarial.',
+        subtitle:
+          'Usa precios y recursos para decidir si necesitas configuración autónoma, implementación guiada o una conversación empresarial.',
         primary: { label: 'Ver precios', path: '/pricing' },
         secondary: { label: 'Contactar al equipo', path: '/contact' },
       },
@@ -380,10 +494,13 @@ const siteContentEs = {
       heroSubtitle:
         'Empieza con un núcleo financiero controlado, amplía hacia operaciones a medida que aumenta la complejidad y pasa a un despliegue personalizado solo cuando sean necesarios una estructura multiubicación, aprobaciones avanzadas, soporte de onboarding, integraciones o revisión de seguridad.',
       packagesTitle: 'Precios públicos para finanzas, operaciones y despliegue guiado',
-      packagesSubtitle: 'Precios transparentes en CAD para equipos SMB canadienses que necesitan flujos estructurados hoy y una ruta creíble hacia un control operativo más amplio con el tiempo.',
+      packagesSubtitle:
+        'Precios transparentes en CAD para equipos SMB canadienses que necesitan flujos estructurados hoy y una ruta creíble hacia un control operativo más amplio con el tiempo.',
       launchBadge: 'Facturación anual disponible',
-      launchOfferLabel: 'Las suscripciones base anuales incluyen un mes gratis cuando se facturan por año.',
-      launchOfferNote: 'El precio de nómina sigue siendo por uso, y la Implementación guiada está disponible cuando se necesita un despliegue más estructurado.',
+      launchOfferLabel:
+        'Las suscripciones base anuales incluyen un mes gratis cuando se facturan por año.',
+      launchOfferNote:
+        'El precio de nómina sigue siendo por uso, y la Implementación guiada está disponible cuando se necesita un despliegue más estructurado.',
       popularLabel: 'Buen ajuste para 10-50 empleados',
       priceSuffixMonthly: '/mes',
       billedMonthlyLabel: 'Facturación mensual',
@@ -397,7 +514,8 @@ const siteContentEs = {
         monthly: 'Mensual',
         annual: 'Anual',
         annualBadge: '1 mes gratis',
-        helper: 'La facturación anual cambia solo el plazo de la suscripción base. La nómina mantiene una cuota base más el número de empleados.',
+        helper:
+          'La facturación anual cambia solo el plazo de la suscripción base. La nómina mantiene una cuota base más el número de empleados.',
       },
       pricingNote:
         'Todos los precios están en CAD. La nómina es un complemento separado. Los planes están diseñados para operaciones estructuradas, flujos controlados, auditabilidad y diseño de producto consciente de la seguridad sin forzar demasiado pronto un alcance empresarial. ZANVROX ayuda a organizar flujos financieros, de nómina y fiscales, pero no sustituye el asesoramiento contable, legal ni fiscal.',
@@ -405,7 +523,8 @@ const siteContentEs = {
         {
           slug: 'finance-core',
           name: 'Núcleo financiero',
-          summary: 'Para empresas que necesitan una base financiera disciplinada con contabilidad, facturación, gastos, informes y una ruta clara de configuración autónoma.',
+          summary:
+            'Para empresas que necesitan una base financiera disciplinada con contabilidad, facturación, gastos, informes y una ruta clara de configuración autónoma.',
           entitiesLabel: 'Alcance de empresa única',
           usersLabel: 'Hasta 3 usuarios',
           monthly: {
@@ -418,7 +537,8 @@ const siteContentEs = {
             amount: 179,
             badge: '1 mes gratis',
             note: 'Facturado anualmente a CAD 1,969 por la suscripción base.',
-            secondaryNote: 'La nómina y un alcance operativo más amplio siguen siendo componentes separados cuando se necesitan.',
+            secondaryNote:
+              'La nómina y un alcance operativo más amplio siguen siendo componentes separados cuando se necesitan.',
           },
           included: [
             'Flujos contables',
@@ -434,7 +554,8 @@ const siteContentEs = {
           slug: 'operations',
           name: 'Operaciones',
           isPopular: true,
-          summary: 'Para equipos que necesitan finanzas y operaciones trabajando juntas entre inventario, almacén, fundamentos de producción y aprobaciones controladas.',
+          summary:
+            'Para equipos que necesitan finanzas y operaciones trabajando juntas entre inventario, almacén, fundamentos de producción y aprobaciones controladas.',
           entitiesLabel: 'Alcance de empresa única',
           usersLabel: 'Hasta 10 usuarios',
           monthly: {
@@ -447,7 +568,8 @@ const siteContentEs = {
             amount: 649,
             badge: '1 mes gratis',
             note: 'Facturado anualmente a CAD 7,139 por la suscripción base.',
-            secondaryNote: 'Recomendado cuando operaciones necesita un control más estrecho sobre stock, movimientos de almacén, BOM y flujos de producción.',
+            secondaryNote:
+              'Recomendado cuando operaciones necesita un control más estrecho sobre stock, movimientos de almacén, BOM y flujos de producción.',
           },
           included: [
             'Todo lo incluido en Núcleo financiero',
@@ -462,7 +584,8 @@ const siteContentEs = {
         {
           slug: 'enterprise',
           name: 'Personalizado',
-          summary: 'Para equipos con varias ubicaciones que necesitan aprobaciones avanzadas, revisiones de seguridad, onboarding personalizado, integraciones, soporte dedicado o un despliegue más estructurado.',
+          summary:
+            'Para equipos con varias ubicaciones que necesitan aprobaciones avanzadas, revisiones de seguridad, onboarding personalizado, integraciones, soporte dedicado o un despliegue más estructurado.',
           entitiesLabel: 'Alcance multiubicación o personalizado',
           usersLabel: 'Alcance de usuarios personalizado',
           monthly: {
@@ -487,11 +610,14 @@ const siteContentEs = {
       ],
       payrollAddon: {
         title: 'Complemento de nómina',
-        summary: 'Un precio separado para nómina mantiene comercialmente claro el ERP base mientras preserva el soporte de nómina canadiense para los equipos que lo necesitan.',
+        summary:
+          'Un precio separado para nómina mantiene comercialmente claro el ERP base mientras preserva el soporte de nómina canadiense para los equipos que lo necesitan.',
         priceLabel: 'CAD 59 / mes + CAD 6 / empleado / mes',
         annualPriceLabel: 'CAD 59 / mes + CAD 6 / empleado / mes',
-        monthlyNote: 'Incluye ejecuciones de nómina canadiense, soporte de flujos de remesas, recibos de sueldo, registros y exportaciones para respaldar la revisión de cierre anual e integración contable. Puede aplicar un mínimo mensual durante el despliegue.',
-        annualNote: 'El complemento de nómina mantiene la misma estructura de cuota base más empleado cuando se factura anualmente, salvo que se acuerde un alcance distinto.',
+        monthlyNote:
+          'Incluye ejecuciones de nómina canadiense, soporte de flujos de remesas, recibos de sueldo, registros y exportaciones para respaldar la revisión de cierre anual e integración contable. Puede aplicar un mínimo mensual durante el despliegue.',
+        annualNote:
+          'El complemento de nómina mantiene la misma estructura de cuota base más empleado cuando se factura anualmente, salvo que se acuerde un alcance distinto.',
         included: [
           'Ejecuciones de nómina canadiense',
           'Soporte de flujos de remesas',
@@ -503,7 +629,8 @@ const siteContentEs = {
       },
       onboardingPackage: {
         title: 'Implementación guiada',
-        summary: 'Configuración guiada opcional de pago único para equipos que quieren alineación operativa, despliegue asistido y un inicio de implementación más estructurado.',
+        summary:
+          'Configuración guiada opcional de pago único para equipos que quieren alineación operativa, despliegue asistido y un inicio de implementación más estructurado.',
         priceLabel: 'CAD 3,500 a 7,500 pago único',
         included: [
           'Configuración guiada del sistema',
@@ -518,16 +645,27 @@ const siteContentEs = {
       },
       supportTiers: {
         title: 'Estructura de soporte',
-        subtitle: 'El soporte se expresa públicamente para que los equipos puedan evaluar cobertura operativa, expectativas de respuesta y postura de despliegue desde el principio.',
+        subtitle:
+          'El soporte se expresa públicamente para que los equipos puedan evaluar cobertura operativa, expectativas de respuesta y postura de despliegue desde el principio.',
         items: [
-          { name: 'Núcleo financiero', body: 'Soporte por correo con tiempo de respuesta de 48 h.' },
-          { name: 'Operaciones', body: 'Soporte prioritario por correo con tiempo de respuesta de 24 h.' },
-          { name: 'Personalizado', body: 'Soporte para despliegue guiado, canal directo y conversación de implementación acotada.' },
+          {
+            name: 'Núcleo financiero',
+            body: 'Soporte por correo con tiempo de respuesta de 48 h.',
+          },
+          {
+            name: 'Operaciones',
+            body: 'Soporte prioritario por correo con tiempo de respuesta de 24 h.',
+          },
+          {
+            name: 'Personalizado',
+            body: 'Soporte para despliegue guiado, canal directo y conversación de implementación acotada.',
+          },
         ],
       },
       comparison: {
         title: 'Comparación de planes',
-        subtitle: 'Usa esto para decidir si necesitas control financiero estructurado, operaciones conectadas o un despliegue empresarial personalizado.',
+        subtitle:
+          'Usa esto para decidir si necesitas control financiero estructurado, operaciones conectadas o un despliegue empresarial personalizado.',
         featureLabel: 'Capacidad',
         rows: [
           { label: 'Contabilidad', values: [true, true, true] },
@@ -541,8 +679,14 @@ const siteContentEs = {
           { label: 'Despliegue multiubicación', values: [false, false, true] },
           { label: 'Aprobaciones avanzadas', values: [false, true, true] },
           { label: 'Integraciones', values: [false, false, true] },
-          { label: 'Nivel de soporte', values: ['Correo / 48 h', 'Correo prioritario / 24 h', 'Canal directo'] },
-          { label: 'Asistencia de incorporación', values: ['Configuración autónoma', 'Configuración autónoma', 'Incluida'] },
+          {
+            label: 'Nivel de soporte',
+            values: ['Correo / 48 h', 'Correo prioritario / 24 h', 'Canal directo'],
+          },
+          {
+            label: 'Asistencia de incorporación',
+            values: ['Configuración autónoma', 'Configuración autónoma', 'Incluida'],
+          },
           { label: 'Usuarios incluidos', values: ['3', '10', 'Personalizado'] },
         ],
         notesTitle: 'Notas comerciales',
@@ -560,19 +704,23 @@ const siteContentEs = {
         items: [
           {
             question: '¿Necesito una demo antes de poder empezar?',
-            answer: 'No. La ruta prevista es autoevaluación primero: ver el resumen, explorar el producto, revisar precios y usar el espacio de evaluación en navegador antes de solicitar una sesión guiada.',
+            answer:
+              'No. La ruta prevista es autoevaluación primero: ver el resumen, explorar el producto, revisar precios y usar el espacio de evaluación en navegador antes de solicitar una sesión guiada.',
           },
           {
             question: '¿La nómina está incluida en los planes ERP base?',
-            answer: 'No. La nómina se vende como complemento separado con una cuota mensual base más precio por empleado.',
+            answer:
+              'No. La nómina se vende como complemento separado con una cuota mensual base más precio por empleado.',
           },
           {
             question: '¿La Implementación guiada es obligatoria?',
-            answer: 'No. Es opcional. Núcleo financiero y Operaciones pueden empezar con configuración autónoma, mientras que la Implementación guiada está disponible para equipos que quieren un despliegue más estructurado.',
+            answer:
+              'No. Es opcional. Núcleo financiero y Operaciones pueden empezar con configuración autónoma, mientras que la Implementación guiada está disponible para equipos que quieren un despliegue más estructurado.',
           },
           {
             question: '¿Qué soporte incluye cada plan?',
-            answer: 'Núcleo financiero incluye soporte por correo en 48 h, Operaciones incluye soporte prioritario por correo en 24 h y Personalizado incluye conversación de despliegue guiado más un canal directo de soporte.',
+            answer:
+              'Núcleo financiero incluye soporte por correo en 48 h, Operaciones incluye soporte prioritario por correo en 24 h y Personalizado incluye conversación de despliegue guiado más un canal directo de soporte.',
           },
         ],
       },
@@ -580,39 +728,47 @@ const siteContentEs = {
       ctaSecondary: { label: 'Contactar para despliegue personalizado', path: '/contact' },
     },
     resources: {
-      heroTitle: 'Recursos para evaluación de producto, revisión de seguridad y planificación de despliegue.',
-      heroSubtitle: 'Usa estos materiales públicos para revisar encaje de producto, postura de seguridad y opciones de evaluación antes de solicitar una conversación más profunda.',
+      heroTitle:
+        'Recursos para evaluación de producto, revisión de seguridad y planificación de despliegue.',
+      heroSubtitle:
+        'Usa estos materiales públicos para revisar encaje de producto, postura de seguridad y opciones de evaluación antes de solicitar una conversación más profunda.',
       sections: [
         {
           title: 'Resumen del producto y recursos de evaluación',
-          description: 'Revisa el resumen del producto, cobertura de flujos y modelo de incorporación antes de invertir tiempo en una evaluación más profunda.',
+          description:
+            'Revisa el resumen del producto, cobertura de flujos y modelo de incorporación antes de invertir tiempo en una evaluación más profunda.',
           cta: 'Revisar producto',
           path: '/product',
         },
         {
           title: 'Resumen de seguridad',
-          description: 'Revisa aislamiento entre organizaciones, controles de acceso, subprocesadores y limitaciones actuales de seguridad en un solo resumen público.',
+          description:
+            'Revisa aislamiento entre organizaciones, controles de acceso, subprocesadores y limitaciones actuales de seguridad en un solo resumen público.',
           cta: 'Revisar seguridad',
           path: '/security',
         },
         {
           title: 'Espacio de evaluación y revisión guiada del producto',
-          description: 'Empieza con el espacio de evaluación compartido para una revisión inicial y contacta al equipo si necesitas una conversación de producto más estructurada.',
+          description:
+            'Empieza con el espacio de evaluación compartido para una revisión inicial y contacta al equipo si necesitas una conversación de producto más estructurada.',
           cta: 'Abrir espacio de evaluación',
           path: '/resources#demo-environment',
         },
         {
           title: 'Contacto y documentación adicional',
-          description: 'Usa la ruta de contacto para consultas de seguridad o cumplimiento, solicitudes de revisión guiada o mayor detalle de evaluación.',
+          description:
+            'Usa la ruta de contacto para consultas de seguridad o cumplimiento, solicitudes de revisión guiada o mayor detalle de evaluación.',
           cta: 'Contactar al equipo',
           path: '/contact',
         },
       ],
       demoEnvironment: {
         title: 'Espacio de evaluación',
-        subtitle: 'Un espacio basado en navegador para revisión inicial del producto con datos ficticios de muestra.',
+        subtitle:
+          'Un espacio basado en navegador para revisión inicial del producto con datos ficticios de muestra.',
         accessTitle: 'Acceso compartido de evaluación',
-        accessIntro: 'El acceso compartido está disponible para revisión temprana del producto. Los equipos que necesiten una evaluación más profunda o más estructurada pueden contactar a ZANVROX.',
+        accessIntro:
+          'El acceso compartido está disponible para revisión temprana del producto. Los equipos que necesiten una evaluación más profunda o más estructurada pueden contactar a ZANVROX.',
         emailLabel: 'Usuario del espacio',
         emailValue: 'Use your work email',
         passwordLabel: 'Código de acceso',
@@ -627,7 +783,8 @@ const siteContentEs = {
       },
       sitemap: {
         title: 'Materiales de evaluación',
-        subtitle: 'El sitio público es intencionalmente compacto y está centrado en los materiales más útiles durante la evaluación inicial.',
+        subtitle:
+          'El sitio público es intencionalmente compacto y está centrado en los materiales más útiles durante la evaluación inicial.',
         items: [
           'Resumen del producto y cobertura de flujos',
           'Precios públicos y modelo de incorporación',
@@ -639,7 +796,8 @@ const siteContentEs = {
       },
       design: {
         title: 'Cómo usar estos recursos',
-        subtitle: 'Una ruta simple de evaluación para equipos que quieren revisar primero el encaje del producto e involucrar al equipo solo cuando se necesita más detalle.',
+        subtitle:
+          'Una ruta simple de evaluación para equipos que quieren revisar primero el encaje del producto e involucrar al equipo solo cuando se necesita más detalle.',
         directionTitle: 'Revisión inicial del producto',
         componentsTitle: 'Revisión de seguridad y cumplimiento',
         statesTitle: 'Cuándo contactar al equipo',
@@ -662,10 +820,12 @@ const siteContentEs = {
     },
     security: {
       heroTitle: 'Seguridad y arquitectura por diseño.',
-      heroSubtitle: 'Límites entre organizaciones, acceso de mínimo privilegio y comportamiento transaccional auditable.',
+      heroSubtitle:
+        'Límites entre organizaciones, acceso de mínimo privilegio y comportamiento transaccional auditable.',
       overview: {
         title: 'Resumen de seguridad',
-        subtitle: 'Un resumen conservador de los controles visibles actualmente en el producto y en el flujo de entrega.',
+        subtitle:
+          'Un resumen conservador de los controles visibles actualmente en el producto y en el flujo de entrega.',
         description:
           'ZANVROX está construido alrededor del aislamiento entre organizaciones, acceso por roles y tratamiento reforzado desde servidor para operaciones sensibles. Las declaraciones públicas de seguridad se limitan a controles que hoy están implementados y evitan de forma intencionada afirmaciones de certificación o cobertura que todavía no existen.',
         bullets: [
@@ -679,10 +839,25 @@ const siteContentEs = {
         subtitle: 'Cada declaración de control está vinculada a un mecanismo de implementación.',
       },
       controls: [
-        { control: 'Aislamiento entre organizaciones', support: 'Políticas PostgreSQL RLS delimitadas por org_id en tablas operativas.' },
-        { control: 'Control de acceso', support: 'Pertenencia a la organización y rutas de escritura limitadas por rol para operaciones críticas.' },
-        { control: 'Trazabilidad de cambios', support: 'Identificadores a nivel de transacción, marcas de tiempo y registros de confirmación de presentación.' },
-        { control: 'Aplicación desde servidor', support: 'Acciones contables y fiscales críticas ejecutadas a través de controles SQL/Edge.' },
+        {
+          control: 'Aislamiento entre organizaciones',
+          support: 'Políticas PostgreSQL RLS delimitadas por org_id en tablas operativas.',
+        },
+        {
+          control: 'Control de acceso',
+          support:
+            'Pertenencia a la organización y rutas de escritura limitadas por rol para operaciones críticas.',
+        },
+        {
+          control: 'Trazabilidad de cambios',
+          support:
+            'Identificadores a nivel de transacción, marcas de tiempo y registros de confirmación de presentación.',
+        },
+        {
+          control: 'Aplicación desde servidor',
+          support:
+            'Acciones contables y fiscales críticas ejecutadas a través de controles SQL/Edge.',
+        },
       ],
       sections: [
         {
@@ -722,11 +897,13 @@ const siteContentEs = {
       ],
       subprocessors: {
         title: 'Subprocesadores',
-        subtitle: 'Resumen público actual de los proveedores externos usados para operar el servicio.',
+        subtitle:
+          'Resumen público actual de los proveedores externos usados para operar el servicio.',
         items: [
           {
             name: 'Supabase',
-            support: 'Plataforma backend gestionada para base de datos, autenticación, almacenamiento y flujos del lado del servidor.',
+            support:
+              'Plataforma backend gestionada para base de datos, autenticación, almacenamiento y flujos del lado del servidor.',
           },
           {
             name: 'Vercel',
@@ -734,7 +911,8 @@ const siteContentEs = {
           },
           {
             name: 'Resend',
-            support: 'Entrega transaccional de correo para comunicación limitada y enrutamiento de oportunidades del sitio web.',
+            support:
+              'Entrega transaccional de correo para comunicación limitada y enrutamiento de oportunidades del sitio web.',
           },
         ],
         note: 'Estos proveedores se usan solo cuando son necesarios para la operación del servicio, la entrega o la comunicación transaccional.',
@@ -753,14 +931,19 @@ const siteContentEs = {
       },
       cta: {
         title: 'Contacto de seguridad',
-        subtitle: 'Usa la ruta de contacto existente para solicitudes de resumen de seguridad o seguimiento de seguridad y cumplimiento.',
+        subtitle:
+          'Usa la ruta de contacto existente para solicitudes de resumen de seguridad o seguimiento de seguridad y cumplimiento.',
         primary: { label: 'Solicitar resumen de seguridad', path: '/contact' },
-        secondary: { label: 'Contactar por consultas de seguridad y cumplimiento', path: '/contact' },
+        secondary: {
+          label: 'Contactar por consultas de seguridad y cumplimiento',
+          path: '/contact',
+        },
       },
     },
     about: {
       heroKicker: 'Acerca de ZANVROX',
-      heroTitle: 'Un ERP práctico posicionado para un despliegue creíble, no para teatralidad empresarial.',
+      heroTitle:
+        'Un ERP práctico posicionado para un despliegue creíble, no para teatralidad empresarial.',
       heroSubtitle:
         'ZANVROX se presenta como un ERP moderno para equipos pyme canadienses que quieren un control operativo más estricto, menos sistemas desconectados y una ruta de soporte más clara.',
       heroPrimaryCta: { label: 'Explorar producto', path: '/product' },
@@ -776,17 +959,28 @@ const siteContentEs = {
       },
       principles: {
         title: 'Tres principios detrás del sitio',
-        subtitle: 'El posicionamiento público está optimizado para una realidad operativa liderada por fundadores sin rebajar los estándares del producto.',
+        subtitle:
+          'El posicionamiento público está optimizado para una realidad operativa liderada por fundadores sin rebajar los estándares del producto.',
         items: [
-          { title: 'Claridad', body: 'Expresar qué hace el producto, qué soporta y dónde todavía se requiere revisión.' },
-          { title: 'Control', body: 'Centrarse en auditabilidad, gobernanza y visibilidad operativa en lugar de exageración SaaS inflada.' },
-          { title: 'Despliegue práctico', body: 'Hacer viable la configuración autónoma manteniendo ayuda experta opcional cuando la complejidad aumenta.' },
+          {
+            title: 'Claridad',
+            body: 'Expresar qué hace el producto, qué soporta y dónde todavía se requiere revisión.',
+          },
+          {
+            title: 'Control',
+            body: 'Centrarse en auditabilidad, gobernanza y visibilidad operativa en lugar de exageración SaaS inflada.',
+          },
+          {
+            title: 'Despliegue práctico',
+            body: 'Hacer viable la configuración autónoma manteniendo ayuda experta opcional cuando la complejidad aumenta.',
+          },
         ],
       },
       operatingModel: [
         {
           title: 'Construido para equipos pyme canadienses',
-          subtitle: 'El sitio público se dirige a empresas que necesitan un control ERP creíble sin la carga de consultoría empresarial desde el primer día.',
+          subtitle:
+            'El sitio público se dirige a empresas que necesitan un control ERP creíble sin la carga de consultoría empresarial desde el primer día.',
           items: [
             'Mejor encaje alrededor de 10-50 empleados',
             'Alto valor cuando finanzas y operaciones están repartidas entre demasiadas herramientas',
@@ -795,7 +989,8 @@ const siteContentEs = {
         },
         {
           title: 'Disciplina comercial',
-          subtitle: 'El sitio está diseñado para reducir reuniones de baja calidad y hacer explícitas las expectativas antes de la primera conversación.',
+          subtitle:
+            'El sitio está diseñado para reducir reuniones de baja calidad y hacer explícitas las expectativas antes de la primera conversación.',
           items: [
             'Demo opcional en lugar de un embudo centrado en la demo',
             'Precios públicos con niveles de soporte y expectativas de incorporación',
@@ -811,17 +1006,31 @@ const siteContentEs = {
       },
     },
     contact: {
-      heroTitle: 'Contacta al equipo solo cuando necesites ayuda con una pregunta real de evaluación.',
+      heroTitle:
+        'Contacta al equipo solo cuando necesites ayuda con una pregunta real de evaluación.',
       heroSubtitle:
         'La ruta prevista es resumen del producto, exploración del producto, revisión de precios, evaluación en navegador y después contacto opcional o solicitud de recorrido guiado.',
       conversion: {
         title: 'Flujo de evaluación recomendado',
-        subtitle: 'Esto reduce reuniones innecesarias y da mejor contexto cuando alguien finalmente se pone en contacto.',
+        subtitle:
+          'Esto reduce reuniones innecesarias y da mejor contexto cuando alguien finalmente se pone en contacto.',
         cards: [
-          { title: 'Ver resumen del producto', body: 'Empieza con el video para entender el modelo operativo y la postura del producto.' },
-          { title: 'Explorar funciones', body: 'Usa Producto, Precios y Seguridad para evaluar la plataforma sin una llamada.' },
-          { title: 'Abrir el espacio de evaluación', body: 'Valida la interfaz con datos ficticios antes de solicitar una sesión guiada.' },
-          { title: 'Solicitar ayuda si hace falta', body: 'Usa los formularios inferiores para una demo opcional o una pregunta concreta sobre el producto.' },
+          {
+            title: 'Ver resumen del producto',
+            body: 'Empieza con el video para entender el modelo operativo y la postura del producto.',
+          },
+          {
+            title: 'Explorar funciones',
+            body: 'Usa Producto, Precios y Seguridad para evaluar la plataforma sin una llamada.',
+          },
+          {
+            title: 'Abrir el espacio de evaluación',
+            body: 'Valida la interfaz con datos ficticios antes de solicitar una sesión guiada.',
+          },
+          {
+            title: 'Solicitar ayuda si hace falta',
+            body: 'Usa los formularios inferiores para una demo opcional o una pregunta concreta sobre el producto.',
+          },
         ],
       },
       supportBlock: {
@@ -835,7 +1044,8 @@ const siteContentEs = {
       },
       pricingContext: {
         title: 'Contexto de precios seleccionado',
-        subtitle: 'El contexto de precios permanece unido a tu solicitud para que el seguimiento siga basado en la configuración que seleccionaste.',
+        subtitle:
+          'El contexto de precios permanece unido a tu solicitud para que el seguimiento siga basado en la configuración que seleccionaste.',
         labels: {
           plan: 'Plan',
           billing: 'Facturación',
@@ -848,11 +1058,14 @@ const siteContentEs = {
       },
       demoForm: {
         title: 'Solicitar recorrido guiado',
-        helper: 'Usa esto después de que tu equipo haya revisado el producto y quiera un recorrido guiado.',
-        confirmation: 'Tu solicitud de recorrido guiado se envió correctamente. Haremos seguimiento por correo.',
+        helper:
+          'Usa esto después de que tu equipo haya revisado el producto y quiera un recorrido guiado.',
+        confirmation:
+          'Tu solicitud de recorrido guiado se envió correctamente. Haremos seguimiento por correo.',
         submittingCta: 'Enviando...',
         submitError: 'No pudimos enviar tu solicitud. Inténtalo de nuevo.',
-        messageHint: 'Opcional. Usa esto para describir tu stack actual, calendario de despliegue o pregunta sobre nómina.',
+        messageHint:
+          'Opcional. Usa esto para describir tu stack actual, calendario de despliegue o pregunta sobre nómina.',
         fields: {
           name: 'Nombre*',
           company: 'Empresa*',
@@ -895,11 +1108,13 @@ const siteContentEs = {
       },
       briefForm: {
         title: 'Hacer una pregunta sobre el producto',
-        helper: 'Usa esto para preguntas sobre encaje del producto, soporte, incorporación, implementación o alcance de nómina.',
+        helper:
+          'Usa esto para preguntas sobre encaje del producto, soporte, incorporación, implementación o alcance de nómina.',
         confirmation: 'Tu mensaje se envió correctamente. Responderemos por correo.',
         submittingCta: 'Enviando...',
         submitError: 'No pudimos enviar tu solicitud. Inténtalo de nuevo.',
-        messageHint: 'Opcional. Usa esto si quieres describir tu flujo, necesidad de soporte o pregunta de implementación.',
+        messageHint:
+          'Opcional. Usa esto si quieres describir tu flujo, necesidad de soporte o pregunta de implementación.',
         fields: {
           name: 'Nombre*',
           company: 'Empresa*',
@@ -913,7 +1128,8 @@ const siteContentEs = {
           email: 'nombre@empresa.com',
           companySize: 'Selecciona el tamaño de la empresa',
           interestArea: 'Selecciona el área de interés',
-          message: '¿Qué te gustaría aclarar antes de que tu equipo dedique más tiempo a la evaluación?',
+          message:
+            '¿Qué te gustaría aclarar antes de que tu equipo dedique más tiempo a la evaluación?',
         },
         options: {
           companySizes: ['1-10 empleados', '10-50 empleados', '50-100 empleados', '100+ empleados'],
@@ -969,7 +1185,8 @@ const siteContentEs = {
     },
   },
   footer: {
-    companyDescription: 'ERP integrado para equipos pyme canadienses que necesitan finanzas, operaciones, cumplimiento y nómina en una sola plataforma controlada.',
+    companyDescription:
+      'ERP integrado para equipos pyme canadienses que necesitan finanzas, operaciones, cumplimiento y nómina en una sola plataforma controlada.',
     headquarters: 'Toronto, Ontario, Canadá',
     email: 'support@zanvrox.com',
     sections: [
@@ -1019,7 +1236,8 @@ const siteContentEs = {
     },
     security: {
       title: 'Seguridad | ZANVROX',
-      description: 'Revisa aislamiento entre organizaciones, controles por rol, aprobaciones, gobernanza y salvaguardas de arquitectura detrás de ZANVROX.',
+      description:
+        'Revisa aislamiento entre organizaciones, controles por rol, aprobaciones, gobernanza y salvaguardas de arquitectura detrás de ZANVROX.',
       path: '/security',
     },
     pricing: {
@@ -1030,30 +1248,35 @@ const siteContentEs = {
     },
     resources: {
       title: 'Recursos | ZANVROX',
-      description: 'Usa recursos del producto, guía del espacio de evaluación y material del resumen de seguridad para autoevaluar ZANVROX.',
+      description:
+        'Usa recursos del producto, guía del espacio de evaluación y material del resumen de seguridad para autoevaluar ZANVROX.',
       path: '/resources',
     },
     about: {
       title: 'Acerca de | ZANVROX',
-      description: 'Descubre cómo ZANVROX posiciona finanzas, operaciones, gobernanza y disciplina de despliegue para equipos pyme canadienses.',
+      description:
+        'Descubre cómo ZANVROX posiciona finanzas, operaciones, gobernanza y disciplina de despliegue para equipos pyme canadienses.',
       path: '/about',
     },
     contact: {
       title: 'Contacto | ZANVROX',
-      description: 'Solicita una demo opcional o plantea una pregunta concreta sobre producto, nómina, incorporación o implementación.',
+      description:
+        'Solicita una demo opcional o plantea una pregunta concreta sobre producto, nómina, incorporación o implementación.',
       path: '/contact',
     },
     privacy: {
       title: 'Política de privacidad | ZANVROX',
-      description: 'Política de privacidad del sitio web de ZANVROX y del tratamiento relacionado con oportunidades.',
+      description:
+        'Política de privacidad del sitio web de ZANVROX y del tratamiento relacionado con oportunidades.',
       path: '/legal/privacy',
     },
     terms: {
       title: 'Términos del servicio | ZANVROX',
-      description: 'Términos del servicio que regulan el uso del sitio web y los materiales de ZANVROX.',
+      description:
+        'Términos del servicio que regulan el uso del sitio web y los materiales de ZANVROX.',
       path: '/legal/terms',
     },
   },
-}
+};
 
-export default siteContentEs
+export default siteContentEs;

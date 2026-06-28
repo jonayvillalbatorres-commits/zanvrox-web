@@ -48,7 +48,14 @@ const siteContentZh = {
         overlayLabel: '观看产品讲解',
         fallbackLabel: '海报预览可用',
         hasRealVideo: true,
-        chapters: ['会计与开票', '库存与仓储', '生产计划', '税务仪表板', '薪资工作台', '报表与审批'],
+        chapters: [
+          '会计与开票',
+          '库存与仓储',
+          '生产计划',
+          '税务仪表板',
+          '薪资工作台',
+          '报表与审批',
+        ],
         primaryCta: { label: '浏览产品', path: '/product' },
         secondaryCta: { label: '打开评估工作区', path: '/resources#demo-environment' },
       },
@@ -176,22 +183,38 @@ const siteContentZh = {
           {
             role: '财务',
             headline: '用更少的离散系统完成结账。',
-            points: ['会计、开票、费用与报表集中在一个系统。', '清晰的支持边界与期末控制。', '加拿大合规定位保持克制，不夸大自动化。'],
+            points: [
+              '会计、开票、费用与报表集中在一个系统。',
+              '清晰的支持边界与期末控制。',
+              '加拿大合规定位保持克制，不夸大自动化。',
+            ],
           },
           {
             role: '运营',
             headline: '让库存、采购与生产保持一致。',
-            points: ['库存与仓储流程与财务直接相连。', '无需额外中间件即可支持 BOM 与基础生产。', '在需要处提供运营复核信号与治理机制。'],
+            points: [
+              '库存与仓储流程与财务直接相连。',
+              '无需额外中间件即可支持 BOM 与基础生产。',
+              '在需要处提供运营复核信号与治理机制。',
+            ],
           },
           {
             role: '管理层',
             headline: '获得更清晰的决策支持。',
-            points: ['减少跨工具手工对账。', '在注册前就明确支持预期与 onboarding 范围。', '在消耗内部时间前先提升线索质量。'],
+            points: [
+              '减少跨工具手工对账。',
+              '在注册前就明确支持预期与 onboarding 范围。',
+              '在消耗内部时间前先提升线索质量。',
+            ],
           },
           {
             role: 'IT / Ops',
             headline: '以有纪律的范围推进采用。',
-            points: ['为小团队提供清晰的实施顺序。', '变更受治理且流程可审计。', '营销层兼容静态站点并配有结构化元数据。'],
+            points: [
+              '为小团队提供清晰的实施顺序。',
+              '变更受治理且流程可审计。',
+              '营销层兼容静态站点并配有结构化元数据。',
+            ],
           },
         ],
       },
@@ -209,7 +232,10 @@ const siteContentZh = {
         title: '按计划定义支持预期',
         subtitle: '支持方式被直接写明，让评估过程更贴近实际。',
         tiers: [
-          { name: 'Finance Core', body: '电子邮件支持，48 小时响应，并提供自主配置 onboarding 指引。' },
+          {
+            name: 'Finance Core',
+            body: '电子邮件支持，48 小时响应，并提供自主配置 onboarding 指引。',
+          },
           { name: 'Operations', body: '优先级电子邮件支持，24 小时响应，并提供更强的运营指导。' },
           { name: 'Enterprise', body: '专属 onboarding、直接支持通道与范围化部署协助。' },
         ],
@@ -230,19 +256,23 @@ const siteContentZh = {
         items: [
           {
             question: '我们可以不先预约演示就评估 ZANVROX 吗？',
-            answer: '可以。推荐路径是先看概览、浏览产品、打开评估工作区，只有在团队确实需要帮助时再联系。',
+            answer:
+              '可以。推荐路径是先看概览、浏览产品、打开评估工作区，只有在团队确实需要帮助时再联系。',
           },
           {
             question: '基础计划是否包含 Payroll？',
-            answer: '不包含。Payroll 作为单独的 add-on 独立计价，这样以财务为先的团队无需默认支付该部分。',
+            answer:
+              '不包含。Payroll 作为单独的 add-on 独立计价，这样以财务为先的团队无需默认支付该部分。',
           },
           {
             question: '是否必须购买付费 onboarding 项目？',
-            answer: '不需要。默认路径是自主配置。Guided Implementation 作为可选付费包提供，适用于希望在设置和数据导入方面获得帮助的团队。',
+            answer:
+              '不需要。默认路径是自主配置。Guided Implementation 作为可选付费包提供，适用于希望在设置和数据导入方面获得帮助的团队。',
           },
           {
             question: '我们应当期待什么样的支持？',
-            answer: 'Finance Core 提供 48 小时电子邮件支持，Operations 提供 24 小时优先电子邮件支持，Enterprise 则包含 onboarding 协助与直接支持通道。',
+            answer:
+              'Finance Core 提供 48 小时电子邮件支持，Operations 提供 24 小时优先电子邮件支持，Enterprise 则包含 onboarding 协助与直接支持通道。',
           },
         ],
       },
@@ -275,7 +305,10 @@ const siteContentZh = {
         items: [
           { title: '财务核心', body: '会计、开票、费用、银行可见性与报表。' },
           { title: '运营', body: '库存、仓储、BOM、基础生产与审批。' },
-          { title: '加拿大合规', body: '税务流程、Payroll add-on、remittance support 与年终定位。' },
+          {
+            title: '加拿大合规',
+            body: '税务流程、Payroll add-on、remittance support 与年终定位。',
+          },
           { title: '治理', body: '可审计性、审批、控制边界与多公司扩展路径。' },
         ],
       },
@@ -329,7 +362,8 @@ const siteContentZh = {
       ],
       onboarding: {
         title: '自主配置在实际中如何运作',
-        subtitle: '产品页强调这样一个事实：onboarding 默认在产品内部被引导，而不是默认躲在咨询服务之后。',
+        subtitle:
+          '产品页强调这样一个事实：onboarding 默认在产品内部被引导，而不是默认躲在咨询服务之后。',
         steps: [
           { number: '1', title: '创建组织', body: '创建工作区，并从清晰的运营基础开始。' },
           { number: '2', title: '选择加拿大', body: '应用国家级默认值和合规假设。' },
@@ -352,10 +386,12 @@ const siteContentZh = {
       heroSubtitle:
         '先从核心财务控制开始，随着复杂度提升再扩展到运营；只有当多地点结构、高级审批、onboarding 支持、集成或安全审查成为必要条件时，才进入定制部署。',
       packagesTitle: '面向财务、运营与引导式部署的公开定价',
-      packagesSubtitle: '以透明的 CAD 定价服务于当前需要结构化工作流的加拿大 SMB 团队，并提供走向更广运营控制的可信路径。',
+      packagesSubtitle:
+        '以透明的 CAD 定价服务于当前需要结构化工作流的加拿大 SMB 团队，并提供走向更广运营控制的可信路径。',
       launchBadge: '提供年付方案',
       launchOfferLabel: '按年计费的基础订阅包含 1 个月免费。',
-      launchOfferNote: 'Payroll 定价仍按使用计费；在需要更结构化部署时可选择 Guided Implementation。',
+      launchOfferNote:
+        'Payroll 定价仍按使用计费；在需要更结构化部署时可选择 Guided Implementation。',
       popularLabel: '非常适合 10-50 名员工',
       priceSuffixMonthly: '/月',
       billedMonthlyLabel: '月付',
@@ -377,7 +413,8 @@ const siteContentZh = {
         {
           slug: 'finance-core',
           name: 'Finance Core',
-          summary: '适用于需要纪律化财务基础的公司，包括会计、开票、费用、报表以及清晰的自主配置路径。',
+          summary:
+            '适用于需要纪律化财务基础的公司，包括会计、开票、费用、报表以及清晰的自主配置路径。',
           entitiesLabel: '单公司范围',
           usersLabel: '最多 3 名用户',
           monthly: {
@@ -392,7 +429,14 @@ const siteContentZh = {
             note: '基础订阅按年计费为 CAD 1,969。',
             secondaryNote: '在需要时，Payroll 与更广的运营范围仍单独计价。',
           },
-          included: ['会计工作流', '开票', '费用录入', '财务报表', '自主配置指引', '电子邮件支持（48 小时）'],
+          included: [
+            '会计工作流',
+            '开票',
+            '费用录入',
+            '财务报表',
+            '自主配置指引',
+            '电子邮件支持（48 小时）',
+          ],
           ctaLabel: '查看 Finance Core',
         },
         {
@@ -412,15 +456,24 @@ const siteContentZh = {
             amount: 649,
             badge: '1 个月免费',
             note: '基础订阅按年计费为 CAD 7,139。',
-            secondaryNote: '当团队需要对库存、仓储流转、BOM 和生产流程有更紧密控制时，通常建议选择该计划。',
+            secondaryNote:
+              '当团队需要对库存、仓储流转、BOM 和生产流程有更紧密控制时，通常建议选择该计划。',
           },
-          included: ['包含 Finance Core 的全部内容', '库存控制', '仓储工作流', '生产（BOM）', '审批与治理', '优先电子邮件支持（24 小时）'],
+          included: [
+            '包含 Finance Core 的全部内容',
+            '库存控制',
+            '仓储工作流',
+            '生产（BOM）',
+            '审批与治理',
+            '优先电子邮件支持（24 小时）',
+          ],
           ctaLabel: '查看 Operations',
         },
         {
           slug: 'enterprise',
           name: '定制',
-          summary: '适用于需要多地点结构、高级审批、安全审查、定制 onboarding、集成、专属支持或更结构化部署的团队。',
+          summary:
+            '适用于需要多地点结构、高级审批、安全审查、定制 onboarding、集成、专属支持或更结构化部署的团队。',
           entitiesLabel: '多地点或定制范围',
           usersLabel: '定制用户范围',
           monthly: {
@@ -433,25 +486,46 @@ const siteContentZh = {
             label: '定制',
             note: '定制定价将根据运营结构、部署需求与实施背景单独评估。',
           },
-          included: ['多地点部署', '高级治理', '集成', '安全审查路径', 'Guided Implementation 与部署支持'],
+          included: [
+            '多地点部署',
+            '高级治理',
+            '集成',
+            '安全审查路径',
+            'Guided Implementation 与部署支持',
+          ],
           ctaLabel: '申请定制评估',
         },
       ],
       payrollAddon: {
         title: 'Payroll add-on',
-        summary: '将 Payroll 单独计价，可以在保持基础 ERP 商业定位清晰的同时，为需要它的团队保留加拿大 Payroll 支持。',
+        summary:
+          '将 Payroll 单独计价，可以在保持基础 ERP 商业定位清晰的同时，为需要它的团队保留加拿大 Payroll 支持。',
         priceLabel: 'CAD 59 / 月 + CAD 6 / 员工 / 月',
         annualPriceLabel: 'CAD 59 / 月 + CAD 6 / 员工 / 月',
-        monthlyNote: '包含加拿大 Payroll runs、remittance workflow support、pay stubs、用于支持年终 review 的记录和导出，以及会计集成。部署期间可能适用月度最低费用。',
+        monthlyNote:
+          '包含加拿大 Payroll runs、remittance workflow support、pay stubs、用于支持年终 review 的记录和导出，以及会计集成。部署期间可能适用月度最低费用。',
         annualNote: '除非另行定义范围，Payroll add-on 在年付时保持相同的基础费加员工计价结构。',
-        included: ['加拿大 Payroll runs', 'remittance workflow support', 'pay stubs', '用于支持 review 的记录和导出', '会计集成'],
+        included: [
+          '加拿大 Payroll runs',
+          'remittance workflow support',
+          'pay stubs',
+          '用于支持 review 的记录和导出',
+          '会计集成',
+        ],
         ctaLabel: '咨询 Payroll',
       },
       onboardingPackage: {
         title: 'Guided Implementation',
         summary: '面向希望获得运营对齐、辅助部署以及更结构化实施起点的团队的一次性可选引导式设置。',
         priceLabel: 'CAD 3,500 至 7,500 一次性',
-        included: ['引导式系统设置', '运营对齐复核', 'chart of accounts 复核', '税务配置', '数据导入指引', '辅助部署培训'],
+        included: [
+          '引导式系统设置',
+          '运营对齐复核',
+          'chart of accounts 复核',
+          '税务配置',
+          '数据导入指引',
+          '辅助部署培训',
+        ],
         note: '可选。标准计划在适合轻量部署时仍可从自主配置开始。',
         ctaLabel: '申请引导式设置',
       },
@@ -499,7 +573,8 @@ const siteContentZh = {
         items: [
           {
             question: '开始之前必须先看演示吗？',
-            answer: '不需要。推荐路径是先自我评估：观看概览、浏览产品、查看定价，并在申请引导式会话之前先使用浏览器评估工作区。',
+            answer:
+              '不需要。推荐路径是先自我评估：观看概览、浏览产品、查看定价，并在申请引导式会话之前先使用浏览器评估工作区。',
           },
           {
             question: '基础 ERP 计划是否包含 Payroll？',
@@ -507,11 +582,13 @@ const siteContentZh = {
           },
           {
             question: 'Guided Implementation 是必须的吗？',
-            answer: '不是。它是可选项。Finance Core 和 Operations 都可以从自主配置开始，而当团队需要更结构化部署时可选择 Guided Implementation。',
+            answer:
+              '不是。它是可选项。Finance Core 和 Operations 都可以从自主配置开始，而当团队需要更结构化部署时可选择 Guided Implementation。',
           },
           {
             question: '每个计划包含什么支持？',
-            answer: 'Finance Core 包含 48 小时电子邮件支持，Operations 包含 24 小时优先电子邮件支持，定制方案则包含引导式部署讨论与直接支持通道。',
+            answer:
+              'Finance Core 包含 48 小时电子邮件支持，Operations 包含 24 小时优先电子邮件支持，定制方案则包含引导式部署讨论与直接支持通道。',
           },
         ],
       },
@@ -567,7 +644,14 @@ const siteContentZh = {
       sitemap: {
         title: '评估材料',
         subtitle: '公开站点刻意保持简洁，只保留对早期评估最有价值的材料。',
-        items: ['产品概览与流程覆盖', '公开定价与 onboarding 模型', '安全概览与当前控制定位', '包含虚构样例数据的评估工作区', '用于引导式评估与后续问题的联系路径', '法律条款与隐私信息'],
+        items: [
+          '产品概览与流程覆盖',
+          '公开定价与 onboarding 模型',
+          '安全概览与当前控制定位',
+          '包含虚构样例数据的评估工作区',
+          '用于引导式评估与后续问题的联系路径',
+          '法律条款与隐私信息',
+        ],
       },
       design: {
         title: '如何使用这些资源',
@@ -635,18 +719,31 @@ const siteContentZh = {
         },
         {
           title: '托管与基础设施',
-          items: ['后端服务通过 Supabase 托管。', '公共前端通过 Vercel 交付。', '传输中加密使用 HTTPS/TLS。', '底层云基础设施由提供商管理，而不是由 ZANVROX 直接运营。'],
+          items: [
+            '后端服务通过 Supabase 托管。',
+            '公共前端通过 Vercel 交付。',
+            '传输中加密使用 HTTPS/TLS。',
+            '底层云基础设施由提供商管理，而不是由 ZANVROX 直接运营。',
+          ],
         },
         {
           title: '运营安全',
-          items: ['发布门禁包括 lint、单元测试、Web 测试、构建与发布验证脚本。', 'Playwright E2E 覆盖和托管 smoke checks 用于验证关键工作流。', '依赖监控包含 CI 中的 npm audit，用于审查高严重级别软件包。', '应用日志经过脱敏，以减少电子邮件、token 等敏感字段意外暴露。'],
+          items: [
+            '发布门禁包括 lint、单元测试、Web 测试、构建与发布验证脚本。',
+            'Playwright E2E 覆盖和托管 smoke checks 用于验证关键工作流。',
+            '依赖监控包含 CI 中的 npm audit，用于审查高严重级别软件包。',
+            '应用日志经过脱敏，以减少电子邮件、token 等敏感字段意外暴露。',
+          ],
         },
       ],
       subprocessors: {
         title: '子处理方',
         subtitle: '当前用于运营服务的第三方提供商公共摘要。',
         items: [
-          { name: 'Supabase', support: '用于数据库、身份验证、storage 和 server-side workflows 的托管后端平台。' },
+          {
+            name: 'Supabase',
+            support: '用于数据库、身份验证、storage 和 server-side workflows 的托管后端平台。',
+          },
           { name: 'Vercel', support: '用于公共 Web 体验的托管前端 hosting 与交付。' },
           { name: 'Resend', support: '用于有限沟通和网站线索路由的事务性电子邮件交付。' },
         ],
@@ -655,7 +752,14 @@ const siteContentZh = {
       disclosures: {
         title: '透明度与当前限制',
         subtitle: '反映当前实际控制情况的保守声明。',
-        items: ['不宣称 auto-filing：仅支持 portal-ready workflow。', '不存在面向公开能力的隐藏 feature flags。', '生产行为由可审计日志和快照支撑。', '当前的 MFA 依赖 authenticator-app TOTP，不具备抗钓鱼能力。', 'step-up authentication 只在敏感路由上实施，而不是每个会话的全局要求。', 'WebAuthn 和基于 passkeys 的身份验证尚未提供。'],
+        items: [
+          '不宣称 auto-filing：仅支持 portal-ready workflow。',
+          '不存在面向公开能力的隐藏 feature flags。',
+          '生产行为由可审计日志和快照支撑。',
+          '当前的 MFA 依赖 authenticator-app TOTP，不具备抗钓鱼能力。',
+          'step-up authentication 只在敏感路由上实施，而不是每个会话的全局要求。',
+          'WebAuthn 和基于 passkeys 的身份验证尚未提供。',
+        ],
       },
       cta: {
         title: '安全联系',
@@ -686,19 +790,30 @@ const siteContentZh = {
         items: [
           { title: '清晰', body: '明确说明产品做什么、支持什么，以及哪些部分仍需要复核。' },
           { title: '控制', body: '强调可审计性、治理与运营可见性，而不是夸张的 SaaS 营销。' },
-          { title: '务实部署', body: '让自主配置成为可行路径，同时在复杂度上升时保留可选的专家帮助。' },
+          {
+            title: '务实部署',
+            body: '让自主配置成为可行路径，同时在复杂度上升时保留可选的专家帮助。',
+          },
         ],
       },
       operatingModel: [
         {
           title: '为加拿大中小企业而设计',
           subtitle: '公开网站面向那些需要可信 ERP 控制、但不希望第一天就承担企业级咨询负担的公司。',
-          items: ['最佳适配大约在 10-50 名员工', '当财务与运营被过多工具割裂时价值尤为明显', '从财务核心扩展到运营和 Payroll add-on 的路径清晰'],
+          items: [
+            '最佳适配大约在 10-50 名员工',
+            '当财务与运营被过多工具割裂时价值尤为明显',
+            '从财务核心扩展到运营和 Payroll add-on 的路径清晰',
+          ],
         },
         {
           title: '商业上有纪律',
           subtitle: '网站旨在减少低质量会议，并在第一次对话前就把预期讲清楚。',
-          items: ['可选演示，而不是 demo-first 漏斗', '公开定价，明确支持等级与 onboarding 预期', '安全与治理表述与产品实际定位保持一致'],
+          items: [
+            '可选演示，而不是 demo-first 漏斗',
+            '公开定价，明确支持等级与 onboarding 预期',
+            '安全与治理表述与产品实际定位保持一致',
+          ],
         },
       ],
       cta: {
@@ -725,7 +840,11 @@ const siteContentZh = {
       supportBlock: {
         title: '支持预期',
         subtitle: '所有网站联系流程都会路由到 support@zanvrox.com。',
-        items: ['Finance Core：电子邮件支持，48 小时响应', 'Operations：优先级电子邮件支持，24 小时响应', 'Enterprise：直接支持通道与 onboarding 协助'],
+        items: [
+          'Finance Core：电子邮件支持，48 小时响应',
+          'Operations：优先级电子邮件支持，24 小时响应',
+          'Enterprise：直接支持通道与 onboarding 协助',
+        ],
       },
       pricingContext: {
         title: '已选择的定价上下文',
@@ -764,7 +883,14 @@ const siteContentZh = {
         },
         options: {
           companySizes: ['1-10 名员工', '10-50 名员工', '50-100 名员工', '100+ 名员工'],
-          interestAreas: ['Finance Core', 'Operations', 'Payroll add-on', 'Guided Implementation', 'Enterprise 部署', '集成 / API'],
+          interestAreas: [
+            'Finance Core',
+            'Operations',
+            'Payroll add-on',
+            'Guided Implementation',
+            'Enterprise 部署',
+            '集成 / API',
+          ],
         },
         errors: {
           name: '请输入姓名。',
@@ -803,7 +929,14 @@ const siteContentZh = {
         },
         options: {
           companySizes: ['1-10 名员工', '10-50 名员工', '50-100 名员工', '100+ 名员工'],
-          interestAreas: ['产品匹配度', '定价与支持', 'Sandbox 访问', '数据导入', 'Payroll add-on', 'Guided Implementation'],
+          interestAreas: [
+            '产品匹配度',
+            '定价与支持',
+            'Sandbox 访问',
+            '数据导入',
+            'Payroll add-on',
+            'Guided Implementation',
+          ],
         },
         errors: {
           name: '请输入姓名。',
@@ -824,13 +957,21 @@ const siteContentZh = {
         title: '隐私政策',
         updated: '2026 年 3 月 5 日',
         updatedLabel: '最后更新',
-        paragraphs: ['ZANVROX 会收集通过本网站提交的企业联系信息，用于产品评估、演示安排和资料请求。', '我们仅将提交的数据用于销售与产品资格评估。', '如需访问、更正或删除已提交数据，可联系 support@zanvrox.com。'],
+        paragraphs: [
+          'ZANVROX 会收集通过本网站提交的企业联系信息，用于产品评估、演示安排和资料请求。',
+          '我们仅将提交的数据用于销售与产品资格评估。',
+          '如需访问、更正或删除已提交数据，可联系 support@zanvrox.com。',
+        ],
       },
       terms: {
         title: '服务条款',
         updated: '2026 年 3 月 5 日',
         updatedLabel: '最后更新',
-        paragraphs: ['本网站用于提供 ZANVROX ERP 的产品信息和商业评估线索表单。', '网站内容仅供参考，不构成具有约束力的产品承诺。', '产品范围与商业条款以签署的协议为准。'],
+        paragraphs: [
+          '本网站用于提供 ZANVROX ERP 的产品信息和商业评估线索表单。',
+          '网站内容仅供参考，不构成具有约束力的产品承诺。',
+          '产品范围与商业条款以签署的协议为准。',
+        ],
       },
     },
     notFound: {
@@ -840,7 +981,8 @@ const siteContentZh = {
     },
   },
   footer: {
-    companyDescription: '面向加拿大中小企业的集成 ERP，将财务、运营、合规与薪资集中在一个受控体系中。',
+    companyDescription:
+      '面向加拿大中小企业的集成 ERP，将财务、运营、合规与薪资集中在一个受控体系中。',
     headquarters: '加拿大安大略省多伦多',
     email: 'support@zanvrox.com',
     sections: [
@@ -878,12 +1020,14 @@ const siteContentZh = {
   seo: {
     home: {
       title: 'ZANVROX | 面向加拿大财务、运营与控制的 ERP',
-      description: '面向加拿大中小企业的一体化 ERP，覆盖会计、开票、库存、仓储、生产、治理、税务流程与 Payroll add-on 支持。',
+      description:
+        '面向加拿大中小企业的一体化 ERP，覆盖会计、开票、库存、仓储、生产、治理、税务流程与 Payroll add-on 支持。',
       path: '/',
     },
     product: {
       title: '产品 | ZANVROX',
-      description: '浏览 ZANVROX ERP 体系中财务、运营、加拿大合规、治理与 Payroll add-on 的覆盖范围。',
+      description:
+        '浏览 ZANVROX ERP 体系中财务、运营、加拿大合规、治理与 Payroll add-on 的覆盖范围。',
       path: '/product',
     },
     security: {
@@ -893,7 +1037,8 @@ const siteContentZh = {
     },
     pricing: {
       title: '定价 | ZANVROX',
-      description: '查看 Finance Core、Operations、定制部署、Payroll add-on 以及可选 Guided Implementation 的公开 CAD 定价。',
+      description:
+        '查看 Finance Core、Operations、定制部署、Payroll add-on 以及可选 Guided Implementation 的公开 CAD 定价。',
       path: '/pricing',
     },
     resources: {
@@ -922,6 +1067,6 @@ const siteContentZh = {
       path: '/legal/terms',
     },
   },
-}
+};
 
-export default siteContentZh
+export default siteContentZh;

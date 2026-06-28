@@ -1,13 +1,13 @@
-﻿import SeoManager from '../components/seo/SeoManager'
-import PageHero from '../components/sections/PageHero'
-import Card from '../components/ui/Card'
-import SectionHeading from '../components/ui/SectionHeading'
-import { useLanguage } from '../contexts/LanguageContext'
-import { organizationSchema, softwareSchema } from '../content/schema'
+﻿import SeoManager from '../components/seo/SeoManager';
+import PageHero from '../components/sections/PageHero';
+import Card from '../components/ui/Card';
+import SectionHeading from '../components/ui/SectionHeading';
+import { useLanguage } from '../contexts/LanguageContext';
+import { organizationSchema, softwareSchema } from '../content/schema';
 
 export default function AiPage() {
-  const { content } = useLanguage()
-  const page = content?.pages?.ai || {}
+  const { content } = useLanguage();
+  const page = content?.pages?.ai || {};
 
   return (
     <>
@@ -31,5 +31,5 @@ export default function AiPage() {
         </Card>
       </section>
     </>
-  )
+  );
 }

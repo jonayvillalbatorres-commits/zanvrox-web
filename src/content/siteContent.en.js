@@ -22,12 +22,14 @@
   brand: {
     name: 'ZANVROX',
     tagline: 'Canadian operations ERP for growing SMBs',
-    oneLiner: 'Finance, inventory, payroll workflows, and operational control in one ERP built for Canadian SMB teams.',
+    oneLiner:
+      'Finance, inventory, payroll workflows, and operational control in one ERP built for Canadian SMB teams.',
   },
   pages: {
     home: {
       heroKicker: 'Canadian ERP for finance, operations, and operational control',
-      heroTitle: 'Run finance, inventory, payroll workflows, and operations in one controlled ERP instead of five disconnected tools.',
+      heroTitle:
+        'Run finance, inventory, payroll workflows, and operations in one controlled ERP instead of five disconnected tools.',
       heroSubtitle:
         'ZANVROX helps Canadian SMB teams centralize accounting, invoicing, purchasing, inventory, production, approvals, and tax workflow support without a heavy implementation project.',
       heroPrimaryCta: { label: 'View product overview', path: '/#product-overview' },
@@ -42,7 +44,8 @@
       },
       video: {
         title: 'Product walkthrough with real workflow context',
-        subtitle: 'A short walkthrough of finance, operations, Canadian tax flows, and payroll readiness.',
+        subtitle:
+          'A short walkthrough of finance, operations, Canadian tax flows, and payroll readiness.',
         windowLabel: 'Product video',
         duration: '90 sec',
         overlayLabel: 'View product walkthrough',
@@ -99,7 +102,8 @@
       screenshots: {
         eyebrow: 'Screens and workflows',
         title: 'Screens designed to show real operational coverage',
-        subtitle: 'Each section below is ready for real screenshots and uses product previews when a final screenshot is not available yet.',
+        subtitle:
+          'Each section below is ready for real screenshots and uses product previews when a final screenshot is not available yet.',
         items: [
           {
             title: 'Canadian tax dashboard',
@@ -128,20 +132,46 @@
       howItWorks: {
         eyebrow: 'Self-setup onboarding',
         title: 'Start in six guided steps',
-        subtitle: 'The product is designed so a founder-led team can get oriented without a heavy onboarding project.',
+        subtitle:
+          'The product is designed so a founder-led team can get oriented without a heavy onboarding project.',
         steps: [
-          { icon: '1', title: 'Create organization', bullets: ['Start your workspace', 'Define legal entity basics'] },
-          { icon: '2', title: 'Select country', bullets: ['Choose Canada', 'Load country-specific defaults'] },
-          { icon: '3', title: 'Choose industry template', bullets: ['Pick a starting model', 'Reduce setup friction'] },
-          { icon: '4', title: 'Configure taxes', bullets: ['Set tax families', 'Confirm province logic and defaults'] },
-          { icon: '5', title: 'Import clients and vendors', bullets: ['Bring in master data', 'Use templates and validation'] },
-          { icon: '6', title: 'Create first invoice', bullets: ['Validate operational flow', 'Move into day-to-day usage'] },
+          {
+            icon: '1',
+            title: 'Create organization',
+            bullets: ['Start your workspace', 'Define legal entity basics'],
+          },
+          {
+            icon: '2',
+            title: 'Select country',
+            bullets: ['Choose Canada', 'Load country-specific defaults'],
+          },
+          {
+            icon: '3',
+            title: 'Choose industry template',
+            bullets: ['Pick a starting model', 'Reduce setup friction'],
+          },
+          {
+            icon: '4',
+            title: 'Configure taxes',
+            bullets: ['Set tax families', 'Confirm province logic and defaults'],
+          },
+          {
+            icon: '5',
+            title: 'Import clients and vendors',
+            bullets: ['Bring in master data', 'Use templates and validation'],
+          },
+          {
+            icon: '6',
+            title: 'Create first invoice',
+            bullets: ['Validate operational flow', 'Move into day-to-day usage'],
+          },
         ],
       },
       compliance: {
         eyebrow: 'Canadian posture',
         title: 'Built for credibility, not hype',
-        subtitle: 'The website explains what is controlled, what is automated, and what still requires review.',
+        subtitle:
+          'The website explains what is controlled, what is automated, and what still requires review.',
         bullets: [
           'Canadian tax workflows are handled with explicit filing posture and auditability.',
           'Payroll is positioned as a separate add-on with clear scope and readiness by jurisdiction.',
@@ -155,7 +185,8 @@
       included: {
         eyebrow: 'What is integrated',
         title: 'One stack across finance and operations',
-        subtitle: 'The point is not more features on paper. The point is fewer fractured workflows in practice.',
+        subtitle:
+          'The point is not more features on paper. The point is fewer fractured workflows in practice.',
         items: [
           'Accounting, invoicing, expenses, and financial reporting',
           'Purchasing, inventory, warehouse, and production basics',
@@ -168,11 +199,16 @@
       executiveSnapshot: {
         badge: 'Operating model',
         title: 'Designed for self-evaluation first, human help second',
-        subtitle: 'This is a product-led site for a serious ERP, not a brochure that forces every prospect into a call.',
+        subtitle:
+          'This is a product-led site for a serious ERP, not a brochure that forces every prospect into a call.',
         metrics: [
           { label: 'Primary ICP', value: '10-50', note: 'Canadian SMB employees' },
           { label: 'Support posture', value: 'Email-first', note: 'Clear response times by plan' },
-          { label: 'Onboarding posture', value: 'Self-setup', note: 'Optional guided implementation available' },
+          {
+            label: 'Onboarding posture',
+            value: 'Self-setup',
+            note: 'Optional guided implementation available',
+          },
         ],
       },
       positioning: {
@@ -221,7 +257,8 @@
       technical: {
         eyebrow: 'Support and onboarding model',
         title: 'Self-service by default, guided help when it matters',
-        subtitle: 'The site sets expectations upfront so small teams know what happens after signup.',
+        subtitle:
+          'The site sets expectations upfront so small teams know what happens after signup.',
         items: [
           'Finance Core includes self-setup onboarding and email support with 48h response.',
           'Operations adds priority email support with 24h response.',
@@ -232,14 +269,24 @@
         title: 'Support expectations by plan',
         subtitle: 'Support is defined directly so evaluation stays realistic.',
         tiers: [
-          { name: 'Finance Core', body: 'Email support, 48h response, self-setup onboarding guidance.' },
-          { name: 'Operations', body: 'Priority email support, 24h response, stronger operational guidance.' },
-          { name: 'Enterprise', body: 'Dedicated onboarding, direct support channel, scoped rollout assistance.' },
+          {
+            name: 'Finance Core',
+            body: 'Email support, 48h response, self-setup onboarding guidance.',
+          },
+          {
+            name: 'Operations',
+            body: 'Priority email support, 24h response, stronger operational guidance.',
+          },
+          {
+            name: 'Enterprise',
+            body: 'Dedicated onboarding, direct support channel, scoped rollout assistance.',
+          },
         ],
       },
       demoEnvironment: {
         title: 'Open the ZANVROX evaluation workspace',
-        subtitle: 'Use a browser-based workspace with fictional data before requesting a guided walkthrough.',
+        subtitle:
+          'Use a browser-based workspace with fictional data before requesting a guided walkthrough.',
         emailLabel: 'Demo user',
         emailValue: 'Use your work email',
         passwordLabel: 'Password',
@@ -253,25 +300,30 @@
         items: [
           {
             question: 'Can we evaluate ZANVROX without booking a demo first?',
-            answer: 'Yes. The intended path is watch the overview, explore the product, open the evaluation workspace, and request help only if your team needs it.',
+            answer:
+              'Yes. The intended path is watch the overview, explore the product, open the evaluation workspace, and request help only if your team needs it.',
           },
           {
             question: 'Is payroll included in the base plans?',
-            answer: 'No. Payroll is a separate add-on priced independently so finance-only teams do not pay for it by default.',
+            answer:
+              'No. Payroll is a separate add-on priced independently so finance-only teams do not pay for it by default.',
           },
           {
             question: 'Do we need a paid onboarding project?',
-            answer: 'No. Self-setup is the default path. Guided Implementation is available as an optional paid package when your team wants help with setup and data import.',
+            answer:
+              'No. Self-setup is the default path. Guided Implementation is available as an optional paid package when your team wants help with setup and data import.',
           },
           {
             question: 'What support should we expect?',
-            answer: 'Finance Core includes 48h email support, Operations includes 24h priority email support, and Enterprise includes onboarding assistance plus a direct support channel.',
+            answer:
+              'Finance Core includes 48h email support, Operations includes 24h priority email support, and Enterprise includes onboarding assistance plus a direct support channel.',
           },
         ],
       },
       cta: {
         title: 'Start with the product, not with a sales call',
-        subtitle: 'Explore the product and pricing first. Contact the team when you have a concrete rollout, payroll, or integration question.',
+        subtitle:
+          'Explore the product and pricing first. Contact the team when you have a concrete rollout, payroll, or integration question.',
         primary: { label: 'Explore product', path: '/product' },
         secondary: { label: 'View pricing', path: '/pricing' },
       },
@@ -294,17 +346,31 @@
       },
       pillars: {
         title: 'Four product pillars',
-        subtitle: 'The website explains the product around workflows, not disconnected feature bullets.',
+        subtitle:
+          'The website explains the product around workflows, not disconnected feature bullets.',
         items: [
-          { title: 'Finance core', body: 'Accounting, invoicing, expenses, banking visibility, and reporting.' },
-          { title: 'Operations', body: 'Inventory, warehouse, BOM, production basics, and approvals.' },
-          { title: 'Canadian workflow support', body: 'Tax workflows, payroll add-on, remittance support, and year-end records to support review.' },
-          { title: 'Governance', body: 'Auditability, approvals, control boundaries, and multi-company expansion path.' },
+          {
+            title: 'Finance core',
+            body: 'Accounting, invoicing, expenses, banking visibility, and reporting.',
+          },
+          {
+            title: 'Operations',
+            body: 'Inventory, warehouse, BOM, production basics, and approvals.',
+          },
+          {
+            title: 'Canadian workflow support',
+            body: 'Tax workflows, payroll add-on, remittance support, and year-end records to support review.',
+          },
+          {
+            title: 'Governance',
+            body: 'Auditability, approvals, control boundaries, and multi-company expansion path.',
+          },
         ],
       },
       showcase: {
         title: 'Product areas worth evaluating visually',
-        subtitle: 'These are the screens most teams want to inspect before they invest time in deeper sales conversations.',
+        subtitle:
+          'These are the screens most teams want to inspect before they invest time in deeper sales conversations.',
         items: [
           {
             title: 'Tax dashboard',
@@ -352,20 +418,46 @@
       ],
       onboarding: {
         title: 'How self-setup works in practice',
-        subtitle: 'The product page reinforces that onboarding is guided inside the product, not hidden behind consulting by default.',
+        subtitle:
+          'The product page reinforces that onboarding is guided inside the product, not hidden behind consulting by default.',
         steps: [
-          { number: '1', title: 'Create organization', body: 'Create your workspace and start from a clean operating base.' },
-          { number: '2', title: 'Select Canada', body: 'Apply country-specific defaults and compliance assumptions.' },
-          { number: '3', title: 'Choose industry template', body: 'Start from a practical baseline instead of configuring from zero.' },
-          { number: '4', title: 'Configure taxes', body: 'Confirm tax routing, registrations, and finance controls.' },
-          { number: '5', title: 'Import master data', body: 'Bring in clients, vendors, and key operational records.' },
-          { number: '6', title: 'Run first transaction', body: 'Create the first invoice and validate the operational path end to end.' },
+          {
+            number: '1',
+            title: 'Create organization',
+            body: 'Create your workspace and start from a clean operating base.',
+          },
+          {
+            number: '2',
+            title: 'Select Canada',
+            body: 'Apply country-specific defaults and compliance assumptions.',
+          },
+          {
+            number: '3',
+            title: 'Choose industry template',
+            body: 'Start from a practical baseline instead of configuring from zero.',
+          },
+          {
+            number: '4',
+            title: 'Configure taxes',
+            body: 'Confirm tax routing, registrations, and finance controls.',
+          },
+          {
+            number: '5',
+            title: 'Import master data',
+            body: 'Bring in clients, vendors, and key operational records.',
+          },
+          {
+            number: '6',
+            title: 'Run first transaction',
+            body: 'Create the first invoice and validate the operational path end to end.',
+          },
         ],
         note: 'Guided Implementation is available when your team wants help with setup, chart of accounts review, data import, and training.',
       },
       cta: {
         title: 'See whether the product scope matches your company now',
-        subtitle: 'Use pricing and resources to decide if you need self-setup, guided implementation, or a custom rollout conversation.',
+        subtitle:
+          'Use pricing and resources to decide if you need self-setup, guided implementation, or a custom rollout conversation.',
         primary: { label: 'View pricing', path: '/pricing' },
         secondary: { label: 'Contact team', path: '/contact' },
       },
@@ -376,7 +468,8 @@
       heroSubtitle: 'A modular ERP foundation that keeps finance and operations synchronized.',
       heading: {
         title: 'Platform layers',
-        subtitle: 'Each layer is designed for auditability, extensibility, and multi-company operations.',
+        subtitle:
+          'Each layer is designed for auditability, extensibility, and multi-company operations.',
       },
       sections: [
         {
@@ -442,26 +535,58 @@
     },
     modules: {
       heroTitle: 'Modules that work as one system.',
-      heroSubtitle: 'Each module is independently usable and connected through one controlled data foundation.',
+      heroSubtitle:
+        'Each module is independently usable and connected through one controlled data foundation.',
       activeLabel: 'Active',
       includedTitle: 'Included',
       modules: [
-        { name: 'Finance', included: ['Journal controls', 'Expense capture', 'Invoice-linked accounting events'] },
-        { name: 'Inventory', included: ['Lot tracking', 'Stock locations', 'Inventory adjustments'] },
-        { name: 'Warehouse', included: ['Shipments', 'Picking support', 'Delivery-ready movement flow'] },
+        {
+          name: 'Finance',
+          included: ['Journal controls', 'Expense capture', 'Invoice-linked accounting events'],
+        },
+        {
+          name: 'Inventory',
+          included: ['Lot tracking', 'Stock locations', 'Inventory adjustments'],
+        },
+        {
+          name: 'Warehouse',
+          included: ['Shipments', 'Picking support', 'Delivery-ready movement flow'],
+        },
         { name: 'BOM', included: ['Bill of materials setup', 'Material linkage to production'] },
-        { name: 'Production', included: ['Production transactions', 'Inventory impact traceability'] },
-        { name: 'Invoicing', included: ['Invoice creation and editing', 'Custom PDF output', 'Client-level billing defaults'] },
-        { name: 'Purchasing', included: ['Vendor purchasing flows', 'Cost capture tied to inventory'] },
-        { name: 'Taxes', included: ['GST/HST + PST/QST reporting', 'Return snapshots', 'Portal-ready filing workflow'] },
+        {
+          name: 'Production',
+          included: ['Production transactions', 'Inventory impact traceability'],
+        },
+        {
+          name: 'Invoicing',
+          included: [
+            'Invoice creation and editing',
+            'Custom PDF output',
+            'Client-level billing defaults',
+          ],
+        },
+        {
+          name: 'Purchasing',
+          included: ['Vendor purchasing flows', 'Cost capture tied to inventory'],
+        },
+        {
+          name: 'Taxes',
+          included: [
+            'GST/HST + PST/QST reporting',
+            'Return snapshots',
+            'Portal-ready filing workflow',
+          ],
+        },
       ],
     },
     security: {
       heroTitle: 'Security and architecture by design.',
-      heroSubtitle: 'Tenant boundaries, least-privilege access, and auditable transaction behavior.',
+      heroSubtitle:
+        'Tenant boundaries, least-privilege access, and auditable transaction behavior.',
       overview: {
         title: 'Security overview',
-        subtitle: 'A conservative summary of the controls currently visible in the product and delivery workflow.',
+        subtitle:
+          'A conservative summary of the controls currently visible in the product and delivery workflow.',
         description:
           'ZANVROX is built around tenant isolation, role-aware access, and server-enforced handling for sensitive operations. Public security statements are limited to controls that are implemented today and intentionally avoid certification or coverage claims that are not yet in place.',
         bullets: [
@@ -475,10 +600,22 @@
         subtitle: 'Every control statement is tied to an implementation mechanism.',
       },
       controls: [
-        { control: 'Tenant isolation', support: 'PostgreSQL RLS policies scoped by org_id across operational tables.' },
-        { control: 'Access control', support: 'Org membership and role-gated write paths for critical operations.' },
-        { control: 'Change traceability', support: 'Transaction-level IDs, timestamps, and filing confirmation records.' },
-        { control: 'Server-side enforcement', support: 'Critical accounting and tax actions executed through SQL/Edge controls.' },
+        {
+          control: 'Tenant isolation',
+          support: 'PostgreSQL RLS policies scoped by org_id across operational tables.',
+        },
+        {
+          control: 'Access control',
+          support: 'Org membership and role-gated write paths for critical operations.',
+        },
+        {
+          control: 'Change traceability',
+          support: 'Transaction-level IDs, timestamps, and filing confirmation records.',
+        },
+        {
+          control: 'Server-side enforcement',
+          support: 'Critical accounting and tax actions executed through SQL/Edge controls.',
+        },
       ],
       sections: [
         {
@@ -518,11 +655,13 @@
       ],
       subprocessors: {
         title: 'Subprocessors',
-        subtitle: 'Current public summary of third-party service providers used to operate the service.',
+        subtitle:
+          'Current public summary of third-party service providers used to operate the service.',
         items: [
           {
             name: 'Supabase',
-            support: 'Managed backend platform for database, authentication, storage, and server-side workflows.',
+            support:
+              'Managed backend platform for database, authentication, storage, and server-side workflows.',
           },
           {
             name: 'Vercel',
@@ -530,7 +669,8 @@
           },
           {
             name: 'Resend',
-            support: 'Transactional email delivery for limited communication and website lead routing.',
+            support:
+              'Transactional email delivery for limited communication and website lead routing.',
           },
         ],
         note: 'These providers are used only where needed for service operation, delivery, or transactional communication.',
@@ -549,7 +689,8 @@
       },
       cta: {
         title: 'Security contact',
-        subtitle: 'Use the existing contact path for security overview requests or security/compliance follow-up.',
+        subtitle:
+          'Use the existing contact path for security overview requests or security/compliance follow-up.',
         primary: { label: 'Request Security Overview', path: '/contact' },
         secondary: { label: 'Contact for security/compliance inquiries', path: '/contact' },
       },
@@ -595,10 +736,12 @@
       heroSubtitle:
         'Start with core finance control, extend into operations as complexity increases, and move into custom rollout only when multi-location structure, advanced approvals, onboarding support, integrations, or security review become necessary.',
       packagesTitle: 'Public pricing for finance, operations, and guided rollout',
-      packagesSubtitle: 'Transparent CAD pricing for Canadian SMB teams that need structured workflows now and a credible path into broader operational control over time.',
+      packagesSubtitle:
+        'Transparent CAD pricing for Canadian SMB teams that need structured workflows now and a credible path into broader operational control over time.',
       launchBadge: 'Annual billing available',
       launchOfferLabel: 'Annual base subscriptions include one month free when billed yearly.',
-      launchOfferNote: 'Payroll pricing remains usage-based, and Guided Implementation is available when a more structured rollout is needed.',
+      launchOfferNote:
+        'Payroll pricing remains usage-based, and Guided Implementation is available when a more structured rollout is needed.',
       popularLabel: 'Strong fit for 10-50 employees',
       priceSuffixMonthly: '/month',
       billedMonthlyLabel: 'Monthly billing',
@@ -612,7 +755,8 @@
         monthly: 'Monthly',
         annual: 'Annual',
         annualBadge: '1 month free',
-        helper: 'Annual billing changes only the base subscription term. Payroll remains priced by base fee plus employee count.',
+        helper:
+          'Annual billing changes only the base subscription term. Payroll remains priced by base fee plus employee count.',
       },
       pricingNote:
         'All prices are in CAD. Payroll is a separate add-on. Plans are designed around structured operations, controlled workflows, auditability, and security-conscious product design without forcing enterprise scope too early. ZANVROX helps organize financial, payroll, and tax workflows, but it does not replace accounting, legal, or tax advice.',
@@ -620,7 +764,8 @@
         {
           slug: 'finance-core',
           name: 'Finance Core',
-          summary: 'For companies that need a disciplined finance foundation with accounting, invoicing, expenses, reporting, and a clear self-directed setup path.',
+          summary:
+            'For companies that need a disciplined finance foundation with accounting, invoicing, expenses, reporting, and a clear self-directed setup path.',
           entitiesLabel: 'Single company scope',
           usersLabel: 'Up to 3 users',
           monthly: {
@@ -649,7 +794,8 @@
           slug: 'operations',
           name: 'Operations',
           isPopular: true,
-          summary: 'For teams that need finance and operations working together across inventory, warehouse, production basics, and controlled approvals.',
+          summary:
+            'For teams that need finance and operations working together across inventory, warehouse, production basics, and controlled approvals.',
           entitiesLabel: 'Single company scope',
           usersLabel: 'Up to 10 users',
           monthly: {
@@ -662,7 +808,8 @@
             amount: 649,
             badge: '1 month free',
             note: 'Billed annually at CAD 7,139 for the base subscription.',
-            secondaryNote: 'Recommended when operations need tighter control across stock, warehouse movement, BOM, and production workflows.',
+            secondaryNote:
+              'Recommended when operations need tighter control across stock, warehouse movement, BOM, and production workflows.',
           },
           included: [
             'Everything in Finance Core',
@@ -677,7 +824,8 @@
         {
           slug: 'enterprise',
           name: 'Custom',
-          summary: 'For multi-location teams that need advanced approvals, security reviews, custom onboarding, integrations, dedicated support, or a more structured rollout.',
+          summary:
+            'For multi-location teams that need advanced approvals, security reviews, custom onboarding, integrations, dedicated support, or a more structured rollout.',
           entitiesLabel: 'Multi-location or custom scope',
           usersLabel: 'Custom user scope',
           monthly: {
@@ -702,11 +850,14 @@
       ],
       payrollAddon: {
         title: 'Payroll add-on',
-        summary: 'Separate payroll pricing keeps the base ERP commercially clear while preserving Canadian payroll workflow support for teams that need it.',
+        summary:
+          'Separate payroll pricing keeps the base ERP commercially clear while preserving Canadian payroll workflow support for teams that need it.',
         priceLabel: 'CAD 59 / month + CAD 6 / employee / month',
         annualPriceLabel: 'CAD 59 / month + CAD 6 / employee / month',
-        monthlyNote: 'Includes Canadian payroll runs, remittance workflow support, pay stubs, records and exports to support year-end review, and accounting integration. Monthly minimum may apply during rollout.',
-        annualNote: 'The payroll add-on keeps the same base plus employee pricing structure when billed annually unless scoped otherwise.',
+        monthlyNote:
+          'Includes Canadian payroll runs, remittance workflow support, pay stubs, records and exports to support year-end review, and accounting integration. Monthly minimum may apply during rollout.',
+        annualNote:
+          'The payroll add-on keeps the same base plus employee pricing structure when billed annually unless scoped otherwise.',
         included: [
           'Canadian payroll runs',
           'Remittance workflow support',
@@ -718,7 +869,8 @@
       },
       onboardingPackage: {
         title: 'Guided Implementation',
-        summary: 'Optional one-time guided setup for teams that want operational alignment, assisted rollout, and a more structured implementation start.',
+        summary:
+          'Optional one-time guided setup for teams that want operational alignment, assisted rollout, and a more structured implementation start.',
         priceLabel: 'CAD 3,500 to 7,500 one-time',
         included: [
           'Guided system setup',
@@ -733,16 +885,21 @@
       },
       supportTiers: {
         title: 'Support structure',
-        subtitle: 'Support is stated publicly so teams can evaluate operating coverage, response expectations, and rollout posture upfront.',
+        subtitle:
+          'Support is stated publicly so teams can evaluate operating coverage, response expectations, and rollout posture upfront.',
         items: [
           { name: 'Finance Core', body: 'Email support with 48h response time.' },
           { name: 'Operations', body: 'Priority email support with 24h response time.' },
-          { name: 'Enterprise', body: 'Guided rollout support, direct support channel, and scoped implementation discussion.' },
+          {
+            name: 'Enterprise',
+            body: 'Guided rollout support, direct support channel, and scoped implementation discussion.',
+          },
         ],
       },
       comparison: {
         title: 'Plan comparison',
-        subtitle: 'Use this to decide whether you need structured finance control, connected operations, or a custom rollout.',
+        subtitle:
+          'Use this to decide whether you need structured finance control, connected operations, or a custom rollout.',
         featureLabel: 'Capability',
         rows: [
           { label: 'Accounting', values: [true, true, true] },
@@ -756,7 +913,10 @@
           { label: 'Multi-location rollout', values: [false, false, true] },
           { label: 'Advanced approvals', values: [false, true, true] },
           { label: 'Integrations', values: [false, false, true] },
-          { label: 'Support tier', values: ['Email / 48h', 'Priority email / 24h', 'Direct channel'] },
+          {
+            label: 'Support tier',
+            values: ['Email / 48h', 'Priority email / 24h', 'Direct channel'],
+          },
           { label: 'Onboarding assistance', values: ['Self-setup', 'Self-setup', 'Included'] },
           { label: 'Users included', values: ['3', '10', 'Custom'] },
         ],
@@ -775,19 +935,23 @@
         items: [
           {
             question: 'Do I need a demo before I can start?',
-            answer: 'No. The intended path is self-evaluation first: watch the overview, explore the product, review pricing, and use the browser-based evaluation workspace before requesting a guided session.',
+            answer:
+              'No. The intended path is self-evaluation first: watch the overview, explore the product, review pricing, and use the browser-based evaluation workspace before requesting a guided session.',
           },
           {
             question: 'Is payroll included in the base ERP plans?',
-            answer: 'No. Payroll is sold as a separate add-on with a monthly base fee plus per-employee pricing.',
+            answer:
+              'No. Payroll is sold as a separate add-on with a monthly base fee plus per-employee pricing.',
           },
           {
             question: 'Is Guided Implementation required?',
-            answer: 'No. It is optional. Finance Core and Operations can start with self-directed setup, while Guided Implementation is available for teams that want a more structured rollout.',
+            answer:
+              'No. It is optional. Finance Core and Operations can start with self-directed setup, while Guided Implementation is available for teams that want a more structured rollout.',
           },
           {
             question: 'What support comes with each plan?',
-            answer: 'Finance Core includes 48h email support, Operations includes 24h priority email support, and Enterprise includes guided rollout discussion plus a direct support channel.',
+            answer:
+              'Finance Core includes 48h email support, Operations includes 24h priority email support, and Enterprise includes guided rollout discussion plus a direct support channel.',
           },
         ],
       },
@@ -796,38 +960,45 @@
     },
     resources: {
       heroTitle: 'Resources for product evaluation, security review, and rollout planning.',
-      heroSubtitle: 'Use these public materials to review product fit, security posture, and evaluation options before requesting a deeper discussion.',
+      heroSubtitle:
+        'Use these public materials to review product fit, security posture, and evaluation options before requesting a deeper discussion.',
       sections: [
         {
           title: 'Product overview and evaluation resources',
-          description: 'Review the product overview, workflow coverage, and onboarding model before investing time in a deeper evaluation.',
+          description:
+            'Review the product overview, workflow coverage, and onboarding model before investing time in a deeper evaluation.',
           cta: 'Review product',
           path: '/product',
         },
         {
           title: 'Security Overview',
-          description: 'Review tenant isolation, access controls, subprocessors, and current security limitations in one public overview.',
+          description:
+            'Review tenant isolation, access controls, subprocessors, and current security limitations in one public overview.',
           cta: 'Review security',
           path: '/security',
         },
         {
           title: 'Evaluation workspace and guided product review',
-          description: 'Start with the shared evaluation workspace for initial review, then contact the team if you need a more structured product discussion.',
+          description:
+            'Start with the shared evaluation workspace for initial review, then contact the team if you need a more structured product discussion.',
           cta: 'Open evaluation workspace',
           path: '/resources#demo-environment',
         },
         {
           title: 'Contact and additional documentation',
-          description: 'Use the contact path for security or compliance inquiries, guided review requests, or additional evaluation detail.',
+          description:
+            'Use the contact path for security or compliance inquiries, guided review requests, or additional evaluation detail.',
           cta: 'Contact team',
           path: '/contact',
         },
       ],
       demoEnvironment: {
         title: 'Evaluation workspace',
-        subtitle: 'A browser-based workspace for initial product review with fictional sample data.',
+        subtitle:
+          'A browser-based workspace for initial product review with fictional sample data.',
         accessTitle: 'Guided demo access',
-        accessIntro: 'Open the workspace, create a buyer account, and the guided demo workspace will be provisioned automatically.',
+        accessIntro:
+          'Open the workspace, create a buyer account, and the guided demo workspace will be provisioned automatically.',
         emailLabel: 'Workspace user',
         emailValue: 'Use your work email',
         passwordLabel: 'Access code',
@@ -842,7 +1013,8 @@
       },
       sitemap: {
         title: 'Evaluation materials',
-        subtitle: 'The public site is intentionally compact and focused on the materials most useful during early evaluation.',
+        subtitle:
+          'The public site is intentionally compact and focused on the materials most useful during early evaluation.',
         items: [
           'Product overview and workflow coverage',
           'Public pricing and onboarding model',
@@ -854,7 +1026,8 @@
       },
       design: {
         title: 'How to use these resources',
-        subtitle: 'A simple evaluation path for teams that want to review product fit first and involve the team only when more detail is needed.',
+        subtitle:
+          'A simple evaluation path for teams that want to review product fit first and involve the team only when more detail is needed.',
         directionTitle: 'Initial product review',
         componentsTitle: 'Security and compliance review',
         statesTitle: 'When to contact the team',
@@ -893,17 +1066,28 @@
       },
       principles: {
         title: 'Three principles behind the site',
-        subtitle: 'The public positioning is optimized for a founder-led operating reality without lowering product standards.',
+        subtitle:
+          'The public positioning is optimized for a founder-led operating reality without lowering product standards.',
         items: [
-          { title: 'Clarity', body: 'State what the product does, what it supports, and where review is still required.' },
-          { title: 'Control', body: 'Focus on auditability, governance, and operational visibility instead of inflated SaaS hype.' },
-          { title: 'Practical rollout', body: 'Make self-setup viable while keeping optional expert help available when complexity increases.' },
+          {
+            title: 'Clarity',
+            body: 'State what the product does, what it supports, and where review is still required.',
+          },
+          {
+            title: 'Control',
+            body: 'Focus on auditability, governance, and operational visibility instead of inflated SaaS hype.',
+          },
+          {
+            title: 'Practical rollout',
+            body: 'Make self-setup viable while keeping optional expert help available when complexity increases.',
+          },
         ],
       },
       operatingModel: [
         {
           title: 'Built for Canadian SMB teams',
-          subtitle: 'The public website targets companies that need credible ERP control without enterprise consulting overhead on day one.',
+          subtitle:
+            'The public website targets companies that need credible ERP control without enterprise consulting overhead on day one.',
           items: [
             'Best fit around 10-50 employees',
             'Strong value where finance and operations are split across too many tools',
@@ -912,7 +1096,8 @@
         },
         {
           title: 'Commercially disciplined',
-          subtitle: 'The site is designed to reduce low-quality meetings and make expectations explicit before the first conversation.',
+          subtitle:
+            'The site is designed to reduce low-quality meetings and make expectations explicit before the first conversation.',
           items: [
             'Optional demo instead of demo-first funnel',
             'Public pricing with support tiers and onboarding expectations',
@@ -933,12 +1118,25 @@
         'The intended flow is product overview, product exploration, pricing review, browser-based evaluation, and then optional contact or guided walkthrough request.',
       conversion: {
         title: 'Recommended evaluation flow',
-        subtitle: 'This reduces unnecessary meetings and gives better context when someone does reach out.',
+        subtitle:
+          'This reduces unnecessary meetings and gives better context when someone does reach out.',
         cards: [
-          { title: 'Watch product overview', body: 'Start with the video to understand the operating model and product posture.' },
-          { title: 'Explore features', body: 'Use Product, Pricing, and Security pages to evaluate the stack without a call.' },
-          { title: 'Open the evaluation workspace', body: 'Validate the UI with fictional data before requesting a guided session.' },
-          { title: 'Request help if needed', body: 'Use the forms below for an optional demo or a focused product question.' },
+          {
+            title: 'Watch product overview',
+            body: 'Start with the video to understand the operating model and product posture.',
+          },
+          {
+            title: 'Explore features',
+            body: 'Use Product, Pricing, and Security pages to evaluate the stack without a call.',
+          },
+          {
+            title: 'Open the evaluation workspace',
+            body: 'Validate the UI with fictional data before requesting a guided session.',
+          },
+          {
+            title: 'Request help if needed',
+            body: 'Use the forms below for an optional demo or a focused product question.',
+          },
         ],
       },
       supportBlock: {
@@ -952,7 +1150,8 @@
       },
       pricingContext: {
         title: 'Selected pricing context',
-        subtitle: 'Pricing context stays attached to your request so follow-up remains grounded in the setup you selected.',
+        subtitle:
+          'Pricing context stays attached to your request so follow-up remains grounded in the setup you selected.',
         labels: {
           plan: 'Plan',
           billing: 'Billing',
@@ -966,10 +1165,12 @@
       demoForm: {
         title: 'Request guided walkthrough',
         helper: 'Use this after your team has reviewed the product and wants a guided walkthrough.',
-        confirmation: 'Your guided walkthrough request was sent successfully. We will follow up by email.',
+        confirmation:
+          'Your guided walkthrough request was sent successfully. We will follow up by email.',
         submittingCta: 'Sending...',
         submitError: 'We could not submit your request. Please try again.',
-        messageHint: 'Optional. Use this to describe your current stack, rollout timing, or payroll question.',
+        messageHint:
+          'Optional. Use this to describe your current stack, rollout timing, or payroll question.',
         fields: {
           name: 'Name*',
           company: 'Company*',
@@ -1012,11 +1213,13 @@
       },
       briefForm: {
         title: 'Ask a product question',
-        helper: 'Use this for product fit, support, onboarding, implementation, or payroll scope questions.',
+        helper:
+          'Use this for product fit, support, onboarding, implementation, or payroll scope questions.',
         confirmation: 'Your message was sent successfully. We will reply by email.',
         submittingCta: 'Sending...',
         submitError: 'We could not submit your request. Please try again.',
-        messageHint: 'Optional. Use this if you want to describe your workflow, support need, or implementation question.',
+        messageHint:
+          'Optional. Use this if you want to describe your workflow, support need, or implementation question.',
         fields: {
           name: 'Name*',
           company: 'Company*',
@@ -1087,7 +1290,8 @@
   },
 
   footer: {
-    companyDescription: 'Integrated ERP for Canadian SMB teams that need finance, operations, tax workflow support, and payroll workflows in one controlled stack.',
+    companyDescription:
+      'Integrated ERP for Canadian SMB teams that need finance, operations, tax workflow support, and payroll workflows in one controlled stack.',
     headquarters: 'Toronto, Ontario, Canada',
     email: 'support@zanvrox.com',
     sections: [
@@ -1137,7 +1341,8 @@
     },
     security: {
       title: 'Security | ZANVROX',
-      description: 'Review tenant isolation, role controls, approvals, governance, and architecture safeguards behind ZANVROX.',
+      description:
+        'Review tenant isolation, role controls, approvals, governance, and architecture safeguards behind ZANVROX.',
       path: '/security',
     },
     pricing: {
@@ -1148,17 +1353,20 @@
     },
     resources: {
       title: 'Resources | ZANVROX',
-      description: 'Use product resources, evaluation workspace guidance, and security overview material to self-evaluate ZANVROX.',
+      description:
+        'Use product resources, evaluation workspace guidance, and security overview material to self-evaluate ZANVROX.',
       path: '/resources',
     },
     about: {
       title: 'About | ZANVROX',
-      description: 'Learn how ZANVROX positions finance, operations, governance, and rollout discipline for Canadian SMB teams.',
+      description:
+        'Learn how ZANVROX positions finance, operations, governance, and rollout discipline for Canadian SMB teams.',
       path: '/about',
     },
     contact: {
       title: 'Contact | ZANVROX',
-      description: 'Request an optional demo or ask a focused product, payroll, onboarding, or implementation question.',
+      description:
+        'Request an optional demo or ask a focused product, payroll, onboarding, or implementation question.',
       path: '/contact',
     },
     privacy: {
@@ -1172,6 +1380,6 @@
       path: '/legal/terms',
     },
   },
-}
+};
 
-export default siteContentEn
+export default siteContentEn;

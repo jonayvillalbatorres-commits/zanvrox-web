@@ -22,16 +22,21 @@ const siteContentFr = {
   brand: {
     name: 'ZANVROX',
     tagline: 'Controle ERP integre pour les PME canadiennes',
-    oneLiner: 'Finance, operations, conformite canadienne et paie dans une seule pile ERP controlee.',
+    oneLiner:
+      'Finance, operations, conformite canadienne et paie dans une seule pile ERP controlee.',
   },
   pages: {
     home: {
       heroKicker: 'ERP canadien pour la finance, les operations et l auditabilite',
-      heroTitle: 'Pilotez la finance et les operations dans un ERP maitrise au lieu de cinq outils deconnectes.',
+      heroTitle:
+        'Pilotez la finance et les operations dans un ERP maitrise au lieu de cinq outils deconnectes.',
       heroSubtitle:
         'ZANVROX aide les PME canadiennes a centraliser la comptabilite, la facturation, les achats, l inventaire, la production, les approbations et la conformite sans projet d implementation lourd.',
       heroPrimaryCta: { label: 'Voir l apercu produit', path: '/#product-overview' },
-      heroSecondaryCta: { label: 'Ouvrir l espace d evaluation', path: '/resources#demo-environment' },
+      heroSecondaryCta: {
+        label: 'Ouvrir l espace d evaluation',
+        path: '/resources#demo-environment',
+      },
       heroPreview: {
         title: 'Apercu fiscal et controle',
         caption: 'En direct dans l ERP',
@@ -42,7 +47,8 @@ const siteContentFr = {
       },
       video: {
         title: 'Presentation produit avec un vrai contexte de workflow',
-        subtitle: 'Un apercu rapide de la finance, des operations, des flux fiscaux canadiens et de la preparation de la paie.',
+        subtitle:
+          'Un apercu rapide de la finance, des operations, des flux fiscaux canadiens et de la preparation de la paie.',
         windowLabel: 'Video produit',
         duration: '90 sec',
         overlayLabel: 'Voir la presentation produit',
@@ -57,7 +63,10 @@ const siteContentFr = {
           'Rapports et approbations',
         ],
         primaryCta: { label: 'Explorer le produit', path: '/product' },
-        secondaryCta: { label: 'Ouvrir l espace d evaluation', path: '/resources#demo-environment' },
+        secondaryCta: {
+          label: 'Ouvrir l espace d evaluation',
+          path: '/resources#demo-environment',
+        },
       },
       trustSignals: [
         'Les workflows officiels soutenus par les fournisseurs restent disponibles lorsque c est necessaire.',
@@ -76,7 +85,8 @@ const siteContentFr = {
       evaluationPath: {
         eyebrow: 'Tunnel axe produit',
         title: 'Evaluez sans reserver une reunion d abord',
-        subtitle: 'Le site est concu pour reduire les appels inutiles et permettre aux equipes de se qualifier seules.',
+        subtitle:
+          'Le site est concu pour reduire les appels inutiles et permettre aux equipes de se qualifier seules.',
         cards: [
           {
             title: '1. Voir l apercu',
@@ -129,20 +139,49 @@ const siteContentFr = {
       howItWorks: {
         eyebrow: 'Onboarding autonome',
         title: 'Demarrez en six etapes guidees',
-        subtitle: 'Le produit est concu pour qu une equipe dirigee par ses fondateurs puisse se repérer sans projet d onboarding lourd.',
+        subtitle:
+          'Le produit est concu pour qu une equipe dirigee par ses fondateurs puisse se repérer sans projet d onboarding lourd.',
         steps: [
-          { icon: '1', title: 'Creer l organisation', bullets: ['Demarrer votre espace', 'Definir les bases de l entite legale'] },
-          { icon: '2', title: 'Selectionner le pays', bullets: ['Choisir le Canada', 'Charger les valeurs par defaut specifiques au pays'] },
-          { icon: '3', title: 'Choisir un modele sectoriel', bullets: ['Choisir un modele de depart', 'Reduire la friction de configuration'] },
-          { icon: '4', title: 'Configurer les taxes', bullets: ['Definir les familles de taxes', 'Confirmer la logique provinciale et les valeurs par defaut'] },
-          { icon: '5', title: 'Importer clients et fournisseurs', bullets: ['Importer les donnees maitres', 'Utiliser des modeles et la validation'] },
-          { icon: '6', title: 'Creer la premiere facture', bullets: ['Valider le flux operationnel', 'Passer a l utilisation quotidienne'] },
+          {
+            icon: '1',
+            title: 'Creer l organisation',
+            bullets: ['Demarrer votre espace', 'Definir les bases de l entite legale'],
+          },
+          {
+            icon: '2',
+            title: 'Selectionner le pays',
+            bullets: ['Choisir le Canada', 'Charger les valeurs par defaut specifiques au pays'],
+          },
+          {
+            icon: '3',
+            title: 'Choisir un modele sectoriel',
+            bullets: ['Choisir un modele de depart', 'Reduire la friction de configuration'],
+          },
+          {
+            icon: '4',
+            title: 'Configurer les taxes',
+            bullets: [
+              'Definir les familles de taxes',
+              'Confirmer la logique provinciale et les valeurs par defaut',
+            ],
+          },
+          {
+            icon: '5',
+            title: 'Importer clients et fournisseurs',
+            bullets: ['Importer les donnees maitres', 'Utiliser des modeles et la validation'],
+          },
+          {
+            icon: '6',
+            title: 'Creer la premiere facture',
+            bullets: ['Valider le flux operationnel', 'Passer a l utilisation quotidienne'],
+          },
         ],
       },
       compliance: {
         eyebrow: 'Posture canadienne',
         title: 'Concu pour la credibilite, pas pour l effet d annonce',
-        subtitle: 'Le site explique ce qui est controle, ce qui est automatise et ce qui exige encore une revue.',
+        subtitle:
+          'Le site explique ce qui est controle, ce qui est automatise et ce qui exige encore une revue.',
         bullets: [
           'Les workflows fiscaux canadiens sont presentes avec une posture explicite de depot et d auditabilite.',
           'La paie est positionnee comme un add-on separe avec un perimetre clair et un niveau de preparation precise par juridiction.',
@@ -156,7 +195,8 @@ const siteContentFr = {
       included: {
         eyebrow: 'Ce qui est integre',
         title: 'Une seule pile pour la finance et les operations',
-        subtitle: 'L enjeu n est pas d afficher plus de fonctions sur le papier. L enjeu est d avoir moins de workflows fractures dans la pratique.',
+        subtitle:
+          'L enjeu n est pas d afficher plus de fonctions sur le papier. L enjeu est d avoir moins de workflows fractures dans la pratique.',
         items: [
           'Comptabilite, facturation, depenses et reporting financier',
           'Achats, inventaire, entrepot et bases de production',
@@ -169,17 +209,27 @@ const siteContentFr = {
       executiveSnapshot: {
         badge: 'Modele operationnel',
         title: 'Concu pour l autoevaluation d abord, l aide humaine ensuite',
-        subtitle: 'C est un site axe produit pour un ERP serieux, pas une brochure qui force chaque prospect a prendre un appel.',
+        subtitle:
+          'C est un site axe produit pour un ERP serieux, pas une brochure qui force chaque prospect a prendre un appel.',
         metrics: [
           { label: 'ICP principal', value: '10-50', note: 'Employes de PME canadiennes' },
-          { label: 'Posture de support', value: 'Priorite a l email', note: 'Delais de reponse clairs par plan' },
-          { label: 'Posture d onboarding', value: 'Configuration autonome', note: 'Implementation guidee disponible en option' },
+          {
+            label: 'Posture de support',
+            value: 'Priorite a l email',
+            note: 'Delais de reponse clairs par plan',
+          },
+          {
+            label: 'Posture d onboarding',
+            value: 'Configuration autonome',
+            note: 'Implementation guidee disponible en option',
+          },
         ],
       },
       positioning: {
         eyebrow: 'Pourquoi les equipes changent',
         title: 'Reduire la fragmentation entre finance, operations et conformite',
-        subtitle: 'La proposition de valeur repose sur le controle, la visibilite et moins de transferts entre systemes.',
+        subtitle:
+          'La proposition de valeur repose sur le controle, la visibilite et moins de transferts entre systemes.',
         cards: [
           {
             role: 'Finance',
@@ -222,7 +272,8 @@ const siteContentFr = {
       technical: {
         eyebrow: 'Modele de support et d onboarding',
         title: 'Self-service par defaut, aide guidee quand elle compte',
-        subtitle: 'Le site fixe les attentes en amont pour que les petites equipes sachent ce qui se passe apres l inscription.',
+        subtitle:
+          'Le site fixe les attentes en amont pour que les petites equipes sachent ce qui se passe apres l inscription.',
         items: [
           'Finance Core inclut un onboarding autonome et un support email avec reponse sous 48 h.',
           'Operations ajoute un support email prioritaire avec reponse sous 24 h.',
@@ -233,14 +284,24 @@ const siteContentFr = {
         title: 'Attentes de support par plan',
         subtitle: 'Le support est defini directement afin que l evaluation reste realiste.',
         tiers: [
-          { name: 'Finance Core', body: 'Support email, reponse sous 48 h, accompagnement d onboarding autonome.' },
-          { name: 'Operations', body: 'Support email prioritaire, reponse sous 24 h, accompagnement operationnel renforce.' },
-          { name: 'Enterprise', body: 'Onboarding dedie, canal de support direct et assistance de deploiement cadree.' },
+          {
+            name: 'Finance Core',
+            body: 'Support email, reponse sous 48 h, accompagnement d onboarding autonome.',
+          },
+          {
+            name: 'Operations',
+            body: 'Support email prioritaire, reponse sous 24 h, accompagnement operationnel renforce.',
+          },
+          {
+            name: 'Enterprise',
+            body: 'Onboarding dedie, canal de support direct et assistance de deploiement cadree.',
+          },
         ],
       },
       demoEnvironment: {
         title: 'Ouvrir l espace d evaluation ZANVROX',
-        subtitle: 'Utilisez un espace navigateur avec des donnees fictives avant de demander une presentation guidee.',
+        subtitle:
+          'Utilisez un espace navigateur avec des donnees fictives avant de demander une presentation guidee.',
         emailLabel: 'Utilisateur de demo',
         emailValue: 'Use your work email',
         passwordLabel: 'Mot de passe',
@@ -254,25 +315,30 @@ const siteContentFr = {
         items: [
           {
             question: 'Peut-on evaluer ZANVROX sans reserver une demo d abord ?',
-            answer: 'Oui. Le parcours prevu est de voir l apercu, d explorer le produit, d ouvrir l espace d evaluation et de demander de l aide seulement si votre equipe en a besoin.',
+            answer:
+              'Oui. Le parcours prevu est de voir l apercu, d explorer le produit, d ouvrir l espace d evaluation et de demander de l aide seulement si votre equipe en a besoin.',
           },
           {
             question: 'La paie est-elle incluse dans les plans de base ?',
-            answer: 'Non. La paie est un add-on separe avec une tarification distincte afin que les equipes centrees sur la finance ne la paient pas par defaut.',
+            answer:
+              'Non. La paie est un add-on separe avec une tarification distincte afin que les equipes centrees sur la finance ne la paient pas par defaut.',
           },
           {
             question: 'Faut-il un projet d onboarding payant ?',
-            answer: 'Non. La configuration autonome est le parcours par defaut. Guided Implementation est disponible comme package payant optionnel lorsque votre equipe veut de l aide pour la configuration et l import des donnees.',
+            answer:
+              'Non. La configuration autonome est le parcours par defaut. Guided Implementation est disponible comme package payant optionnel lorsque votre equipe veut de l aide pour la configuration et l import des donnees.',
           },
           {
             question: 'Quel support faut-il attendre ?',
-            answer: 'Finance Core inclut un support email sous 48 h, Operations inclut un support email prioritaire sous 24 h et Enterprise inclut une aide d onboarding ainsi qu un canal de support direct.',
+            answer:
+              'Finance Core inclut un support email sous 48 h, Operations inclut un support email prioritaire sous 24 h et Enterprise inclut une aide d onboarding ainsi qu un canal de support direct.',
           },
         ],
       },
       cta: {
         title: 'Commencez par le produit, pas par un appel commercial',
-        subtitle: 'Explorez d abord le produit et les tarifs. Contactez l equipe lorsque vous avez une question concrete de deploiement, de paie ou d integration.',
+        subtitle:
+          'Explorez d abord le produit et les tarifs. Contactez l equipe lorsque vous avez une question concrete de deploiement, de paie ou d integration.',
         primary: { label: 'Explorer le produit', path: '/product' },
         secondary: { label: 'Voir les tarifs', path: '/pricing' },
       },
@@ -283,7 +349,10 @@ const siteContentFr = {
       heroSubtitle:
         'ZANVROX est positionne comme une pile ERP controlee pour les PME canadiennes qui ont besoin de visibilite operationnelle sans theatre d entreprise.',
       heroPrimaryCta: { label: 'Voir les tarifs', path: '/pricing' },
-      heroSecondaryCta: { label: 'Ouvrir l espace d evaluation', path: '/resources#demo-environment' },
+      heroSecondaryCta: {
+        label: 'Ouvrir l espace d evaluation',
+        path: '/resources#demo-environment',
+      },
       heroPreview: {
         title: 'Apercu operations',
         type: 'inventory',
@@ -295,17 +364,31 @@ const siteContentFr = {
       },
       pillars: {
         title: 'Quatre piliers produit',
-        subtitle: 'Le site explique le produit autour des workflows, pas de puces de fonctions deconnectees.',
+        subtitle:
+          'Le site explique le produit autour des workflows, pas de puces de fonctions deconnectees.',
         items: [
-          { title: 'Noyau finance', body: 'Comptabilite, facturation, depenses, visibilite bancaire et reporting.' },
-          { title: 'Operations', body: 'Inventaire, entrepot, BOM, bases de production et approbations.' },
-          { title: 'Conformite canadienne', body: 'Workflows fiscaux, add-on paie, support des remises et posture de fin d annee.' },
-          { title: 'Gouvernance', body: 'Auditabilite, approbations, limites de controle et chemin d expansion multi-company.' },
+          {
+            title: 'Noyau finance',
+            body: 'Comptabilite, facturation, depenses, visibilite bancaire et reporting.',
+          },
+          {
+            title: 'Operations',
+            body: 'Inventaire, entrepot, BOM, bases de production et approbations.',
+          },
+          {
+            title: 'Conformite canadienne',
+            body: 'Workflows fiscaux, add-on paie, support des remises et posture de fin d annee.',
+          },
+          {
+            title: 'Gouvernance',
+            body: 'Auditabilite, approbations, limites de controle et chemin d expansion multi-company.',
+          },
         ],
       },
       showcase: {
         title: 'Zones produit a evaluer visuellement',
-        subtitle: 'Ce sont les ecrans que la plupart des equipes veulent inspecter avant d investir plus de temps dans des conversations commerciales approfondies.',
+        subtitle:
+          'Ce sont les ecrans que la plupart des equipes veulent inspecter avant d investir plus de temps dans des conversations commerciales approfondies.',
         items: [
           {
             title: 'Tableau de bord fiscal',
@@ -334,7 +417,8 @@ const siteContentFr = {
       stacks: [
         {
           title: 'Finance et operations integrees',
-          subtitle: 'Concu pour reduire les transferts entre outils dans le segment des 10-50 employes.',
+          subtitle:
+            'Concu pour reduire les transferts entre outils dans le segment des 10-50 employes.',
           items: [
             'La comptabilite et la facturation vivent dans le meme systeme que les achats et les depenses.',
             'Les donnees d inventaire, d entrepot et de BOM restent liees a l ecriture financiere.',
@@ -353,20 +437,46 @@ const siteContentFr = {
       ],
       onboarding: {
         title: 'Comment la configuration autonome fonctionne en pratique',
-        subtitle: 'La page produit rappelle que l onboarding est guide dans le produit, pas masque derriere du conseil par defaut.',
+        subtitle:
+          'La page produit rappelle que l onboarding est guide dans le produit, pas masque derriere du conseil par defaut.',
         steps: [
-          { number: '1', title: 'Creer l organisation', body: 'Creez votre espace et partez d une base operationnelle propre.' },
-          { number: '2', title: 'Selectionner le Canada', body: 'Appliquez les valeurs par defaut specifiques au pays et les hypotheses de conformite.' },
-          { number: '3', title: 'Choisir un modele sectoriel', body: 'Partez d une base pratique au lieu de tout configurer a zero.' },
-          { number: '4', title: 'Configurer les taxes', body: 'Confirmez le routage fiscal, les enregistrements et les controles financiers.' },
-          { number: '5', title: 'Importer les donnees maitres', body: 'Importez clients, fournisseurs et enregistrements operationnels cles.' },
-          { number: '6', title: 'Executer la premiere transaction', body: 'Creez la premiere facture et validez le flux operationnel de bout en bout.' },
+          {
+            number: '1',
+            title: 'Creer l organisation',
+            body: 'Creez votre espace et partez d une base operationnelle propre.',
+          },
+          {
+            number: '2',
+            title: 'Selectionner le Canada',
+            body: 'Appliquez les valeurs par defaut specifiques au pays et les hypotheses de conformite.',
+          },
+          {
+            number: '3',
+            title: 'Choisir un modele sectoriel',
+            body: 'Partez d une base pratique au lieu de tout configurer a zero.',
+          },
+          {
+            number: '4',
+            title: 'Configurer les taxes',
+            body: 'Confirmez le routage fiscal, les enregistrements et les controles financiers.',
+          },
+          {
+            number: '5',
+            title: 'Importer les donnees maitres',
+            body: 'Importez clients, fournisseurs et enregistrements operationnels cles.',
+          },
+          {
+            number: '6',
+            title: 'Executer la premiere transaction',
+            body: 'Creez la premiere facture et validez le flux operationnel de bout en bout.',
+          },
         ],
         note: 'Guided Implementation est disponible lorsque votre equipe souhaite de l aide pour la configuration, la revue du chart of accounts, l import des donnees et la formation.',
       },
       cta: {
         title: 'Verifiez si le perimetre produit correspond a votre entreprise aujourd hui',
-        subtitle: 'Utilisez les tarifs et les ressources pour decider si vous avez besoin d une configuration autonome, d une implementation guidee ou d une conversation d entreprise.',
+        subtitle:
+          'Utilisez les tarifs et les ressources pour decider si vous avez besoin d une configuration autonome, d une implementation guidee ou d une conversation d entreprise.',
         primary: { label: 'Voir les tarifs', path: '/pricing' },
         secondary: { label: 'Contacter l equipe', path: '/contact' },
       },
@@ -376,10 +486,13 @@ const siteContentFr = {
       heroSubtitle:
         'Commencez par un noyau de controle financier, etendez-vous aux operations lorsque la complexite augmente, puis passez a un deploiement personnalise seulement lorsque la structure multi-site, les approbations avancees, le support onboarding, les integrations ou la revue securite deviennent necessaires.',
       packagesTitle: 'Tarifs publics pour la finance, les operations et un deploiement guide',
-      packagesSubtitle: 'Une tarification CAD transparente pour les equipes SMB canadiennes qui ont besoin de workflows structures aujourd hui et d un chemin credible vers un controle operationnel plus large avec le temps.',
+      packagesSubtitle:
+        'Une tarification CAD transparente pour les equipes SMB canadiennes qui ont besoin de workflows structures aujourd hui et d un chemin credible vers un controle operationnel plus large avec le temps.',
       launchBadge: 'Facturation annuelle disponible',
-      launchOfferLabel: 'Les abonnements annuels de base incluent un mois offert en facturation annuelle.',
-      launchOfferNote: 'La tarification de la paie reste a l usage, et Guided Implementation est disponible lorsqu un deploiement plus structure est necessaire.',
+      launchOfferLabel:
+        'Les abonnements annuels de base incluent un mois offert en facturation annuelle.',
+      launchOfferNote:
+        'La tarification de la paie reste a l usage, et Guided Implementation est disponible lorsqu un deploiement plus structure est necessaire.',
       popularLabel: 'Bon fit pour 10-50 employes',
       priceSuffixMonthly: '/mois',
       billedMonthlyLabel: 'Facturation mensuelle',
@@ -393,7 +506,8 @@ const siteContentFr = {
         monthly: 'Mensuel',
         annual: 'Annuel',
         annualBadge: '1 mois offert',
-        helper: 'La facturation annuelle modifie seulement la duree de l abonnement de base. La paie reste facturee selon un forfait de base plus le nombre d employes.',
+        helper:
+          'La facturation annuelle modifie seulement la duree de l abonnement de base. La paie reste facturee selon un forfait de base plus le nombre d employes.',
       },
       pricingNote:
         'Tous les prix sont en CAD. La paie est un add-on distinct. Les plans sont concus autour d operations structurees, de workflows controles, d auditabilite et d une conception produit attentive a la securite sans imposer trop tot un perimetre d entreprise. ZANVROX aide a organiser les workflows financiers, de paie et fiscaux, mais ne remplace pas les conseils comptables, juridiques ou fiscaux.',
@@ -401,7 +515,8 @@ const siteContentFr = {
         {
           slug: 'finance-core',
           name: 'Finance Core',
-          summary: 'Pour les entreprises qui ont besoin d une base finance disciplinee avec comptabilite, facturation, depenses, reporting et un chemin clair de configuration autonome.',
+          summary:
+            'Pour les entreprises qui ont besoin d une base finance disciplinee avec comptabilite, facturation, depenses, reporting et un chemin clair de configuration autonome.',
           entitiesLabel: 'Perimetre mono-societe',
           usersLabel: 'Jusqu a 3 utilisateurs',
           monthly: {
@@ -414,7 +529,8 @@ const siteContentFr = {
             amount: 179,
             badge: '1 mois offert',
             note: 'Facture annuellement à CAD 1,969 pour l abonnement de base.',
-            secondaryNote: 'La paie et un perimetre operationnel plus large restent distincts lorsque c est necessaire.',
+            secondaryNote:
+              'La paie et un perimetre operationnel plus large restent distincts lorsque c est necessaire.',
           },
           included: [
             'Workflows comptables',
@@ -430,7 +546,8 @@ const siteContentFr = {
           slug: 'operations',
           name: 'Operations',
           isPopular: true,
-          summary: 'Pour les equipes qui ont besoin que la finance et les operations fonctionnent ensemble sur l inventaire, l entrepot, les bases de production et les approbations controlees.',
+          summary:
+            'Pour les equipes qui ont besoin que la finance et les operations fonctionnent ensemble sur l inventaire, l entrepot, les bases de production et les approbations controlees.',
           entitiesLabel: 'Perimetre mono-societe',
           usersLabel: 'Jusqu a 10 utilisateurs',
           monthly: {
@@ -443,7 +560,8 @@ const siteContentFr = {
             amount: 649,
             badge: '1 mois offert',
             note: 'Facture annuellement à CAD 7,139 pour l abonnement de base.',
-            secondaryNote: 'Recommande lorsque les operations demandent un controle plus strict sur le stock, les mouvements d entrepot, le BOM et les workflows de production.',
+            secondaryNote:
+              'Recommande lorsque les operations demandent un controle plus strict sur le stock, les mouvements d entrepot, le BOM et les workflows de production.',
           },
           included: [
             'Tout ce qui est inclus dans Finance Core',
@@ -458,7 +576,8 @@ const siteContentFr = {
         {
           slug: 'enterprise',
           name: 'Personnalise',
-          summary: 'Pour les equipes multi-sites qui ont besoin d approbations avancees, de revues securite, d onboarding personnalise, d integrations, de support dedie ou d un deploiement plus structure.',
+          summary:
+            'Pour les equipes multi-sites qui ont besoin d approbations avancees, de revues securite, d onboarding personnalise, d integrations, de support dedie ou d un deploiement plus structure.',
           entitiesLabel: 'Perimetre multi-site ou personnalise',
           usersLabel: 'Perimetre utilisateurs personnalise',
           monthly: {
@@ -483,11 +602,14 @@ const siteContentFr = {
       ],
       payrollAddon: {
         title: 'Add-on paie',
-        summary: 'Une tarification paie distincte garde l ERP de base commercialement clair tout en preservant le support de la paie canadienne pour les equipes qui en ont besoin.',
+        summary:
+          'Une tarification paie distincte garde l ERP de base commercialement clair tout en preservant le support de la paie canadienne pour les equipes qui en ont besoin.',
         priceLabel: 'CAD 59 / mois + CAD 6 / employe / mois',
         annualPriceLabel: 'CAD 59 / mois + CAD 6 / employe / mois',
-        monthlyNote: 'Inclut les executions de paie canadiennes, le support des workflows de remises, les bulletins de paie, les dossiers et exports pour appuyer la revue de fin d annee, ainsi que l integration comptable. Un minimum mensuel peut s appliquer pendant le deploiement.',
-        annualNote: 'L add-on paie conserve la meme structure tarifaire de base plus employe en annuel, sauf cadrage different.',
+        monthlyNote:
+          'Inclut les executions de paie canadiennes, le support des workflows de remises, les bulletins de paie, les dossiers et exports pour appuyer la revue de fin d annee, ainsi que l integration comptable. Un minimum mensuel peut s appliquer pendant le deploiement.',
+        annualNote:
+          'L add-on paie conserve la meme structure tarifaire de base plus employe en annuel, sauf cadrage different.',
         included: [
           'Executions de paie canadiennes',
           'Support des workflows de remises',
@@ -499,7 +621,8 @@ const siteContentFr = {
       },
       onboardingPackage: {
         title: 'Guided Implementation',
-        summary: 'Configuration guidee optionnelle en une seule fois pour les equipes qui veulent un alignement operationnel, un deploiement assiste et un demarrage d implementation plus structure.',
+        summary:
+          'Configuration guidee optionnelle en une seule fois pour les equipes qui veulent un alignement operationnel, un deploiement assiste et un demarrage d implementation plus structure.',
         priceLabel: 'CAD 3,500 à 7,500 en une fois',
         included: [
           'Configuration systeme guidee',
@@ -514,16 +637,21 @@ const siteContentFr = {
       },
       supportTiers: {
         title: 'Structure de support',
-        subtitle: 'Le support est indique publiquement afin que les equipes puissent evaluer la couverture operationnelle, les delais de reponse et la posture de deploiement en amont.',
+        subtitle:
+          'Le support est indique publiquement afin que les equipes puissent evaluer la couverture operationnelle, les delais de reponse et la posture de deploiement en amont.',
         items: [
           { name: 'Finance Core', body: 'Support email avec reponse sous 48 h.' },
           { name: 'Operations', body: 'Support email prioritaire avec reponse sous 24 h.' },
-          { name: 'Personnalise', body: 'Support au deploiement guide, canal direct et discussion d implementation cadree.' },
+          {
+            name: 'Personnalise',
+            body: 'Support au deploiement guide, canal direct et discussion d implementation cadree.',
+          },
         ],
       },
       comparison: {
         title: 'Comparaison des plans',
-        subtitle: 'Utilisez ce tableau pour decider si vous avez besoin d un controle financier structure, d operations connectees ou d un deploiement d entreprise personnalise.',
+        subtitle:
+          'Utilisez ce tableau pour decider si vous avez besoin d un controle financier structure, d operations connectees ou d un deploiement d entreprise personnalise.',
         featureLabel: 'Capacite',
         rows: [
           { label: 'Comptabilite', values: [true, true, true] },
@@ -537,7 +665,10 @@ const siteContentFr = {
           { label: 'Deploiement multi-site', values: [false, false, true] },
           { label: 'Approbations avancees', values: [false, true, true] },
           { label: 'Integrations', values: [false, false, true] },
-          { label: 'Niveau de support', values: ['Email / 48 h', 'Email prioritaire / 24 h', 'Canal direct'] },
+          {
+            label: 'Niveau de support',
+            values: ['Email / 48 h', 'Email prioritaire / 24 h', 'Canal direct'],
+          },
           { label: 'Assistance onboarding', values: ['Autonome', 'Autonome', 'Inclus'] },
           { label: 'Utilisateurs inclus', values: ['3', '10', 'Personnalise'] },
         ],
@@ -556,19 +687,23 @@ const siteContentFr = {
         items: [
           {
             question: 'Faut-il une demo avant de pouvoir commencer ?',
-            answer: 'Non. Le parcours prevu est l autoevaluation d abord : voir l apercu, explorer le produit, consulter les tarifs et utiliser l espace d evaluation navigateur avant de demander une session guidee.',
+            answer:
+              'Non. Le parcours prevu est l autoevaluation d abord : voir l apercu, explorer le produit, consulter les tarifs et utiliser l espace d evaluation navigateur avant de demander une session guidee.',
           },
           {
             question: 'La paie est-elle incluse dans les plans ERP de base ?',
-            answer: 'Non. La paie est vendue comme un add-on distinct avec un forfait mensuel de base plus un tarif par employe.',
+            answer:
+              'Non. La paie est vendue comme un add-on distinct avec un forfait mensuel de base plus un tarif par employe.',
           },
           {
             question: 'Guided Implementation est-il obligatoire ?',
-            answer: 'Non. C est optionnel. Finance Core et Operations peuvent commencer avec une configuration autonome, tandis que Guided Implementation reste disponible pour les equipes qui veulent un deploiement plus structure.',
+            answer:
+              'Non. C est optionnel. Finance Core et Operations peuvent commencer avec une configuration autonome, tandis que Guided Implementation reste disponible pour les equipes qui veulent un deploiement plus structure.',
           },
           {
             question: 'Quel support est inclus avec chaque plan ?',
-            answer: 'Finance Core inclut un support email sous 48 h, Operations inclut un support email prioritaire sous 24 h et Personnalise inclut une discussion de deploiement guidee ainsi qu un canal de support direct.',
+            answer:
+              'Finance Core inclut un support email sous 48 h, Operations inclut un support email prioritaire sous 24 h et Personnalise inclut une discussion de deploiement guidee ainsi qu un canal de support direct.',
           },
         ],
       },
@@ -576,40 +711,47 @@ const siteContentFr = {
       ctaSecondary: { label: 'Contacter pour un deploiement personnalise', path: '/contact' },
     },
     resources: {
-      heroTitle: 'Ressources pour l evaluation produit, la revue securite et la planification du deploiement.',
+      heroTitle:
+        'Ressources pour l evaluation produit, la revue securite et la planification du deploiement.',
       heroSubtitle:
         'Utilisez ces materiaux publics pour evaluer l adequation produit, la posture securite et les options d evaluation avant de demander une discussion plus approfondie.',
       sections: [
         {
           title: 'Apercu produit et ressources d evaluation',
-          description: 'Consultez l apercu produit, la couverture des workflows et le modele d onboarding avant d investir du temps dans une evaluation plus poussée.',
+          description:
+            'Consultez l apercu produit, la couverture des workflows et le modele d onboarding avant d investir du temps dans une evaluation plus poussée.',
           cta: 'Consulter le produit',
           path: '/product',
         },
         {
           title: 'Apercu securite',
-          description: 'Consultez l isolation entre organisations, les controles d acces, les sous-traitants et les limites actuelles dans un seul apercu public.',
+          description:
+            'Consultez l isolation entre organisations, les controles d acces, les sous-traitants et les limites actuelles dans un seul apercu public.',
           cta: 'Consulter la securite',
           path: '/security',
         },
         {
           title: 'Espace d evaluation et revue produit guidee',
-          description: 'Commencez par l espace d evaluation partage pour une premiere revue, puis contactez l equipe si vous avez besoin d une discussion produit plus structuree.',
+          description:
+            'Commencez par l espace d evaluation partage pour une premiere revue, puis contactez l equipe si vous avez besoin d une discussion produit plus structuree.',
           cta: 'Ouvrir l espace d evaluation',
           path: '/resources#demo-environment',
         },
         {
           title: 'Contact et documentation complementaire',
-          description: 'Utilisez le parcours de contact pour les demandes securite ou compliance, les demandes de revue guidee ou des details supplementaires d evaluation.',
+          description:
+            'Utilisez le parcours de contact pour les demandes securite ou compliance, les demandes de revue guidee ou des details supplementaires d evaluation.',
           cta: 'Contacter l equipe',
           path: '/contact',
         },
       ],
       demoEnvironment: {
         title: 'Espace d evaluation',
-        subtitle: 'Un espace navigateur pour une premiere revue produit avec des donnees d exemple fictives.',
+        subtitle:
+          'Un espace navigateur pour une premiere revue produit avec des donnees d exemple fictives.',
         accessTitle: 'Acces d evaluation partage',
-        accessIntro: 'Un acces partage est disponible pour une premiere revue produit. Les equipes qui ont besoin d une evaluation plus profonde ou plus structuree peuvent contacter ZANVROX.',
+        accessIntro:
+          'Un acces partage est disponible pour une premiere revue produit. Les equipes qui ont besoin d une evaluation plus profonde ou plus structuree peuvent contacter ZANVROX.',
         emailLabel: 'Utilisateur de l espace',
         emailValue: 'Use your work email',
         passwordLabel: 'Code d acces',
@@ -624,7 +766,8 @@ const siteContentFr = {
       },
       sitemap: {
         title: 'Materiaux d evaluation',
-        subtitle: 'Le site public est volontairement compact et concentre sur les materiaux les plus utiles pendant l evaluation initiale.',
+        subtitle:
+          'Le site public est volontairement compact et concentre sur les materiaux les plus utiles pendant l evaluation initiale.',
         items: [
           'Apercu produit et couverture des workflows',
           'Tarification publique et modele d onboarding',
@@ -636,7 +779,8 @@ const siteContentFr = {
       },
       design: {
         title: 'Comment utiliser ces ressources',
-        subtitle: 'Un parcours d evaluation simple pour les equipes qui veulent d abord verifier l adequation produit et n impliquer l equipe que lorsque plus de details sont necessaires.',
+        subtitle:
+          'Un parcours d evaluation simple pour les equipes qui veulent d abord verifier l adequation produit et n impliquer l equipe que lorsque plus de details sont necessaires.',
         directionTitle: 'Premiere revue produit',
         componentsTitle: 'Revue securite et compliance',
         statesTitle: 'Quand contacter l equipe',
@@ -659,10 +803,12 @@ const siteContentFr = {
     },
     security: {
       heroTitle: 'Securite et architecture par conception.',
-      heroSubtitle: 'Isolation entre organisations, acces de moindre privilege et comportement transactionnel auditable.',
+      heroSubtitle:
+        'Isolation entre organisations, acces de moindre privilege et comportement transactionnel auditable.',
       overview: {
         title: 'Apercu securite',
-        subtitle: 'Un resume conservateur des controles actuellement visibles dans le produit et dans le flux de livraison.',
+        subtitle:
+          'Un resume conservateur des controles actuellement visibles dans le produit et dans le flux de livraison.',
         description:
           'ZANVROX repose sur l isolation entre organisations, l acces selon les roles et une gestion imposee cote serveur pour les operations sensibles. Les declarations publiques de securite sont limitees aux controles effectivement en place aujourd hui et evitent toute promesse de certification ou de couverture qui n existe pas encore.',
         bullets: [
@@ -676,10 +822,24 @@ const siteContentFr = {
         subtitle: 'Chaque affirmation de controle est rattachee a un mecanisme d implementation.',
       },
       controls: [
-        { control: 'Isolation entre organisations', support: 'Politiques PostgreSQL RLS scopees par org_id sur les tables operationnelles.' },
-        { control: 'Controle d acces', support: 'Appartenance a l organisation et chemins d ecriture limites par role pour les operations critiques.' },
-        { control: 'Tracabilite des changements', support: 'Identifiants transactionnels, horodatages et enregistrements de confirmation de depot.' },
-        { control: 'Execution cote serveur', support: 'Actions comptables et fiscales critiques executees via des controles SQL/Edge.' },
+        {
+          control: 'Isolation entre organisations',
+          support: 'Politiques PostgreSQL RLS scopees par org_id sur les tables operationnelles.',
+        },
+        {
+          control: 'Controle d acces',
+          support:
+            'Appartenance a l organisation et chemins d ecriture limites par role pour les operations critiques.',
+        },
+        {
+          control: 'Tracabilite des changements',
+          support:
+            'Identifiants transactionnels, horodatages et enregistrements de confirmation de depot.',
+        },
+        {
+          control: 'Execution cote serveur',
+          support: 'Actions comptables et fiscales critiques executees via des controles SQL/Edge.',
+        },
       ],
       sections: [
         {
@@ -723,7 +883,8 @@ const siteContentFr = {
         items: [
           {
             name: 'Supabase',
-            support: 'Plateforme backend geree pour la base de donnees, l authentification, le stockage et les workflows cote serveur.',
+            support:
+              'Plateforme backend geree pour la base de donnees, l authentification, le stockage et les workflows cote serveur.',
           },
           {
             name: 'Vercel',
@@ -731,14 +892,16 @@ const siteContentFr = {
           },
           {
             name: 'Resend',
-            support: 'Envoi transactionnel d emails pour une communication limitee et le routage des leads du site.',
+            support:
+              'Envoi transactionnel d emails pour une communication limitee et le routage des leads du site.',
           },
         ],
         note: 'Ces prestataires sont utilises uniquement lorsque c est necessaire pour l exploitation du service, sa diffusion ou la communication transactionnelle.',
       },
       disclosures: {
         title: 'Transparence et limites actuelles',
-        subtitle: 'Des declarations conservatrices qui refletent les controles actuellement disponibles.',
+        subtitle:
+          'Des declarations conservatrices qui refletent les controles actuellement disponibles.',
         items: [
           'Aucune promesse d auto-filing : uniquement un support de workflow portal-ready.',
           'Aucun feature flag cache pour des capacites publiques.',
@@ -750,14 +913,16 @@ const siteContentFr = {
       },
       cta: {
         title: 'Contact securite',
-        subtitle: 'Utilisez le parcours de contact existant pour les demandes d apercu securite ou les suivis securite/compliance.',
+        subtitle:
+          'Utilisez le parcours de contact existant pour les demandes d apercu securite ou les suivis securite/compliance.',
         primary: { label: 'Demander un apercu securite', path: '/contact' },
         secondary: { label: 'Contacter pour des demandes securite/compliance', path: '/contact' },
       },
     },
     about: {
       heroKicker: 'A propos de ZANVROX',
-      heroTitle: 'Un ERP pratique positionne pour un deploiement credible, pas pour le theatre d entreprise.',
+      heroTitle:
+        'Un ERP pratique positionne pour un deploiement credible, pas pour le theatre d entreprise.',
       heroSubtitle:
         'ZANVROX est presente comme un ERP moderne pour les PME canadiennes qui veulent un controle operationnel plus ferme, moins de systemes deconnectes et un parcours de support plus clair.',
       heroPrimaryCta: { label: 'Explorer le produit', path: '/product' },
@@ -773,17 +938,28 @@ const siteContentFr = {
       },
       principles: {
         title: 'Trois principes derriere le site',
-        subtitle: 'Le positionnement public est optimise pour une realite operationnelle dirigee par les fondateurs sans abaisser le niveau du produit.',
+        subtitle:
+          'Le positionnement public est optimise pour une realite operationnelle dirigee par les fondateurs sans abaisser le niveau du produit.',
         items: [
-          { title: 'Clarite', body: 'Dire ce que fait le produit, ce qu il supporte et ou une revue reste necessaire.' },
-          { title: 'Controle', body: 'Mettre en avant l auditabilite, la gouvernance et la visibilite operationnelle plutot qu un discours SaaS gonfle.' },
-          { title: 'Deploiement pratique', body: 'Rendre la configuration autonome viable tout en gardant une aide experte en option lorsque la complexite augmente.' },
+          {
+            title: 'Clarite',
+            body: 'Dire ce que fait le produit, ce qu il supporte et ou une revue reste necessaire.',
+          },
+          {
+            title: 'Controle',
+            body: 'Mettre en avant l auditabilite, la gouvernance et la visibilite operationnelle plutot qu un discours SaaS gonfle.',
+          },
+          {
+            title: 'Deploiement pratique',
+            body: 'Rendre la configuration autonome viable tout en gardant une aide experte en option lorsque la complexite augmente.',
+          },
         ],
       },
       operatingModel: [
         {
           title: 'Concu pour les PME canadiennes',
-          subtitle: 'Le site public vise les entreprises qui ont besoin d un controle ERP credible sans surcharge de conseil de niveau entreprise des le premier jour.',
+          subtitle:
+            'Le site public vise les entreprises qui ont besoin d un controle ERP credible sans surcharge de conseil de niveau entreprise des le premier jour.',
           items: [
             'Meilleur fit autour de 10-50 employes',
             'Valeur forte lorsque la finance et les operations sont eparpillees entre trop d outils',
@@ -792,7 +968,8 @@ const siteContentFr = {
         },
         {
           title: 'Discipline commerciale',
-          subtitle: 'Le site est concu pour reduire les reunions de faible qualite et rendre les attentes explicites avant la premiere conversation.',
+          subtitle:
+            'Le site est concu pour reduire les reunions de faible qualite et rendre les attentes explicites avant la premiere conversation.',
           items: [
             'Demo optionnelle au lieu d un tunnel demo-first',
             'Tarification publique avec niveaux de support et attentes d onboarding',
@@ -802,23 +979,38 @@ const siteContentFr = {
       ],
       cta: {
         title: 'Verifiez si le modele operationnel convient a votre equipe',
-        subtitle: 'Utilisez Produit, Tarifs et Ressources pour qualifier l adequation avant de nous contacter.',
+        subtitle:
+          'Utilisez Produit, Tarifs et Ressources pour qualifier l adequation avant de nous contacter.',
         primary: { label: 'Voir les tarifs', path: '/pricing' },
         secondary: { label: 'Aller au contact', path: '/contact' },
       },
     },
     contact: {
-      heroTitle: 'Contactez l equipe seulement lorsque vous avez besoin d aide pour une vraie question d evaluation.',
+      heroTitle:
+        'Contactez l equipe seulement lorsque vous avez besoin d aide pour une vraie question d evaluation.',
       heroSubtitle:
         'Le parcours prevu est apercu produit, exploration du produit, revue des tarifs, evaluation dans le navigateur, puis contact optionnel ou demande de presentation guidee.',
       conversion: {
         title: 'Parcours d evaluation recommande',
-        subtitle: 'Cela reduit les reunions inutiles et fournit un meilleur contexte lorsqu une personne prend finalement contact.',
+        subtitle:
+          'Cela reduit les reunions inutiles et fournit un meilleur contexte lorsqu une personne prend finalement contact.',
         cards: [
-          { title: 'Voir l apercu produit', body: 'Commencez par la video pour comprendre le modele operationnel et la posture du produit.' },
-          { title: 'Explorer les fonctionnalites', body: 'Utilisez les pages Produit, Tarifs et Securite pour evaluer la pile sans appel.' },
-          { title: 'Ouvrir l espace d evaluation', body: 'Validez l interface avec des donnees fictives avant de demander une session guidee.' },
-          { title: 'Demander de l aide si necessaire', body: 'Utilisez les formulaires ci-dessous pour une demo optionnelle ou une question produit ciblee.' },
+          {
+            title: 'Voir l apercu produit',
+            body: 'Commencez par la video pour comprendre le modele operationnel et la posture du produit.',
+          },
+          {
+            title: 'Explorer les fonctionnalites',
+            body: 'Utilisez les pages Produit, Tarifs et Securite pour evaluer la pile sans appel.',
+          },
+          {
+            title: 'Ouvrir l espace d evaluation',
+            body: 'Validez l interface avec des donnees fictives avant de demander une session guidee.',
+          },
+          {
+            title: 'Demander de l aide si necessaire',
+            body: 'Utilisez les formulaires ci-dessous pour une demo optionnelle ou une question produit ciblee.',
+          },
         ],
       },
       supportBlock: {
@@ -832,7 +1024,8 @@ const siteContentFr = {
       },
       pricingContext: {
         title: 'Contexte tarifaire selectionne',
-        subtitle: 'Le contexte tarifaire reste rattache a votre demande afin que le suivi demeure ancre dans la configuration choisie.',
+        subtitle:
+          'Le contexte tarifaire reste rattache a votre demande afin que le suivi demeure ancre dans la configuration choisie.',
         labels: {
           plan: 'Plan',
           billing: 'Facturation',
@@ -845,11 +1038,14 @@ const siteContentFr = {
       },
       demoForm: {
         title: 'Demander une presentation guidee',
-        helper: 'Utilisez ce formulaire apres que votre equipe a consulte le produit et souhaite une presentation guidee.',
-        confirmation: 'Votre demande de presentation guidee a ete envoyee avec succes. Nous assurerons le suivi par email.',
+        helper:
+          'Utilisez ce formulaire apres que votre equipe a consulte le produit et souhaite une presentation guidee.',
+        confirmation:
+          'Votre demande de presentation guidee a ete envoyee avec succes. Nous assurerons le suivi par email.',
         submittingCta: 'Envoi...',
         submitError: 'Nous n avons pas pu envoyer votre demande. Veuillez reessayer.',
-        messageHint: 'Optionnel. Utilisez ce champ pour decrire votre pile actuelle, votre calendrier de deploiement ou une question de paie.',
+        messageHint:
+          'Optionnel. Utilisez ce champ pour decrire votre pile actuelle, votre calendrier de deploiement ou une question de paie.',
         fields: {
           name: 'Nom*',
           company: 'Entreprise*',
@@ -892,11 +1088,13 @@ const siteContentFr = {
       },
       briefForm: {
         title: 'Poser une question produit',
-        helper: 'Utilisez ce formulaire pour des questions sur l adequation produit, le support, l onboarding, l implementation ou le perimetre paie.',
+        helper:
+          'Utilisez ce formulaire pour des questions sur l adequation produit, le support, l onboarding, l implementation ou le perimetre paie.',
         confirmation: 'Votre message a ete envoye avec succes. Nous repondrons par email.',
         submittingCta: 'Envoi...',
         submitError: 'Nous n avons pas pu envoyer votre demande. Veuillez reessayer.',
-        messageHint: 'Optionnel. Utilisez ce champ si vous souhaitez decrire votre workflow, votre besoin de support ou votre question d implementation.',
+        messageHint:
+          'Optionnel. Utilisez ce champ si vous souhaitez decrire votre workflow, votre besoin de support ou votre question d implementation.',
         fields: {
           name: 'Nom*',
           company: 'Entreprise*',
@@ -910,7 +1108,8 @@ const siteContentFr = {
           email: 'nom@entreprise.com',
           companySize: 'Selectionnez la taille de l entreprise',
           interestArea: 'Selectionnez le domaine d interet',
-          message: 'Que souhaitez-vous clarifier avant que votre equipe investisse plus de temps dans l evaluation ?',
+          message:
+            'Que souhaitez-vous clarifier avant que votre equipe investisse plus de temps dans l evaluation ?',
         },
         options: {
           companySizes: ['1-10 employes', '10-50 employes', '50-100 employes', '100+ employes'],
@@ -966,7 +1165,8 @@ const siteContentFr = {
     },
   },
   footer: {
-    companyDescription: 'ERP integre pour les PME canadiennes qui ont besoin de finance, d operations, de conformite et de paie dans une seule pile controlee.',
+    companyDescription:
+      'ERP integre pour les PME canadiennes qui ont besoin de finance, d operations, de conformite et de paie dans une seule pile controlee.',
     headquarters: 'Toronto, Ontario, Canada',
     email: 'support@zanvrox.com',
     sections: [
@@ -1016,7 +1216,8 @@ const siteContentFr = {
     },
     security: {
       title: 'Securite | ZANVROX',
-      description: 'Consultez l isolation entre organisations, les controles par role, les approbations, la gouvernance et les protections d architecture derriere ZANVROX.',
+      description:
+        'Consultez l isolation entre organisations, les controles par role, les approbations, la gouvernance et les protections d architecture derriere ZANVROX.',
       path: '/security',
     },
     pricing: {
@@ -1027,22 +1228,26 @@ const siteContentFr = {
     },
     resources: {
       title: 'Ressources | ZANVROX',
-      description: 'Utilisez les ressources produit, le guide de l espace d evaluation et l apercu securite pour autoevaluer ZANVROX.',
+      description:
+        'Utilisez les ressources produit, le guide de l espace d evaluation et l apercu securite pour autoevaluer ZANVROX.',
       path: '/resources',
     },
     about: {
       title: 'A propos | ZANVROX',
-      description: 'Decouvrez comment ZANVROX positionne la finance, les operations, la gouvernance et la discipline de deploiement pour les PME canadiennes.',
+      description:
+        'Decouvrez comment ZANVROX positionne la finance, les operations, la gouvernance et la discipline de deploiement pour les PME canadiennes.',
       path: '/about',
     },
     contact: {
       title: 'Contact | ZANVROX',
-      description: 'Demandez une demo optionnelle ou posez une question ciblee sur le produit, la paie, l onboarding ou l implementation.',
+      description:
+        'Demandez une demo optionnelle ou posez une question ciblee sur le produit, la paie, l onboarding ou l implementation.',
       path: '/contact',
     },
     privacy: {
       title: 'Politique de confidentialite | ZANVROX',
-      description: 'Politique de confidentialite du site ZANVROX et du traitement associe des leads.',
+      description:
+        'Politique de confidentialite du site ZANVROX et du traitement associe des leads.',
       path: '/legal/privacy',
     },
     terms: {
@@ -1051,6 +1256,6 @@ const siteContentFr = {
       path: '/legal/terms',
     },
   },
-}
+};
 
-export default siteContentFr
+export default siteContentFr;

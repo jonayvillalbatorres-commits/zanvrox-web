@@ -1,24 +1,27 @@
-import { Link } from 'react-router-dom'
-import SeoManager from '../components/seo/SeoManager'
-import PageHero from '../components/sections/PageHero'
-import Card from '../components/ui/Card'
-import ProductPreview from '../components/ui/ProductPreview'
-import SectionHeading from '../components/ui/SectionHeading'
-import { organizationSchema, softwareSchema, websiteSchema } from '../content/schema'
-import { useLanguage } from '../contexts/LanguageContext'
-import taxDashboardImage from '../assets/screens/tax-dashboard.png'
+import { Link } from 'react-router-dom';
+import SeoManager from '../components/seo/SeoManager';
+import PageHero from '../components/sections/PageHero';
+import Card from '../components/ui/Card';
+import ProductPreview from '../components/ui/ProductPreview';
+import SectionHeading from '../components/ui/SectionHeading';
+import { organizationSchema, softwareSchema, websiteSchema } from '../content/schema';
+import { useLanguage } from '../contexts/LanguageContext';
+import taxDashboardImage from '../assets/screens/tax-dashboard.png';
 
 const IMAGE_BY_KEY = {
   taxDashboard: taxDashboardImage,
-}
+};
 
 export default function ProductPage() {
-  const { content } = useLanguage()
-  const page = content?.pages?.product || {}
+  const { content } = useLanguage();
+  const page = content?.pages?.product || {};
 
   return (
     <>
-      <SeoManager meta={content?.seo?.product} schema={[organizationSchema, websiteSchema, softwareSchema]} />
+      <SeoManager
+        meta={content?.seo?.product}
+        schema={[organizationSchema, websiteSchema, softwareSchema]}
+      />
       <PageHero
         kicker={page.heroKicker}
         title={page.heroTitle}
@@ -86,13 +89,17 @@ export default function ProductPage() {
         <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {(page.onboarding?.steps || []).map((step) => (
             <Card key={step.number}>
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zx-accent">{step.number}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zx-accent">
+                {step.number}
+              </p>
               <h3 className="mt-3 font-heading text-lg font-semibold text-zx-text">{step.title}</h3>
               <p className="mt-2 text-sm text-zx-text-muted">{step.body}</p>
             </Card>
           ))}
         </div>
-        {page.onboarding?.note ? <p className="mt-5 text-sm text-zx-text-muted">{page.onboarding.note}</p> : null}
+        {page.onboarding?.note ? (
+          <p className="mt-5 text-sm text-zx-text-muted">{page.onboarding.note}</p>
+        ) : null}
       </section>
 
       <section className="section-shell pb-16">
@@ -100,15 +107,21 @@ export default function ProductPage() {
           <h2 className="font-heading text-2xl font-semibold text-zx-text">{page.cta?.title}</h2>
           <p className="mt-3 max-w-2xl text-sm text-zx-text-muted">{page.cta?.subtitle}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link to={page.cta?.primary?.path || '/pricing'} className="zx-button zx-button-primary">
+            <Link
+              to={page.cta?.primary?.path || '/pricing'}
+              className="zx-button zx-button-primary"
+            >
               {page.cta?.primary?.label}
             </Link>
-            <Link to={page.cta?.secondary?.path || '/contact'} className="zx-button zx-button-secondary">
+            <Link
+              to={page.cta?.secondary?.path || '/contact'}
+              className="zx-button zx-button-secondary"
+            >
               {page.cta?.secondary?.label}
             </Link>
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }

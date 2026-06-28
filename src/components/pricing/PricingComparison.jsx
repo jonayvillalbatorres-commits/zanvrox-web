@@ -1,6 +1,6 @@
-import Card from '../ui/Card'
-import SectionHeading from '../ui/SectionHeading'
-import { BILLING_PERIODS } from '../../utils/contactDemo'
+import Card from '../ui/Card';
+import SectionHeading from '../ui/SectionHeading';
+import { BILLING_PERIODS } from '../../utils/contactDemo';
 
 function CheckIcon({ className = '' }) {
   return (
@@ -14,7 +14,7 @@ function CheckIcon({ className = '' }) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 function MinusIcon({ className = '' }) {
@@ -29,7 +29,7 @@ function MinusIcon({ className = '' }) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 const renderCellValue = (value) => {
@@ -42,16 +42,16 @@ const renderCellValue = (value) => {
       <span className="inline-flex items-center justify-center text-zx-text-muted">
         <MinusIcon className="h-4 w-4" />
       </span>
-    )
+    );
   }
 
-  return <span className="text-zx-text">{value}</span>
-}
+  return <span className="text-zx-text">{value}</span>;
+};
 
 export default function PricingComparison({ pricing, billingPeriod = BILLING_PERIODS.monthly }) {
-  const comparison = pricing?.comparison || {}
-  const tiers = pricing?.tiers || []
-  const isAnnual = billingPeriod === BILLING_PERIODS.annual
+  const comparison = pricing?.comparison || {};
+  const tiers = pricing?.tiers || [];
+  const isAnnual = billingPeriod === BILLING_PERIODS.annual;
 
   return (
     <section className="section-shell">
@@ -63,7 +63,9 @@ export default function PricingComparison({ pricing, billingPeriod = BILLING_PER
               <table className="min-w-full border-collapse text-sm">
                 <thead>
                   <tr className="border-b border-zx-border text-left">
-                    <th className="px-4 py-4 font-medium text-zx-text-muted">{comparison?.featureLabel}</th>
+                    <th className="px-4 py-4 font-medium text-zx-text-muted">
+                      {comparison?.featureLabel}
+                    </th>
                     {tiers.map((tier) => (
                       <th key={tier.slug} className="px-4 py-4 font-semibold text-zx-text">
                         {tier.name}
@@ -76,7 +78,10 @@ export default function PricingComparison({ pricing, billingPeriod = BILLING_PER
                     <tr key={row.label} className="border-b border-zx-border/70 last:border-b-0">
                       <th className="px-4 py-4 text-left font-medium text-zx-text">{row.label}</th>
                       {(row.values || []).map((value, index) => (
-                        <td key={`${row.label}-${tiers[index]?.slug || index}`} className="px-4 py-4 text-zx-text-muted">
+                        <td
+                          key={`${row.label}-${tiers[index]?.slug || index}`}
+                          className="px-4 py-4 text-zx-text-muted"
+                        >
                           {renderCellValue(value)}
                         </td>
                       ))}
@@ -88,10 +93,15 @@ export default function PricingComparison({ pricing, billingPeriod = BILLING_PER
           </div>
 
           <Card className="h-full">
-            <p className="text-xs uppercase tracking-[0.14em] text-zx-accent">{comparison?.notesTitle}</p>
+            <p className="text-xs uppercase tracking-[0.14em] text-zx-accent">
+              {comparison?.notesTitle}
+            </p>
             <div className="mt-4 space-y-3 text-sm text-zx-text-muted">
               {(comparison?.notes || []).map((item) => (
-                <div key={item} className="rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3">
+                <div
+                  key={item}
+                  className="rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3"
+                >
                   {item}
                 </div>
               ))}
@@ -105,5 +115,5 @@ export default function PricingComparison({ pricing, billingPeriod = BILLING_PER
         </div>
       </div>
     </section>
-  )
+  );
 }

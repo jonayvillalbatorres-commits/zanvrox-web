@@ -46,8 +46,7 @@
       radial-gradient(700px 500px at 8% -12%, var(--zx-glow-blue), transparent 70%),
       radial-gradient(680px 520px at 88% -18%, var(--zx-glow-green), transparent 75%),
       radial-gradient(700px 460px at 50% 100%, var(--zx-glow-gold), transparent 80%),
-      linear-gradient(180deg, #08101f 0%, var(--zx-bg) 45%, #060b16 100%),
-      var(--zx-bg);
+      linear-gradient(180deg, #08101f 0%, var(--zx-bg) 45%, #060b16 100%), var(--zx-bg);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -143,7 +142,12 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, transparent 25%, rgba(255, 255, 255, 0.2) 45%, transparent 65%);
+    background: linear-gradient(
+      120deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.2) 45%,
+      transparent 65%
+    );
     transform: translateX(-140%);
     transition: transform 0.5s ease;
   }
@@ -181,7 +185,8 @@
   .zx-badge {
     @apply inline-flex items-center rounded-full border border-zx-border px-3 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-zx-text-muted;
     background: rgba(21, 34, 60, 0.72);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
   }
 
   .zx-success-soft {
@@ -195,7 +200,12 @@
   }
 
   .zx-cta-panel {
-    background: linear-gradient(110deg, rgba(49, 179, 255, 0.24) 0%, rgba(14, 24, 43, 0.95) 48%, rgba(21, 34, 60, 0.95) 100%);
+    background: linear-gradient(
+      110deg,
+      rgba(49, 179, 255, 0.24) 0%,
+      rgba(14, 24, 43, 0.95) 48%,
+      rgba(21, 34, 60, 0.95) 100%
+    );
   }
 }
 

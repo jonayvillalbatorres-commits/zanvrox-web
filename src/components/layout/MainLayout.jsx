@@ -1,24 +1,24 @@
-import { useEffect } from 'react'
-import { Outlet, useLocation } from 'react-router-dom'
-import { normalizeLanguageCode } from '../../content'
-import { useLanguage } from '../../contexts/LanguageContext'
-import SiteFooter from './SiteFooter'
-import SiteHeader from './SiteHeader'
+import { useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import { normalizeLanguageCode } from '../../content';
+import { useLanguage } from '../../contexts/LanguageContext';
+import SiteFooter from './SiteFooter';
+import SiteHeader from './SiteHeader';
 
 export default function MainLayout() {
-  const location = useLocation()
-  const { language, setLanguage } = useLanguage()
+  const location = useLocation();
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search)
-    const nextLanguage = params.get('lang')
-    if (!nextLanguage) return
+    const params = new URLSearchParams(location.search);
+    const nextLanguage = params.get('lang');
+    if (!nextLanguage) return;
 
-    const normalized = normalizeLanguageCode(nextLanguage)
+    const normalized = normalizeLanguageCode(nextLanguage);
     if (normalized !== language) {
-      setLanguage(normalized)
+      setLanguage(normalized);
     }
-  }, [language, location.search, setLanguage])
+  }, [language, location.search, setLanguage]);
 
   return (
     <div className="min-h-screen bg-zx-bg text-zx-text">
@@ -28,5 +28,5 @@ export default function MainLayout() {
       </main>
       <SiteFooter />
     </div>
-  )
+  );
 }

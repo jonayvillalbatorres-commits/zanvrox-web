@@ -1,22 +1,22 @@
-import { useEffect, useMemo } from 'react'
-import { useLocation } from 'react-router-dom'
-import BriefRequestForm from '../components/forms/BriefRequestForm'
-import DemoForm from '../components/forms/DemoForm'
-import SeoManager from '../components/seo/SeoManager'
-import PageHero from '../components/sections/PageHero'
-import Card from '../components/ui/Card'
-import SectionHeading from '../components/ui/SectionHeading'
-import { normalizeLanguageCode } from '../content'
-import { organizationSchema, softwareSchema, websiteSchema } from '../content/schema'
-import { useLanguage } from '../contexts/LanguageContext'
-import { BILLING_PERIODS, CONTACT_PROMOS, getContactDemoContext } from '../utils/contactDemo'
+import { useEffect, useMemo } from 'react';
+import { useLocation } from 'react-router-dom';
+import BriefRequestForm from '../components/forms/BriefRequestForm';
+import DemoForm from '../components/forms/DemoForm';
+import SeoManager from '../components/seo/SeoManager';
+import PageHero from '../components/sections/PageHero';
+import Card from '../components/ui/Card';
+import SectionHeading from '../components/ui/SectionHeading';
+import { normalizeLanguageCode } from '../content';
+import { organizationSchema, softwareSchema, websiteSchema } from '../content/schema';
+import { useLanguage } from '../contexts/LanguageContext';
+import { BILLING_PERIODS, CONTACT_PROMOS, getContactDemoContext } from '../utils/contactDemo';
 
 export default function ContactDemoPage() {
-  const location = useLocation()
-  const { content, language, setLanguage } = useLanguage()
-  const page = content?.pages?.contact || {}
-  const pricingPage = useMemo(() => content?.pages?.pricing || {}, [content])
-  const pricingContext = useMemo(() => page.pricingContext || {}, [page.pricingContext])
+  const location = useLocation();
+  const { content, language, setLanguage } = useLanguage();
+  const page = content?.pages?.contact || {};
+  const pricingPage = useMemo(() => content?.pages?.pricing || {}, [content]);
+  const pricingContext = useMemo(() => page.pricingContext || {}, [page.pricingContext]);
   const contextLabels = useMemo(
     () => ({
       plan: pricingContext?.labels?.plan || 'Plan',
@@ -25,52 +25,67 @@ export default function ContactDemoPage() {
       offer: pricingContext?.labels?.offer || 'Offer',
       notSelected: pricingContext?.labels?.notSelected || 'Not selected',
       payrollInterested: pricingContext?.labels?.payrollInterested || 'Payroll Canada add-on',
-      payrollNotSelected: pricingContext?.labels?.payrollNotSelected || 'No payroll add-on selected',
+      payrollNotSelected:
+        pricingContext?.labels?.payrollNotSelected || 'No payroll add-on selected',
     }),
-    [pricingContext],
-  )
+    [pricingContext]
+  );
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search)
-    const nextLanguage = normalizeLanguageCode(params.get('lang'))
+    const params = new URLSearchParams(location.search);
+    const nextLanguage = normalizeLanguageCode(params.get('lang'));
 
     if (params.get('lang') && nextLanguage !== language) {
-      setLanguage(nextLanguage)
+      setLanguage(nextLanguage);
     }
-  }, [language, location.search, setLanguage])
+  }, [language, location.search, setLanguage]);
 
   const leadContext = useMemo(() => {
-    const context = getContactDemoContext(location.search)
-    const selectedPlan = (pricingPage.tiers || []).find((tier) => tier.slug === context.plan)
+    const context = getContactDemoContext(location.search);
+    const selectedPlan = (pricingPage.tiers || []).find((tier) => tier.slug === context.plan);
 
     return {
       ...context,
       planLabel: selectedPlan?.name || '',
       billingLabel:
-        context.billing === BILLING_PERIODS.annual ? pricingPage.billingToggle?.annual : pricingPage.billingToggle?.monthly,
+        context.billing === BILLING_PERIODS.annual
+          ? pricingPage.billingToggle?.annual
+          : pricingPage.billingToggle?.monthly,
       payrollLabel: context.payrollInterest ? pricingPage.payrollAddon?.title : '',
       promoLabel: context.promo === CONTACT_PROMOS.annualLaunch ? pricingPage.launchOfferLabel : '',
       language,
-    }
-  }, [language, location.search, pricingPage])
+    };
+  }, [language, location.search, pricingPage]);
 
   const contextItems = useMemo(
     () => [
       { label: contextLabels.plan, value: leadContext.planLabel || contextLabels.notSelected },
-      { label: contextLabels.billing, value: leadContext.billingLabel || contextLabels.notSelected },
+      {
+        label: contextLabels.billing,
+        value: leadContext.billingLabel || contextLabels.notSelected,
+      },
       {
         label: contextLabels.payroll,
-        value: leadContext.payrollInterest ? contextLabels.payrollInterested : contextLabels.payrollNotSelected,
+        value: leadContext.payrollInterest
+          ? contextLabels.payrollInterested
+          : contextLabels.payrollNotSelected,
       },
       { label: contextLabels.offer, value: leadContext.promoLabel || contextLabels.notSelected },
     ],
-    [contextLabels, leadContext],
-  )
+    [contextLabels, leadContext]
+  );
 
   return (
     <>
-      <SeoManager meta={content?.seo?.contact} schema={[organizationSchema, websiteSchema, softwareSchema]} />
-      <PageHero title={page.heroTitle} subtitle={page.heroSubtitle} preview={{ type: 'warehouse' }} />
+      <SeoManager
+        meta={content?.seo?.contact}
+        schema={[organizationSchema, websiteSchema, softwareSchema]}
+      />
+      <PageHero
+        title={page.heroTitle}
+        subtitle={page.heroSubtitle}
+        preview={{ type: 'warehouse' }}
+      />
 
       <section className="section-shell">
         <SectionHeading title={page.conversion?.title} subtitle={page.conversion?.subtitle} />
@@ -89,7 +104,10 @@ export default function ContactDemoPage() {
           <SectionHeading title={page.supportBlock?.title} subtitle={page.supportBlock?.subtitle} />
           <div className="mt-6 grid gap-3 md:grid-cols-3">
             {(page.supportBlock?.items || []).map((item) => (
-              <div key={item} className="rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3 text-sm text-zx-text-muted">
+              <div
+                key={item}
+                className="rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3 text-sm text-zx-text-muted"
+              >
                 {item}
               </div>
             ))}
@@ -102,12 +120,20 @@ export default function ContactDemoPage() {
           <Card>
             <SectionHeading
               title={pricingContext?.title || 'Selected pricing context'}
-              subtitle={pricingContext?.subtitle || 'We keep this commercial context attached to your request.'}
+              subtitle={
+                pricingContext?.subtitle ||
+                'We keep this commercial context attached to your request.'
+              }
             />
             <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
               {contextItems.map((item) => (
-                <div key={item.label} className="rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3">
-                  <p className="text-xs uppercase tracking-[0.14em] text-zx-text-muted">{item.label}</p>
+                <div
+                  key={item.label}
+                  className="rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3"
+                >
+                  <p className="text-xs uppercase tracking-[0.14em] text-zx-text-muted">
+                    {item.label}
+                  </p>
                   <p className="mt-2 text-sm font-medium text-zx-text">{item.value}</p>
                 </div>
               ))}
@@ -123,5 +149,5 @@ export default function ContactDemoPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

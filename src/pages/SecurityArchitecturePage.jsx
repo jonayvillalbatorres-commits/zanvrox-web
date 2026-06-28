@@ -1,18 +1,21 @@
-﻿import { Link } from 'react-router-dom'
-import SeoManager from '../components/seo/SeoManager'
-import PageHero from '../components/sections/PageHero'
-import Card from '../components/ui/Card'
-import SectionHeading from '../components/ui/SectionHeading'
-import { useLanguage } from '../contexts/LanguageContext'
-import { organizationSchema, softwareSchema, websiteSchema } from '../content/schema'
+﻿import { Link } from 'react-router-dom';
+import SeoManager from '../components/seo/SeoManager';
+import PageHero from '../components/sections/PageHero';
+import Card from '../components/ui/Card';
+import SectionHeading from '../components/ui/SectionHeading';
+import { useLanguage } from '../contexts/LanguageContext';
+import { organizationSchema, softwareSchema, websiteSchema } from '../content/schema';
 
 export default function SecurityArchitecturePage() {
-  const { content } = useLanguage()
-  const page = content?.pages?.security || {}
+  const { content } = useLanguage();
+  const page = content?.pages?.security || {};
 
   return (
     <>
-      <SeoManager meta={content?.seo?.security} schema={[organizationSchema, websiteSchema, softwareSchema]} />
+      <SeoManager
+        meta={content?.seo?.security}
+        schema={[organizationSchema, websiteSchema, softwareSchema]}
+      />
       <PageHero title={page.heroTitle} subtitle={page.heroSubtitle} preview={{ type: 'reports' }} />
 
       <section className="section-shell">
@@ -23,7 +26,10 @@ export default function SecurityArchitecturePage() {
           </Card>
           <div className="grid gap-3">
             {(page.overview?.bullets || []).map((item) => (
-              <div key={item} className="rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3 text-sm text-zx-text-muted">
+              <div
+                key={item}
+                className="rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3 text-sm text-zx-text-muted"
+              >
                 {item}
               </div>
             ))}
@@ -104,5 +110,5 @@ export default function SecurityArchitecturePage() {
         ) : null}
       </section>
     </>
-  )
+  );
 }

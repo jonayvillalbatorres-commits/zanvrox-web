@@ -1,18 +1,22 @@
-﻿import SeoManager from '../components/seo/SeoManager'
-import PageHero from '../components/sections/PageHero'
-import Card from '../components/ui/Card'
-import SectionHeading from '../components/ui/SectionHeading'
-import { useLanguage } from '../contexts/LanguageContext'
-import { organizationSchema, softwareSchema } from '../content/schema'
+﻿import SeoManager from '../components/seo/SeoManager';
+import PageHero from '../components/sections/PageHero';
+import Card from '../components/ui/Card';
+import SectionHeading from '../components/ui/SectionHeading';
+import { useLanguage } from '../contexts/LanguageContext';
+import { organizationSchema, softwareSchema } from '../content/schema';
 
 export default function IntegrationsApiPage() {
-  const { content } = useLanguage()
-  const page = content?.pages?.integrations || {}
+  const { content } = useLanguage();
+  const page = content?.pages?.integrations || {};
 
   return (
     <>
       <SeoManager meta={content?.seo?.integrations} schema={[organizationSchema, softwareSchema]} />
-      <PageHero title={page.heroTitle} subtitle={page.heroSubtitle} preview={{ type: 'purchases' }} />
+      <PageHero
+        title={page.heroTitle}
+        subtitle={page.heroSubtitle}
+        preview={{ type: 'purchases' }}
+      />
 
       <section className="section-shell">
         <SectionHeading title={page.posture?.title} subtitle={page.posture?.subtitle} />
@@ -36,5 +40,5 @@ export default function IntegrationsApiPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

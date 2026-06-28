@@ -1,26 +1,26 @@
-import { Suspense, lazy } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
-import MainLayout from './components/layout/MainLayout'
-import { usePreviewCopy } from './content/previewCopy'
+import { Suspense, lazy } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import MainLayout from './components/layout/MainLayout';
+import { usePreviewCopy } from './content/previewCopy';
 
-const HomePage = lazy(() => import('./pages/HomePage'))
-const ProductPage = lazy(() => import('./pages/ProductPage'))
-const PricingPage = lazy(() => import('./pages/PricingPage'))
-const ResourcesPage = lazy(() => import('./pages/ResourcesPage'))
-const SecurityArchitecturePage = lazy(() => import('./pages/SecurityArchitecturePage'))
-const AboutPage = lazy(() => import('./pages/AboutPage'))
-const ContactDemoPage = lazy(() => import('./pages/ContactDemoPage'))
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
-const PrivacyPage = lazy(() => import('./pages/legal/PrivacyPage'))
-const TermsPage = lazy(() => import('./pages/legal/TermsPage'))
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ProductPage = lazy(() => import('./pages/ProductPage'));
+const PricingPage = lazy(() => import('./pages/PricingPage'));
+const ResourcesPage = lazy(() => import('./pages/ResourcesPage'));
+const SecurityArchitecturePage = lazy(() => import('./pages/SecurityArchitecturePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ContactDemoPage = lazy(() => import('./pages/ContactDemoPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+const PrivacyPage = lazy(() => import('./pages/legal/PrivacyPage'));
+const TermsPage = lazy(() => import('./pages/legal/TermsPage'));
 
 function RouteFallback() {
-  const t = usePreviewCopy()
+  const t = usePreviewCopy();
   return (
     <div className="section-shell">
       <div className="zx-card py-10 text-center text-sm text-zx-text-muted">{t('Loading...')}</div>
     </div>
-  )
+  );
 }
 
 export default function App() {
@@ -52,5 +52,5 @@ export default function App() {
         </Route>
       </Routes>
     </Suspense>
-  )
+  );
 }

@@ -1,12 +1,12 @@
-﻿import SeoManager from '../../components/seo/SeoManager'
-import PageHero from '../../components/sections/PageHero'
-import Card from '../../components/ui/Card'
-import { useLanguage } from '../../contexts/LanguageContext'
-import { organizationSchema } from '../../content/schema'
+﻿import SeoManager from '../../components/seo/SeoManager';
+import PageHero from '../../components/sections/PageHero';
+import Card from '../../components/ui/Card';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { organizationSchema } from '../../content/schema';
 
 export default function PrivacyPage() {
-  const { content } = useLanguage()
-  const page = content?.pages?.legal?.privacy || {}
+  const { content } = useLanguage();
+  const page = content?.pages?.legal?.privacy || {};
 
   return (
     <>
@@ -20,5 +20,5 @@ export default function PrivacyPage() {
         </Card>
       </section>
     </>
-  )
+  );
 }

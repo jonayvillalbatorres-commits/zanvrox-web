@@ -1,9 +1,9 @@
-﻿import { Link } from 'react-router-dom'
-import { useLanguage } from '../contexts/LanguageContext'
+﻿import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function NotFoundPage() {
-  const { content } = useLanguage()
-  const page = content?.pages?.notFound || {}
+  const { content } = useLanguage();
+  const page = content?.pages?.notFound || {};
 
   return (
     <section className="section-shell py-20">
@@ -15,5 +15,5 @@ export default function NotFoundPage() {
         </Link>
       </div>
     </section>
-  )
+  );
 }
