@@ -1,4 +1,4 @@
-﻿const statusStyles = {
+const statusStyles = {
   ready: {
     icon: '🟢',
     className: 'border-emerald-400/45 bg-emerald-500/10 text-emerald-300',

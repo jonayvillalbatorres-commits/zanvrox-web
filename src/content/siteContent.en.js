@@ -1,4 +1,4 @@
-﻿const siteContentEn = {
+const siteContentEn = {
   locale: 'en',
   localeLabel: 'English',
   labels: {

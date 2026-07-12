@@ -3,7 +3,7 @@ import siteContentEn from './siteContent.en';
 export const ERP_LANGUAGE_SET = [
   { code: 'en', label: 'English', flag: 'CA', primary: true, erpLocale: 'en-CA' },
   { code: 'fr', label: 'Français', flag: 'CA', primary: true, erpLocale: 'fr-CA' },
-  { code: 'es', label: 'Español', flag: 'ES', primary: false, erpLocale: 'es-419' },
+  { code: 'es', label: 'Español', flag: 'ES', primary: false, erpLocale: 'es-ES' },
   { code: 'zh', label: '中文', flag: 'CN', primary: false, erpLocale: 'zh-CN' },
   { code: 'pa', label: 'Punjabi', flag: 'IN', primary: false, erpLocale: 'pa-IN' },
   { code: 'ar', label: 'العربية', flag: 'SA', primary: false, erpLocale: 'ar' },
@@ -29,7 +29,7 @@ const ALIASES = {
   fr: 'fr',
   'fr-ca': 'fr',
   es: 'es',
-  'es-419': 'es',
+  'es-ES': 'es',
   'es-ca': 'es',
   zh: 'zh',
   'zh-cn': 'zh',

@@ -20,7 +20,7 @@ function CheckIcon({ className = '' }) {
 const LOCALE_BY_LANGUAGE = {
   en: 'en-CA',
   fr: 'fr-CA',
-  es: 'es-419',
+  es: 'es-ES',
   zh: 'zh-CN',
   pa: 'pa-IN',
   ar: 'ar',

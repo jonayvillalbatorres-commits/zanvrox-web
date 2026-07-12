@@ -1,4 +1,4 @@
-﻿import siteContentEn from './siteContent.en';
+import siteContentEn from './siteContent.en';
 
 export const brand = siteContentEn.brand;
 export const navItems = siteContentEn.navItems;

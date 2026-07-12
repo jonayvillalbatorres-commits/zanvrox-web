@@ -1,4 +1,4 @@
-﻿const styles = {
+const styles = {
   available: 'zx-success-soft text-zx-success',
   info: 'border-zx-border bg-zx-surface-strong text-zx-text-muted',
 };

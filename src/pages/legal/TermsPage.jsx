@@ -1,4 +1,4 @@
-﻿import SeoManager from '../../components/seo/SeoManager';
+import SeoManager from '../../components/seo/SeoManager';
 import PageHero from '../../components/sections/PageHero';
 import Card from '../../components/ui/Card';
 import { useLanguage } from '../../contexts/LanguageContext';
