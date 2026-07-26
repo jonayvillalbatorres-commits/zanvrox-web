@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router';
 import MainLayout from './components/layout/MainLayout';
 import { usePreviewCopy } from './content/previewCopy';
 

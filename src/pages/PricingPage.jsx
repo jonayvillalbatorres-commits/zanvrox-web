@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import PricingCard from '../components/pricing/PricingCard';
 import PricingComparison from '../components/pricing/PricingComparison';
 import PricingFAQ from '../components/pricing/PricingFAQ';

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router';
 import { normalizeLanguageCode } from '../../content';
 import { useLanguage } from '../../contexts/LanguageContext';
 import SiteFooter from './SiteFooter';

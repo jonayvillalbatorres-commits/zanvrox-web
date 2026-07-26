@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import SeoManager from '../components/seo/SeoManager';
 import PageHero from '../components/sections/PageHero';
 import Card from '../components/ui/Card';

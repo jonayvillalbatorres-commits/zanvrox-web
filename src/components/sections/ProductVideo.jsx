@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import defaultVideoUrl from '../../assets/videos/zanvrox-overview.mp4';
 import previewImage from '../../assets/videos/zanvrox-overview-poster.jpg';
 import SectionHeading from '../ui/SectionHeading';

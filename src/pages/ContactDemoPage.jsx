@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import BriefRequestForm from '../components/forms/BriefRequestForm';
 import DemoForm from '../components/forms/DemoForm';
 import SeoManager from '../components/seo/SeoManager';

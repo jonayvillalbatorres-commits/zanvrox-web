@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import defaultOgImagePath from '../../assets/og/og-image.png';
 import { useLanguage } from '../../contexts/LanguageContext';
 

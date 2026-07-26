@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import StatusBadge from '../ui/StatusBadge';
 import ProductPreview from '../ui/ProductPreview';
 import { resolvePublicAppLink } from '../../utils/publicApp';

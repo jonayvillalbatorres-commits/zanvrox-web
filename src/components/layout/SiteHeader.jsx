@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { createDemoWorkspaceUrl } from '../../utils/publicApp';
 
