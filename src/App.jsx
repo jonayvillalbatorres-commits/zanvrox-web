@@ -13,6 +13,7 @@ const ContactDemoPage = lazy(() => import('./pages/ContactDemoPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 const PrivacyPage = lazy(() => import('./pages/legal/PrivacyPage'));
 const TermsPage = lazy(() => import('./pages/legal/TermsPage'));
+const AccountDeletionPage = lazy(() => import('./pages/legal/AccountDeletionPage'));
 
 function RouteFallback() {
   const t = usePreviewCopy();
@@ -48,6 +49,7 @@ export default function App() {
 
           <Route path="/legal/privacy" element={<PrivacyPage />} />
           <Route path="/legal/terms" element={<TermsPage />} />
+          <Route path="/account-deletion" element={<AccountDeletionPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
