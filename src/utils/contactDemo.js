@@ -7,7 +7,16 @@ export const CONTACT_PROMOS = {
   annualLaunch: 'annual-launch-1-month-free',
 };
 
-const KNOWN_PLANS = new Set(['finance-core', 'operations', 'enterprise']);
+const KNOWN_PLANS = new Set([
+  'finance',
+  'business',
+  'operations',
+  'enterprise',
+  'workforce-starter',
+  'workforce-team',
+  'workforce-business',
+  'workforce-multi-location',
+]);
 
 export const normalizePlan = (value) => {
   const normalized = String(value || '')
