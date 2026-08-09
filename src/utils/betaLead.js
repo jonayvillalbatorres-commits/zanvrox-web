@@ -1,8 +1,4 @@
-import {
-  createBetaLeadSubject,
-  serializeBetaLeadBody,
-  validateBetaLeadPayload,
-} from './betaLeadValidation';
+import { validateBetaLeadPayload } from './betaLeadValidation';
 
 const FALLBACK_ENDPOINT = '/api/workforce-beta-lead';
 
@@ -27,11 +23,12 @@ export async function submitBetaLead({ payload }) {
     headers: {
       'Content-Type': 'application/json',
     },
+    // The server always derives subject/body/html from `payload` itself and
+    // ignores any subject/body/html fields sent alongside it, so none are
+    // sent from here.
     body: JSON.stringify({
       type: 'workforce-beta',
       payload,
-      subject: createBetaLeadSubject({ payload }),
-      body: serializeBetaLeadBody({ payload }),
     }),
   });
 
