@@ -40,10 +40,11 @@ describe('PricingCard annual display', () => {
     expect(screen.getByText(/billed annually at cad 1,969/i)).toBeInTheDocument();
   });
 
-  test('uses product-specific annual promotion context', () => {
+  test('routes self-serve Workforce to billing and keeps ERP promotion context', () => {
     const workforce = renderCard(pricing.workforce, 'workforce-starter', BILLING_PERIODS.annual);
-    expect(workforce.container.querySelector('a').getAttribute('href')).toContain(
-      encodeURIComponent(CONTACT_PROMOS.workforceAnnual)
+    const workforceHref = workforce.container.querySelector('a').getAttribute('href');
+    expect(workforceHref).toBe(
+      'https://app.zanvrox.com/settings/billing?plan=starter&period=annual'
     );
     workforce.unmount();
 
