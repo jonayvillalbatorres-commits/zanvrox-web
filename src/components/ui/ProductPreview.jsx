@@ -7,6 +7,7 @@ import ProductionPreview from '../previews/ProductionPreview';
 import PurchasesPreview from '../previews/PurchasesPreview';
 import ReportsPreview from '../previews/ReportsPreview';
 import WarehousePreview from '../previews/WarehousePreview';
+import WorkforcePreview from '../previews/WorkforcePreview';
 
 const PREVIEW_COMPONENTS = {
   accounting: AccountingPreview,
@@ -18,6 +19,7 @@ const PREVIEW_COMPONENTS = {
   expenses: ExpensesPreview,
   ai: AIPreview,
   reports: ReportsPreview,
+  workforce: WorkforcePreview,
 };
 
 const PREVIEW_LABELS = {
@@ -30,6 +32,7 @@ const PREVIEW_LABELS = {
   expenses: 'Expenses',
   ai: 'AI Insights',
   reports: 'Analytics',
+  workforce: 'Workforce',
 };
 
 export default function ProductPreview({

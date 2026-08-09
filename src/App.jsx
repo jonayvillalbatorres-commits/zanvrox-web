@@ -5,6 +5,9 @@ import { usePreviewCopy } from './content/previewCopy';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const ProductPage = lazy(() => import('./pages/ProductPage'));
+const WorkforcePage = lazy(() => import('./pages/WorkforcePage'));
+const WorkforceRestaurantsPage = lazy(() => import('./pages/WorkforceRestaurantsPage'));
+const WorkforceBetaPage = lazy(() => import('./pages/WorkforceBetaPage'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
 const ResourcesPage = lazy(() => import('./pages/ResourcesPage'));
 const SecurityArchitecturePage = lazy(() => import('./pages/SecurityArchitecturePage'));
@@ -30,21 +33,25 @@ export default function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/product" element={<ProductPage />} />
+          <Route path="/erp" element={<ProductPage />} />
+          <Route path="/workforce" element={<WorkforcePage />} />
+          <Route path="/workforce/restaurants" element={<WorkforceRestaurantsPage />} />
+          <Route path="/workforce/beta" element={<WorkforceBetaPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/security" element={<SecurityArchitecturePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactDemoPage />} />
 
-          <Route path="/platform" element={<Navigate to="/product" replace />} />
-          <Route path="/modules" element={<Navigate to="/product" replace />} />
-          <Route path="/solutions" element={<Navigate to="/product" replace />} />
-          <Route path="/solutions/manufacturing" element={<Navigate to="/product" replace />} />
-          <Route path="/solutions/food-distribution" element={<Navigate to="/product" replace />} />
+          <Route path="/product" element={<Navigate to="/erp" replace />} />
+          <Route path="/platform" element={<Navigate to="/erp" replace />} />
+          <Route path="/modules" element={<Navigate to="/erp" replace />} />
+          <Route path="/solutions" element={<Navigate to="/erp" replace />} />
+          <Route path="/solutions/manufacturing" element={<Navigate to="/erp" replace />} />
+          <Route path="/solutions/food-distribution" element={<Navigate to="/erp" replace />} />
           <Route path="/security-architecture" element={<Navigate to="/security" replace />} />
           <Route path="/integrations-api" element={<Navigate to="/resources" replace />} />
-          <Route path="/ai" element={<Navigate to="/product" replace />} />
+          <Route path="/ai" element={<Navigate to="/erp" replace />} />
           <Route path="/contact-demo" element={<Navigate to="/contact" replace />} />
 
           <Route path="/legal/privacy" element={<PrivacyPage />} />
