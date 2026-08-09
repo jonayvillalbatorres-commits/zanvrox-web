@@ -3,7 +3,7 @@ import SeoManager from '../components/seo/SeoManager';
 import PageHero from '../components/sections/PageHero';
 import Card from '../components/ui/Card';
 import SectionHeading from '../components/ui/SectionHeading';
-import { organizationSchema, websiteSchema } from '../content/schema';
+import { organizationSchema, websiteSchema, workforceSoftwareSchema } from '../content/schema';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function WorkforcePage() {
@@ -12,7 +12,10 @@ export default function WorkforcePage() {
 
   return (
     <>
-      <SeoManager meta={content?.seo?.workforce} schema={[organizationSchema, websiteSchema]} />
+      <SeoManager
+        meta={content?.seo?.workforce}
+        schema={[organizationSchema, websiteSchema, workforceSoftwareSchema]}
+      />
       <PageHero
         kicker={page.heroKicker}
         title={page.heroTitle}

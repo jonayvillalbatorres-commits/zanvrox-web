@@ -3,7 +3,7 @@ import SeoManager from '../components/seo/SeoManager';
 import PageHero from '../components/sections/PageHero';
 import Card from '../components/ui/Card';
 import SectionHeading from '../components/ui/SectionHeading';
-import { organizationSchema, websiteSchema } from '../content/schema';
+import { organizationSchema, websiteSchema, workforceSoftwareSchema } from '../content/schema';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function WorkforceRestaurantsPage() {
@@ -14,7 +14,7 @@ export default function WorkforceRestaurantsPage() {
     <>
       <SeoManager
         meta={content?.seo?.workforceRestaurants}
-        schema={[organizationSchema, websiteSchema]}
+        schema={[organizationSchema, websiteSchema, workforceSoftwareSchema]}
       />
       <PageHero
         kicker={page.heroKicker}

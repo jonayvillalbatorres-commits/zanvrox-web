@@ -36,12 +36,12 @@ const formatPrice = (value, language = 'en') => {
   }).format(Number(value || 0));
 };
 
-const renderPriceLabel = (entry, pricing, language) => {
+const renderPriceLabel = (entry, pricing, language, amountOverride) => {
   if (entry?.kind === 'custom') {
     return entry?.label || pricing?.customLabel || 'Custom';
   }
 
-  const amount = formatPrice(entry?.amount, language);
+  const amount = formatPrice(amountOverride ?? entry?.amount, language);
   const prefix = entry?.kind === 'from' ? `${pricing?.fromLabel || 'From'} ` : '';
 
   return `${prefix}${amount}`;
@@ -55,8 +55,17 @@ export default function PricingCard({
 }) {
   const isPopular = Boolean(tier?.isPopular);
   const isAnnual = billingPeriod === BILLING_PERIODS.annual;
-  const priceSuffix = pricing?.priceSuffixMonthly || '/month';
   const activePricing = isAnnual ? tier?.annual : tier?.monthly;
+  // Workforce shows the annual total (e.g. "CAD 290 / year / location") instead
+  // of the monthly rate once billed annually, since "$29/month + billed
+  // annually at CAD 290" reads as ambiguous. ERP keeps its existing approved
+  // annual display (monthly rate headline + a "billed annually at ..." note)
+  // untouched — this only activates when the pricing group opts in.
+  const isAnnualTotalDisplay =
+    isAnnual && pricing?.annualDisplayMode === 'total' && activePricing?.kind === 'fixed';
+  const priceSuffix = isAnnualTotalDisplay
+    ? pricing?.priceSuffixAnnual || pricing?.priceSuffixMonthly || '/year'
+    : pricing?.priceSuffixMonthly || '/month';
   const includedItems = (tier?.included || [])
     .map((item) => String(item || '').trim())
     .filter(Boolean);
@@ -97,7 +106,12 @@ export default function PricingCard({
           {isAnnual ? pricing?.billedAnnuallyLabel : pricing?.billedMonthlyLabel}
         </p>
         <p className="mt-2 text-4xl font-semibold text-zx-text">
-          {renderPriceLabel(activePricing, pricing, language)}
+          {renderPriceLabel(
+            activePricing,
+            pricing,
+            language,
+            isAnnualTotalDisplay ? activePricing?.totalAmount : undefined
+          )}
           {activePricing?.kind === 'custom' ? null : (
             <span className="ml-2 text-base font-medium text-zx-text-muted">{priceSuffix}</span>
           )}

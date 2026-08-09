@@ -64,4 +64,27 @@ export const softwareSchema = {
   ],
 };
 
+export const workforceSoftwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  '@id': `${SITE_URL}/#software-workforce`,
+  name: 'ZANVROX Workforce',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Android, iOS, Web',
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'CAD',
+    lowPrice: 29,
+    highPrice: 79,
+  },
+  featureList: [
+    'Location-aware clock in and clock out',
+    'Schedules and shifts',
+    'Timesheets',
+    'Tasks and checklists',
+    'Team communication',
+    'Manager review and approvals',
+  ],
+};
+
 export const faqSchema = createFaqSchema([]);

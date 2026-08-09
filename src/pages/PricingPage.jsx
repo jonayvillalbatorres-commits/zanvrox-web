@@ -12,6 +12,7 @@ import {
   organizationSchema,
   softwareSchema,
   websiteSchema,
+  workforceSoftwareSchema,
 } from '../content/schema';
 import { useLanguage } from '../contexts/LanguageContext';
 import { BILLING_PERIODS, CONTACT_PROMOS, createContactDemoLink } from '../utils/contactDemo';
@@ -102,7 +103,13 @@ export default function PricingPage() {
     <>
       <SeoManager
         meta={content?.seo?.pricing}
-        schema={[organizationSchema, websiteSchema, softwareSchema, pricingFaqSchema]}
+        schema={[
+          organizationSchema,
+          websiteSchema,
+          softwareSchema,
+          workforceSoftwareSchema,
+          pricingFaqSchema,
+        ]}
       />
       <PageHero
         title={page.heroTitle}
