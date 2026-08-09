@@ -223,7 +223,7 @@ const pricingContract = (content) => {
 
 describe('siteContent i18n pricing', () => {
   test('keeps every visible language aligned with English pricing amounts and commercial structure', async () => {
-    const englishContract = pricingContract(siteContentEn);
+    const englishContract = pricingContract(await loadContent('en'));
 
     await Promise.all(
       ERP_LANGUAGE_SET.map(async ({ code }) => {

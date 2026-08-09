@@ -1,4 +1,10 @@
 import { getCachedContent } from './index';
+import {
+  ERP_PLANS,
+  GUIDED_IMPLEMENTATION,
+  PAYROLL_ADD_ON,
+  WORKFORCE_PLANS,
+} from '../../../packages/commercial-config/index.js';
 
 const findTier = (tiers, slug) => tiers.find((tier) => tier.slug === slug);
 
@@ -8,15 +14,20 @@ describe('pricing amounts', () => {
   const workforceTiers = pricing.workforce.tiers;
 
   test('ERP Finance is CAD 179/month', () => {
-    expect(findTier(erpTiers, 'finance').monthly.amount).toBe(179);
+    expect(findTier(erpTiers, 'finance').monthly.amount).toBe(ERP_PLANS.finance.monthlyCad);
+    expect(findTier(erpTiers, 'finance').annual.totalAmount).toBe(ERP_PLANS.finance.annualCad);
   });
 
   test('ERP Business is CAD 349/month', () => {
-    expect(findTier(erpTiers, 'business').monthly.amount).toBe(349);
+    expect(findTier(erpTiers, 'business').monthly.amount).toBe(ERP_PLANS.business.monthlyCad);
+    expect(findTier(erpTiers, 'business').annual.totalAmount).toBe(ERP_PLANS.business.annualCad);
   });
 
   test('ERP Operations is CAD 649/month', () => {
-    expect(findTier(erpTiers, 'operations').monthly.amount).toBe(649);
+    expect(findTier(erpTiers, 'operations').monthly.amount).toBe(ERP_PLANS.operations.monthlyCad);
+    expect(findTier(erpTiers, 'operations').annual.totalAmount).toBe(
+      ERP_PLANS.operations.annualCad
+    );
   });
 
   test('ERP Operations shows a Workforce included badge', () => {
@@ -39,18 +50,31 @@ describe('pricing amounts', () => {
 
   test('Payroll add-on is CAD 59/month + CAD 6/employee/month', () => {
     expect(pricing.payrollAddon.priceLabel).toBe('CAD 59 / month + CAD 6 / employee / month');
+    expect(pricing.payrollAddon.monthlyBaseCad).toBe(PAYROLL_ADD_ON.monthlyBaseCad);
+    expect(pricing.payrollAddon.monthlyPerEmployeeCad).toBe(PAYROLL_ADD_ON.monthlyPerEmployeeCad);
+    expect(pricing.onboardingPackage.minimumCad).toBe(GUIDED_IMPLEMENTATION.minimumCad);
+    expect(pricing.onboardingPackage.maximumCad).toBe(GUIDED_IMPLEMENTATION.maximumCad);
   });
 
   test('Workforce Starter is CAD 29/month per location', () => {
-    expect(findTier(workforceTiers, 'workforce-starter').monthly.amount).toBe(29);
+    expect(findTier(workforceTiers, 'workforce-starter').monthly.amount).toBe(
+      WORKFORCE_PLANS.starter.monthlyCad
+    );
+    expect(findTier(workforceTiers, 'workforce-starter').employeeLimit).toBe(
+      WORKFORCE_PLANS.starter.employeeLimit
+    );
   });
 
   test('Workforce Team is CAD 49/month per location', () => {
-    expect(findTier(workforceTiers, 'workforce-team').monthly.amount).toBe(49);
+    expect(findTier(workforceTiers, 'workforce-team').monthly.amount).toBe(
+      WORKFORCE_PLANS.team.monthlyCad
+    );
   });
 
   test('Workforce Business is CAD 79/month per location', () => {
-    expect(findTier(workforceTiers, 'workforce-business').monthly.amount).toBe(79);
+    expect(findTier(workforceTiers, 'workforce-business').monthly.amount).toBe(
+      WORKFORCE_PLANS.business.monthlyCad
+    );
   });
 
   test('Workforce annual pricing equals 10 months of the monthly rate (two months free)', () => {
