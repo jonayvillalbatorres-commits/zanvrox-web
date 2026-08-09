@@ -4,8 +4,11 @@ export const BILLING_PERIODS = {
 };
 
 export const CONTACT_PROMOS = {
-  annualLaunch: 'annual-launch-1-month-free',
+  workforceAnnual: 'workforce-annual-2-months-free',
+  erpAnnual: 'erp-annual-1-month-free',
 };
+
+const KNOWN_PROMOS = new Set(Object.values(CONTACT_PROMOS));
 
 const KNOWN_PLANS = new Set([
   'finance',
@@ -30,8 +33,8 @@ export const normalizeBilling = (value) => {
 };
 
 export const normalizePromo = (value, billing) => {
-  if (value === CONTACT_PROMOS.annualLaunch && billing === BILLING_PERIODS.annual) {
-    return CONTACT_PROMOS.annualLaunch;
+  if (KNOWN_PROMOS.has(value) && billing === BILLING_PERIODS.annual) {
+    return value;
   }
   return '';
 };

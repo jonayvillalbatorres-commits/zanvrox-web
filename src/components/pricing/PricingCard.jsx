@@ -72,7 +72,11 @@ export default function PricingCard({
   const ctaPath = createContactDemoLink({
     plan: tier?.slug,
     billing: billingPeriod,
-    promo: isAnnual ? CONTACT_PROMOS.annualLaunch : '',
+    promo: isAnnual
+      ? pricing?.locationBasis === 'per_location'
+        ? CONTACT_PROMOS.workforceAnnual
+        : CONTACT_PROMOS.erpAnnual
+      : '',
     language,
     hash: 'demo-form',
   });

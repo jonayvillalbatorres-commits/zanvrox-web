@@ -42,17 +42,25 @@ export default function ContactDemoPage() {
 
   const leadContext = useMemo(() => {
     const context = getContactDemoContext(location.search);
-    const selectedPlan = (pricingPage.tiers || []).find((tier) => tier.slug === context.plan);
+    const isWorkforcePlan = context.plan.startsWith('workforce-');
+    const pricingSection = isWorkforcePlan ? pricingPage.workforce || {} : pricingPage.erp || {};
+    const selectedPlan = (pricingSection.tiers || []).find((tier) => tier.slug === context.plan);
+    const promoLabel =
+      context.promo === CONTACT_PROMOS.workforceAnnual
+        ? pricingPage.workforce?.launchOfferLabel
+        : context.promo === CONTACT_PROMOS.erpAnnual
+          ? pricingPage.erp?.launchOfferLabel
+          : '';
 
     return {
       ...context,
       planLabel: selectedPlan?.name || '',
       billingLabel:
         context.billing === BILLING_PERIODS.annual
-          ? pricingPage.billingToggle?.annual
-          : pricingPage.billingToggle?.monthly,
+          ? pricingSection.billingToggle?.annual
+          : pricingSection.billingToggle?.monthly,
       payrollLabel: context.payrollInterest ? pricingPage.payrollAddon?.title : '',
-      promoLabel: context.promo === CONTACT_PROMOS.annualLaunch ? pricingPage.launchOfferLabel : '',
+      promoLabel,
       language,
     };
   }, [language, location.search, pricingPage]);

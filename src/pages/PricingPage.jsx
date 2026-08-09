@@ -69,7 +69,7 @@ export default function PricingPage() {
   const erp = page.erp || {};
   const [workforceBilling, setWorkforceBilling] = useState(BILLING_PERIODS.monthly);
   const [erpBilling, setErpBilling] = useState(BILLING_PERIODS.monthly);
-  const erpPromo = erpBilling === BILLING_PERIODS.annual ? CONTACT_PROMOS.annualLaunch : '';
+  const erpPromo = erpBilling === BILLING_PERIODS.annual ? CONTACT_PROMOS.erpAnnual : '';
   const pricingFaqSchema = useMemo(() => createFaqSchema(page?.faq?.items), [page?.faq?.items]);
 
   const primaryCta = createContactDemoLink({
