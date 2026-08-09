@@ -200,6 +200,7 @@ const pricingGroupContract = (group) => ({
     monthlyAmount: tier.monthly?.amount ?? null,
     annualKind: tier.annual?.kind,
     annualAmount: tier.annual?.amount ?? null,
+    annualTotalAmount: tier.annual?.totalAmount ?? null,
     annualNoteNumbers: extractNumbers(tier.annual?.note),
     includedCount: tier.included?.length,
   })),

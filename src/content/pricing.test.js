@@ -58,11 +58,18 @@ describe('pricing amounts', () => {
       .filter((tier) => tier.monthly.kind === 'fixed')
       .forEach((tier) => {
         expect(tier.annual.amount).toBe(tier.monthly.amount);
-        const annualTotalNumbers = tier.annual.note
-          .match(/\d[\d,]*/g)
-          .map((n) => Number(n.replace(/,/g, '')));
-        expect(annualTotalNumbers).toContain(tier.monthly.amount * 10);
+        expect(tier.annual.totalAmount).toBe(tier.monthly.amount * 10);
+        expect(tier.annual.badge).toBe('2 months free');
       });
+  });
+
+  test('Workforce pricing group is flagged to show the annual total, not a monthly-rate headline', () => {
+    expect(pricing.workforce.annualDisplayMode).toBe('total');
+    expect(pricing.workforce.priceSuffixAnnual).toContain('year');
+  });
+
+  test('ERP pricing group does not use the annual-total display (unchanged approved behavior)', () => {
+    expect(pricing.erp.annualDisplayMode).toBeUndefined();
   });
 
   test('ERP annual pricing equals 11 months of the monthly rate (one month free)', () => {
@@ -81,5 +88,25 @@ describe('pricing amounts', () => {
     expect(beta.badges).toContain('14-day beta');
     expect(beta.badges).toContain('6 months free after launch');
     expect(beta.badges).toContain('No purchase commitment');
+  });
+
+  test('ERP annual billing toggle stays at one month free (not two)', () => {
+    expect(pricing.erp.billingToggle.annualBadge).toBe('1 month free');
+  });
+
+  test('Workforce annual billing toggle stays at two months free', () => {
+    expect(pricing.workforce.billingToggle.annualBadge).toBe('2 months free');
+  });
+
+  test('Workforce and ERP annual helper texts are distinct (no shared global helper)', () => {
+    expect(pricing.workforce.billingToggle.helper).not.toBe(pricing.erp.billingToggle.helper);
+  });
+
+  test('bundle copy does not overstate the Finance/Business Workforce relationship', () => {
+    const bundleText = JSON.stringify(pricing.bundleOffers);
+    expect(bundleText).not.toMatch(/finance[^.]*25%\s*off/i);
+    expect(bundleText).not.toMatch(/unlimited workforce/i);
+    expect(bundleText).toMatch(/50% off/i);
+    expect(bundleText).toMatch(/included for the employees and locations/i);
   });
 });

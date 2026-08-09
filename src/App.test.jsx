@@ -128,6 +128,21 @@ describe('navigation', () => {
 });
 
 describe('account deletion contact address', () => {
+  test('renders localized content-driven copy instead of hardcoded English', async () => {
+    const content = getCachedContent('en');
+    renderApp('/account-deletion');
+    expect(
+      await screen.findByRole(
+        'heading',
+        { name: content.pages.legal.accountDeletion.title },
+        { timeout: 5000 }
+      )
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(content.pages.legal.accountDeletion.selfServiceBody)
+    ).toBeInTheDocument();
+  });
+
   test('uses support@zanvrox.com instead of an unconfirmed privacy@ alias', async () => {
     renderApp('/account-deletion');
     const mailLinks = await screen.findAllByRole('link', { name: /support@zanvrox\.com/i });
