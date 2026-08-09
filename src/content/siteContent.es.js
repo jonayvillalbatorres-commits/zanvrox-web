@@ -17,7 +17,8 @@ const siteContentEs = {
   },
   navItems: [
     { label: 'Inicio', path: '/' },
-    { label: 'Producto', path: '/product' },
+    { label: 'ERP', path: '/erp' },
+    { label: 'Workforce', path: '/workforce' },
     { label: 'Precios', path: '/pricing' },
     { label: 'Recursos', path: '/resources' },
     { label: 'Seguridad', path: '/security' },
@@ -67,7 +68,7 @@ const siteContentEs = {
           'Mesa de trabajo de nómina',
           'Informes y aprobaciones',
         ],
-        primaryCta: { label: 'Explorar producto', path: '/product' },
+        primaryCta: { label: 'Explorar producto', path: '/erp' },
         secondaryCta: { label: 'Abrir espacio de evaluación', path: '/resources#demo-environment' },
       },
       trustSignals: [
@@ -84,6 +85,26 @@ const siteContentEs = {
         { status: 'locked', text: 'Controles de gobernanza y auditabilidad' },
         { status: 'ready', text: 'Ruta de incorporación autónoma' },
       ],
+      productLines: {
+        eyebrow: 'Una plataforma, dos formas de empezar',
+        title: 'Dos formas de dirigir tu negocio con ZANVROX',
+        subtitle:
+          'Empieza con Workforce para operaciones de turnos de primera línea, con ZANVROX ERP para finanzas y operaciones de negocio, o con ambos juntos.',
+        cards: [
+          {
+            name: 'ZANVROX ERP',
+            headline:
+              'Finanzas, inventario, compras y operaciones en una sola plataforma conectada.',
+            cta: { label: 'Explorar ERP', path: '/erp' },
+          },
+          {
+            name: 'ZANVROX Workforce',
+            headline: 'Fichajes, horarios, tareas y hojas de horas para equipos de primera línea.',
+            cta: { label: 'Explorar Workforce', path: '/workforce' },
+          },
+        ],
+        note: 'Empieza con Workforce. Añade el ERP cuando lo necesites. ¿Ya diriges tu negocio con ZANVROX? Workforce viene incluido con Operaciones.',
+      },
       evaluationPath: {
         eyebrow: 'Embudo orientado al producto',
         title: 'Evalúa sin reservar una reunión primero',
@@ -317,6 +338,12 @@ const siteContentEs = {
         note: 'Solo para evaluación en navegador. Este espacio permanece separado de la planificación de implementación y de las expectativas de producción.',
         cta: { label: 'Abrir espacio de evaluación', path: '/resources#demo-environment' },
       },
+      restaurantBetaBanner: {
+        eyebrow: 'Restaurantes de Ontario',
+        title: 'Únete a la beta privada de ZANVROX Workforce',
+        body: 'Prueba de 14 días. 6 meses gratis después del lanzamiento.',
+        cta: { label: 'Más información', path: '/workforce/beta' },
+      },
       faq: {
         eyebrow: 'Preguntas frecuentes',
         title: 'Preguntas que los equipos hacen antes de comprometer tiempo',
@@ -347,15 +374,16 @@ const siteContentEs = {
         title: 'Empieza por el producto, no por una llamada comercial',
         subtitle:
           'Explora primero el producto y los precios. Contacta al equipo cuando tengas una pregunta concreta sobre despliegue, nómina o integración.',
-        primary: { label: 'Explorar producto', path: '/product' },
+        primary: { label: 'Explorar producto', path: '/erp' },
         secondary: { label: 'Ver precios', path: '/pricing' },
       },
     },
     product: {
-      heroKicker: 'Cobertura integrada del producto',
-      heroTitle: 'Cobertura del producto para finanzas, operaciones, cumplimiento y nómina.',
+      heroKicker: 'ZANVROX ERP',
+      heroTitle:
+        'Gestiona finanzas, operaciones y equipo de trabajo desde una sola plataforma conectada.',
       heroSubtitle:
-        'ZANVROX se presenta como una plataforma ERP controlada para equipos pyme canadienses que necesitan visibilidad operativa sin teatralidad empresarial.',
+        'ZANVROX ERP es una plataforma controlada para equipos pyme canadienses que cubre finanzas, facturación, gastos, clientes y proveedores, compras, inventario, ubicaciones, operaciones, informes, flujos de nómina y ZANVROX Workforce.',
       heroPrimaryCta: { label: 'Ver precios', path: '/pricing' },
       heroSecondaryCta: {
         label: 'Abrir espacio de evaluación',
@@ -371,7 +399,7 @@ const siteContentEs = {
         ],
       },
       pillars: {
-        title: 'Cuatro pilares del producto',
+        title: 'Pilares del producto',
         subtitle:
           'El sitio explica el producto en torno a flujos de trabajo, no a listas desconectadas de funciones.',
         items: [
@@ -390,6 +418,10 @@ const siteContentEs = {
           {
             title: 'Gobernanza',
             body: 'Auditabilidad, aprobaciones, límites de control y ruta de expansión multisociedad.',
+          },
+          {
+            title: 'ZANVROX Workforce',
+            body: 'Fichaje de entrada y salida, horarios, tareas y hojas de horas para equipos de primera línea, incluido con los planes ERP elegibles o disponible de forma independiente.',
           },
         ],
       },
@@ -431,6 +463,7 @@ const siteContentEs = {
             'Contabilidad y facturación viven en el mismo sistema que compras y gastos.',
             'Los datos de inventario, almacén y BOM permanecen vinculados al registro financiero.',
             'Aprobaciones y gobernanza pueden añadirse sin herramientas operativas separadas.',
+            'ZANVROX Workforce conecta los datos de fichaje, horarios y hojas de horas del personal de primera línea de vuelta a la misma plataforma.',
           ],
         },
         {
@@ -490,132 +523,404 @@ const siteContentEs = {
       },
     },
     pricing: {
-      heroTitle: 'Precios para operaciones estructuradas y expansión controlada.',
+      heroTitle: 'Precios para ZANVROX ERP y ZANVROX Workforce.',
       heroSubtitle:
-        'Empieza con un núcleo financiero controlado, amplía hacia operaciones a medida que aumenta la complejidad y pasa a un despliegue personalizado solo cuando sean necesarios una estructura multiubicación, aprobaciones avanzadas, soporte de onboarding, integraciones o revisión de seguridad.',
-      packagesTitle: 'Precios públicos para finanzas, operaciones y despliegue guiado',
-      packagesSubtitle:
-        'Precios transparentes en CAD para equipos SMB canadienses que necesitan flujos estructurados hoy y una ruta creíble hacia un control operativo más amplio con el tiempo.',
-      launchBadge: 'Facturación anual disponible',
-      launchOfferLabel:
-        'Las suscripciones base anuales incluyen un mes gratis cuando se facturan por año.',
-      launchOfferNote:
-        'El precio de nómina sigue siendo por uso, y la Implementación guiada está disponible cuando se necesita un despliegue más estructurado.',
-      popularLabel: 'Buen ajuste para 10-50 empleados',
-      priceSuffixMonthly: '/mes',
-      billedMonthlyLabel: 'Facturación mensual',
-      billedAnnuallyLabel: 'Facturación anual',
-      fromLabel: 'Desde',
-      customLabel: 'Personalizado',
-      includesLabel: 'Incluye',
-      entitiesIncludedLabel: 'Alcance comercial',
-      usersIncludedLabel: 'Usuarios incluidos',
-      billingToggle: {
-        monthly: 'Mensual',
-        annual: 'Anual',
-        annualBadge: '1 mes gratis',
-        helper:
-          'La facturación anual cambia solo el plazo de la suscripción base. La nómina mantiene una cuota base más el número de empleados.',
-      },
+        'Empieza con Workforce para operaciones de turnos de primera línea, con ZANVROX ERP para finanzas y operaciones de negocio, o con ambos juntos. Precios transparentes en CAD para equipos pyme canadienses.',
       pricingNote:
-        'Todos los precios están en CAD. La nómina es un complemento separado. Los planes están diseñados para operaciones estructuradas, flujos controlados, auditabilidad y diseño de producto consciente de la seguridad sin forzar demasiado pronto un alcance empresarial. ZANVROX ayuda a organizar flujos financieros, de nómina y fiscales, pero no sustituye el asesoramiento contable, legal ni fiscal.',
-      tiers: [
-        {
-          slug: 'finance-core',
-          name: 'Núcleo financiero',
-          summary:
-            'Para empresas que necesitan una base financiera disciplinada con contabilidad, facturación, gastos, informes y una ruta clara de configuración autónoma.',
-          entitiesLabel: 'Alcance de empresa única',
-          usersLabel: 'Hasta 3 usuarios',
-          monthly: {
-            kind: 'fixed',
-            amount: 179,
-            note: 'Incluye guía de configuración autónoma, flujos financieros controlados y soporte por correo con respuesta en 48 h.',
-          },
-          annual: {
-            kind: 'fixed',
-            amount: 179,
-            badge: '1 mes gratis',
-            note: 'Facturado anualmente a CAD 1,969 por la suscripción base.',
-            secondaryNote:
-              'La nómina y un alcance operativo más amplio siguen siendo componentes separados cuando se necesitan.',
-          },
-          included: [
-            'Flujos contables',
-            'Facturación',
-            'Captura de gastos',
-            'Informes financieros',
-            'Guía de configuración autónoma',
-            'Soporte por correo (48 h de respuesta)',
-          ],
-          ctaLabel: 'Revisar Núcleo financiero',
+        'Precios en dólares canadienses. Impuestos no incluidos. El precio puede variar para despliegues empresariales o de alto volumen. La nómina es un complemento separado. ZANVROX ayuda a organizar flujos financieros, de nómina y de personal, pero no sustituye el asesoramiento contable, legal ni fiscal.',
+      upgradePath: {
+        eyebrow: 'Empieza donde está tu negocio hoy',
+        title: 'Una sola plataforma a medida que tu negocio crece',
+        subtitle:
+          'Esta no es una secuencia obligatoria. Una empresa puede contratar directamente el plan que mejor encaje hoy.',
+        steps: [
+          { name: 'Workforce', body: 'CAD 29-79 por ubicación' },
+          { name: 'Finanzas', body: 'CAD 179 / mes' },
+          { name: 'Negocio', body: 'CAD 349 / mes' },
+          { name: 'Operaciones', body: 'CAD 649 / mes, Workforce incluido' },
+          { name: 'Empresarial', body: 'Personalizado' },
+        ],
+        note: '¿Ya diriges tu negocio con ZANVROX? Workforce viene incluido con Operaciones.',
+      },
+      bundleOffers: {
+        operationsIncluded: {
+          title: 'Operaciones incluye ZANVROX Workforce',
+          body: 'ZANVROX Workforce incluido para los empleados y ubicaciones cubiertos por tu suscripción ERP. Sin coste adicional de Workforce para ese alcance.',
         },
-        {
-          slug: 'operations',
-          name: 'Operaciones',
-          isPopular: true,
-          summary:
-            'Para equipos que necesitan finanzas y operaciones trabajando juntas entre inventario, almacén, fundamentos de producción y aprobaciones controladas.',
-          entitiesLabel: 'Alcance de empresa única',
-          usersLabel: 'Hasta 10 usuarios',
-          monthly: {
-            kind: 'fixed',
-            amount: 649,
-            note: 'Incluye soporte prioritario por correo con respuesta en 24 h para equipos con mayor actividad operativa.',
-          },
-          annual: {
-            kind: 'fixed',
-            amount: 649,
-            badge: '1 mes gratis',
-            note: 'Facturado anualmente a CAD 7,139 por la suscripción base.',
-            secondaryNote:
-              'Recomendado cuando operaciones necesita un control más estrecho sobre stock, movimientos de almacén, BOM y flujos de producción.',
-          },
-          included: [
-            'Todo lo incluido en Núcleo financiero',
-            'Control de inventario',
-            'Flujos de almacén',
-            'Producción (BOM)',
-            'Aprobaciones y gobernanza',
-            'Soporte prioritario por correo (24 h de respuesta)',
-          ],
-          ctaLabel: 'Revisar Operaciones',
+        businessDiscount: {
+          title: '50% de descuento en Workforce con Negocio',
+          body: 'Los clientes de ERP Negocio reciben un 50% de descuento en su plan independiente elegible de ZANVROX Workforce.',
         },
-        {
-          slug: 'enterprise',
-          name: 'Personalizado',
-          summary:
-            'Para equipos con varias ubicaciones que necesitan aprobaciones avanzadas, revisiones de seguridad, onboarding personalizado, integraciones, soporte dedicado o un despliegue más estructurado.',
-          entitiesLabel: 'Alcance multiubicación o personalizado',
-          usersLabel: 'Alcance de usuarios personalizado',
-          monthly: {
-            kind: 'custom',
-            label: 'Personalizado',
-            note: 'Revisión acotada para despliegue multiubicación, configuración guiada, integraciones, necesidades de gobernanza y revisión de seguridad.',
-          },
-          annual: {
-            kind: 'custom',
-            label: 'Personalizado',
-            note: 'El precio personalizado se acota directamente según la estructura operativa, las necesidades de despliegue y el contexto de implementación.',
-          },
-          included: [
-            'Despliegue multiubicación',
-            'Gobernanza avanzada',
-            'Integraciones',
-            'Ruta de revisión de seguridad',
-            'Implementación guiada y soporte de despliegue',
-          ],
-          ctaLabel: 'Solicitar revisión personalizada',
+        financeStandalone: {
+          title: 'Finanzas y Workforce, de forma independiente',
+          body: 'Finanzas no incluye Workforce. Puedes contratar Finanzas más un plan independiente de Workforce sin ninguna obligación de pasar a Negocio u Operaciones.',
         },
-      ],
+      },
+      workforce: {
+        title: 'ZANVROX Workforce',
+        subtitle:
+          'Fichajes de entrada y salida, horarios, tareas y hojas de horas para equipos de primera línea, con precio por ubicación.',
+        launchBadge: 'Facturación anual disponible',
+        launchOfferLabel:
+          'Los planes anuales de Workforce incluyen dos meses gratis al facturarse por año.',
+        launchOfferNote:
+          'El precio mostrado aquí es informativo; la facturación se confirma cuando empiezas.',
+        popularLabel: 'Más popular',
+        priceSuffixMonthly: '/mes por ubicación',
+        billedMonthlyLabel: 'Facturación mensual',
+        billedAnnuallyLabel: 'Facturación anual',
+        fromLabel: 'Desde',
+        customLabel: 'Precio personalizado',
+        includesLabel: 'Incluye',
+        entitiesIncludedLabel: 'Alcance de facturación',
+        usersIncludedLabel: 'Empleados incluidos',
+        billingToggle: {
+          monthly: 'Mensual',
+          annual: 'Anual',
+          annualBadge: '2 meses gratis',
+          helper:
+            'La facturación anual cambia solo el plazo de la suscripción base y equivale a 10 meses de la tarifa mensual.',
+        },
+        tiers: [
+          {
+            slug: 'workforce-starter',
+            name: 'Inicial',
+            summary:
+              'Para una sola ubicación que necesita fichajes, horarios y hojas de horas en una sola app.',
+            entitiesLabel: 'Precio por ubicación',
+            usersLabel: 'Hasta 10 empleados',
+            monthly: { kind: 'fixed', amount: 29, note: 'Facturado por ubicación, al mes.' },
+            annual: {
+              kind: 'fixed',
+              amount: 29,
+              badge: '2 meses gratis',
+              note: 'Facturado anualmente a CAD 290 por ubicación.',
+            },
+            included: [
+              'Fichaje de entrada / salida',
+              'Verificación de ubicación',
+              'Hojas de horas',
+              'Horarios',
+              'Tareas',
+            ],
+            ctaLabel: 'Empezar con Inicial',
+          },
+          {
+            slug: 'workforce-team',
+            name: 'Equipo',
+            isPopular: true,
+            summary:
+              'Para ubicaciones que necesitan controles de gerencia, solicitudes de turno e informes más sólidos.',
+            entitiesLabel: 'Precio por ubicación',
+            usersLabel: 'Hasta 25 empleados',
+            monthly: { kind: 'fixed', amount: 49, note: 'Facturado por ubicación, al mes.' },
+            annual: {
+              kind: 'fixed',
+              amount: 49,
+              badge: '2 meses gratis',
+              note: 'Facturado anualmente a CAD 490 por ubicación.',
+            },
+            included: [
+              'Todo lo incluido en Inicial',
+              'Controles de gerencia',
+              'Turnos abiertos y solicitudes de turno',
+              'Comunicación de equipo',
+              'Informes mejorados',
+              'Más controles operativos',
+            ],
+            ctaLabel: 'Empezar con Equipo',
+          },
+          {
+            slug: 'workforce-business',
+            name: 'Negocio',
+            summary:
+              'Para ubicaciones más grandes que necesitan controles de gerencia avanzados y varios gerentes.',
+            entitiesLabel: 'Precio por ubicación',
+            usersLabel: 'Hasta 50 empleados',
+            monthly: { kind: 'fixed', amount: 79, note: 'Facturado por ubicación, al mes.' },
+            annual: {
+              kind: 'fixed',
+              amount: 79,
+              badge: '2 meses gratis',
+              note: 'Facturado anualmente a CAD 790 por ubicación.',
+            },
+            included: [
+              'Todo lo incluido en Equipo',
+              'Controles de gerencia avanzados',
+              'Más informes',
+              'Varios gerentes',
+              'Operaciones de personal avanzadas',
+            ],
+            ctaLabel: 'Empezar con Negocio',
+          },
+          {
+            slug: 'workforce-multi-location',
+            name: 'Multiubicación',
+            summary: 'Para cadenas, grupos multiubicación y ubicaciones con más de 50 empleados.',
+            entitiesLabel: 'Precio multiubicación personalizado',
+            usersLabel: '50+ empleados por ubicación',
+            monthly: {
+              kind: 'custom',
+              label: 'Precio personalizado',
+              note: 'Acotado para cadenas, grupos multiubicación y necesidades operativas especiales.',
+            },
+            annual: {
+              kind: 'custom',
+              label: 'Precio personalizado',
+              note: 'Acotado directamente según el número de ubicaciones y empleados.',
+            },
+            included: [
+              '50+ empleados por ubicación',
+              'Soporte multiubicación y de cadenas',
+              'Necesidades operativas especiales',
+              'Despliegue y soporte personalizados',
+            ],
+            ctaLabel: 'Solicitar precio multiubicación',
+          },
+        ],
+        comparison: {
+          title: 'Comparación de planes Workforce',
+          subtitle: 'Compara Inicial, Equipo y Negocio para una sola ubicación.',
+          featureLabel: 'Capacidad',
+          rows: [
+            { label: 'Fichaje de entrada / salida', values: [true, true, true] },
+            { label: 'Verificación de ubicación', values: [true, true, true] },
+            { label: 'Hojas de horas', values: [true, true, true] },
+            { label: 'Horarios', values: [true, true, true] },
+            { label: 'Tareas', values: [true, true, true] },
+            { label: 'Controles de gerencia', values: [false, true, true] },
+            { label: 'Turnos abiertos / solicitudes de turno', values: [false, true, true] },
+            { label: 'Comunicación de equipo', values: [false, true, true] },
+            { label: 'Informes mejorados', values: [false, true, true] },
+            { label: 'Controles de gerencia avanzados', values: [false, false, true] },
+            { label: 'Varios gerentes', values: [false, false, true] },
+            { label: 'Empleados incluidos', values: ['10', '25', '50'] },
+          ],
+          notesTitle: 'Notas comerciales',
+          notes: [
+            'Precio por ubicación, al mes.',
+            'Multiubicación y ubicaciones con más de 50 empleados usan precio personalizado.',
+            'La facturación anual incluye dos meses gratis (10 meses de la tarifa mensual).',
+          ],
+          annualNote: 'Los planes anuales de Workforce incluyen dos meses gratis.',
+        },
+      },
+      erp: {
+        title: 'ZANVROX ERP',
+        subtitle:
+          'Control financiero, operaciones de negocio y flujos conectados para equipos pyme canadienses.',
+        launchBadge: 'Facturación anual disponible',
+        launchOfferLabel:
+          'Las suscripciones base anuales incluyen un mes gratis al facturarse por año.',
+        launchOfferNote:
+          'El precio de la nómina sigue siendo por uso, y la Implementación guiada está disponible cuando se necesita un despliegue más estructurado.',
+        popularLabel: 'Más popular',
+        priceSuffixMonthly: '/mes',
+        billedMonthlyLabel: 'Facturación mensual',
+        billedAnnuallyLabel: 'Facturación anual',
+        fromLabel: 'Desde',
+        customLabel: 'Personalizado',
+        includesLabel: 'Incluye',
+        entitiesIncludedLabel: 'Alcance comercial',
+        usersIncludedLabel: 'Usuarios incluidos',
+        billingToggle: {
+          monthly: 'Mensual',
+          annual: 'Anual',
+          annualBadge: '1 mes gratis',
+          helper:
+            'La facturación anual cambia solo el plazo de la suscripción base. La nómina mantiene el precio por cuota base más número de empleados.',
+        },
+        tiers: [
+          {
+            slug: 'finance',
+            name: 'Finanzas',
+            summary:
+              'Control financiero para empresas en crecimiento: facturación, gastos e informes.',
+            entitiesLabel: 'Alcance de empresa única',
+            usersLabel: 'Hasta 3 usuarios',
+            monthly: {
+              kind: 'fixed',
+              amount: 179,
+              note: 'Incluye guía de configuración autónoma, flujos financieros controlados y soporte por correo con respuesta en 48 h.',
+            },
+            annual: {
+              kind: 'fixed',
+              amount: 179,
+              badge: '1 mes gratis',
+              note: 'Facturado anualmente a CAD 1,969 por la suscripción base.',
+              secondaryNote:
+                'Workforce y un alcance operativo más amplio siguen siendo componentes separados cuando se necesitan.',
+            },
+            included: [
+              'Facturación',
+              'Clientes y proveedores',
+              'Gastos',
+              'Cuentas por cobrar y por pagar',
+              'Contabilidad',
+              'Impuestos',
+              'Informes financieros',
+              'Soporte por correo (respuesta en 48 h)',
+            ],
+            ctaLabel: 'Revisar Finanzas',
+          },
+          {
+            slug: 'business',
+            name: 'Negocio',
+            isPopular: true,
+            summary:
+              'Finanzas más operaciones de negocio del día a día: compras, proveedores e inventario.',
+            entitiesLabel: 'Alcance de empresa única',
+            usersLabel: 'Hasta 6 usuarios',
+            monthly: {
+              kind: 'fixed',
+              amount: 349,
+              badge: '50% de descuento en Workforce',
+              note: 'Incluye soporte prioritario por correo con respuesta en 24 h.',
+            },
+            annual: {
+              kind: 'fixed',
+              amount: 349,
+              badge: '50% de descuento en Workforce',
+              note: 'Facturado anualmente a CAD 3,839 por la suscripción base.',
+              secondaryNote:
+                'Los clientes de ERP Negocio reciben un 50% de descuento en su plan independiente elegible de Workforce.',
+            },
+            included: [
+              'Todo lo incluido en Finanzas',
+              'Compras',
+              'Proveedores',
+              'Inventario',
+              'Ubicaciones',
+              'Paneles operativos',
+              'Gestión operativa estándar',
+              '50% de descuento en ZANVROX Workforce (plan independiente)',
+              'Soporte prioritario por correo (24 h)',
+            ],
+            ctaLabel: 'Revisar Negocio',
+          },
+          {
+            slug: 'operations',
+            name: 'Operaciones',
+            summary:
+              'La plataforma completa de operaciones de negocio de ZANVROX, con Workforce incluido.',
+            entitiesLabel: 'Alcance de empresa única',
+            usersLabel: 'Hasta 10 usuarios',
+            monthly: {
+              kind: 'fixed',
+              amount: 649,
+              badge: 'Workforce incluido',
+              note: 'Incluye soporte prioritario por correo con respuesta en 24 h para equipos con mayor actividad operativa.',
+            },
+            annual: {
+              kind: 'fixed',
+              amount: 649,
+              badge: 'Workforce incluido',
+              note: 'Facturado anualmente a CAD 7,139 por la suscripción base.',
+              secondaryNote:
+                'ZANVROX Workforce incluido para los empleados y ubicaciones cubiertos por tu suscripción ERP.',
+            },
+            included: [
+              'Todo lo incluido en Negocio',
+              'Inventario avanzado',
+              'Compras avanzadas',
+              'Operaciones multiubicación',
+              'Controles operativos avanzados',
+              'Producción (BOM)',
+              'Informes avanzados',
+              'Controles de gestión',
+              'ZANVROX Workforce incluido',
+              'Soporte prioritario por correo (24 h)',
+            ],
+            ctaLabel: 'Revisar Operaciones',
+          },
+          {
+            slug: 'enterprise',
+            name: 'Empresarial',
+            summary:
+              'Para grandes organizaciones, grupos complejos, muchas ubicaciones, altos volúmenes y requisitos personalizados.',
+            entitiesLabel: 'Alcance multiubicación o personalizado',
+            usersLabel: 'Alcance de usuarios personalizado',
+            monthly: {
+              kind: 'custom',
+              label: 'Personalizado',
+              note: 'Revisión acotada para despliegue multiubicación, configuración guiada, integraciones, necesidades de gobernanza y revisión de seguridad.',
+            },
+            annual: {
+              kind: 'custom',
+              label: 'Personalizado',
+              note: 'El precio personalizado se acota directamente según la estructura operativa, las necesidades de despliegue y el contexto de implementación.',
+            },
+            included: [
+              'Despliegue multiubicación',
+              'Gobernanza avanzada',
+              'Integraciones',
+              'Ruta de revisión de seguridad',
+              'Contratos especiales',
+              'Implementación guiada y soporte de despliegue',
+            ],
+            ctaLabel: 'Contáctanos',
+          },
+        ],
+        comparison: {
+          title: 'Comparación de planes ERP',
+          subtitle:
+            'Usa esto para decidir si necesitas control financiero, operaciones del día a día o la plataforma completa de operaciones.',
+          featureLabel: 'Capacidad',
+          rows: [
+            { label: 'Contabilidad', values: [true, true, true, true] },
+            { label: 'Facturación', values: [true, true, true, true] },
+            { label: 'Gastos', values: [true, true, true, true] },
+            { label: 'Informes financieros', values: [true, true, true, true] },
+            { label: 'Compras', values: [false, true, true, true] },
+            { label: 'Inventario', values: [false, true, true, true] },
+            { label: 'Ubicaciones', values: [false, true, true, true] },
+            { label: 'Almacén', values: [false, false, true, true] },
+            { label: 'Producción (BOM)', values: [false, false, true, true] },
+            { label: 'Aprobaciones y gobernanza', values: [false, true, true, true] },
+            { label: 'Despliegue multiubicación', values: [false, false, true, true] },
+            { label: 'Integraciones', values: [false, false, false, true] },
+            {
+              label: 'ZANVROX Workforce',
+              values: ['Complemento', '50% de descuento', 'Incluido', 'Personalizado'],
+            },
+            {
+              label: 'Nivel de soporte',
+              values: [
+                'Correo / 48 h',
+                'Correo prioritario / 24 h',
+                'Correo prioritario / 24 h',
+                'Canal directo',
+              ],
+            },
+            {
+              label: 'Asistencia de incorporación',
+              values: [
+                'Configuración autónoma',
+                'Configuración autónoma',
+                'Configuración autónoma',
+                'Incluida',
+              ],
+            },
+            { label: 'Usuarios incluidos', values: ['3', '6', '10', 'Personalizado'] },
+          ],
+          notesTitle: 'Notas comerciales',
+          notes: [
+            'La nómina es un complemento separado para todos los planes ERP.',
+            'La Implementación guiada es opcional y tiene precio aparte para equipos que quieren un despliegue más estructurado.',
+            'Empresarial es la ruta para alcance multiubicación, integraciones, revisión de seguridad y contexto de implementación guiada.',
+            'El modelo comercial está diseñado para preservar la transparencia mientras respalda flujos controlados y auditabilidad a medida que aumentan los requisitos.',
+          ],
+          annualNote: 'Los planes base anuales incluyen un mes gratis.',
+        },
+      },
       payrollAddon: {
         title: 'Complemento de nómina',
         summary:
-          'Un precio separado para nómina mantiene comercialmente claro el ERP base mientras preserva el soporte de nómina canadiense para los equipos que lo necesitan.',
+          'Un precio separado para la nómina mantiene comercialmente claro el ERP base mientras preserva el soporte de nómina canadiense para los equipos que lo necesitan.',
         priceLabel: 'CAD 59 / mes + CAD 6 / empleado / mes',
         annualPriceLabel: 'CAD 59 / mes + CAD 6 / empleado / mes',
         monthlyNote:
-          'Incluye ejecuciones de nómina canadiense, soporte de flujos de remesas, recibos de sueldo, registros y exportaciones para respaldar la revisión de cierre anual e integración contable. Puede aplicar un mínimo mensual durante el despliegue.',
+          'Incluye ejecuciones de nómina canadiense, soporte de flujos de remesas, recibos de sueldo, registros y exportaciones para respaldar la revisión de cierre anual, e integración contable. Puede aplicar un mínimo mensual durante el despliegue. La nómina no está incluida con ZANVROX Workforce.',
         annualNote:
           'El complemento de nómina mantiene la misma estructura de cuota base más empleado cuando se factura anualmente, salvo que se acuerde un alcance distinto.',
         included: [
@@ -640,7 +945,7 @@ const siteContentEs = {
           'Guía para importación de datos',
           'Sesión de formación para despliegue asistido',
         ],
-        note: 'Opcional. Los planes estándar pueden empezar igualmente con configuración autónoma cuando un despliegue más ligero es suficiente.',
+        note: 'Implementación guiada opcional para organizaciones que quieren migración, configuración y soporte de lanzamiento con acompañamiento práctico. Los planes estándar pueden empezar igualmente con configuración autónoma cuando un despliegue más ligero es suficiente.',
         ctaLabel: 'Solicitar configuración guiada',
       },
       supportTiers: {
@@ -648,55 +953,20 @@ const siteContentEs = {
         subtitle:
           'El soporte se expresa públicamente para que los equipos puedan evaluar cobertura operativa, expectativas de respuesta y postura de despliegue desde el principio.',
         items: [
+          { name: 'Finanzas', body: 'Soporte por correo con tiempo de respuesta de 48 h.' },
           {
-            name: 'Núcleo financiero',
-            body: 'Soporte por correo con tiempo de respuesta de 48 h.',
-          },
-          {
-            name: 'Operaciones',
+            name: 'Negocio',
             body: 'Soporte prioritario por correo con tiempo de respuesta de 24 h.',
           },
           {
-            name: 'Personalizado',
-            body: 'Soporte para despliegue guiado, canal directo y conversación de implementación acotada.',
-          },
-        ],
-      },
-      comparison: {
-        title: 'Comparación de planes',
-        subtitle:
-          'Usa esto para decidir si necesitas control financiero estructurado, operaciones conectadas o un despliegue empresarial personalizado.',
-        featureLabel: 'Capacidad',
-        rows: [
-          { label: 'Contabilidad', values: [true, true, true] },
-          { label: 'Facturación', values: [true, true, true] },
-          { label: 'Gastos', values: [true, true, true] },
-          { label: 'Informes financieros', values: [true, true, true] },
-          { label: 'Inventario', values: [false, true, true] },
-          { label: 'Almacén', values: [false, true, true] },
-          { label: 'Producción (BOM)', values: [false, true, true] },
-          { label: 'Aprobaciones y gobernanza', values: [false, true, true] },
-          { label: 'Despliegue multiubicación', values: [false, false, true] },
-          { label: 'Aprobaciones avanzadas', values: [false, true, true] },
-          { label: 'Integraciones', values: [false, false, true] },
-          {
-            label: 'Nivel de soporte',
-            values: ['Correo / 48 h', 'Correo prioritario / 24 h', 'Canal directo'],
+            name: 'Operaciones',
+            body: 'Soporte prioritario por correo con tiempo de respuesta de 24 h, incluyendo Workforce para las ubicaciones cubiertas.',
           },
           {
-            label: 'Asistencia de incorporación',
-            values: ['Configuración autónoma', 'Configuración autónoma', 'Incluida'],
+            name: 'Empresarial',
+            body: 'Soporte para despliegue guiado, canal directo de soporte y conversación de implementación acotada.',
           },
-          { label: 'Usuarios incluidos', values: ['3', '10', 'Personalizado'] },
         ],
-        notesTitle: 'Notas comerciales',
-        notes: [
-          'La nómina es un complemento separado.',
-          'La Implementación guiada es opcional y tiene precio aparte para equipos que quieren un despliegue más estructurado.',
-          'Personalizado es la ruta para alcance multiubicación, integraciones, revisión de seguridad y contexto de implementación guiada.',
-          'El modelo comercial está diseñado para preservar la transparencia mientras respalda flujos controlados y auditabilidad a medida que aumentan los requisitos.',
-        ],
-        annualNote: 'Los planes base anuales incluyen un mes gratis.',
       },
       faq: {
         title: 'Preguntas frecuentes sobre precios',
@@ -708,24 +978,310 @@ const siteContentEs = {
               'No. La ruta prevista es autoevaluación primero: ver el resumen, explorar el producto, revisar precios y usar el espacio de evaluación en navegador antes de solicitar una sesión guiada.',
           },
           {
-            question: '¿La nómina está incluida en los planes ERP base?',
+            question: '¿Workforce está incluido en los planes ERP?',
             answer:
-              'No. La nómina se vende como complemento separado con una cuota mensual base más precio por empleado.',
+              'Operaciones incluye ZANVROX Workforce para los empleados y ubicaciones cubiertos por esa suscripción ERP. Negocio no incluye Workforce, pero califica para un 50% de descuento en un plan independiente elegible de Workforce. Finanzas no incluye Workforce.',
+          },
+          {
+            question: '¿Puedo comprar Workforce sin el ERP?',
+            answer:
+              'Sí. ZANVROX Workforce está disponible como plan independiente, con precio por ubicación, sin necesidad de comprar o pasar a ningún plan ERP.',
+          },
+          {
+            question: '¿La nómina está incluida en los planes ERP base o en Workforce?',
+            answer:
+              'No. La nómina se vende como complemento separado con una cuota mensual base más precio por empleado. No está incluida con ZANVROX Workforce.',
           },
           {
             question: '¿La Implementación guiada es obligatoria?',
             answer:
-              'No. Es opcional. Núcleo financiero y Operaciones pueden empezar con configuración autónoma, mientras que la Implementación guiada está disponible para equipos que quieren un despliegue más estructurado.',
+              'No. Es opcional. Finanzas, Negocio y Operaciones pueden empezar con configuración autónoma, mientras que la Implementación guiada está disponible para equipos que quieren un despliegue más estructurado.',
           },
           {
             question: '¿Qué soporte incluye cada plan?',
             answer:
-              'Núcleo financiero incluye soporte por correo en 48 h, Operaciones incluye soporte prioritario por correo en 24 h y Personalizado incluye conversación de despliegue guiado más un canal directo de soporte.',
+              'Finanzas incluye soporte por correo en 48 h, Negocio y Operaciones incluyen soporte prioritario por correo en 24 h, y Empresarial incluye conversación de despliegue guiado más un canal directo de soporte.',
           },
         ],
       },
       ctaPrimary: { label: 'Abrir espacio de evaluación', path: '/resources#demo-environment' },
       ctaSecondary: { label: 'Contactar para despliegue personalizado', path: '/contact' },
+    },
+    workforce: {
+      heroKicker: 'ZANVROX WORKFORCE',
+      heroTitle: 'Gestiona cada turno con menos caos.',
+      heroSubtitle:
+        'Fichajes de entrada y salida, horarios, tareas y hojas de horas para equipos de primera línea, todo conectado en una sola app de trabajo sencilla.',
+      heroPrimaryCta: { label: 'Empezar con Workforce', path: '/pricing#workforce-pricing' },
+      heroSecondaryCta: {
+        label: 'Únete a la Beta de Restaurantes de Ontario',
+        path: '/workforce/beta',
+      },
+      heroPreview: {
+        title: 'Vista previa de turno',
+        type: 'workforce',
+        caption: 'Creado para equipos de primera línea',
+        callouts: [
+          { status: 'ready', text: 'Fichaje de entrada / salida' },
+          { status: 'ready', text: 'Horarios y hojas de horas' },
+        ],
+      },
+      existingCustomer: {
+        title: '¿Ya usas ZANVROX ERP?',
+        body: 'Workforce está incluido con los planes ERP elegibles.',
+        cta: { label: 'Ver planes ERP con Workforce incluido', path: '/pricing#erp-pricing' },
+      },
+      sections: {
+        eyebrow: 'Qué cubre Workforce',
+        title: 'Todo lo que necesita un turno, conectado',
+        subtitle:
+          'ZANVROX Workforce cubre las partes de un turno que normalmente viven en hojas de cálculo, hojas de horas en papel y chats grupales.',
+        items: [
+          {
+            eyebrow: 'Fichaje de entrada y salida',
+            title:
+              'Los empleados fichan la entrada y la salida desde su teléfono con verificación consciente de la ubicación.',
+            body: 'Los eventos de fichaje están vinculados a momentos de trabajo autorizados, no a un seguimiento continuo de la persona.',
+            bullets: [
+              'Fichar entrada y salida desde un teléfono en segundos',
+              'Descansos registrados en el mismo flujo',
+              'Verificación consciente de la ubicación al fichar, donde el geocercado está habilitado para una ubicación',
+              'Resiliencia sin conexión para que un turno pueda empezar incluso con una conexión débil',
+            ],
+          },
+          {
+            eyebrow: 'Horarios y turnos',
+            title: 'Horarios que todo el equipo puede ver, desde cualquier teléfono.',
+            body: 'Los gerentes publican los horarios; los empleados ven sus turnos en un solo lugar.',
+            bullets: [
+              'Horarios',
+              'Próximos turnos',
+              'Turnos abiertos, donde esté habilitado',
+              'Cambios de turno y solicitudes de turno, donde esté habilitado',
+            ],
+          },
+          {
+            eyebrow: 'Hojas de horas',
+            title: 'Las horas trabajadas se convierten en una hoja de horas automáticamente.',
+            body: 'Los eventos de fichaje se acumulan en hojas de horas que los gerentes pueden revisar.',
+            bullets: [
+              'Horas trabajadas',
+              'Hojas de horas de empleados',
+              'Correcciones',
+              'Revisión y aprobación por parte del gerente, donde esté habilitado',
+            ],
+          },
+          {
+            eyebrow: 'Tareas y listas de verificación',
+            title: 'Tareas diarias y listas de verificación, hechas desde el piso de trabajo.',
+            body: 'Las rutinas de apertura y cierre se convierten en listas de verificación rastreables en lugar de depender de la memoria.',
+            bullets: [
+              'Tareas diarias',
+              'Tareas de apertura',
+              'Tareas de cierre',
+              'Listas de verificación operativas',
+              'Comentarios y evidencia, donde esté habilitado',
+            ],
+          },
+          {
+            eyebrow: 'Operaciones de equipo',
+            title: 'Mantén al equipo alineado entre turnos.',
+            body: 'Contexto compartido para el equipo sin una herramienta de mensajería separada.',
+            bullets: [
+              'Anuncios',
+              'Notas de turno',
+              'Traspasos',
+              'Solicitudes',
+              'Comunicación de equipo',
+            ],
+          },
+          {
+            eyebrow: 'Control de gerencia',
+            title: 'Un solo lugar para que los gerentes vean cómo va un turno.',
+            body: 'Supervisión para las personas que dirigen la operación del día a día.',
+            bullets: [
+              'Revisión de hojas de horas',
+              'Gestión de horarios',
+              'Tareas',
+              'Anomalías',
+              'Eventos de fichaje conscientes de la ubicación',
+              'Supervisión del equipo',
+            ],
+          },
+        ],
+      },
+      industries: {
+        title: 'Creado para equipos de primera línea y por turnos',
+        subtitle: 'ZANVROX Workforce no está creado solo para restaurantes.',
+        items: [
+          'Restaurantes',
+          'Cafeterías',
+          'Retail',
+          'Hostelería',
+          'Servicios',
+          'Almacenes',
+          'Negocios multiubicación',
+        ],
+      },
+      cta: {
+        title: 'Empieza con Workforce',
+        subtitle: 'Añade el ERP cuando lo necesites.',
+        primary: { label: 'Empezar con Workforce', path: '/pricing#workforce-pricing' },
+        secondary: { label: 'Workforce para restaurantes', path: '/workforce/restaurants' },
+      },
+    },
+    workforceRestaurants: {
+      heroKicker: 'ZANVROX WORKFORCE PARA RESTAURANTES',
+      heroTitle: 'Creado para la realidad de los turnos de restaurante.',
+      heroSubtitle:
+        'Fichajes, horarios, hojas de horas y tareas diarias sin hojas de cálculo, hojas de horas en papel ni herramientas desconectadas.',
+      heroPrimaryCta: { label: 'Empezar con Workforce', path: '/pricing#workforce-pricing' },
+      heroSecondaryCta: {
+        label: 'Únete a la Beta de Restaurantes de Ontario',
+        path: '/workforce/beta',
+      },
+      heroPreview: {
+        title: 'Vista previa de turno',
+        type: 'workforce',
+        caption: 'Creado para equipos de restaurante',
+        callouts: [
+          { status: 'ready', text: 'Fichaje de entrada / salida' },
+          { status: 'ready', text: 'Tareas diarias y listas de verificación' },
+        ],
+      },
+      timeline: {
+        eyebrow: 'Un turno de restaurante, de principio a fin',
+        title: 'Antes, durante y después de cada turno',
+        subtitle: 'La misma app sigue el turno desde el horario hasta la hoja de horas.',
+        stages: [
+          {
+            name: 'Antes del turno',
+            items: ['Horario', 'Turnos abiertos', 'Visibilidad para empleados'],
+          },
+          {
+            name: 'Durante el turno',
+            items: [
+              'Fichaje consciente de la ubicación',
+              'Descansos',
+              'Tareas',
+              'Listas de verificación',
+              'Notas de turno',
+            ],
+          },
+          {
+            name: 'Después del turno',
+            items: [
+              'Fichaje de salida',
+              'Horas trabajadas',
+              'Hoja de horas',
+              'Revisión del gerente',
+            ],
+          },
+          {
+            name: 'Gerente',
+            items: [
+              'Quién está trabajando',
+              'Horas trabajadas',
+              'Tareas pendientes',
+              'Correcciones',
+              'Aprobación de hoja de horas',
+            ],
+          },
+        ],
+      },
+      crossSell: {
+        title: '¿Necesitas más que gestión de personal?',
+        body: 'Conecta Workforce con el ERP completo de ZANVROX para finanzas, inventario, compras y operaciones de negocio.',
+        cta: { label: 'Explorar ZANVROX ERP', path: '/erp' },
+      },
+      cta: {
+        title: 'Lleva Workforce a tu restaurante',
+        subtitle: 'Empieza con Workforce, o solicita primero la Beta de Restaurantes de Ontario.',
+        primary: { label: 'Empezar con Workforce', path: '/pricing#workforce-pricing' },
+        secondary: { label: 'Únete a la Beta de Restaurantes de Ontario', path: '/workforce/beta' },
+      },
+    },
+    workforceBeta: {
+      heroKicker: 'BETA DE RESTAURANTES DE ONTARIO',
+      heroTitle:
+        'Prueba ZANVROX Workforce con tu equipo real antes de nuestro lanzamiento público.',
+      heroSubtitle:
+        'Estamos invitando a un grupo limitado de restaurantes de Ontario a probar ZANVROX Workforce durante turnos reales.',
+      badges: [
+        'Beta de 14 días',
+        'Sin compromiso de compra',
+        '6 meses gratis después del lanzamiento',
+      ],
+      intro: {
+        title: 'Cómo funciona la beta',
+        paragraphs: [
+          'Estamos invitando a un grupo limitado de restaurantes de Ontario a probar ZANVROX Workforce durante turnos reales.',
+          'Usa la app con un gerente y empleados, cuéntanos qué funciona y qué necesita mejorar, y ayúdanos a prepararnos para el lanzamiento público.',
+          'Los restaurantes que completen la beta reciben seis meses de ZANVROX Workforce gratis después del lanzamiento.',
+        ],
+      },
+      terms: {
+        title: 'Términos de la beta',
+        subtitle:
+          'Términos comerciales de la Beta de Restaurantes de Ontario, expresados con claridad.',
+        items: [
+          'Periodo de beta de 14 días',
+          'Sin coste durante la beta',
+          'Sin compromiso de compra',
+          'Los restaurantes que completen la beta reciben 6 meses de ZANVROX Workforce gratis después del lanzamiento público',
+          'Después de los 6 meses gratis, eliges un plan de Workforce',
+          'Sin renovación automática ni cargo desde la beta sin tu consentimiento',
+        ],
+      },
+      form: {
+        title: 'Solicita la beta',
+        helper:
+          'Cuéntanos sobre tu restaurante. Revisaremos tu solicitud y te contactaremos por correo.',
+        fields: {
+          restaurantName: 'Nombre del restaurante',
+          contactName: 'Nombre de contacto',
+          email: 'Correo empresarial',
+          city: 'Ciudad',
+          employeeCount: 'Número de empleados',
+          locationCount: 'Número de ubicaciones',
+          currentMethod: 'Método actual de control horario',
+          participantCount: '¿Cuántos empleados podrían participar?',
+          message: 'Mensaje opcional',
+          consent: 'Acepto que ZANVROX me contacte sobre la beta de Workforce.',
+        },
+        placeholders: {
+          restaurantName: 'p. ej. Maple Street Kitchen',
+          contactName: 'Tu nombre completo',
+          email: 'tu@turestaurante.com',
+          city: 'p. ej. Toronto',
+          employeeCount: 'p. ej. 12',
+          locationCount: 'p. ej. 1',
+          currentMethod: 'p. ej. Hojas de horas en papel, hoja de cálculo, integrado en el POS',
+          participantCount: 'p. ej. 5',
+          message: '¿Algo más que debamos saber?',
+        },
+        errors: {
+          restaurantName: 'Introduce el nombre de tu restaurante.',
+          contactName: 'Introduce un nombre de contacto.',
+          email: 'Introduce un correo empresarial válido.',
+          city: 'Introduce tu ciudad.',
+          employeeCount: 'Introduce el número de empleados.',
+          locationCount: 'Introduce el número de ubicaciones.',
+          currentMethod: 'Cuéntanos tu método actual de control horario.',
+          participantCount: 'Introduce cuántos empleados podrían participar.',
+          message: 'Mantén el mensaje por debajo de 2000 caracteres.',
+          consent: 'El consentimiento es obligatorio para solicitar la beta.',
+          website: 'Se activó la protección antispam.',
+          startedAt: 'Espera un momento antes de enviar.',
+        },
+        consentPrivacyLabel: 'Política de privacidad',
+        consentPrivacyPath: '/legal/privacy',
+        cta: 'Solicitar la beta',
+        submittingCta: 'Enviando...',
+        confirmation:
+          'Gracias. Revisaremos tu solicitud y te contactaremos con las instrucciones de prueba privada si tu restaurante es seleccionado.',
+        submitError: 'No pudimos enviar tu solicitud. Inténtalo de nuevo.',
+      },
     },
     resources: {
       heroTitle:
@@ -738,7 +1294,7 @@ const siteContentEs = {
           description:
             'Revisa el resumen del producto, cobertura de flujos y modelo de incorporación antes de invertir tiempo en una evaluación más profunda.',
           cta: 'Revisar producto',
-          path: '/product',
+          path: '/erp',
         },
         {
           title: 'Resumen de seguridad',
@@ -946,7 +1502,7 @@ const siteContentEs = {
         'Un ERP práctico posicionado para un despliegue creíble, no para teatralidad empresarial.',
       heroSubtitle:
         'ZANVROX se presenta como un ERP moderno para equipos pyme canadienses que quieren un control operativo más estricto, menos sistemas desconectados y una ruta de soporte más clara.',
-      heroPrimaryCta: { label: 'Explorar producto', path: '/product' },
+      heroPrimaryCta: { label: 'Explorar producto', path: '/erp' },
       heroSecondaryCta: { label: 'Contactar al equipo', path: '/contact' },
       heroPreview: {
         title: 'Resumen de posicionamiento',
@@ -1037,8 +1593,8 @@ const siteContentEs = {
         title: 'Expectativas de soporte',
         subtitle: 'Todos los flujos de contacto del sitio web llegan a support@zanvrox.com.',
         items: [
-          'Núcleo financiero: soporte por correo con tiempo de respuesta de 48 h',
-          'Operaciones: soporte prioritario por correo con tiempo de respuesta de 24 h',
+          'Finanzas: soporte por correo con tiempo de respuesta de 48 h',
+          'Negocio y Operaciones: soporte prioritario por correo con tiempo de respuesta de 24 h',
           'Empresarial: canal directo de soporte más ayuda de incorporación',
         ],
       },
@@ -1085,8 +1641,10 @@ const siteContentEs = {
         options: {
           companySizes: ['1-10 empleados', '10-50 empleados', '50-100 empleados', '100+ empleados'],
           interestAreas: [
-            'Núcleo financiero',
+            'Finanzas',
+            'Negocio',
             'Operaciones',
+            'Workforce',
             'Complemento de nómina',
             'Implementación guiada',
             'Despliegue empresarial',
@@ -1159,11 +1717,15 @@ const siteContentEs = {
     legal: {
       privacy: {
         title: 'Política de privacidad',
-        updated: '5 de marzo de 2026',
+        updated: '7 de agosto de 2026',
         updatedLabel: 'Última actualización',
         paragraphs: [
-          'ZANVROX recopila información de contacto empresarial enviada a través de este sitio web para evaluación del producto, programación de demos y solicitudes de documentación.',
-          'Procesamos los datos enviados únicamente para fines comerciales y de calificación de producto.',
+          'ZANVROX recopila información de contacto empresarial enviada a través de este sitio web para la evaluación del producto, la programación de demostraciones, las solicitudes de beta y las solicitudes de documentación.',
+          'Procesamos los datos enviados únicamente con fines de ventas y calificación de producto.',
+          'ZANVROX Workforce utiliza la ubicación del dispositivo únicamente en el momento en que un empleado ficha la entrada o la salida, y solo cuando un empleador ha habilitado la verificación consciente de la ubicación para un lugar de trabajo. La ubicación está vinculada a ese evento de fichaje específico, no se recopila de forma continua ni se utiliza para rastrear a un empleado fuera de los momentos autorizados de fichaje de entrada y salida.',
+          'Los datos de ubicación y de eventos de fichaje de Workforce se utilizan para verificar que un fichaje de entrada o salida ocurrió en un lugar de trabajo autorizado, y para respaldar la hoja de horas resultante. Son visibles para el empleado y para los gerentes autorizados de ese empleador.',
+          'Los empleados pueden negarse a conceder el permiso de ubicación; según la configuración del empleador, esto puede significar que un evento de fichaje no pueda verificarse como consciente de la ubicación, y el empleador debe proporcionar un proceso alternativo.',
+          'Los registros de Workforce y otros registros operativos se conservan durante el tiempo necesario para respaldar los requisitos de nómina, hojas de horas y mantenimiento de registros laborales, y están protegidos con los mismos controles de acceso y seguridad descritos en nuestra página de Seguridad.',
           'Puedes solicitar acceso, corrección o eliminación de los datos enviados escribiendo a support@zanvrox.com.',
         ],
       },
@@ -1191,27 +1753,29 @@ const siteContentEs = {
     email: 'support@zanvrox.com',
     sections: [
       {
-        title: 'Producto',
+        title: 'Productos',
         links: [
-          { label: 'Resumen del producto', path: '/product' },
+          { label: 'ERP', path: '/erp' },
+          { label: 'Workforce', path: '/workforce' },
+          { label: 'Workforce para restaurantes', path: '/workforce/restaurants' },
           { label: 'Precios', path: '/pricing' },
-          { label: 'Recursos', path: '/resources' },
-          { label: 'Contacto', path: '/contact' },
         ],
       },
       {
-        title: 'Confianza y legal',
+        title: 'Recursos',
         links: [
+          { label: 'Recursos', path: '/resources' },
           { label: 'Seguridad', path: '/security' },
-          { label: 'Seguridad / Cumplimiento', path: '/security' },
-          { label: 'Solicitar información de seguridad', path: '/contact' },
           { label: 'Privacidad', path: '/legal/privacy' },
           { label: 'Términos', path: '/legal/terms' },
+          { label: 'Eliminación de cuenta', path: '/account-deletion' },
+          { label: 'Contacto', path: '/contact' },
         ],
       },
     ],
     links: [
-      { label: 'Producto', path: '/product' },
+      { label: 'ERP', path: '/erp' },
+      { label: 'Workforce', path: '/workforce' },
       { label: 'Precios', path: '/pricing' },
       { label: 'Recursos', path: '/resources' },
       { label: 'Seguridad', path: '/security' },
@@ -1219,6 +1783,7 @@ const siteContentEs = {
       { label: 'Contacto', path: '/contact' },
       { label: 'Privacidad', path: '/legal/privacy' },
       { label: 'Términos', path: '/legal/terms' },
+      { label: 'Eliminación de cuenta', path: '/account-deletion' },
     ],
   },
   seo: {
@@ -1229,10 +1794,28 @@ const siteContentEs = {
       path: '/',
     },
     product: {
-      title: 'Producto | ZANVROX',
+      title: 'ZANVROX ERP | Plataforma de finanzas, operaciones y personal',
       description:
-        'Explora finanzas, operaciones, cumplimiento canadiense, gobernanza y cobertura del complemento de nómina dentro de la plataforma ERP de ZANVROX.',
-      path: '/product',
+        'Explora finanzas, facturación, gastos, compras, inventario, operaciones, informes, flujos de nómina y ZANVROX Workforce dentro de la plataforma ZANVROX ERP.',
+      path: '/erp',
+    },
+    workforce: {
+      title: 'ZANVROX Workforce | Control horario, horarios y tareas',
+      description:
+        'Ficha la entrada y la salida, gestiona horarios, controla hojas de horas y organiza tareas diarias con ZANVROX Workforce.',
+      path: '/workforce',
+    },
+    workforceRestaurants: {
+      title: 'Gestión de personal para restaurantes | ZANVROX Workforce',
+      description:
+        'Fichajes, horarios, hojas de horas y tareas diarias de equipo para equipos de restaurante.',
+      path: '/workforce/restaurants',
+    },
+    workforceBeta: {
+      title: 'Beta de Restaurantes de Ontario | ZANVROX Workforce',
+      description:
+        'Los restaurantes de Ontario pueden solicitar probar ZANVROX Workforce antes del lanzamiento público.',
+      path: '/workforce/beta',
     },
     security: {
       title: 'Seguridad | ZANVROX',
@@ -1243,7 +1826,7 @@ const siteContentEs = {
     pricing: {
       title: 'Precios | ZANVROX',
       description:
-        'Revisa precios públicos en CAD para Núcleo financiero, Operaciones, despliegue personalizado, el complemento de nómina y la Implementación guiada opcional.',
+        'Consulta los precios públicos en CAD de ZANVROX Workforce (Inicial, Equipo, Negocio) y ZANVROX ERP (Finanzas, Negocio, Operaciones, Empresarial), el complemento de nómina y la Implementación guiada opcional.',
       path: '/pricing',
     },
     resources: {

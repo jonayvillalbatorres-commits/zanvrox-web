@@ -17,7 +17,8 @@ const siteContentAr = {
   },
   navItems: [
     { label: 'الرئيسية', path: '/' },
-    { label: 'المنتج', path: '/product' },
+    { label: 'ERP', path: '/erp' },
+    { label: 'Workforce', path: '/workforce' },
     { label: 'الأسعار', path: '/pricing' },
     { label: 'الموارد', path: '/resources' },
     { label: 'الأمان', path: '/security' },
@@ -66,7 +67,7 @@ const siteContentAr = {
           'مساحة Payroll',
           'التقارير والموافقات',
         ],
-        primaryCta: { label: 'استكشاف المنتج', path: '/product' },
+        primaryCta: { label: 'استكشاف المنتج', path: '/erp' },
         secondaryCta: { label: 'فتح مساحة التقييم', path: '/resources#demo-environment' },
       },
       trustSignals: [
@@ -83,6 +84,25 @@ const siteContentAr = {
         { status: 'locked', text: 'ضوابط الحوكمة وقابلية التدقيق' },
         { status: 'ready', text: 'مسار onboarding للإعداد الذاتي' },
       ],
+      productLines: {
+        eyebrow: 'منصة واحدة، طريقتان للبدء',
+        title: 'طريقتان لإدارة عملك مع ZANVROX',
+        subtitle:
+          'ابدأ بـWorkforce لعمليات الورديات الميدانية، أو بـZANVROX ERP للمالية وعمليات الأعمال، أو بكليهما معا.',
+        cards: [
+          {
+            name: 'ZANVROX ERP',
+            headline: 'المالية والمخزون والمشتريات والعمليات في منصة واحدة متصلة.',
+            cta: { label: 'استكشاف ERP', path: '/erp' },
+          },
+          {
+            name: 'ZANVROX Workforce',
+            headline: 'تسجيل الدخول، الجداول، المهام، وسجلات الدوام لفرق الخط الأمامي.',
+            cta: { label: 'استكشاف Workforce', path: '/workforce' },
+          },
+        ],
+        note: 'ابدأ مع Workforce. أضف ERP عندما تحتاج إليه. هل تدير عملك بالفعل على ZANVROX؟ Workforce مشمول مع Operations.',
+      },
       evaluationPath: {
         eyebrow: 'مسار تقوده تجربة المنتج',
         title: 'قيم المنتج دون حجز اجتماع أولا',
@@ -292,6 +312,12 @@ const siteContentAr = {
         note: 'للتقييم عبر المتصفح فقط. تبقى هذه المساحة منفصلة عن تخطيط التنفيذ وتوقعات الإنتاج.',
         cta: { label: 'فتح مساحة التقييم', path: '/resources#demo-environment' },
       },
+      restaurantBetaBanner: {
+        eyebrow: 'مطاعم أونتاريو',
+        title: 'انضم إلى النسخة التجريبية الخاصة لـZANVROX Workforce',
+        body: 'اختبار لمدة 14 يوما. 6 أشهر مجانية بعد الإطلاق.',
+        cta: { label: 'اعرف المزيد', path: '/workforce/beta' },
+      },
       faq: {
         eyebrow: 'FAQ',
         title: 'أسئلة تطرحها الفرق قبل تخصيص الوقت',
@@ -322,16 +348,16 @@ const siteContentAr = {
         title: 'ابدأ بالمنتج، لا بمكالمة بيع',
         subtitle:
           'استكشف المنتج والأسعار أولا. تواصل مع الفريق عندما يكون لديك سؤال محدد عن rollout أو Payroll أو التكاملات.',
-        primary: { label: 'استكشاف المنتج', path: '/product' },
+        primary: { label: 'استكشاف المنتج', path: '/erp' },
         secondary: { label: 'عرض الأسعار', path: '/pricing' },
       },
     },
     product: {
       ...base.pages.product,
-      heroKicker: 'نطاق منتج متكامل',
-      heroTitle: 'تغطية المنتج للمالية والعمليات وسير العمل الضريبي ودعم Payroll.',
+      heroKicker: 'ZANVROX ERP',
+      heroTitle: 'شغّل المالية والعمليات وWorkforce من منصة واحدة متصلة.',
       heroSubtitle:
-        'يتم وضع ZANVROX كمنظومة ERP محكومة لفرق SMB الكندية التي تحتاج إلى رؤية تشغيلية دون مبالغة مؤسسية.',
+        'ZANVROX ERP منصة محكومة لفرق SMB الكندية تغطي المالية والفوترة والمصروفات والعملاء والموردين والمشتريات والمخزون والمواقع والعمليات والتقارير وسير عمل Payroll وZANVROX Workforce.',
       heroPrimaryCta: { label: 'عرض الأسعار', path: '/pricing' },
       heroSecondaryCta: { label: 'فتح مساحة التقييم', path: '/resources#demo-environment' },
       heroPreview: {
@@ -344,7 +370,7 @@ const siteContentAr = {
         ],
       },
       pillars: {
-        title: 'أربع ركائز للمنتج',
+        title: 'ركائز المنتج',
         subtitle: 'يشرح الموقع المنتج حول سير العمل، لا حول نقاط ميزات منفصلة.',
         items: [
           { title: 'Finance core', body: 'المحاسبة والفوترة والمصروفات ورؤية البنوك والتقارير.' },
@@ -356,6 +382,10 @@ const siteContentAr = {
           {
             title: 'الحوكمة',
             body: 'قابلية التدقيق والموافقات وحدود التحكم ومسار التوسع متعدد الشركات.',
+          },
+          {
+            title: 'ZANVROX Workforce',
+            body: 'تسجيل الدخول والخروج، الجداول، المهام، وسجلات الدوام لفرق الخط الأمامي، مشمولة مع خطط ERP المؤهلة أو متاحة بشكل مستقل.',
           },
         ],
       },
@@ -394,6 +424,7 @@ const siteContentAr = {
             'المحاسبة والفوترة تعملان في نفس النظام مع المشتريات والمصروفات.',
             'تبقى بيانات المخزون والمستودع وBOM مرتبطة بالسجل المالي.',
             'يمكن إضافة الموافقات والحوكمة دون أدوات تشغيلية منفصلة.',
+            'يربط ZANVROX Workforce بيانات تسجيل الدخول والجداول وسجلات الدوام لفرق الخط الأمامي بنفس المنصة.',
           ],
         },
         {
@@ -702,123 +733,375 @@ const siteContentAr = {
       note: 'توصيات AI مساعدة فقط. تبقى الإجراءات التشغيلية والامتثالية النهائية مؤكدة من المستخدم.',
     },
     pricing: {
-      ...base.pages.pricing,
-      heroTitle: 'أسعار لفرق SMB الكندية التي تحتاج إلى عمليات منظمة وتحكم.',
+      heroTitle: 'أسعار ZANVROX ERP وZANVROX Workforce.',
       heroSubtitle:
-        'ابدأ بتحكم مالي أساسي، ثم توسع إلى العمليات مع زيادة التعقيد، وانتقل إلى rollout مخصص فقط عندما تصبح البنية متعددة المواقع أو الموافقات المتقدمة أو دعم onboarding أو التكاملات أو مراجعة الأمان ضرورية.',
-      packagesTitle: 'أسعار عامة للمالية والعمليات وrollout موجه',
-      packagesSubtitle:
-        'أسعار CAD شفافة لفرق SMB الكندية التي تحتاج إلى سير عمل منظم الآن ومسار موثوق إلى تحكم تشغيلي أوسع مع الوقت.',
-      launchBadge: 'الفوترة السنوية متاحة',
-      launchOfferLabel: 'تشمل الاشتراكات الأساسية السنوية شهرا واحدا مجانيا عند الفوترة سنويا.',
-      launchOfferNote:
-        'يبقى تسعير Payroll قائما على الاستخدام، ويتاح Guided Implementation عندما تكون هناك حاجة إلى rollout أكثر تنظيما.',
-      popularLabel: 'ملائم بقوة لفرق 10-50 موظفا',
-      priceSuffixMonthly: '/شهر',
-      billedMonthlyLabel: 'فوترة شهرية',
-      billedAnnuallyLabel: 'فوترة سنوية',
-      fromLabel: 'من',
-      customLabel: 'مخصص',
-      includesLabel: 'مشمول',
-      entitiesIncludedLabel: 'النطاق التجاري',
-      usersIncludedLabel: 'المستخدمون المشمولون',
-      billingToggle: {
-        monthly: 'شهري',
-        annual: 'سنوي',
-        annualBadge: 'شهر واحد مجاني',
-        helper:
-          'تغير الفوترة السنوية مدة الاشتراك الأساسي فقط. يبقى Payroll مسعرا برسوم أساسية زائد عدد الموظفين.',
-      },
+        'ابدأ بـWorkforce لعمليات الورديات الميدانية، أو بـZANVROX ERP للمالية وعمليات الأعمال، أو بكليهما معا. أسعار CAD شفافة لفرق SMB الكندية.',
       pricingNote:
-        'كل الأسعار بعملة CAD. Payroll إضافة منفصلة. صممت الخطط حول العمليات المنظمة وسير العمل المحكوم وقابلية التدقيق وتصميم منتج واع بالأمان دون فرض نطاق مؤسسي مبكرا. يساعد ZANVROX على تنظيم سير العمل المالي وPayroll والضرائب، لكنه لا يحل محل المشورة المحاسبية أو القانونية أو الضريبية.',
-      tiers: [
-        {
-          slug: 'finance-core',
-          name: 'Finance Core',
-          summary:
-            'للشركات التي تحتاج إلى أساس مالي منضبط مع المحاسبة والفوترة والمصروفات والتقارير ومسار إعداد ذاتي واضح.',
-          entitiesLabel: 'نطاق شركة واحدة',
-          usersLabel: 'حتى 3 مستخدمين',
-          monthly: {
-            kind: 'fixed',
-            amount: 179,
-            note: 'يشمل إرشاد الإعداد الذاتي وسير العمل المالي المحكوم ودعم بريد إلكتروني باستجابة خلال 48 ساعة.',
-          },
-          annual: {
-            kind: 'fixed',
-            amount: 179,
-            badge: 'شهر واحد مجاني',
-            note: 'يفوتر سنويا بقيمة CAD 1,969 للاشتراك الأساسي.',
-            secondaryNote: 'يبقى Payroll والنطاق التشغيلي الأوسع منفصلين عند الحاجة.',
-          },
-          included: [
-            'سير عمل المحاسبة',
-            'الفوترة',
-            'التقاط المصروفات',
-            'التقارير المالية',
-            'إرشاد الإعداد الذاتي',
-            'دعم بريد إلكتروني (استجابة 48 ساعة)',
-          ],
-          ctaLabel: 'مراجعة Finance Core',
+        'الأسعار بالدولار الكندي. الضرائب غير مشمولة. قد يختلف التسعير لعمليات النشر المؤسسية أو ذات الحجم الكبير. Payroll إضافة منفصلة. يساعد ZANVROX على تنظيم سير العمل المالي وPayroll وWorkforce، لكنه لا يحل محل المشورة المحاسبية أو القانونية أو الضريبية.',
+      upgradePath: {
+        eyebrow: 'ابدأ من حيث يقف عملك اليوم',
+        title: 'منصة واحدة مع نمو عملك',
+        subtitle: 'هذا ليس تسلسلا إلزاميا. يمكن للشركة التعاقد مباشرة على أي خطة تناسبها اليوم.',
+        steps: [
+          { name: 'Workforce', body: 'CAD 29-79 لكل موقع' },
+          { name: 'Finance', body: 'CAD 179 / شهر' },
+          { name: 'Business', body: 'CAD 349 / شهر' },
+          { name: 'Operations', body: 'CAD 649 / شهر، Workforce مشمول' },
+          { name: 'Enterprise', body: 'مخصص' },
+        ],
+        note: 'هل تدير عملك بالفعل على ZANVROX؟ Workforce مشمول مع Operations.',
+      },
+      bundleOffers: {
+        operationsIncluded: {
+          title: 'يشمل Operations ZANVROX Workforce',
+          body: 'ZANVROX Workforce مشمول للموظفين والمواقع المغطاة باشتراك ERP الخاص بك. لا رسوم Workforce منفصلة لهذا النطاق.',
         },
-        {
-          slug: 'operations',
-          name: 'Operations',
-          isPopular: true,
-          summary:
-            'للفرق التي تحتاج إلى عمل المالية والعمليات معا عبر المخزون والمستودع وأساسيات الإنتاج والموافقات المحكومة.',
-          entitiesLabel: 'نطاق شركة واحدة',
-          usersLabel: 'حتى 10 مستخدمين',
-          monthly: {
-            kind: 'fixed',
-            amount: 649,
-            note: 'يشمل دعم بريد إلكتروني ذا أولوية باستجابة خلال 24 ساعة للفرق الأكثر نشاطا تشغيليا.',
-          },
-          annual: {
-            kind: 'fixed',
-            amount: 649,
-            badge: 'شهر واحد مجاني',
-            note: 'يفوتر سنويا بقيمة CAD 7,139 للاشتراك الأساسي.',
-            secondaryNote:
-              'موصى به عندما تحتاج العمليات إلى تحكم أشد في المخزون وحركة المستودع وBOM وسير عمل الإنتاج.',
-          },
-          included: [
-            'كل ما في Finance Core',
-            'التحكم في المخزون',
-            'سير عمل المستودع',
-            'الإنتاج (BOM)',
-            'الموافقات والحوكمة',
-            'دعم بريد إلكتروني أولوية (24 ساعة)',
-          ],
-          ctaLabel: 'مراجعة Operations',
+        businessDiscount: {
+          title: 'خصم 50% على Workforce مع Business',
+          body: 'يحصل عملاء Business ERP على خصم 50% على خطة ZANVROX Workforce المستقلة المؤهلة.',
         },
-        {
-          slug: 'enterprise',
-          name: 'مخصص',
-          summary:
-            'للفرق متعددة المواقع التي تحتاج إلى موافقات متقدمة أو مراجعات أمان أو onboarding مخصص أو تكاملات أو دعم مخصص أو rollout أكثر تنظيما.',
-          entitiesLabel: 'نطاق متعدد المواقع أو مخصص',
-          usersLabel: 'نطاق مستخدمين مخصص',
-          monthly: {
-            kind: 'custom',
-            label: 'مخصص',
-            note: 'مراجعة نطاق لrollout متعدد المواقع، والإعداد الموجه، والتكاملات، واحتياجات الحوكمة، ومراجعة الأمان.',
-          },
-          annual: {
-            kind: 'custom',
-            label: 'مخصص',
-            note: 'يحدد التسعير المخصص مباشرة حسب الهيكل التشغيلي واحتياجات rollout وسياق التنفيذ.',
-          },
-          included: [
-            'Rollout متعدد المواقع',
-            'حوكمة متقدمة',
-            'تكاملات',
-            'مسار مراجعة الأمان',
-            'Guided implementation ودعم rollout',
-          ],
-          ctaLabel: 'طلب مراجعة مخصصة',
+        financeStandalone: {
+          title: 'Finance وWorkforce، بشكل مستقل',
+          body: 'لا يشمل Finance خطة Workforce. يمكنك شراء Finance بالإضافة إلى خطة Workforce مستقلة دون أي التزام بالترقية إلى Business أو Operations.',
         },
-      ],
+      },
+      workforce: {
+        title: 'ZANVROX Workforce',
+        subtitle:
+          'تسجيل الدخول والخروج، الجداول، المهام، وسجلات الدوام لفرق الخط الأمامي، مسعرة لكل موقع.',
+        launchBadge: 'الفوترة السنوية متاحة',
+        launchOfferLabel: 'تشمل خطط Workforce السنوية شهرين مجانيين عند الفوترة سنويا.',
+        launchOfferNote: 'الأسعار المعروضة هنا استرشادية؛ يتم تأكيد الفوترة عند البدء.',
+        popularLabel: 'الأكثر شيوعا',
+        priceSuffixMonthly: '/شهر لكل موقع',
+        billedMonthlyLabel: 'فوترة شهرية',
+        billedAnnuallyLabel: 'فوترة سنوية',
+        fromLabel: 'من',
+        customLabel: 'تسعير مخصص',
+        includesLabel: 'مشمول',
+        entitiesIncludedLabel: 'نطاق الفوترة',
+        usersIncludedLabel: 'الموظفون المشمولون',
+        billingToggle: {
+          monthly: 'شهري',
+          annual: 'سنوي',
+          annualBadge: 'شهران مجانيان',
+          helper: 'تغير الفوترة السنوية مدة الاشتراك الأساسي فقط وتعادل 10 أشهر من السعر الشهري.',
+        },
+        tiers: [
+          {
+            slug: 'workforce-starter',
+            name: 'Starter',
+            summary: 'لموقع واحد يحتاج إلى تسجيل الدخول والجداول وسجلات الدوام في تطبيق واحد.',
+            entitiesLabel: 'مسعر لكل موقع',
+            usersLabel: 'حتى 10 موظفين',
+            monthly: { kind: 'fixed', amount: 29, note: 'يفوتر لكل موقع، شهريا.' },
+            annual: {
+              kind: 'fixed',
+              amount: 29,
+              badge: 'شهران مجانيان',
+              note: 'يفوتر سنويا بقيمة CAD 290 لكل موقع.',
+            },
+            included: [
+              'تسجيل الدخول / الخروج',
+              'التحقق من الموقع',
+              'سجلات الدوام',
+              'الجداول',
+              'المهام',
+            ],
+            ctaLabel: 'ابدأ مع Starter',
+          },
+          {
+            slug: 'workforce-team',
+            name: 'Team',
+            isPopular: true,
+            summary: 'للمواقع التي تحتاج إلى ضوابط المدراء وطلبات الورديات وتقارير أقوى.',
+            entitiesLabel: 'مسعر لكل موقع',
+            usersLabel: 'حتى 25 موظفا',
+            monthly: { kind: 'fixed', amount: 49, note: 'يفوتر لكل موقع، شهريا.' },
+            annual: {
+              kind: 'fixed',
+              amount: 49,
+              badge: 'شهران مجانيان',
+              note: 'يفوتر سنويا بقيمة CAD 490 لكل موقع.',
+            },
+            included: [
+              'كل ما في Starter',
+              'ضوابط المدراء',
+              'الورديات المفتوحة وطلبات الورديات',
+              'تواصل الفريق',
+              'تقارير محسّنة',
+              'ضوابط تشغيلية إضافية',
+            ],
+            ctaLabel: 'ابدأ مع Team',
+          },
+          {
+            slug: 'workforce-business',
+            name: 'Business',
+            summary: 'للمواقع الأكبر التي تحتاج إلى ضوابط مدراء متقدمة وعدة مدراء.',
+            entitiesLabel: 'مسعر لكل موقع',
+            usersLabel: 'حتى 50 موظفا',
+            monthly: { kind: 'fixed', amount: 79, note: 'يفوتر لكل موقع، شهريا.' },
+            annual: {
+              kind: 'fixed',
+              amount: 79,
+              badge: 'شهران مجانيان',
+              note: 'يفوتر سنويا بقيمة CAD 790 لكل موقع.',
+            },
+            included: [
+              'كل ما في Team',
+              'ضوابط مدراء متقدمة',
+              'تقارير إضافية',
+              'عدة مدراء',
+              'عمليات Workforce متقدمة',
+            ],
+            ctaLabel: 'ابدأ مع Business',
+          },
+          {
+            slug: 'workforce-multi-location',
+            name: 'Multi-location',
+            summary: 'للسلاسل والمجموعات متعددة المواقع والمواقع التي بها أكثر من 50 موظفا.',
+            entitiesLabel: 'تسعير مخصص متعدد المواقع',
+            usersLabel: '+50 موظفا لكل موقع',
+            monthly: {
+              kind: 'custom',
+              label: 'تسعير مخصص',
+              note: 'محدد النطاق للسلاسل والمجموعات متعددة المواقع والاحتياجات التشغيلية الخاصة.',
+            },
+            annual: {
+              kind: 'custom',
+              label: 'تسعير مخصص',
+              note: 'يحدد مباشرة حسب عدد المواقع والموظفين.',
+            },
+            included: [
+              '+50 موظفا لكل موقع',
+              'دعم متعدد المواقع والسلاسل',
+              'احتياجات تشغيلية خاصة',
+              'rollout ودعم مخصصان',
+            ],
+            ctaLabel: 'طلب تسعير متعدد المواقع',
+          },
+        ],
+        comparison: {
+          title: 'مقارنة خطط Workforce',
+          subtitle: 'قارن بين Starter وTeam وBusiness لموقع واحد.',
+          featureLabel: 'القدرة',
+          rows: [
+            { label: 'تسجيل الدخول / الخروج', values: [true, true, true] },
+            { label: 'التحقق من الموقع', values: [true, true, true] },
+            { label: 'سجلات الدوام', values: [true, true, true] },
+            { label: 'الجداول', values: [true, true, true] },
+            { label: 'المهام', values: [true, true, true] },
+            { label: 'ضوابط المدراء', values: [false, true, true] },
+            { label: 'الورديات المفتوحة / طلبات الورديات', values: [false, true, true] },
+            { label: 'تواصل الفريق', values: [false, true, true] },
+            { label: 'تقارير محسّنة', values: [false, true, true] },
+            { label: 'ضوابط مدراء متقدمة', values: [false, false, true] },
+            { label: 'عدة مدراء', values: [false, false, true] },
+            { label: 'الموظفون المشمولون', values: ['10', '25', '50'] },
+          ],
+          notesTitle: 'ملاحظات تجارية',
+          notes: [
+            'مسعر لكل موقع، شهريا.',
+            'تستخدم المواقع متعددة المواقع والمواقع التي بها أكثر من 50 موظفا تسعيرا مخصصا.',
+            'تشمل الفوترة السنوية شهرين مجانيين (10 أشهر من السعر الشهري).',
+          ],
+          annualNote: 'تشمل خطط Workforce السنوية شهرين مجانيين.',
+        },
+      },
+      erp: {
+        title: 'ZANVROX ERP',
+        subtitle: 'تحكم مالي، عمليات أعمال، وسير عمل متصل لفرق SMB الكندية.',
+        launchBadge: 'الفوترة السنوية متاحة',
+        launchOfferLabel: 'تشمل الاشتراكات الأساسية السنوية شهرا واحدا مجانيا عند الفوترة سنويا.',
+        launchOfferNote:
+          'يبقى تسعير Payroll قائما على الاستخدام، ويتاح Guided Implementation عند الحاجة إلى rollout أكثر تنظيما.',
+        popularLabel: 'الأكثر شيوعا',
+        priceSuffixMonthly: '/شهر',
+        billedMonthlyLabel: 'فوترة شهرية',
+        billedAnnuallyLabel: 'فوترة سنوية',
+        fromLabel: 'من',
+        customLabel: 'مخصص',
+        includesLabel: 'مشمول',
+        entitiesIncludedLabel: 'النطاق التجاري',
+        usersIncludedLabel: 'المستخدمون المشمولون',
+        billingToggle: {
+          monthly: 'شهري',
+          annual: 'سنوي',
+          annualBadge: 'شهر واحد مجاني',
+          helper:
+            'تغير الفوترة السنوية مدة الاشتراك الأساسي فقط. يبقى Payroll مسعرا برسوم أساسية زائد عدد الموظفين.',
+        },
+        tiers: [
+          {
+            slug: 'finance',
+            name: 'Finance',
+            summary: 'تحكم مالي للشركات النامية: الفوترة والمصروفات والتقارير.',
+            entitiesLabel: 'نطاق شركة واحدة',
+            usersLabel: 'حتى 3 مستخدمين',
+            monthly: {
+              kind: 'fixed',
+              amount: 179,
+              note: 'يشمل إرشاد إعداد ذاتي، وسير عمل مالي محكوم، ودعم بريد إلكتروني باستجابة خلال 48 ساعة.',
+            },
+            annual: {
+              kind: 'fixed',
+              amount: 179,
+              badge: 'شهر واحد مجاني',
+              note: 'يفوتر سنويا بقيمة CAD 1,969 للاشتراك الأساسي.',
+              secondaryNote: 'يبقى Workforce والنطاق التشغيلي الأوسع منفصلين عند الحاجة.',
+            },
+            included: [
+              'الفوترة',
+              'العملاء والموردون',
+              'المصروفات',
+              'الذمم المدينة والدائنة',
+              'المحاسبة',
+              'الضرائب',
+              'التقارير المالية',
+              'دعم بريد إلكتروني (استجابة 48 ساعة)',
+            ],
+            ctaLabel: 'مراجعة Finance',
+          },
+          {
+            slug: 'business',
+            name: 'Business',
+            isPopular: true,
+            summary: 'Finance بالإضافة إلى عمليات الأعمال اليومية: المشتريات والموردون والمخزون.',
+            entitiesLabel: 'نطاق شركة واحدة',
+            usersLabel: 'حتى 6 مستخدمين',
+            monthly: {
+              kind: 'fixed',
+              amount: 349,
+              badge: 'خصم 50% على Workforce',
+              note: 'يشمل دعم بريد إلكتروني ذا أولوية باستجابة خلال 24 ساعة.',
+            },
+            annual: {
+              kind: 'fixed',
+              amount: 349,
+              badge: 'خصم 50% على Workforce',
+              note: 'يفوتر سنويا بقيمة CAD 3,839 للاشتراك الأساسي.',
+              secondaryNote:
+                'يحصل عملاء Business ERP على خصم 50% على خطة Workforce المستقلة المؤهلة.',
+            },
+            included: [
+              'كل ما في Finance',
+              'المشتريات',
+              'الموردون',
+              'المخزون',
+              'المواقع',
+              'لوحات المعلومات التشغيلية',
+              'إدارة تشغيلية قياسية',
+              'خصم 50% على ZANVROX Workforce (خطة مستقلة)',
+              'دعم بريد إلكتروني أولوية (24 ساعة)',
+            ],
+            ctaLabel: 'مراجعة Business',
+          },
+          {
+            slug: 'operations',
+            name: 'Operations',
+            summary: 'منصة ZANVROX الكاملة لعمليات الأعمال، مع Workforce مشمول.',
+            entitiesLabel: 'نطاق شركة واحدة',
+            usersLabel: 'حتى 10 مستخدمين',
+            monthly: {
+              kind: 'fixed',
+              amount: 649,
+              badge: 'Workforce مشمول',
+              note: 'يشمل دعم بريد إلكتروني ذا أولوية باستجابة خلال 24 ساعة للفرق الأكثر نشاطا تشغيليا.',
+            },
+            annual: {
+              kind: 'fixed',
+              amount: 649,
+              badge: 'Workforce مشمول',
+              note: 'يفوتر سنويا بقيمة CAD 7,139 للاشتراك الأساسي.',
+              secondaryNote:
+                'ZANVROX Workforce مشمول للموظفين والمواقع المغطاة باشتراك ERP الخاص بك.',
+            },
+            included: [
+              'كل ما في Business',
+              'مخزون متقدم',
+              'مشتريات متقدمة',
+              'عمليات متعددة المواقع',
+              'ضوابط تشغيلية متقدمة',
+              'الإنتاج (BOM)',
+              'تقارير متقدمة',
+              'ضوابط إدارية',
+              'ZANVROX Workforce مشمول',
+              'دعم بريد إلكتروني أولوية (24 ساعة)',
+            ],
+            ctaLabel: 'مراجعة Operations',
+          },
+          {
+            slug: 'enterprise',
+            name: 'Enterprise',
+            summary:
+              'للمؤسسات الكبيرة والمجموعات المعقدة والعديد من المواقع والأحجام الكبيرة والمتطلبات المخصصة.',
+            entitiesLabel: 'نطاق متعدد المواقع أو مخصص',
+            usersLabel: 'نطاق مستخدمين مخصص',
+            monthly: {
+              kind: 'custom',
+              label: 'مخصص',
+              note: 'مراجعة محددة النطاق لـrollout متعدد المواقع، والإعداد الموجه، والتكاملات، واحتياجات الحوكمة، ومراجعة الأمان.',
+            },
+            annual: {
+              kind: 'custom',
+              label: 'مخصص',
+              note: 'يحدد التسعير المخصص مباشرة حسب الهيكل التشغيلي واحتياجات rollout وسياق التنفيذ.',
+            },
+            included: [
+              'Rollout متعدد المواقع',
+              'حوكمة متقدمة',
+              'تكاملات',
+              'مسار مراجعة الأمان',
+              'عقود خاصة',
+              'Guided implementation ودعم rollout',
+            ],
+            ctaLabel: 'تواصل معنا',
+          },
+        ],
+        comparison: {
+          title: 'مقارنة خطط ERP',
+          subtitle:
+            'استخدم هذا لتحديد ما إذا كنت تحتاج إلى تحكم مالي أو عمليات يومية أو منصة العمليات الكاملة.',
+          featureLabel: 'القدرة',
+          rows: [
+            { label: 'المحاسبة', values: [true, true, true, true] },
+            { label: 'الفوترة', values: [true, true, true, true] },
+            { label: 'المصروفات', values: [true, true, true, true] },
+            { label: 'التقارير المالية', values: [true, true, true, true] },
+            { label: 'المشتريات', values: [false, true, true, true] },
+            { label: 'المخزون', values: [false, true, true, true] },
+            { label: 'المواقع', values: [false, true, true, true] },
+            { label: 'المستودع', values: [false, false, true, true] },
+            { label: 'الإنتاج (BOM)', values: [false, false, true, true] },
+            { label: 'الموافقات والحوكمة', values: [false, true, true, true] },
+            { label: 'Rollout متعدد المواقع', values: [false, false, true, true] },
+            { label: 'التكاملات', values: [false, false, false, true] },
+            { label: 'ZANVROX Workforce', values: ['إضافة', 'خصم 50%', 'مشمول', 'مخصص'] },
+            {
+              label: 'مستوى الدعم',
+              values: [
+                'بريد إلكتروني / 48 ساعة',
+                'بريد إلكتروني أولوية / 24 ساعة',
+                'بريد إلكتروني أولوية / 24 ساعة',
+                'قناة مباشرة',
+              ],
+            },
+            {
+              label: 'مساعدة onboarding',
+              values: ['إعداد ذاتي', 'إعداد ذاتي', 'إعداد ذاتي', 'مشمول'],
+            },
+            { label: 'المستخدمون المشمولون', values: ['3', '6', '10', 'مخصص'] },
+          ],
+          notesTitle: 'ملاحظات تجارية',
+          notes: [
+            'Payroll إضافة منفصلة لكل خطة ERP.',
+            'Guided Implementation اختياري ومسعر بشكل منفصل للفرق التي تريد rollout أكثر تنظيما.',
+            'Enterprise هو المسار للنطاق متعدد المواقع والتكاملات ومراجعة الأمان وسياق Guided Implementation.',
+            'صمم النموذج التجاري للحفاظ على الشفافية مع دعم سير العمل المحكوم وقابلية التدقيق مع نمو المتطلبات.',
+          ],
+          annualNote: 'تشمل الخطط الأساسية السنوية شهرا واحدا مجانيا.',
+        },
+      },
       payrollAddon: {
         title: 'إضافة Payroll',
         summary:
@@ -826,7 +1109,7 @@ const siteContentAr = {
         priceLabel: 'CAD 59 / شهر + CAD 6 / موظف / شهر',
         annualPriceLabel: 'CAD 59 / شهر + CAD 6 / موظف / شهر',
         monthlyNote:
-          'يشمل تشغيل Payroll الكندي، ودعم سير عمل التحويلات، وقسائم الدفع، والسجلات والصادرات لدعم مراجعة نهاية السنة، والتكامل المحاسبي. قد ينطبق حد أدنى شهري أثناء rollout.',
+          'يشمل تشغيل Payroll الكندي، ودعم سير عمل التحويلات، وقسائم الدفع، والسجلات والصادرات لدعم مراجعة نهاية السنة، والتكامل المحاسبي. قد ينطبق حد أدنى شهري أثناء rollout. لا يشمل Payroll ضمن ZANVROX Workforce.',
         annualNote:
           'تحافظ إضافة Payroll على نفس هيكل الرسوم الأساسية زائد الموظفين عند الفوترة سنويا ما لم يتم تحديد نطاق آخر.',
         included: [
@@ -851,7 +1134,7 @@ const siteContentAr = {
           'إرشاد استيراد البيانات',
           'جلسة تدريب rollout مساعد',
         ],
-        note: 'اختياري. ما زالت الخطط القياسية قادرة على البدء بإعداد ذاتي عندما يكون rollout الأخف مناسبا.',
+        note: 'Guided Implementation اختياري للمؤسسات التي تريد ترحيلا عمليا وتهيئة ودعم إطلاق. ما زالت الخطط القياسية قادرة على البدء بإعداد ذاتي عندما يكون rollout الأخف مناسبا.',
         ctaLabel: 'طلب إعداد موجه',
       },
       supportTiers: {
@@ -859,43 +1142,17 @@ const siteContentAr = {
         subtitle:
           'يذكر الدعم علنا حتى تتمكن الفرق من تقييم التغطية التشغيلية وتوقعات الاستجابة وموقف rollout مقدما.',
         items: [
-          { name: 'Finance Core', body: 'دعم بريد إلكتروني بزمن استجابة 48 ساعة.' },
-          { name: 'Operations', body: 'دعم بريد إلكتروني أولوية بزمن استجابة 24 ساعة.' },
-          { name: 'مخصص', body: 'دعم rollout موجه وقناة دعم مباشرة ومناقشة تنفيذ محددة النطاق.' },
-        ],
-      },
-      comparison: {
-        title: 'مقارنة الخطط',
-        subtitle:
-          'استخدم هذا لتحديد ما إذا كنت تحتاج إلى تحكم مالي منظم أو عمليات متصلة أو rollout مخصص.',
-        featureLabel: 'القدرة',
-        rows: [
-          { label: 'المحاسبة', values: [true, true, true] },
-          { label: 'الفوترة', values: [true, true, true] },
-          { label: 'المصروفات', values: [true, true, true] },
-          { label: 'التقارير المالية', values: [true, true, true] },
-          { label: 'المخزون', values: [false, true, true] },
-          { label: 'المستودع', values: [false, true, true] },
-          { label: 'الإنتاج (BOM)', values: [false, true, true] },
-          { label: 'الموافقات والحوكمة', values: [false, true, true] },
-          { label: 'Rollout متعدد المواقع', values: [false, false, true] },
-          { label: 'موافقات متقدمة', values: [false, true, true] },
-          { label: 'التكاملات', values: [false, false, true] },
+          { name: 'Finance', body: 'دعم بريد إلكتروني بزمن استجابة 48 ساعة.' },
+          { name: 'Business', body: 'دعم بريد إلكتروني أولوية بزمن استجابة 24 ساعة.' },
           {
-            label: 'مستوى الدعم',
-            values: ['بريد / 48 ساعة', 'بريد أولوية / 24 ساعة', 'قناة مباشرة'],
+            name: 'Operations',
+            body: 'دعم بريد إلكتروني أولوية بزمن استجابة 24 ساعة، بما يشمل Workforce للمواقع المغطاة.',
           },
-          { label: 'مساعدة onboarding', values: ['إعداد ذاتي', 'إعداد ذاتي', 'مشمول'] },
-          { label: 'المستخدمون المشمولون', values: ['3', '10', 'مخصص'] },
+          {
+            name: 'Enterprise',
+            body: 'دعم rollout موجه، وقناة دعم مباشرة، ومناقشة تنفيذ محددة النطاق.',
+          },
         ],
-        notesTitle: 'ملاحظات تجارية',
-        notes: [
-          'Payroll إضافة منفصلة.',
-          'Guided Implementation اختياري ومسعر بشكل منفصل للفرق التي تريد rollout أكثر تنظيما.',
-          'مخصص هو المسار للنطاق متعدد المواقع والتكاملات ومراجعة الأمان وسياق Guided Implementation.',
-          'صمم النموذج التجاري للحفاظ على الشفافية مع دعم سير العمل المحكوم وقابلية التدقيق مع نمو المتطلبات.',
-        ],
-        annualNote: 'تشمل الخطط الأساسية السنوية شهرا واحدا مجانيا.',
       },
       faq: {
         title: 'FAQ الأسعار',
@@ -907,23 +1164,291 @@ const siteContentAr = {
               'لا. المسار المقصود هو التقييم الذاتي أولا: شاهد النظرة العامة، استكشف المنتج، راجع الأسعار، واستخدم مساحة التقييم عبر المتصفح قبل طلب جلسة موجهة.',
           },
           {
-            question: 'هل Payroll مشمول في خطط ERP الأساسية؟',
-            answer: 'لا. يباع Payroll كإضافة منفصلة برسوم شهرية أساسية زائد تسعير لكل موظف.',
+            question: 'هل Workforce مشمول في خطط ERP؟',
+            answer:
+              'يشمل Operations ZANVROX Workforce للموظفين والمواقع المغطاة بذلك الاشتراك في ERP. لا يشمل Business خطة Workforce لكنه مؤهل لخصم 50% على خطة Workforce المستقلة. لا يشمل Finance خطة Workforce.',
+          },
+          {
+            question: 'هل يمكنني شراء Workforce دون ERP؟',
+            answer:
+              'نعم. ZANVROX Workforce متاح كخطة مستقلة، مسعرة لكل موقع، دون أي التزام بشراء أو الترقية إلى أي خطة ERP.',
+          },
+          {
+            question: 'هل Payroll مشمول في خطط ERP الأساسية أو في Workforce؟',
+            answer:
+              'لا. يباع Payroll كإضافة منفصلة برسوم شهرية أساسية زائد تسعير لكل موظف. لا يشمل ضمن ZANVROX Workforce.',
           },
           {
             question: 'هل Guided Implementation مطلوب؟',
             answer:
-              'لا. هو اختياري. يمكن أن تبدأ Finance Core وOperations بالإعداد الذاتي، بينما يتاح Guided Implementation للفرق التي تريد rollout أكثر تنظيما.',
+              'لا. هو اختياري. يمكن أن تبدأ Finance وBusiness وOperations بالإعداد الذاتي، بينما يتاح Guided Implementation للفرق التي تريد rollout أكثر تنظيما.',
           },
           {
             question: 'ما الدعم المرفق بكل خطة؟',
             answer:
-              'تتضمن Finance Core دعم بريد إلكتروني خلال 48 ساعة، وتتضمن Operations دعما أولويا خلال 24 ساعة، ويتضمن المخصص مناقشة rollout موجهة وقناة دعم مباشرة.',
+              'يتضمن Finance دعم بريد إلكتروني خلال 48 ساعة، ويتضمن Business وOperations دعما أولويا خلال 24 ساعة، ويتضمن Enterprise مناقشة rollout موجهة وقناة دعم مباشرة.',
           },
         ],
       },
       ctaPrimary: { label: 'فتح مساحة التقييم', path: '/resources#demo-environment' },
       ctaSecondary: { label: 'التواصل حول rollout مخصص', path: '/contact' },
+    },
+    workforce: {
+      heroKicker: 'ZANVROX WORKFORCE',
+      heroTitle: 'أدر كل وردية بفوضى أقل.',
+      heroSubtitle:
+        'تسجيل الدخول والخروج، الجداول، المهام، وسجلات الدوام لفرق الخط الأمامي — كلها متصلة في تطبيق عمل واحد وبسيط.',
+      heroPrimaryCta: { label: 'ابدأ مع Workforce', path: '/pricing#workforce-pricing' },
+      heroSecondaryCta: {
+        label: 'انضم إلى النسخة التجريبية لمطاعم أونتاريو',
+        path: '/workforce/beta',
+      },
+      heroPreview: {
+        title: 'لمحة عن الوردية',
+        type: 'workforce',
+        caption: 'مبني لفرق الخط الأمامي',
+        callouts: [
+          { status: 'ready', text: 'تسجيل الدخول / الخروج' },
+          { status: 'ready', text: 'الجداول وسجلات الدوام' },
+        ],
+      },
+      existingCustomer: {
+        title: 'هل تستخدم ZANVROX ERP بالفعل؟',
+        body: 'Workforce مشمول مع خطط ERP المؤهلة.',
+        cta: { label: 'عرض خطط ERP التي تشمل Workforce', path: '/pricing#erp-pricing' },
+      },
+      sections: {
+        eyebrow: 'ما الذي يغطيه Workforce',
+        title: 'كل ما تحتاجه الوردية، متصل',
+        subtitle:
+          'يغطي ZANVROX Workforce أجزاء الوردية التي عادة ما تعيش في جداول بيانات وسجلات دوام ورقية ومحادثات جماعية.',
+        items: [
+          {
+            eyebrow: 'تسجيل الدخول والخروج',
+            title: 'يسجل الموظفون الدخول والخروج من هواتفهم مع تحقق واع بالموقع.',
+            body: 'ترتبط أحداث تسجيل الدخول بلحظات عمل مصرح بها، وليست تتبعا مستمرا للشخص.',
+            bullets: [
+              'تسجيل الدخول والخروج من الهاتف في ثوان',
+              'تتبع الاستراحات في نفس التدفق',
+              'تحقق واع بالموقع عند تسجيل الدخول/الخروج، حيث يكون geofencing مفعلا للموقع',
+              'مرونة دون اتصال حتى تبدأ الوردية حتى مع اتصال ضعيف',
+            ],
+          },
+          {
+            eyebrow: 'الجداول والورديات',
+            title: 'جداول يمكن لكل الفريق رؤيتها، من أي هاتف.',
+            body: 'ينشر المدراء الجداول؛ ويرى الموظفون ورديتهم في مكان واحد.',
+            bullets: [
+              'الجداول',
+              'الورديات القادمة',
+              'الورديات المفتوحة، حيث مفعلة',
+              'تغييرات الورديات وطلبات الورديات، حيث مفعلة',
+            ],
+          },
+          {
+            eyebrow: 'سجلات الدوام',
+            title: 'تتحول ساعات العمل إلى سجل دوام تلقائيا.',
+            body: 'تتجمع أحداث تسجيل الدخول في سجلات دوام يمكن للمدراء مراجعتها.',
+            bullets: [
+              'ساعات العمل',
+              'سجلات دوام الموظفين',
+              'التصحيحات',
+              'مراجعة وموافقة المدير، حيث مفعلة',
+            ],
+          },
+          {
+            eyebrow: 'المهام وقوائم التحقق',
+            title: 'مهام وقوائم تحقق يومية، تنجز من أرض العمل.',
+            body: 'تتحول روتينات الفتح والإغلاق إلى قوائم تحقق قابلة للتتبع بدلا من الذاكرة.',
+            bullets: [
+              'المهام اليومية',
+              'مهام الفتح',
+              'مهام الإغلاق',
+              'قوائم تحقق تشغيلية',
+              'تعليقات وأدلة، حيث مفعلة',
+            ],
+          },
+          {
+            eyebrow: 'عمليات الفريق',
+            title: 'حافظ على توافق الفريق بين الورديات.',
+            body: 'سياق مشترك للفريق دون أداة مراسلة منفصلة.',
+            bullets: ['الإعلانات', 'ملاحظات الوردية', 'التسليمات', 'الطلبات', 'تواصل الفريق'],
+          },
+          {
+            eyebrow: 'تحكم المدير',
+            title: 'مكان واحد للمدراء لمعرفة كيف تسير الوردية.',
+            body: 'إشراف للأشخاص الذين يديرون العملية اليومية.',
+            bullets: [
+              'مراجعة سجل الدوام',
+              'إدارة الجدول',
+              'المهام',
+              'الحالات الشاذة',
+              'أحداث تسجيل دخول واعية بالموقع',
+              'إشراف الفريق',
+            ],
+          },
+        ],
+      },
+      industries: {
+        title: 'مبني لفرق الخط الأمامي والفرق القائمة على الورديات',
+        subtitle: 'لم يُبنَ ZANVROX Workforce للمطاعم فقط.',
+        items: [
+          'المطاعم',
+          'المقاهي',
+          'التجزئة',
+          'الضيافة',
+          'الخدمات',
+          'المستودعات',
+          'الشركات متعددة المواقع',
+        ],
+      },
+      cta: {
+        title: 'ابدأ مع Workforce',
+        subtitle: 'أضف ERP عندما تحتاج إليه.',
+        primary: { label: 'ابدأ مع Workforce', path: '/pricing#workforce-pricing' },
+        secondary: { label: 'Workforce للمطاعم', path: '/workforce/restaurants' },
+      },
+    },
+    workforceRestaurants: {
+      heroKicker: 'ZANVROX WORKFORCE للمطاعم',
+      heroTitle: 'مبني لواقع ورديات المطاعم.',
+      heroSubtitle:
+        'تسجيلات الدخول والجداول وسجلات الدوام والمهام اليومية دون جداول بيانات أو سجلات دوام ورقية أو أدوات منفصلة.',
+      heroPrimaryCta: { label: 'ابدأ مع Workforce', path: '/pricing#workforce-pricing' },
+      heroSecondaryCta: {
+        label: 'انضم إلى النسخة التجريبية لمطاعم أونتاريو',
+        path: '/workforce/beta',
+      },
+      heroPreview: {
+        title: 'لمحة عن الوردية',
+        type: 'workforce',
+        caption: 'مبني لفرق المطاعم',
+        callouts: [
+          { status: 'ready', text: 'تسجيل الدخول / الخروج' },
+          { status: 'ready', text: 'المهام اليومية وقوائم التحقق' },
+        ],
+      },
+      timeline: {
+        eyebrow: 'وردية مطعم، من البداية إلى النهاية',
+        title: 'قبل كل وردية وأثناءها وبعدها',
+        subtitle: 'يتابع التطبيق نفسه الوردية من الجدول إلى سجل الدوام.',
+        stages: [
+          {
+            name: 'قبل الوردية',
+            items: ['الجدول', 'الورديات المفتوحة', 'رؤية الموظفين'],
+          },
+          {
+            name: 'أثناء الوردية',
+            items: [
+              'تسجيل دخول واع بالموقع',
+              'الاستراحات',
+              'المهام',
+              'قوائم التحقق',
+              'ملاحظات الوردية',
+            ],
+          },
+          {
+            name: 'بعد الوردية',
+            items: ['تسجيل الخروج', 'ساعات العمل', 'سجل الدوام', 'مراجعة المدير'],
+          },
+          {
+            name: 'المدير',
+            items: [
+              'من يعمل',
+              'ساعات العمل',
+              'المهام المعلقة',
+              'التصحيحات',
+              'الموافقة على سجل الدوام',
+            ],
+          },
+        ],
+      },
+      crossSell: {
+        title: 'هل تحتاج إلى أكثر من إدارة القوى العاملة؟',
+        body: 'اربط Workforce بمنظومة ZANVROX ERP الكاملة للمالية والمخزون والمشتريات وعمليات الأعمال.',
+        cta: { label: 'استكشاف ZANVROX ERP', path: '/erp' },
+      },
+      cta: {
+        title: 'أحضر Workforce إلى مطعمك',
+        subtitle: 'ابدأ مع Workforce، أو قدّم أولا للنسخة التجريبية لمطاعم أونتاريو.',
+        primary: { label: 'ابدأ مع Workforce', path: '/pricing#workforce-pricing' },
+        secondary: { label: 'انضم إلى النسخة التجريبية لمطاعم أونتاريو', path: '/workforce/beta' },
+      },
+    },
+    workforceBeta: {
+      heroKicker: 'النسخة التجريبية لمطاعم أونتاريو',
+      heroTitle: 'جرّب ZANVROX Workforce مع فريقك الحقيقي قبل إطلاقنا العام.',
+      heroSubtitle:
+        'ندعو مجموعة محدودة من مطاعم أونتاريو لتجربة ZANVROX Workforce خلال ورديات حقيقية.',
+      badges: ['نسخة تجريبية لمدة 14 يوما', 'دون التزام شراء', '6 أشهر مجانية بعد الإطلاق'],
+      intro: {
+        title: 'كيف تعمل النسخة التجريبية',
+        paragraphs: [
+          'ندعو مجموعة محدودة من مطاعم أونتاريو لتجربة ZANVROX Workforce خلال ورديات حقيقية.',
+          'استخدم التطبيق مع مدير وموظفين، أخبرنا بما ينجح وما يحتاج إلى تحسين، وساعدنا في الاستعداد للإطلاق العام.',
+          'تحصل المطاعم التي تكمل النسخة التجريبية على ستة أشهر من ZANVROX Workforce مجانا بعد الإطلاق.',
+        ],
+      },
+      terms: {
+        title: 'شروط النسخة التجريبية',
+        subtitle: 'الشروط التجارية للنسخة التجريبية لمطاعم أونتاريو، موضحة بصراحة.',
+        items: [
+          'فترة تجريبية مدتها 14 يوما',
+          'دون تكلفة خلال الفترة التجريبية',
+          'دون التزام شراء',
+          'تحصل المطاعم التي تكمل النسخة التجريبية على 6 أشهر من ZANVROX Workforce مجانا بعد الإطلاق العام',
+          'بعد الأشهر الستة المجانية، تختار خطة Workforce',
+          'لا تجديد تلقائي أو رسوم من النسخة التجريبية دون موافقتك',
+        ],
+      },
+      form: {
+        title: 'قدّم للنسخة التجريبية',
+        helper: 'أخبرنا عن مطعمك. سنراجع طلبك ونتابع عبر البريد الإلكتروني.',
+        fields: {
+          restaurantName: 'اسم المطعم',
+          contactName: 'اسم جهة الاتصال',
+          email: 'البريد الإلكتروني للعمل',
+          city: 'المدينة',
+          employeeCount: 'عدد الموظفين',
+          locationCount: 'عدد المواقع',
+          currentMethod: 'طريقة تتبع الوقت الحالية',
+          participantCount: 'كم عدد الموظفين الذين يمكنهم المشاركة؟',
+          message: 'رسالة اختيارية',
+          consent: 'أوافق على أن يتواصل معي ZANVROX بخصوص النسخة التجريبية من Workforce.',
+        },
+        placeholders: {
+          restaurantName: 'مثال: Maple Street Kitchen',
+          contactName: 'اسمك الكامل',
+          email: 'you@yourrestaurant.com',
+          city: 'مثال: تورونتو',
+          employeeCount: 'مثال: 12',
+          locationCount: 'مثال: 1',
+          currentMethod: 'مثال: سجلات دوام ورقية، جدول بيانات، نظام POS مدمج',
+          participantCount: 'مثال: 5',
+          message: 'هل هناك أي شيء آخر يجب أن نعرفه؟',
+        },
+        errors: {
+          restaurantName: 'أدخل اسم مطعمك.',
+          contactName: 'أدخل اسم جهة اتصال.',
+          email: 'أدخل بريدا إلكترونيا صالحا للعمل.',
+          city: 'أدخل مدينتك.',
+          employeeCount: 'أدخل عدد الموظفين.',
+          locationCount: 'أدخل عدد المواقع.',
+          currentMethod: 'أخبرنا بطريقة تتبع الوقت الحالية لديك.',
+          participantCount: 'أدخل عدد الموظفين الذين يمكنهم المشاركة.',
+          message: 'اجعل الرسالة أقل من 2000 حرف.',
+          consent: 'الموافقة مطلوبة للتقديم للنسخة التجريبية.',
+          website: 'تم تفعيل حماية البريد المزعج.',
+          startedAt: 'يرجى الانتظار لحظة قبل الإرسال.',
+        },
+        consentPrivacyLabel: 'سياسة الخصوصية',
+        consentPrivacyPath: '/legal/privacy',
+        cta: 'قدّم للنسخة التجريبية',
+        submittingCta: 'جار الإرسال...',
+        confirmation:
+          'شكرا لك. سنراجع طلبك ونتواصل معك بتعليمات الاختبار الخاص إذا تم اختيار مطعمك.',
+        submitError: 'تعذر إرسال طلبك. يرجى المحاولة مرة أخرى.',
+      },
     },
     resources: {
       ...base.pages.resources,
@@ -936,7 +1461,7 @@ const siteContentAr = {
           description:
             'راجع نظرة المنتج وتغطية سير العمل ونموذج onboarding قبل استثمار الوقت في تقييم أعمق.',
           cta: 'مراجعة المنتج',
-          path: '/product',
+          path: '/erp',
         },
         {
           title: 'Security Overview',
@@ -1019,7 +1544,7 @@ const siteContentAr = {
       heroTitle: 'نظام ERP عملي موضوع لrollout موثوق، لا لاستعراض مؤسسي.',
       heroSubtitle:
         'يقدم ZANVROX كنظام ERP حديث لفرق SMB الكندية التي تريد تحكما تشغيليا أدق وأنظمة أقل انفصالا ومسار دعم أوضح.',
-      heroPrimaryCta: { label: 'استكشاف المنتج', path: '/product' },
+      heroPrimaryCta: { label: 'استكشاف المنتج', path: '/erp' },
       heroSecondaryCta: { label: 'التواصل مع الفريق', path: '/contact' },
       heroPreview: {
         ...base.pages.about.heroPreview,
@@ -1102,8 +1627,8 @@ const siteContentAr = {
         title: 'توقعات الدعم',
         subtitle: 'كل تدفقات التواصل في الموقع توجه إلى support@zanvrox.com.',
         items: [
-          'Finance Core: دعم بريد إلكتروني بزمن استجابة 48 ساعة',
-          'Operations: دعم بريد إلكتروني أولوية بزمن استجابة 24 ساعة',
+          'Finance: دعم بريد إلكتروني بزمن استجابة 48 ساعة',
+          'Business وOperations: دعم بريد إلكتروني أولوية بزمن استجابة 24 ساعة',
           'Enterprise: قناة دعم مباشرة بالإضافة إلى مساعدة onboarding',
         ],
       },
@@ -1146,8 +1671,10 @@ const siteContentAr = {
         options: {
           companySizes: ['1-10 موظفين', '10-50 موظفا', '50-100 موظف', '100+ موظف'],
           interestAreas: [
-            'Finance Core',
+            'Finance',
+            'Business',
             'Operations',
+            'Workforce',
             'Payroll add-on',
             'Guided Implementation',
             'Enterprise rollout',
@@ -1218,11 +1745,15 @@ const siteContentAr = {
     legal: {
       privacy: {
         title: 'سياسة الخصوصية',
-        updated: '5 مارس 2026',
+        updated: '7 أغسطس 2026',
         updatedLabel: 'آخر تحديث',
         paragraphs: [
-          'يجمع ZANVROX معلومات التواصل التجاري المقدمة عبر هذا الموقع لأغراض تقييم المنتج وجدولة العروض وطلبات الوثائق.',
+          'يجمع ZANVROX معلومات التواصل التجاري المقدمة عبر هذا الموقع لأغراض تقييم المنتج وجدولة العروض وطلبات النسخة التجريبية وطلبات الوثائق.',
           'نعالج البيانات المقدمة لأغراض المبيعات وتأهيل المنتج فقط.',
+          'يستخدم ZANVROX Workforce موقع الجهاز فقط في لحظة تسجيل الموظف للدخول أو الخروج، وفقط عندما يكون صاحب العمل قد فعّل التحقق الواعي بالموقع لموقع عمل معين. يرتبط الموقع بحدث تسجيل الدخول/الخروج المحدد ذاك، ولا يتم جمعه بشكل مستمر أو استخدامه لتتبع الموظف خارج لحظات تسجيل الدخول والخروج المصرح بها.',
+          'تستخدم بيانات موقع Workforce وأحداث تسجيل الدخول للتحقق من أن تسجيل الدخول أو الخروج حدث في موقع عمل مصرح به، ولدعم سجل الدوام الناتج. تكون هذه البيانات مرئية للموظف ولمدراء صاحب العمل المصرح لهم.',
+          'يمكن للموظفين رفض منح إذن الموقع؛ وحسب إعدادات صاحب العمل، قد يعني هذا أنه لا يمكن التحقق من حدث تسجيل الدخول كواعٍ بالموقع، وينبغي على صاحب العمل توفير عملية بديلة.',
+          'تُحفظ سجلات Workforce وغيرها من السجلات التشغيلية طالما كان ذلك ضروريا لدعم متطلبات Payroll وسجلات الدوام وحفظ سجلات التوظيف، وتُحمى بنفس ضوابط الوصول والأمان الموضحة في صفحة الأمان لدينا.',
           'يمكنك طلب الوصول أو التصحيح أو الحذف للبيانات المقدمة عبر التواصل مع support@zanvrox.com.',
         ],
       },
@@ -1250,27 +1781,29 @@ const siteContentAr = {
     email: 'support@zanvrox.com',
     sections: [
       {
-        title: 'المنتج',
+        title: 'المنتجات',
         links: [
-          { label: 'نظرة المنتج', path: '/product' },
+          { label: 'ERP', path: '/erp' },
+          { label: 'Workforce', path: '/workforce' },
+          { label: 'Workforce للمطاعم', path: '/workforce/restaurants' },
           { label: 'الأسعار', path: '/pricing' },
-          { label: 'الموارد', path: '/resources' },
-          { label: 'التواصل', path: '/contact' },
         ],
       },
       {
-        title: 'الثقة والقانون',
+        title: 'الموارد',
         links: [
+          { label: 'الموارد', path: '/resources' },
           { label: 'الأمان', path: '/security' },
-          { label: 'الأمان / الامتثال', path: '/security' },
-          { label: 'طلب معلومات الأمان', path: '/contact' },
           { label: 'الخصوصية', path: '/legal/privacy' },
           { label: 'الشروط', path: '/legal/terms' },
+          { label: 'حذف الحساب', path: '/account-deletion' },
+          { label: 'التواصل', path: '/contact' },
         ],
       },
     ],
     links: [
-      { label: 'المنتج', path: '/product' },
+      { label: 'ERP', path: '/erp' },
+      { label: 'Workforce', path: '/workforce' },
       { label: 'الأسعار', path: '/pricing' },
       { label: 'الموارد', path: '/resources' },
       { label: 'الأمان', path: '/security' },
@@ -1278,6 +1811,7 @@ const siteContentAr = {
       { label: 'التواصل', path: '/contact' },
       { label: 'الخصوصية', path: '/legal/privacy' },
       { label: 'الشروط', path: '/legal/terms' },
+      { label: 'حذف الحساب', path: '/account-deletion' },
     ],
   },
   seo: {
@@ -1288,10 +1822,26 @@ const siteContentAr = {
       path: '/',
     },
     product: {
-      title: 'المنتج | ZANVROX',
+      title: 'ZANVROX ERP | منصة المالية والعمليات وWorkforce',
       description:
-        'استكشف المالية والعمليات ودعم سير العمل الضريبي الكندي والحوكمة وتغطية إضافة Payroll داخل منظومة ZANVROX ERP.',
-      path: '/product',
+        'استكشف المالية والفوترة والمصروفات والمشتريات والمخزون والعمليات والتقارير وسير عمل Payroll وZANVROX Workforce داخل منظومة ZANVROX ERP.',
+      path: '/erp',
+    },
+    workforce: {
+      title: 'ZANVROX Workforce | تتبع الوقت والجدولة والمهام',
+      description:
+        'سجل الدخول والخروج، وأدر الجداول، وتتبع سجلات الدوام، ونظم المهام اليومية مع ZANVROX Workforce.',
+      path: '/workforce',
+    },
+    workforceRestaurants: {
+      title: 'إدارة القوى العاملة للمطاعم | ZANVROX Workforce',
+      description: 'تسجيلات الدخول والجداول وسجلات الدوام والمهام اليومية للفريق لفرق المطاعم.',
+      path: '/workforce/restaurants',
+    },
+    workforceBeta: {
+      title: 'النسخة التجريبية لمطاعم أونتاريو | ZANVROX Workforce',
+      description: 'يمكن لمطاعم أونتاريو التقديم لتجربة ZANVROX Workforce قبل الإطلاق العام.',
+      path: '/workforce/beta',
     },
     security: {
       title: 'الأمان | ZANVROX',
@@ -1302,7 +1852,7 @@ const siteContentAr = {
     pricing: {
       title: 'الأسعار | ZANVROX',
       description:
-        'راجع أسعار CAD العامة لFinance Core وOperations وrollout مخصص وإضافة Payroll وGuided Implementation الاختياري.',
+        'راجع أسعار CAD العامة لـZANVROX Workforce (Starter وTeam وBusiness) وZANVROX ERP (Finance وBusiness وOperations وEnterprise)، وإضافة Payroll، وGuided Implementation الاختياري.',
       path: '/pricing',
     },
     resources: {

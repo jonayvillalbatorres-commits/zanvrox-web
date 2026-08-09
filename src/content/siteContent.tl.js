@@ -18,7 +18,8 @@ const siteContentTl = {
   },
   navItems: [
     { label: 'Simula', path: '/' },
-    { label: 'Produkto', path: '/product' },
+    { label: 'ERP', path: '/erp' },
+    { label: 'Workforce', path: '/workforce' },
     { label: 'Presyo', path: '/pricing' },
     { label: 'Sanggunian', path: '/resources' },
     { label: 'Seguridad', path: '/security' },
@@ -70,7 +71,7 @@ const siteContentTl = {
           'Lugar-gawaan ng pasahod',
           'Mga ulat at pag-apruba',
         ],
-        primaryCta: { label: 'Suriin ang produkto', path: '/product' },
+        primaryCta: { label: 'Suriin ang produkto', path: '/erp' },
         secondaryCta: {
           label: 'Buksan ang kapaligiran ng pagsusuri',
           path: '/resources#demo-environment',
@@ -93,6 +94,27 @@ const siteContentTl = {
         { status: 'locked', text: 'Pamamahala at kontrol na nasusuri' },
         { status: 'ready', text: 'Landas ng sariling paunang pagsasaayos' },
       ],
+      productLines: {
+        eyebrow: 'Iisang plataporma, dalawang paraan para magsimula',
+        title: 'Dalawang paraan para patakbuhin ang iyong negosyo gamit ang ZANVROX',
+        subtitle:
+          'Magsimula sa Workforce para sa mga shift ng mga tauhan sa harapan, sa ZANVROX ERP para sa pananalapi at operasyon ng negosyo, o pareho.',
+        cards: [
+          {
+            name: 'ZANVROX ERP',
+            headline:
+              'Pananalapi, imbentaryo, pagbili, at operasyon sa iisang konektadong plataporma.',
+            cta: { label: 'Suriin ang ERP', path: '/erp' },
+          },
+          {
+            name: 'ZANVROX Workforce',
+            headline:
+              'Pagtala ng oras ng pagpasok, iskedyul, gawain, at listahan ng oras para sa mga tauhan sa harapan.',
+            cta: { label: 'Suriin ang Workforce', path: '/workforce' },
+          },
+        ],
+        note: 'Magsimula sa Workforce. Idagdag ang ERP kapag kailangan mo na. Pinapatakbo mo na ba ang negosyo mo gamit ang ZANVROX? Kasama na ang Workforce sa Operasyon.',
+      },
       evaluationPath: {
         eyebrow: 'Pagsusuring pinangungunahan ng produkto',
         title: 'Magsuri nang hindi muna nagtatakda ng pulong',
@@ -334,6 +356,12 @@ const siteContentTl = {
         note: 'Para lamang sa pagsusuri sa browser. Hiwalay ang kapaligirang ito sa pagpaplano ng pagpapatupad at inaasahang paggamit sa produksyon.',
         cta: { label: 'Buksan ang kapaligiran ng pagsusuri', path: '/resources#demo-environment' },
       },
+      restaurantBetaBanner: {
+        eyebrow: 'Mga restawran sa Ontario',
+        title: 'Sumali sa pribadong beta ng ZANVROX Workforce',
+        body: '14 na araw na pagsubok. 6 buwang libre pagkatapos ng paglulunsad.',
+        cta: { label: 'Alamin pa', path: '/workforce/beta' },
+      },
       faq: {
         ...base.pages.home.faq,
         eyebrow: 'FAQ',
@@ -367,16 +395,17 @@ const siteContentTl = {
         title: 'Magsimula sa produkto, hindi sa tawag sa benta',
         subtitle:
           'Suriin muna ang produkto at presyo. Makipag-ugnayan lang sa pangkat kapag may malinaw kang tanong sa paglulunsad, pasahod, o pagsasama.',
-        primary: { label: 'Suriin ang produkto', path: '/product' },
+        primary: { label: 'Suriin ang produkto', path: '/erp' },
         secondary: { label: 'Tingnan ang presyo', path: '/pricing' },
       },
     },
     product: {
       ...base.pages.product,
-      heroKicker: 'Pinagsamang saklaw ng produkto',
-      heroTitle: 'Saklaw ng produkto para sa pananalapi, operasyon, pagsunod, at pasahod.',
+      heroKicker: 'ZANVROX ERP',
+      heroTitle:
+        'Patakbuhin ang pananalapi, operasyon, at Workforce mula sa iisang konektadong plataporma.',
       heroSubtitle:
-        'Inilalagay ang ZANVROX bilang kontroladong ERP para sa maliliit at katamtamang negosyo sa Canada na nangangailangan ng tanaw sa operasyon nang walang palabas para sa malalaking organisasyon.',
+        'Ang ZANVROX ERP ay kontroladong plataporma para sa maliliit at katamtamang negosyo sa Canada na sumasaklaw sa pananalapi, pagsingil, gastos, kliyente at tagapagtustos, pagbili, imbentaryo, lokasyon, operasyon, ulat, daloy ng pasahod, at ZANVROX Workforce.',
       heroPrimaryCta: { label: 'Tingnan ang presyo', path: '/pricing' },
       heroSecondaryCta: {
         label: 'Buksan ang kapaligiran ng pagsusuri',
@@ -392,7 +421,7 @@ const siteContentTl = {
         ],
       },
       pillars: {
-        title: 'Apat na haligi ng produkto',
+        title: 'Mga haligi ng produkto',
         subtitle:
           'Ipinaliliwanag ng pook-sapot ang produkto sa paligid ng daloy ng trabaho, hindi sa magkakahiwalay na tala ng kakayahan.',
         items: [
@@ -411,6 +440,10 @@ const siteContentTl = {
           {
             title: 'Pamamahala',
             body: 'Kakayahang masuri, pag-apruba, hangganan ng kontrol, at landas ng pagpapalawak sa maraming kumpanya.',
+          },
+          {
+            title: 'ZANVROX Workforce',
+            body: 'Pagtala ng oras ng pagpasok at paglabas, iskedyul, gawain, at listahan ng oras para sa mga tauhan sa harapan, kasama sa mga karapat-dapat na plano ng ERP o magagamit nang hiwalay.',
           },
         ],
       },
@@ -452,6 +485,7 @@ const siteContentTl = {
             'Nasa iisang sistema ang pagkuwenta at pagsingil kasama ang pagbili at gastos.',
             'Nananatiling nakaugnay sa talaang pinansyal ang datos ng imbentaryo, bodega, at BOM.',
             'Maaaring idagdag ang pag-apruba at pamamahala nang walang hiwalay na kasangkapan sa operasyon.',
+            'Ikinokonekta ng ZANVROX Workforce ang datos ng pagtala ng oras, iskedyul, at listahan ng oras ng mga tauhan sa harapan pabalik sa parehong plataporma.',
           ],
         },
         {
@@ -812,125 +846,397 @@ const siteContentTl = {
     },
     pricing: {
       ...base.pages.pricing,
-      heroTitle: 'Presyo para sa nakabalangkas na operasyon at kontroladong pagpapalawak.',
+      heroTitle: 'Presyo para sa ZANVROX ERP at ZANVROX Workforce.',
       heroSubtitle:
-        'Magsimula sa pangunahing kontrol sa pananalapi, palawakin patungo sa operasyon habang tumataas ang kumplikasyon, at lumipat lang sa pasadyang paglulunsad kapag kailangan na ang istruktura sa maraming lokasyon, mas mataas na pag-apruba, tulong sa paunang pagsasaayos, pagsasama, o pagsusuri sa seguridad.',
-      packagesTitle:
-        'Pampublikong presyo para sa pananalapi, operasyon, at may-gabay na paglulunsad',
-      packagesSubtitle:
-        'Malinaw na presyo sa CAD para sa maliliit at katamtamang negosyo sa Canada na kailangan ng nakabalangkas na daloy ng trabaho ngayon at kapani-paniwalang landas patungo sa mas malawak na kontrol sa operasyon sa paglipas ng panahon.',
-      launchBadge: 'May taunang pagsingil',
-      launchOfferLabel:
-        'Kasama sa taunang batayang subscription ang isang buwang libre kapag siningil taun-taon.',
-      launchOfferNote:
-        'Nakabatay pa rin sa paggamit ang presyo ng pasahod, at magagamit ang May-gabay na Pagpapatupad kapag kailangan ang mas nakabalangkas na paglulunsad.',
-      popularLabel: 'Malakas na tugma para sa 10-50 empleyado',
-      priceSuffixMonthly: '/buwan',
-      billedMonthlyLabel: 'Buwanang pagsingil',
-      billedAnnuallyLabel: 'Taunang pagsingil',
-      fromLabel: 'Mula',
-      customLabel: 'Pasadya',
-      includesLabel: 'Kasama',
-      entitiesIncludedLabel: 'Saklaw sa komersyo',
-      usersIncludedLabel: 'Kasamang gumagamit',
-      billingToggle: {
-        monthly: 'Buwanan',
-        annual: 'Taunan',
-        annualBadge: '1 buwang libre',
-        helper:
-          'Binabago lang ng taunang pagsingil ang termino ng batayang subscription. Nananatiling batayang bayad kasama ang bilang ng empleyado ang presyo ng pasahod.',
-      },
+        'Magsimula sa Workforce para sa mga shift ng mga tauhan sa harapan, sa ZANVROX ERP para sa pananalapi at operasyon ng negosyo, o pareho. Malinaw na presyo sa CAD para sa maliliit at katamtamang negosyo sa Canada.',
       pricingNote:
-        'Lahat ng presyo ay nasa CAD. Hiwalay na dagdag ang pasahod. Dinisenyo ang mga plano sa paligid ng nakabalangkas na operasyon, kontroladong daloy ng trabaho, kakayahang masuri, at disenyo ng produktong maingat sa seguridad nang hindi masyadong maagang itinutulak ang saklaw para sa malalaking organisasyon. Tumutulong ang ZANVROX na ayusin ang mga daloy ng pananalapi, pasahod, at buwis, ngunit hindi nito pinapalitan ang payo sa pagkuwenta, batas, o buwis.',
-      tiers: [
-        {
-          slug: 'finance-core',
-          name: 'Pundasyong Pinansyal',
-          summary:
-            'Para sa mga kumpanyang nangangailangan ng disiplinadong pundasyong pinansyal na may pagkuwenta, pagsingil, gastos, ulat, at malinaw na landas ng sariling pagsasaayos.',
-          entitiesLabel: 'Saklaw ng iisang kumpanya',
-          usersLabel: 'Hanggang 3 gumagamit',
-          monthly: {
-            kind: 'fixed',
-            amount: 179,
-            note: 'Kasama ang gabay sa sariling pagsasaayos, kontroladong daloy ng pananalapi, at tulong sa elektronikong liham na may tugon sa 48h.',
-          },
-          annual: {
-            kind: 'fixed',
-            amount: 179,
-            badge: '1 buwang libre',
-            note: 'Siningil taun-taon sa CAD 1,969 para sa batayang subscription.',
-            secondaryNote:
-              'Hiwalay pa rin ang pasahod at mas malawak na saklaw ng operasyon kapag kailangan.',
-          },
-          included: [
-            'Mga daloy ng pagkuwenta',
-            'Pagsingil',
-            'Pagkuha ng gastos',
-            'Ulat sa pananalapi',
-            'Gabay sa sariling pagsasaayos',
-            'Tulong sa elektronikong liham (tugon sa 48h)',
-          ],
-          ctaLabel: 'Suriin ang Pundasyong Pinansyal',
+        'Nasa dolyar ng Canada ang mga presyo. Hindi kasama ang buwis. Maaaring mag-iba ang presyo para sa malalaking organisasyon o mataas na dami ng paggamit. Hiwalay na dagdag ang pasahod. Tinutulungan ng ZANVROX na ayusin ang mga daloy ng pananalapi, pasahod, at Workforce, ngunit hindi nito pinapalitan ang payo sa pagkuwenta, batas, o buwis.',
+      upgradePath: {
+        eyebrow: 'Magsimula kung saan naroroon ang iyong negosyo ngayon',
+        title: 'Iisang plataporma habang lumalaki ang iyong negosyo',
+        subtitle:
+          'Hindi ito kinakailangang pagkakasunod-sunod. Maaaring direktang pumili ang isang negosyo ng anumang planong tumutugma ngayon.',
+        steps: [
+          { name: 'Workforce', body: 'CAD 29-79 bawat lokasyon' },
+          { name: 'Pundasyong Pinansyal', body: 'CAD 179 / buwan' },
+          { name: 'Negosyo', body: 'CAD 349 / buwan' },
+          { name: 'Operasyon', body: 'CAD 649 / buwan, kasama ang Workforce' },
+          { name: 'Pasadya', body: 'Pasadya' },
+        ],
+        note: 'Pinapatakbo mo na ba ang negosyo mo gamit ang ZANVROX? Kasama na ang Workforce sa Operasyon.',
+      },
+      bundleOffers: {
+        operationsIncluded: {
+          title: 'Kasama sa Operasyon ang ZANVROX Workforce',
+          body: 'Kasama ang ZANVROX Workforce para sa mga empleyado at lokasyong saklaw ng iyong subscription sa ERP. Walang hiwalay na bayad sa Workforce para sa saklaw na iyon.',
         },
-        {
-          slug: 'operations',
-          name: 'Operasyon',
-          isPopular: true,
-          summary:
-            'Para sa mga pangkat na kailangang sabay gumana ang pananalapi at operasyon sa imbentaryo, bodega, pangunahing produksyon, at kontroladong pag-apruba.',
-          entitiesLabel: 'Saklaw ng iisang kumpanya',
-          usersLabel: 'Hanggang 10 gumagamit',
-          monthly: {
-            kind: 'fixed',
-            amount: 649,
-            note: 'Kasama ang pangunahing tulong sa elektronikong liham na may tugon sa 24h para sa mas aktibong pangkat sa operasyon.',
-          },
-          annual: {
-            kind: 'fixed',
-            amount: 649,
-            badge: '1 buwang libre',
-            note: 'Siningil taun-taon sa CAD 7,139 para sa batayang subscription.',
-            secondaryNote:
-              'Inirerekomenda kapag kailangan ng operasyon ng mas mahigpit na kontrol sa paninda, paggalaw sa bodega, BOM, at mga daloy ng produksyon.',
-          },
-          included: [
-            'Lahat ng nasa Pundasyong Pinansyal',
-            'Kontrol sa imbentaryo',
-            'Mga daloy sa bodega',
-            'Produksyon (BOM)',
-            'Pag-apruba at pamamahala',
-            'Pangunahing tulong sa elektronikong liham (tugon sa 24h)',
-          ],
-          ctaLabel: 'Suriin ang Operasyon',
+        businessDiscount: {
+          title: '50% diskuwento sa Workforce kapag may Negosyo',
+          body: 'Ang mga kliyente ng Negosyo sa ERP ay may 50% diskuwento sa kanilang karapat-dapat na hiwalay na plano ng ZANVROX Workforce.',
         },
-        {
-          slug: 'enterprise',
-          name: 'Pasadya',
-          summary:
-            'Para sa mga pangkat sa maraming lokasyon na nangangailangan ng mas mataas na pag-apruba, pagsusuri sa seguridad, pasadyang paunang pagsasaayos, pagsasama, nakalaang tulong, o mas nakabalangkas na paglulunsad.',
-          entitiesLabel: 'Maraming lokasyon o pasadyang saklaw',
-          usersLabel: 'Pasadyang saklaw ng gumagamit',
-          monthly: {
-            kind: 'custom',
-            label: 'Pasadya',
-            note: 'Nakasaklaw na pagsusuri para sa paglulunsad sa maraming lokasyon, may-gabay na pagsasaayos, pagsasama, pangangailangan sa pamamahala, at pagsusuri sa seguridad.',
-          },
-          annual: {
-            kind: 'custom',
-            label: 'Pasadya',
-            note: 'Direktang itinatakda ang pasadyang presyo ayon sa istruktura ng pagpapatakbo, pangangailangan sa paglulunsad, at konteksto ng pagpapatupad.',
-          },
-          included: [
-            'Paglulunsad sa maraming lokasyon',
-            'Mas mataas na pamamahala',
-            'Pagsasama',
-            'Landas ng pagsusuri sa seguridad',
-            'May-gabay na pagpapatupad at tulong sa paglulunsad',
-          ],
-          ctaLabel: 'Humiling ng pasadyang pagsusuri',
+        financeStandalone: {
+          title: 'Pundasyong Pinansyal at Workforce, hiwalay',
+          body: 'Hindi kasama ang Workforce sa Pundasyong Pinansyal. Maaari kang bumili ng Pundasyong Pinansyal kasama ang hiwalay na plano ng Workforce nang walang obligasyong umakyat sa Negosyo o Operasyon.',
         },
-      ],
+      },
+      workforce: {
+        title: 'ZANVROX Workforce',
+        subtitle:
+          'Pagtala ng oras ng pagpasok at paglabas, iskedyul, mga gawain, at listahan ng oras para sa mga tauhan sa harapan, may presyong bawat lokasyon.',
+        launchBadge: 'May taunang pagsingil',
+        launchOfferLabel:
+          'Kasama sa taunang mga plano ng Workforce ang dalawang buwang libre kapag taun-taon sinisingil.',
+        launchOfferNote:
+          'Ang presyong ipinapakita rito ay pang-impormasyon lamang; kinukumpirma ang pagsingil kapag nagsimula ka na.',
+        popularLabel: 'Pinakasikat',
+        priceSuffixMonthly: '/buwan bawat lokasyon',
+        billedMonthlyLabel: 'Buwanang pagsingil',
+        billedAnnuallyLabel: 'Taunang pagsingil',
+        fromLabel: 'Mula',
+        customLabel: 'Pasadyang presyo',
+        includesLabel: 'Kasama',
+        entitiesIncludedLabel: 'Saklaw ng pagsingil',
+        usersIncludedLabel: 'Kasamang empleyado',
+        billingToggle: {
+          monthly: 'Buwanan',
+          annual: 'Taunan',
+          annualBadge: '2 buwang libre',
+          helper:
+            'Binabago lang ng taunang pagsingil ang termino ng batayang subscription at katumbas ito ng 10 buwan ng buwanang halaga.',
+        },
+        tiers: [
+          {
+            slug: 'workforce-starter',
+            name: 'Panimula',
+            summary:
+              'Para sa iisang lokasyon na nangangailangan ng pagtala ng oras ng pagpasok, iskedyul, at listahan ng oras sa iisang app.',
+            entitiesLabel: 'May presyo bawat lokasyon',
+            usersLabel: 'Hanggang 10 empleyado',
+            monthly: { kind: 'fixed', amount: 29, note: 'Sinisingil bawat lokasyon, bawat buwan.' },
+            annual: {
+              kind: 'fixed',
+              amount: 29,
+              badge: '2 buwang libre',
+              note: 'Sinisingil taun-taon sa CAD 290 bawat lokasyon.',
+            },
+            included: [
+              'Pagtala ng oras ng pagpasok / paglabas',
+              'Pagpapatunay ng lokasyon',
+              'Listahan ng oras',
+              'Iskedyul',
+              'Mga gawain',
+            ],
+            ctaLabel: 'Magsimula sa Panimula',
+          },
+          {
+            slug: 'workforce-team',
+            name: 'Pangkat',
+            isPopular: true,
+            summary:
+              'Para sa mga lokasyong nangangailangan ng kontrol ng tagapamahala, kahilingan sa shift, at mas malakas na ulat.',
+            entitiesLabel: 'May presyo bawat lokasyon',
+            usersLabel: 'Hanggang 25 empleyado',
+            monthly: { kind: 'fixed', amount: 49, note: 'Sinisingil bawat lokasyon, bawat buwan.' },
+            annual: {
+              kind: 'fixed',
+              amount: 49,
+              badge: '2 buwang libre',
+              note: 'Sinisingil taun-taon sa CAD 490 bawat lokasyon.',
+            },
+            included: [
+              'Lahat ng nasa Panimula',
+              'Kontrol ng tagapamahala',
+              'Mga bukas na shift at kahilingan sa shift',
+              'Komunikasyon ng pangkat',
+              'Pinahusay na ulat',
+              'Higit pang kontrol sa pagpapatakbo',
+            ],
+            ctaLabel: 'Magsimula sa Pangkat',
+          },
+          {
+            slug: 'workforce-business',
+            name: 'Negosyo',
+            summary:
+              'Para sa mas malalaking lokasyon na nangangailangan ng mas mataas na kontrol ng tagapamahala at maraming tagapamahala.',
+            entitiesLabel: 'May presyo bawat lokasyon',
+            usersLabel: 'Hanggang 50 empleyado',
+            monthly: { kind: 'fixed', amount: 79, note: 'Sinisingil bawat lokasyon, bawat buwan.' },
+            annual: {
+              kind: 'fixed',
+              amount: 79,
+              badge: '2 buwang libre',
+              note: 'Sinisingil taun-taon sa CAD 790 bawat lokasyon.',
+            },
+            included: [
+              'Lahat ng nasa Pangkat',
+              'Mas mataas na kontrol ng tagapamahala',
+              'Higit pang ulat',
+              'Maraming tagapamahala',
+              'Mas mataas na pagpapatakbo ng Workforce',
+            ],
+            ctaLabel: 'Magsimula sa Negosyo',
+          },
+          {
+            slug: 'workforce-multi-location',
+            name: 'Maramihang Lokasyon',
+            summary:
+              'Para sa mga kadena, grupo ng maraming lokasyon, at mga lokasyong may 50+ empleyado.',
+            entitiesLabel: 'Pasadyang presyo para sa maraming lokasyon',
+            usersLabel: '50+ empleyado bawat lokasyon',
+            monthly: {
+              kind: 'custom',
+              label: 'Pasadyang presyo',
+              note: 'Nakatakda para sa mga kadena, grupo ng maraming lokasyon, at natatanging pangangailangan sa pagpapatakbo.',
+            },
+            annual: {
+              kind: 'custom',
+              label: 'Pasadyang presyo',
+              note: 'Direktang itinatakda batay sa bilang ng lokasyon at empleyado.',
+            },
+            included: [
+              '50+ empleyado bawat lokasyon',
+              'Suporta para sa maraming lokasyon at kadena',
+              'Natatanging pangangailangan sa pagpapatakbo',
+              'Pasadyang paglulunsad at tulong',
+            ],
+            ctaLabel: 'Humiling ng presyo para sa maraming lokasyon',
+          },
+        ],
+        comparison: {
+          title: 'Paghahambing ng mga plano ng Workforce',
+          subtitle: 'Ihambing ang Panimula, Pangkat, at Negosyo para sa iisang lokasyon.',
+          featureLabel: 'Kakayahan',
+          rows: [
+            { label: 'Pagtala ng oras ng pagpasok / paglabas', values: [true, true, true] },
+            { label: 'Pagpapatunay ng lokasyon', values: [true, true, true] },
+            { label: 'Listahan ng oras', values: [true, true, true] },
+            { label: 'Iskedyul', values: [true, true, true] },
+            { label: 'Mga gawain', values: [true, true, true] },
+            { label: 'Kontrol ng tagapamahala', values: [false, true, true] },
+            { label: 'Mga bukas na shift / kahilingan sa shift', values: [false, true, true] },
+            { label: 'Komunikasyon ng pangkat', values: [false, true, true] },
+            { label: 'Pinahusay na ulat', values: [false, true, true] },
+            { label: 'Mas mataas na kontrol ng tagapamahala', values: [false, false, true] },
+            { label: 'Maraming tagapamahala', values: [false, false, true] },
+            { label: 'Kasamang empleyado', values: ['10', '25', '50'] },
+          ],
+          notesTitle: 'Mga tala sa komersyo',
+          notes: [
+            'May presyo bawat lokasyon, bawat buwan.',
+            'Gumagamit ng pasadyang presyo ang maramihang lokasyon at mga lokasyong may 50+ empleyado.',
+            'Kasama sa taunang pagsingil ang dalawang buwang libre (10 buwan ng buwanang halaga).',
+          ],
+          annualNote: 'Kasama sa taunang mga plano ng Workforce ang dalawang buwang libre.',
+        },
+      },
+      erp: {
+        title: 'ZANVROX ERP',
+        subtitle:
+          'Kontrol sa pananalapi, operasyon ng negosyo, at konektadong daloy ng trabaho para sa maliliit at katamtamang negosyo sa Canada.',
+        launchBadge: 'May taunang pagsingil',
+        launchOfferLabel:
+          'Kasama sa taunang batayang subscription ang isang buwang libre kapag siningil taun-taon.',
+        launchOfferNote:
+          'Nakabatay pa rin sa paggamit ang presyo ng pasahod, at magagamit ang May-gabay na Pagpapatupad kapag kailangan ang mas nakabalangkas na paglulunsad.',
+        popularLabel: 'Pinakasikat',
+        priceSuffixMonthly: '/buwan',
+        billedMonthlyLabel: 'Buwanang pagsingil',
+        billedAnnuallyLabel: 'Taunang pagsingil',
+        fromLabel: 'Mula',
+        customLabel: 'Pasadya',
+        includesLabel: 'Kasama',
+        entitiesIncludedLabel: 'Saklaw sa komersyo',
+        usersIncludedLabel: 'Kasamang gumagamit',
+        billingToggle: {
+          monthly: 'Buwanan',
+          annual: 'Taunan',
+          annualBadge: '1 buwang libre',
+          helper:
+            'Binabago lang ng taunang pagsingil ang termino ng batayang subscription. Nananatiling batayang bayad kasama ang bilang ng empleyado ang presyo ng pasahod.',
+        },
+        tiers: [
+          {
+            slug: 'finance',
+            name: 'Pundasyong Pinansyal',
+            summary:
+              'Kontrol sa pananalapi para sa lumalaking negosyo: pagsingil, gastos, at ulat.',
+            entitiesLabel: 'Saklaw ng iisang kumpanya',
+            usersLabel: 'Hanggang 3 gumagamit',
+            monthly: {
+              kind: 'fixed',
+              amount: 179,
+              note: 'Kasama ang gabay sa sariling pagsasaayos, kontroladong daloy ng pananalapi, at tulong sa elektronikong liham na may tugon sa 48h.',
+            },
+            annual: {
+              kind: 'fixed',
+              amount: 179,
+              badge: '1 buwang libre',
+              note: 'Sinisingil taun-taon sa CAD 1,969 para sa batayang subscription.',
+              secondaryNote:
+                'Nananatiling hiwalay ang Workforce at mas malawak na saklaw ng operasyon kapag kailangan.',
+            },
+            included: [
+              'Pagsingil',
+              'Kliyente at tagapagtustos',
+              'Gastos',
+              'Mga dapat singilin at bayaran',
+              'Pagkuwenta',
+              'Buwis',
+              'Ulat sa pananalapi',
+              'Tulong sa elektronikong liham (tugon sa 48h)',
+            ],
+            ctaLabel: 'Suriin ang Pundasyong Pinansyal',
+          },
+          {
+            slug: 'business',
+            name: 'Negosyo',
+            isPopular: true,
+            summary:
+              'Pundasyong pinansyal kasama ang pang-araw-araw na operasyon ng negosyo: pagbili, tagapagtustos, at imbentaryo.',
+            entitiesLabel: 'Saklaw ng iisang kumpanya',
+            usersLabel: 'Hanggang 6 gumagamit',
+            monthly: {
+              kind: 'fixed',
+              amount: 349,
+              badge: '50% diskuwento sa Workforce',
+              note: 'Kasama ang pangunahing tulong sa elektronikong liham na may tugon sa 24h.',
+            },
+            annual: {
+              kind: 'fixed',
+              amount: 349,
+              badge: '50% diskuwento sa Workforce',
+              note: 'Sinisingil taun-taon sa CAD 3,839 para sa batayang subscription.',
+              secondaryNote:
+                'May 50% diskuwento ang mga kliyente ng Negosyo sa ERP sa kanilang karapat-dapat na hiwalay na plano ng Workforce.',
+            },
+            included: [
+              'Lahat ng nasa Pundasyong Pinansyal',
+              'Pagbili',
+              'Mga tagapagtustos',
+              'Imbentaryo',
+              'Mga lokasyon',
+              'Mga dashboard ng operasyon',
+              'Karaniwang pamamahala ng operasyon',
+              '50% diskuwento sa ZANVROX Workforce (hiwalay na plano)',
+              'Pangunahing tulong sa elektronikong liham (24h)',
+            ],
+            ctaLabel: 'Suriin ang Negosyo',
+          },
+          {
+            slug: 'operations',
+            name: 'Operasyon',
+            summary:
+              'Ang kumpletong plataporma ng operasyon ng negosyo ng ZANVROX, kasama ang Workforce.',
+            entitiesLabel: 'Saklaw ng iisang kumpanya',
+            usersLabel: 'Hanggang 10 gumagamit',
+            monthly: {
+              kind: 'fixed',
+              amount: 649,
+              badge: 'Kasama ang Workforce',
+              note: 'Kasama ang pangunahing tulong sa elektronikong liham na may tugon sa 24h para sa mas aktibong pangkat sa operasyon.',
+            },
+            annual: {
+              kind: 'fixed',
+              amount: 649,
+              badge: 'Kasama ang Workforce',
+              note: 'Sinisingil taun-taon sa CAD 7,139 para sa batayang subscription.',
+              secondaryNote:
+                'Kasama ang ZANVROX Workforce para sa mga empleyado at lokasyong saklaw ng iyong subscription sa ERP.',
+            },
+            included: [
+              'Lahat ng nasa Negosyo',
+              'Mas mataas na imbentaryo',
+              'Mas mataas na pagbili',
+              'Operasyon sa maraming lokasyon',
+              'Mas mataas na kontrol sa operasyon',
+              'Produksyon (BOM)',
+              'Mas mataas na ulat',
+              'Mga kontrol sa pamamahala',
+              'Kasama ang ZANVROX Workforce',
+              'Pangunahing tulong sa elektronikong liham (24h)',
+            ],
+            ctaLabel: 'Suriin ang Operasyon',
+          },
+          {
+            slug: 'enterprise',
+            name: 'Pasadya',
+            summary:
+              'Para sa malalaking organisasyon, komplikadong grupo, maraming lokasyon, mataas na dami, at pasadyang pangangailangan.',
+            entitiesLabel: 'Maramihang lokasyon o pasadyang saklaw',
+            usersLabel: 'Pasadyang saklaw ng gumagamit',
+            monthly: {
+              kind: 'custom',
+              label: 'Pasadya',
+              note: 'Nakasaklaw na pagsusuri para sa paglulunsad sa maraming lokasyon, may-gabay na pagsasaayos, pagsasama, pangangailangan sa pamamahala, at pagsusuri sa seguridad.',
+            },
+            annual: {
+              kind: 'custom',
+              label: 'Pasadya',
+              note: 'Direktang itinatakda ang pasadyang presyo ayon sa istruktura ng pagpapatakbo, pangangailangan sa paglulunsad, at konteksto ng pagpapatupad.',
+            },
+            included: [
+              'Paglulunsad sa maraming lokasyon',
+              'Mas mataas na pamamahala',
+              'Pagsasama',
+              'Landas ng pagsusuri sa seguridad',
+              'Mga natatanging kasunduan',
+              'May-gabay na pagpapatupad at tulong sa paglulunsad',
+            ],
+            ctaLabel: 'Makipag-ugnayan sa amin',
+          },
+        ],
+        comparison: {
+          title: 'Paghahambing ng mga plano ng ERP',
+          subtitle:
+            'Gamitin ito para magpasya kung kailangan mo ng kontrol sa pananalapi, pang-araw-araw na operasyon, o ang kumpletong plataporma ng operasyon.',
+          featureLabel: 'Kakayahan',
+          rows: [
+            { label: 'Pagkuwenta', values: [true, true, true, true] },
+            { label: 'Pagsingil', values: [true, true, true, true] },
+            { label: 'Gastos', values: [true, true, true, true] },
+            { label: 'Mga ulat sa pananalapi', values: [true, true, true, true] },
+            { label: 'Pagbili', values: [false, true, true, true] },
+            { label: 'Imbentaryo', values: [false, true, true, true] },
+            { label: 'Mga lokasyon', values: [false, true, true, true] },
+            { label: 'Bodega', values: [false, false, true, true] },
+            { label: 'Produksyon (BOM)', values: [false, false, true, true] },
+            { label: 'Pag-apruba at pamamahala', values: [false, true, true, true] },
+            { label: 'Paglulunsad sa maraming lokasyon', values: [false, false, true, true] },
+            { label: 'Pagsasama', values: [false, false, false, true] },
+            {
+              label: 'ZANVROX Workforce',
+              values: ['Dagdag', '50% diskuwento', 'Kasama', 'Pasadya'],
+            },
+            {
+              label: 'Antas ng tulong',
+              values: [
+                'Elektronikong liham / 48h',
+                'Pangunahing elektronikong liham / 24h',
+                'Pangunahing elektronikong liham / 24h',
+                'Tuwirang daan',
+              ],
+            },
+            {
+              label: 'Tulong sa paunang pagsasaayos',
+              values: [
+                'Sariling pagsasaayos',
+                'Sariling pagsasaayos',
+                'Sariling pagsasaayos',
+                'Kasama',
+              ],
+            },
+            { label: 'Kasamang gumagamit', values: ['3', '6', '10', 'Pasadya'] },
+          ],
+          notesTitle: 'Mga tala sa komersyo',
+          notes: [
+            'Hiwalay na dagdag ang pasahod para sa bawat plano ng ERP.',
+            'Opsyonal at hiwalay ang presyo ng May-gabay na Pagpapatupad para sa mga pangkat na gusto ng mas nakabalangkas na paglulunsad.',
+            'Ang Pasadya ang landas para sa saklaw sa maraming lokasyon, pagsasama, pagsusuri sa seguridad, at konteksto ng may-gabay na pagpapatupad.',
+            'Dinisenyo ang komersyal na modelo para panatilihin ang pagiging malinaw habang sinusuportahan ang kontroladong daloy ng trabaho at kakayahang masuri habang lumalaki ang pangangailangan.',
+          ],
+          annualNote: 'Kasama sa taunang batayang mga plano ang isang buwang libre.',
+        },
+      },
       payrollAddon: {
         title: 'Dagdag na pasahod',
         summary:
@@ -938,7 +1244,7 @@ const siteContentTl = {
         priceLabel: 'CAD 59 / buwan + CAD 6 / empleyado / buwan',
         annualPriceLabel: 'CAD 59 / buwan + CAD 6 / empleyado / buwan',
         monthlyNote:
-          'Kasama ang pagpapatakbo ng pasahod sa Canada, suporta sa daloy ng pagpapadala ng bayad, pay stub, mga tala at pagluluwas para suportahan ang pagsusuri sa pagtatapos ng taon, at pagsasama sa pagkuwenta. Maaaring may buwanang pinakamababa habang nasa paglulunsad.',
+          'Kasama ang pagpapatakbo ng pasahod sa Canada, suporta sa daloy ng pagpapadala ng bayad, pay stub, mga tala at pagluluwas para suportahan ang pagsusuri sa pagtatapos ng taon, at pagsasama sa pagkuwenta. Maaaring may buwanang pinakamababa habang nasa paglulunsad. Hindi kasama ang pasahod sa ZANVROX Workforce.',
         annualNote:
           'Pinananatili ng dagdag na pasahod ang parehong istruktura ng batayang bayad kasama ang presyo ayon sa empleyado kahit taunang pagsingil maliban kung may ibang nakatakdang ayos.',
         included: [
@@ -963,7 +1269,7 @@ const siteContentTl = {
           'Gabay sa pagpasok ng datos',
           'Tinutulungang sesyon ng pagsasanay sa paglulunsad',
         ],
-        note: 'Opsyonal. Maaari pa ring magsimula ang karaniwang mga plano sa sariling pagsasaayos kapag sapat ang mas magaan na paglulunsad.',
+        note: 'Opsyonal na may-gabay na pagpapatupad para sa mga organisasyong gustong tulungan sa paglipat, pagsasaayos, at suporta sa paglulunsad. Maaari pa ring magsimula ang karaniwang mga plano sa sariling pagsasaayos kapag sapat ang mas magaan na paglulunsad.',
         ctaLabel: 'Humiling ng may-gabay na pagsasaayos',
       },
       supportTiers: {
@@ -976,54 +1282,18 @@ const siteContentTl = {
             body: 'Tulong sa elektronikong liham na may tugon sa loob ng 48h.',
           },
           {
-            name: 'Operasyon',
+            name: 'Negosyo',
             body: 'Pangunahing tulong sa elektronikong liham na may tugon sa loob ng 24h.',
+          },
+          {
+            name: 'Operasyon',
+            body: 'Pangunahing tulong sa elektronikong liham na may tugon sa loob ng 24h, kasama ang Workforce para sa mga saklaw na lokasyon.',
           },
           {
             name: 'Pasadya',
             body: 'May-gabay na tulong sa paglulunsad, tuwirang daan ng suporta, at nakatakdang usapan sa pagpapatupad.',
           },
         ],
-      },
-      comparison: {
-        title: 'Paghahambing ng mga plano',
-        subtitle:
-          'Gamitin ito para magpasya kung kailangan mo ng nakabalangkas na kontrol sa pananalapi, konektadong operasyon, o pasadyang paglulunsad.',
-        featureLabel: 'Kakayahan',
-        rows: [
-          { label: 'Pagkuwenta', values: [true, true, true] },
-          { label: 'Pagsingil', values: [true, true, true] },
-          { label: 'Gastos', values: [true, true, true] },
-          { label: 'Mga ulat sa pananalapi', values: [true, true, true] },
-          { label: 'Imbentaryo', values: [false, true, true] },
-          { label: 'Bodega', values: [false, true, true] },
-          { label: 'Produksyon (BOM)', values: [false, true, true] },
-          { label: 'Pag-apruba at pamamahala', values: [false, true, true] },
-          { label: 'Paglulunsad sa maraming lokasyon', values: [false, false, true] },
-          { label: 'Mas mataas na pag-apruba', values: [false, true, true] },
-          { label: 'Pagsasama', values: [false, false, true] },
-          {
-            label: 'Antas ng tulong',
-            values: [
-              'Elektronikong liham / 48h',
-              'Pangunahing elektronikong liham / 24h',
-              'Tuwirang daan',
-            ],
-          },
-          {
-            label: 'Tulong sa paunang pagsasaayos',
-            values: ['Sariling pagsasaayos', 'Sariling pagsasaayos', 'Kasama'],
-          },
-          { label: 'Kasamang gumagamit', values: ['3', '10', 'Pasadya'] },
-        ],
-        notesTitle: 'Mga tala sa komersyo',
-        notes: [
-          'Hiwalay na dagdag ang pasahod.',
-          'Opsyonal at hiwalay ang presyo ng May-gabay na Pagpapatupad para sa mga pangkat na gusto ng mas nakabalangkas na paglulunsad.',
-          'Ang Pasadya ang landas para sa saklaw sa maraming lokasyon, pagsasama, pagsusuri sa seguridad, at konteksto ng may-gabay na pagpapatupad.',
-          'Dinisenyo ang komersyal na modelo para panatilihin ang pagiging malinaw habang sinusuportahan ang kontroladong daloy ng trabaho at kakayahang masuri habang lumalaki ang pangangailangan.',
-        ],
-        annualNote: 'Kasama sa taunang batayang mga plano ang isang buwang libre.',
       },
       faq: {
         title: 'Mga tanong sa presyo',
@@ -1035,19 +1305,29 @@ const siteContentTl = {
               'Hindi. Ang nilalayong landas ay sariling pagsusuri muna: panoorin ang buod, suriin ang produkto, tingnan ang presyo, at gamitin ang kapaligiran ng pagsusuri sa browser bago humiling ng may-gabay na sesyon.',
           },
           {
-            question: 'Kasama ba ang pasahod sa batayang mga plano sa ERP?',
+            question: 'Kasama ba ang Workforce sa mga plano ng ERP?',
             answer:
-              'Hindi. Ibinebenta ang pasahod bilang hiwalay na dagdag na may buwanang batayang bayad at presyo kada empleyado.',
+              'Kasama ang ZANVROX Workforce sa Operasyon para sa mga empleyado at lokasyong saklaw ng subscription na iyon sa ERP. Hindi kasama ang Workforce sa Negosyo ngunit karapat-dapat ito sa 50% diskuwento sa isang karapat-dapat na hiwalay na plano ng Workforce. Hindi kasama ang Workforce sa Pundasyong Pinansyal.',
+          },
+          {
+            question: 'Maaari ko bang bilhin ang Workforce nang walang ERP?',
+            answer:
+              'Oo. Magagamit ang ZANVROX Workforce bilang hiwalay na plano, may presyong bawat lokasyon, nang walang kinakailangang bumili o umakyat sa anumang plano ng ERP.',
+          },
+          {
+            question: 'Kasama ba ang pasahod sa batayang mga plano ng ERP o sa Workforce?',
+            answer:
+              'Hindi. Ibinebenta ang pasahod bilang hiwalay na dagdag na may buwanang batayang bayad kasama ang presyo kada empleyado. Hindi ito kasama sa ZANVROX Workforce.',
           },
           {
             question: 'Kailangan ba ang May-gabay na Pagpapatupad?',
             answer:
-              'Hindi. Opsyonal ito. Puwedeng magsimula ang Pundasyong Pinansyal at Operasyon sa sariling pagsasaayos, habang magagamit ang May-gabay na Pagpapatupad para sa mga pangkat na gusto ng mas nakabalangkas na paglulunsad.',
+              'Hindi. Opsyonal ito. Puwedeng magsimula ang Pundasyong Pinansyal, Negosyo, at Operasyon sa sariling pagsasaayos, habang magagamit ang May-gabay na Pagpapatupad para sa mga pangkat na gusto ng mas nakabalangkas na paglulunsad.',
           },
           {
             question: 'Anong tulong ang kasama sa bawat plano?',
             answer:
-              'Kasama sa Pundasyong Pinansyal ang tulong sa elektronikong liham sa loob ng 48h, sa Operasyon ang pangunahing tulong sa elektronikong liham sa loob ng 24h, at sa Pasadya ang may-gabay na usapan sa paglulunsad kasama ang tuwirang daan ng suporta.',
+              'Kasama sa Pundasyong Pinansyal ang tulong sa elektronikong liham sa loob ng 48h, sa Negosyo at Operasyon ang pangunahing tulong sa elektronikong liham sa loob ng 24h, at sa Pasadya ang may-gabay na usapan sa paglulunsad kasama ang tuwirang daan ng suporta.',
           },
         ],
       },
@@ -1056,6 +1336,287 @@ const siteContentTl = {
         path: '/resources#demo-environment',
       },
       ctaSecondary: { label: 'Makipag-ugnayan para sa pasadyang paglulunsad', path: '/contact' },
+    },
+    workforce: {
+      heroKicker: 'ZANVROX WORKFORCE',
+      heroTitle: 'Patakbuhin ang bawat shift nang mas kaunti ang gulo.',
+      heroSubtitle:
+        'Pagtala ng oras ng pagpasok at paglabas, iskedyul, mga gawain, at listahan ng oras para sa mga tauhan sa harapan — lahat konektado sa iisang simpleng app para sa lugar-trabaho.',
+      heroPrimaryCta: { label: 'Magsimula sa Workforce', path: '/pricing#workforce-pricing' },
+      heroSecondaryCta: {
+        label: 'Sumali sa Beta ng Restawran sa Ontario',
+        path: '/workforce/beta',
+      },
+      heroPreview: {
+        title: 'Paunang tanaw ng shift',
+        type: 'workforce',
+        caption: 'Ginawa para sa mga tauhan sa harapan',
+        callouts: [
+          { status: 'ready', text: 'Pagpasok / paglabas' },
+          { status: 'ready', text: 'Iskedyul at listahan ng oras' },
+        ],
+      },
+      existingCustomer: {
+        title: 'Gumagamit ka na ba ng ZANVROX ERP?',
+        body: 'Kasama ang Workforce sa mga karapat-dapat na plano ng ERP.',
+        cta: {
+          label: 'Tingnan ang mga plano ng ERP na may kasamang Workforce',
+          path: '/pricing#erp-pricing',
+        },
+      },
+      sections: {
+        eyebrow: 'Ano ang saklaw ng Workforce',
+        title: 'Lahat ng kailangan ng isang shift, konektado',
+        subtitle:
+          'Sinasaklaw ng ZANVROX Workforce ang mga bahagi ng shift na karaniwang nasa spreadsheet, papel na listahan ng oras, at group chat.',
+        items: [
+          {
+            eyebrow: 'Pagpasok at paglabas',
+            title:
+              'Nagtatala ang mga empleyado ng pagpasok at paglabas mula sa kanilang telepono na may pagpapatunay batay sa lokasyon.',
+            body: 'Nakatali ang mga pangyayari ng pagtala sa mga pinahintulutang sandali ng trabaho, hindi patuloy na pagsubaybay sa isang tao.',
+            bullets: [
+              'Magtala ng pagpasok at paglabas mula sa telepono sa loob ng segundo',
+              'Nasusubaybayan ang mga pahinga sa parehong daloy',
+              'Pagpapatunay batay sa lokasyon sa oras ng pagpasok/paglabas, kung saan pinagana ang geofencing para sa isang lokasyon',
+              'Matatag kahit walang koneksyon para makapagsimula ang shift kahit mahina ang signal',
+            ],
+          },
+          {
+            eyebrow: 'Iskedyul at shift',
+            title: 'Mga iskedyul na makikita ng buong pangkat, mula sa anumang telepono.',
+            body: 'Naglalathala ang mga tagapamahala ng iskedyul; nakikita ng mga empleyado ang kanilang mga shift sa iisang lugar.',
+            bullets: [
+              'Mga iskedyul',
+              'Mga paparating na shift',
+              'Mga bukas na shift, kung pinagana',
+              'Mga pagbabago sa shift at kahilingan sa shift, kung pinagana',
+            ],
+          },
+          {
+            eyebrow: 'Listahan ng oras',
+            title: 'Awtomatikong nagiging listahan ng oras ang mga oras na nagtrabaho.',
+            body: 'Nagiging listahan ng oras ang mga pangyayari ng pagtala na maaaring suriin ng mga tagapamahala.',
+            bullets: [
+              'Mga oras na nagtrabaho',
+              'Listahan ng oras ng empleyado',
+              'Mga pagwawasto',
+              'Pagsusuri at pag-apruba ng tagapamahala, kung pinagana',
+            ],
+          },
+          {
+            eyebrow: 'Mga gawain at checklist',
+            title: 'Araw-araw na gawain at checklist, ginagawa mula sa sahig.',
+            body: 'Nagiging masusubaybayang checklist ang mga gawi sa pagbubukas at pagsasara sa halip na pag-asa sa memorya.',
+            bullets: [
+              'Araw-araw na gawain',
+              'Mga gawain sa pagbubukas',
+              'Mga gawain sa pagsasara',
+              'Mga checklist sa pagpapatakbo',
+              'Mga komento at ebidensya, kung pinagana',
+            ],
+          },
+          {
+            eyebrow: 'Operasyon ng pangkat',
+            title: 'Panatilihing magkatugma ang pangkat sa pagitan ng mga shift.',
+            body: 'Pinagsasaluhang konteksto para sa pangkat nang walang hiwalay na kasangkapan sa pagmemensahe.',
+            bullets: [
+              'Mga anunsyo',
+              'Mga tala sa shift',
+              'Paglipat ng tungkulin',
+              'Mga kahilingan',
+              'Komunikasyon ng pangkat',
+            ],
+          },
+          {
+            eyebrow: 'Kontrol ng tagapamahala',
+            title:
+              'Iisang lugar para makita ng mga tagapamahala kung paano umuusad ang isang shift.',
+            body: 'Pangangasiwa para sa mga taong nagpapatakbo ng araw-araw na operasyon.',
+            bullets: [
+              'Pagsusuri ng listahan ng oras',
+              'Pamamahala ng iskedyul',
+              'Mga gawain',
+              'Mga anomalya',
+              'Mga pangyayari ng pagtala batay sa lokasyon',
+              'Pangangasiwa sa pangkat',
+            ],
+          },
+        ],
+      },
+      industries: {
+        title: 'Ginawa para sa mga pangkat na nasa harapan at batay sa shift',
+        subtitle: 'Hindi lang para sa mga restawran ginawa ang ZANVROX Workforce.',
+        items: [
+          'Mga Restawran',
+          'Mga Kapehan',
+          'Tingian',
+          'Hospitalidad',
+          'Mga Serbisyo',
+          'Mga Bodega',
+          'Mga negosyong may maraming lokasyon',
+        ],
+      },
+      cta: {
+        title: 'Magsimula sa Workforce',
+        subtitle: 'Idagdag ang ERP kapag kailangan mo na.',
+        primary: { label: 'Magsimula sa Workforce', path: '/pricing#workforce-pricing' },
+        secondary: { label: 'Workforce para sa mga Restawran', path: '/workforce/restaurants' },
+      },
+    },
+    workforceRestaurants: {
+      heroKicker: 'ZANVROX WORKFORCE PARA SA MGA RESTAWRAN',
+      heroTitle: 'Ginawa para sa katotohanan ng mga shift sa restawran.',
+      heroSubtitle:
+        'Pagtala ng oras ng pagpasok, iskedyul, listahan ng oras, at araw-araw na gawain nang walang spreadsheet, papel na listahan ng oras, o magkakahiwalay na kasangkapan.',
+      heroPrimaryCta: { label: 'Magsimula sa Workforce', path: '/pricing#workforce-pricing' },
+      heroSecondaryCta: {
+        label: 'Sumali sa Beta ng Restawran sa Ontario',
+        path: '/workforce/beta',
+      },
+      heroPreview: {
+        title: 'Paunang tanaw ng shift',
+        type: 'workforce',
+        caption: 'Ginawa para sa mga pangkat sa restawran',
+        callouts: [
+          { status: 'ready', text: 'Pagpasok / paglabas' },
+          { status: 'ready', text: 'Araw-araw na gawain at checklist' },
+        ],
+      },
+      timeline: {
+        eyebrow: 'Isang shift sa restawran, mula simula hanggang dulo',
+        title: 'Bago, habang, at pagkatapos ng bawat shift',
+        subtitle:
+          'Sinusundan ng parehong app ang shift mula sa iskedyul hanggang sa listahan ng oras.',
+        stages: [
+          {
+            name: 'Bago ang shift',
+            items: ['Iskedyul', 'Mga bukas na shift', 'Pagkakakita ng empleyado'],
+          },
+          {
+            name: 'Habang nasa shift',
+            items: [
+              'Pagtala ng pagpasok batay sa lokasyon',
+              'Mga pahinga',
+              'Mga gawain',
+              'Mga checklist',
+              'Mga tala sa shift',
+            ],
+          },
+          {
+            name: 'Pagkatapos ng shift',
+            items: [
+              'Pagtala ng paglabas',
+              'Mga oras na nagtrabaho',
+              'Listahan ng oras',
+              'Pagsusuri ng tagapamahala',
+            ],
+          },
+          {
+            name: 'Tagapamahala',
+            items: [
+              'Sino ang nagtatrabaho',
+              'Mga oras na nagtrabaho',
+              'Mga natitirang gawain',
+              'Mga pagwawasto',
+              'Pag-apruba ng listahan ng oras',
+            ],
+          },
+        ],
+      },
+      crossSell: {
+        title: 'Kailangan ng higit pa sa pamamahala ng Workforce?',
+        body: 'Ikonekta ang Workforce sa kumpletong ZANVROX ERP para sa pananalapi, imbentaryo, pagbili, at operasyon ng negosyo.',
+        cta: { label: 'Suriin ang ZANVROX ERP', path: '/erp' },
+      },
+      cta: {
+        title: 'Dalhin ang Workforce sa iyong restawran',
+        subtitle: 'Magsimula sa Workforce, o mag-apply muna sa Beta ng Restawran sa Ontario.',
+        primary: { label: 'Magsimula sa Workforce', path: '/pricing#workforce-pricing' },
+        secondary: { label: 'Sumali sa Beta ng Restawran sa Ontario', path: '/workforce/beta' },
+      },
+    },
+    workforceBeta: {
+      heroKicker: 'BETA NG RESTAWRAN SA ONTARIO',
+      heroTitle:
+        'Subukan ang ZANVROX Workforce kasama ang tunay mong pangkat bago ang aming pampublikong paglulunsad.',
+      heroSubtitle:
+        'Inaanyayahan namin ang limitadong grupo ng mga restawran sa Ontario na subukan ang ZANVROX Workforce sa totoong mga shift.',
+      badges: [
+        '14 na araw na beta',
+        'Walang obligasyong bumili',
+        '6 buwang libre pagkatapos ng paglulunsad',
+      ],
+      intro: {
+        title: 'Paano gumagana ang beta',
+        paragraphs: [
+          'Inaanyayahan namin ang limitadong grupo ng mga restawran sa Ontario na subukan ang ZANVROX Workforce sa totoong mga shift.',
+          'Gamitin ang app kasama ang isang tagapamahala at mga empleyado, sabihin sa amin kung ano ang gumagana at kung ano ang kailangang pagbutihin, at tulungan kaming maghanda para sa pampublikong paglulunsad.',
+          'Ang mga restawrang makakumpleto sa beta ay makakatanggap ng anim na buwan ng ZANVROX Workforce nang libre pagkatapos ng paglulunsad.',
+        ],
+      },
+      terms: {
+        title: 'Mga tuntunin ng beta',
+        subtitle:
+          'Malinaw na sinasaad ang mga komersyal na tuntunin para sa Beta ng Restawran sa Ontario.',
+        items: [
+          '14 na araw na panahon ng beta',
+          'Walang bayad habang nasa beta',
+          'Walang obligasyong bumili',
+          'Ang mga restawrang makakumpleto sa beta ay makakatanggap ng 6 buwan ng ZANVROX Workforce nang libre pagkatapos ng pampublikong paglulunsad',
+          'Pagkatapos ng 6 libreng buwan, pipili ka ng plano ng Workforce',
+          'Walang awtomatikong pagpapanibago o singil mula sa beta nang wala ang iyong pahintulot',
+        ],
+      },
+      form: {
+        title: 'Mag-apply para sa beta',
+        helper:
+          'Sabihin sa amin ang tungkol sa iyong restawran. Susuriin namin ang iyong aplikasyon at susundan namin ito sa elektronikong liham.',
+        fields: {
+          restaurantName: 'Pangalan ng restawran',
+          contactName: 'Pangalan ng taong maaaring lapitan',
+          email: 'Elektronikong liham ng negosyo',
+          city: 'Lungsod',
+          employeeCount: 'Bilang ng empleyado',
+          locationCount: 'Bilang ng lokasyon',
+          currentMethod: 'Kasalukuyang paraan ng pagsubaybay sa oras',
+          participantCount: 'Ilang empleyado ang maaaring makilahok?',
+          message: 'Opsyonal na mensahe',
+          consent: 'Sumasang-ayon akong makontak ng ZANVROX tungkol sa beta ng Workforce.',
+        },
+        placeholders: {
+          restaurantName: 'hal. Maple Street Kitchen',
+          contactName: 'Ang buo mong pangalan',
+          email: 'ikaw@iyongrestawran.com',
+          city: 'hal. Toronto',
+          employeeCount: 'hal. 12',
+          locationCount: 'hal. 1',
+          currentMethod: 'hal. Papel na listahan ng oras, spreadsheet, built-in sa POS',
+          participantCount: 'hal. 5',
+          message: 'May iba pa bang dapat naming malaman?',
+        },
+        errors: {
+          restaurantName: 'Ilagay ang pangalan ng iyong restawran.',
+          contactName: 'Ilagay ang pangalan ng taong maaaring lapitan.',
+          email: 'Maglagay ng wastong elektronikong liham ng negosyo.',
+          city: 'Ilagay ang iyong lungsod.',
+          employeeCount: 'Ilagay ang bilang ng empleyado.',
+          locationCount: 'Ilagay ang bilang ng lokasyon.',
+          currentMethod: 'Sabihin sa amin ang kasalukuyan mong paraan ng pagsubaybay sa oras.',
+          participantCount: 'Ilagay kung ilang empleyado ang maaaring makilahok.',
+          message: 'Panatilihing mas maikli sa 2000 character ang mensahe.',
+          consent: 'Kailangan ang pahintulot para mag-apply sa beta.',
+          website: 'Na-trigger ang proteksyon laban sa spam.',
+          startedAt: 'Maghintay sandali bago magsumite.',
+        },
+        consentPrivacyLabel: 'Patakaran sa Pagkapribado',
+        consentPrivacyPath: '/legal/privacy',
+        cta: 'Mag-apply para sa beta',
+        submittingCta: 'Isinusumite...',
+        confirmation:
+          'Salamat. Susuriin namin ang iyong aplikasyon at makikipag-ugnayan kami sa iyo may kasamang pribadong tagubilin sa pagsubok kung mapili ang iyong restawran.',
+        submitError: 'Hindi namin naisumite ang iyong aplikasyon. Pakisubukang muli.',
+      },
     },
     resources: {
       ...base.pages.resources,
@@ -1069,7 +1630,7 @@ const siteContentTl = {
           description:
             'Suriin ang buod ng produkto, saklaw ng daloy ng trabaho, at paraan ng paunang pagsasaayos bago maglaan ng mas malalim na oras sa pagsusuri.',
           cta: 'Suriin ang produkto',
-          path: '/product',
+          path: '/erp',
         },
         {
           title: 'Buod ng seguridad',
@@ -1156,7 +1717,7 @@ const siteContentTl = {
         'Praktikal na ERP na nakapuwesto para sa kapani-paniwalang paglulunsad, hindi para sa palabas ng malalaking organisasyon.',
       heroSubtitle:
         'Inilalahad ang ZANVROX bilang modernong ERP para sa maliliit at katamtamang negosyo sa Canada na gusto ng mas mahigpit na kontrol sa operasyon, mas kaunting magkakahiwalay na sistema, at mas malinaw na landas ng tulong.',
-      heroPrimaryCta: { label: 'Suriin ang produkto', path: '/product' },
+      heroPrimaryCta: { label: 'Suriin ang produkto', path: '/erp' },
       heroSecondaryCta: { label: 'Makipag-ugnayan sa pangkat', path: '/contact' },
       heroPreview: {
         ...base.pages.about.heroPreview,
@@ -1250,8 +1811,8 @@ const siteContentTl = {
         subtitle: 'Lahat ng daloy ng ugnayan sa pook-sapot ay dumadaan sa support@zanvrox.com.',
         items: [
           'Pundasyong Pinansyal: tulong sa elektronikong liham na may tugon sa 48h',
-          'Operasyon: pangunahing tulong sa elektronikong liham na may tugon sa 24h',
-          'Malaking Organisasyon: tuwirang daan ng suporta kasama ang tulong sa paunang pagsasaayos',
+          'Negosyo at Operasyon: pangunahing tulong sa elektronikong liham na may tugon sa 24h',
+          'Pasadya: tuwirang daan ng suporta kasama ang tulong sa paunang pagsasaayos',
         ],
       },
       pricingContext: {
@@ -1298,7 +1859,9 @@ const siteContentTl = {
           companySizes: ['1-10 empleyado', '10-50 empleyado', '50-100 empleyado', '100+ empleyado'],
           interestAreas: [
             'Pundasyong Pinansyal',
+            'Negosyo',
             'Operasyon',
+            'Workforce',
             'Dagdag na pasahod',
             'May-gabay na Pagpapatupad',
             'Paglulunsad para sa malaking organisasyon',
@@ -1373,11 +1936,15 @@ const siteContentTl = {
     legal: {
       privacy: {
         title: 'Patakaran sa Pagkapribado',
-        updated: 'Marso 5, 2026',
+        updated: 'Agosto 7, 2026',
         updatedLabel: 'Huling in-update',
         paragraphs: [
-          'Kinokolekta ng ZANVROX ang impormasyong pang-ugnayan sa negosyo na ipinapasa sa pook-sapot na ito para sa pagsusuri ng produkto, pagtatakda ng pagpapakita, at kahilingan sa dokumentasyon.',
+          'Kinokolekta ng ZANVROX ang impormasyong pang-ugnayan sa negosyo na ipinapasa sa pook-sapot na ito para sa pagsusuri ng produkto, pagtatakda ng pagpapakita, aplikasyon sa beta, at kahilingan sa dokumentasyon.',
           'Pinoproseso namin ang ipinadalang datos para lamang sa benta at paunang pagsusuri ng produkto.',
+          'Ginagamit ng ZANVROX Workforce ang lokasyon ng device lamang sa sandaling magtala ang isang empleyado ng pagpasok o paglabas, at kung saan lang pinagana ng tagapag-empleyo ang pagpapatunay batay sa lokasyon para sa isang lugar ng trabaho. Nakatali ang lokasyon sa partikular na pangyayaring iyon ng pagtala, hindi ito kinokolekta nang patuloy o ginagamit para subaybayan ang isang empleyado sa labas ng pinahintulutang mga sandali ng pagpasok at paglabas.',
+          'Ginagamit ang datos ng lokasyon at pangyayari ng pagtala ng Workforce para patunayan na naganap ang pagpasok o paglabas sa pinahintulutang lugar ng trabaho, at para suportahan ang kasunod na listahan ng oras. Nakikita ito ng empleyado at ng mga pinahintulutang tagapamahala ng tagapag-empleyong iyon.',
+          'Maaaring tumangging magbigay ng pahintulot sa lokasyon ang mga empleyado; depende sa pagsasaayos ng tagapag-empleyo, maaaring hindi mapatunayan bilang batay-sa-lokasyon ang isang pangyayari ng pagtala dahil dito, at dapat magbigay ang tagapag-empleyo ng alternatibong paraan.',
+          'Iniingatan ang mga talaan ng Workforce at iba pang talaang pang-operasyon hangga’t kailangan para suportahan ang pasahod, listahan ng oras, at mga kinakailangan sa pagtatala ng trabaho, at pinoprotektahan ang mga ito ng parehong kontrol sa pagpasok at seguridad na inilarawan sa aming pahina ng Seguridad.',
           'Maaari kang humiling ng pagtingin, pagwawasto, o pagbura ng ipinadalang datos sa pamamagitan ng support@zanvrox.com.',
         ],
       },
@@ -1405,27 +1972,29 @@ const siteContentTl = {
     headquarters: 'Toronto, Ontario, Canada',
     sections: [
       {
-        title: 'Produkto',
+        title: 'Mga Produkto',
         links: [
-          { label: 'Buod ng produkto', path: '/product' },
+          { label: 'ERP', path: '/erp' },
+          { label: 'Workforce', path: '/workforce' },
+          { label: 'Workforce para sa mga Restawran', path: '/workforce/restaurants' },
           { label: 'Presyo', path: '/pricing' },
-          { label: 'Sanggunian', path: '/resources' },
-          { label: 'Ugnayan', path: '/contact' },
         ],
       },
       {
-        title: 'Tiwala at Legal',
+        title: 'Sanggunian',
         links: [
+          { label: 'Sanggunian', path: '/resources' },
           { label: 'Seguridad', path: '/security' },
-          { label: 'Seguridad / Pagsunod', path: '/security' },
-          { label: 'Humiling ng impormasyon sa seguridad', path: '/contact' },
           { label: 'Pagkapribado', path: '/legal/privacy' },
           { label: 'Mga Tuntunin', path: '/legal/terms' },
+          { label: 'Pagbura ng account', path: '/account-deletion' },
+          { label: 'Ugnayan', path: '/contact' },
         ],
       },
     ],
     links: [
-      { label: 'Produkto', path: '/product' },
+      { label: 'ERP', path: '/erp' },
+      { label: 'Workforce', path: '/workforce' },
       { label: 'Presyo', path: '/pricing' },
       { label: 'Sanggunian', path: '/resources' },
       { label: 'Seguridad', path: '/security' },
@@ -1433,6 +2002,7 @@ const siteContentTl = {
       { label: 'Ugnayan', path: '/contact' },
       { label: 'Pagkapribado', path: '/legal/privacy' },
       { label: 'Mga Tuntunin', path: '/legal/terms' },
+      { label: 'Pagbura ng account', path: '/account-deletion' },
     ],
   },
   seo: {
@@ -1443,10 +2013,28 @@ const siteContentTl = {
       path: '/',
     },
     product: {
-      title: 'Produkto | ZANVROX',
+      title: 'ZANVROX ERP | Plataporma ng Pananalapi, Operasyon, at Workforce',
       description:
-        'Suriin ang pananalapi, operasyon, pagsunod sa Canada, pamamahala, at saklaw ng dagdag na pasahod sa loob ng ZANVROX ERP.',
-      path: '/product',
+        'Suriin ang pananalapi, pagsingil, gastos, pagbili, imbentaryo, operasyon, ulat, daloy ng pasahod, at ZANVROX Workforce sa loob ng salansan ng ZANVROX ERP.',
+      path: '/erp',
+    },
+    workforce: {
+      title: 'ZANVROX Workforce | Pagtala ng Oras, Iskedyul, at Gawain',
+      description:
+        'Magtala ng pagpasok at paglabas, pamahalaan ang iskedyul, subaybayan ang listahan ng oras, at ayusin ang araw-araw na gawain gamit ang ZANVROX Workforce.',
+      path: '/workforce',
+    },
+    workforceRestaurants: {
+      title: 'Pamamahala ng Workforce para sa Restawran | ZANVROX Workforce',
+      description:
+        'Pagtala ng pagpasok, iskedyul, listahan ng oras, at araw-araw na gawain ng pangkat para sa mga pangkat sa restawran.',
+      path: '/workforce/restaurants',
+    },
+    workforceBeta: {
+      title: 'Beta ng Restawran sa Ontario | ZANVROX Workforce',
+      description:
+        'Maaaring mag-apply ang mga restawran sa Ontario para subukan ang ZANVROX Workforce bago ang pampublikong paglulunsad.',
+      path: '/workforce/beta',
     },
     security: {
       title: 'Seguridad | ZANVROX',
@@ -1457,7 +2045,7 @@ const siteContentTl = {
     pricing: {
       title: 'Presyo | ZANVROX',
       description:
-        'Suriin ang pampublikong presyo sa CAD para sa Pundasyong Pinansyal, Operasyon, pasadyang paglulunsad, dagdag na pasahod, at opsyonal na May-gabay na Pagpapatupad.',
+        'Suriin ang pampublikong presyo sa CAD para sa ZANVROX Workforce (Panimula, Pangkat, Negosyo) at ZANVROX ERP (Pundasyong Pinansyal, Negosyo, Operasyon, Pasadya), ang dagdag na pasahod, at opsyonal na May-gabay na Pagpapatupad.',
       path: '/pricing',
     },
     resources: {
