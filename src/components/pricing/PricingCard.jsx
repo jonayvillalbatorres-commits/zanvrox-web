@@ -80,6 +80,12 @@ export default function PricingCard({
     language,
     hash: 'demo-form',
   });
+  const workforceSlug = String(tier?.slug || '').replace(/^workforce-/, '');
+  const selfServeCheckoutUrl =
+    pricing?.locationBasis === 'per_location' &&
+    ['starter', 'team', 'business'].includes(workforceSlug)
+      ? `https://app.zanvrox.com/settings/billing?plan=${encodeURIComponent(workforceSlug)}&period=${encodeURIComponent(billingPeriod)}`
+      : null;
 
   return (
     <Card
@@ -160,12 +166,21 @@ export default function PricingCard({
       </div>
 
       <div className="mt-6 pt-2">
-        <Link
-          to={ctaPath}
-          className={`zx-button w-full justify-center ${isPopular ? 'zx-button-primary' : 'zx-button-secondary'}`}
-        >
-          {tier?.ctaLabel}
-        </Link>
+        {selfServeCheckoutUrl ? (
+          <a
+            href={selfServeCheckoutUrl}
+            className={`zx-button w-full justify-center ${isPopular ? 'zx-button-primary' : 'zx-button-secondary'}`}
+          >
+            {tier?.ctaLabel}
+          </a>
+        ) : (
+          <Link
+            to={ctaPath}
+            className={`zx-button w-full justify-center ${isPopular ? 'zx-button-primary' : 'zx-button-secondary'}`}
+          >
+            {tier?.ctaLabel}
+          </Link>
+        )}
       </div>
     </Card>
   );
