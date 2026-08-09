@@ -1,6 +1,9 @@
 import {
   createLeadSubject,
+  escapeHtml,
   normalizeLeadType,
+  sanitizeLeadContext,
+  sanitizeLeadPayload,
   serializeLeadBody,
   validateLeadPayload,
 } from '../src/utils/contactLeadValidation.js';
@@ -40,33 +43,33 @@ const readJson = async (request) => {
 };
 
 const buildHtml = ({ type, payload, context }) => {
-  const safeMessage = String(payload?.message || '').trim() || 'No additional message provided.';
+  const safeMessage = escapeHtml(payload?.message) || 'No additional message provided.';
   const contextRows = [
     context?.planLabel || context?.plan
-      ? `<li><strong>Plan:</strong> ${context?.planLabel || context?.plan}</li>`
+      ? `<li><strong>Plan:</strong> ${escapeHtml(context?.planLabel || context?.plan)}</li>`
       : '',
     context?.billingLabel || context?.billing
-      ? `<li><strong>Billing:</strong> ${context?.billingLabel || context?.billing}</li>`
+      ? `<li><strong>Billing:</strong> ${escapeHtml(context?.billingLabel || context?.billing)}</li>`
       : '',
     context?.payrollInterest
-      ? `<li><strong>Payroll:</strong> ${context?.payrollLabel || 'Interested'}</li>`
+      ? `<li><strong>Payroll:</strong> ${escapeHtml(context?.payrollLabel || 'Interested')}</li>`
       : '',
     context?.promoLabel || context?.promo
-      ? `<li><strong>Offer:</strong> ${context?.promoLabel || context?.promo}</li>`
+      ? `<li><strong>Offer:</strong> ${escapeHtml(context?.promoLabel || context?.promo)}</li>`
       : '',
-    context?.language ? `<li><strong>Language:</strong> ${context.language}</li>` : '',
-    context?.source ? `<li><strong>Source:</strong> ${context.source}</li>` : '',
+    context?.language ? `<li><strong>Language:</strong> ${escapeHtml(context.language)}</li>` : '',
+    context?.source ? `<li><strong>Source:</strong> ${escapeHtml(context.source)}</li>` : '',
   ].filter(Boolean);
 
   return `
     <div style="font-family:Arial,sans-serif;line-height:1.5;color:#0f172a">
       <h2 style="margin:0 0 16px">ZANVROX website lead</h2>
-      <p><strong>Lead type:</strong> ${normalizeLeadType(type)}</p>
-      <p><strong>Name:</strong> ${payload.name}</p>
-      <p><strong>Company:</strong> ${payload.company}</p>
-      <p><strong>Email:</strong> ${payload.email}</p>
-      <p><strong>Company size:</strong> ${payload.companySize}</p>
-      <p><strong>Interest area:</strong> ${payload.interestArea}</p>
+      <p><strong>Lead type:</strong> ${escapeHtml(normalizeLeadType(type))}</p>
+      <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
+      <p><strong>Company:</strong> ${escapeHtml(payload.company)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
+      <p><strong>Company size:</strong> ${escapeHtml(payload.companySize)}</p>
+      <p><strong>Interest area:</strong> ${escapeHtml(payload.interestArea)}</p>
       <p><strong>Message:</strong><br/>${safeMessage.replace(/\n/g, '<br/>')}</p>
       ${contextRows.length ? `<h3 style="margin:24px 0 8px">Commercial context</h3><ul>${contextRows.join('')}</ul>` : ''}
     </div>
@@ -98,8 +101,8 @@ export default async function handler(request, response) {
   }
 
   const body = (await readJson(request)) || {};
-  const payload = body.payload || {};
-  const fieldErrors = validateLeadPayload(payload);
+  const rawPayload = body.payload && typeof body.payload === 'object' ? body.payload : {};
+  const fieldErrors = validateLeadPayload(rawPayload);
 
   if (Object.keys(fieldErrors).length > 0) {
     return response.status(400).json({
@@ -110,27 +113,37 @@ export default async function handler(request, response) {
     });
   }
 
-  const subject = String(body.subject || createLeadSubject({ type: body.type, payload })).trim();
-  const textBody = String(
-    body.body || serializeLeadBody({ type: body.type, payload, context: body.context })
-  );
-  const htmlBody = buildHtml({ type: body.type, payload, context: body.context });
+  const payload = sanitizeLeadPayload(rawPayload);
+  const context = sanitizeLeadContext(body.context);
+  const type = normalizeLeadType(body.type);
+  const subject = createLeadSubject({ type, payload });
+  const textBody = serializeLeadBody({ type, payload, context });
+  const htmlBody = buildHtml({ type, payload, context });
 
-  const resendResponse = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${EMAIL_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from: EMAIL_FROM,
-      to: [NOTIFICATION_EMAIL],
-      reply_to: payload.email,
-      subject,
-      text: textBody,
-      html: htmlBody,
-    }),
-  });
+  let resendResponse;
+  try {
+    resendResponse = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${EMAIL_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: EMAIL_FROM,
+        to: [NOTIFICATION_EMAIL],
+        reply_to: payload.email,
+        subject,
+        text: textBody,
+        html: htmlBody,
+      }),
+    });
+  } catch {
+    return response.status(502).json({
+      ok: false,
+      code: 'EMAIL_DELIVERY_FAILED',
+      error: 'Email delivery failed.',
+    });
+  }
 
   const resendData = await resendResponse.json().catch(() => ({}));
 
@@ -138,7 +151,7 @@ export default async function handler(request, response) {
     return response.status(502).json({
       ok: false,
       code: 'EMAIL_DELIVERY_FAILED',
-      error: resendData?.message || 'Email delivery failed.',
+      error: 'Email delivery failed.',
     });
   }
 
