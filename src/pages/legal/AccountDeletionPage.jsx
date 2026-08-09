@@ -27,8 +27,8 @@ export default function AccountDeletionPage() {
           </p>
           <p>
             If you cannot sign in, email{' '}
-            <a className="font-semibold text-zx-accent" href="mailto:privacy@zanvrox.com">
-              privacy@zanvrox.com
+            <a className="font-semibold text-zx-accent" href="mailto:support@zanvrox.com">
+              support@zanvrox.com
             </a>{' '}
             from the address registered to your account and use “Account deletion request” as the
             subject. We may request additional identity verification.

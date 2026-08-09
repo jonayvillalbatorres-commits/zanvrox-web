@@ -33,7 +33,7 @@ export default function ResourcesPage() {
               <h3 className="font-heading text-xl font-semibold text-zx-text">{section.title}</h3>
               <p className="mt-3 text-sm text-zx-text-muted">{section.description}</p>
               <Link
-                to={section.path || '/product'}
+                to={section.path || '/erp'}
                 className="zx-button zx-button-secondary mt-5 w-full justify-center"
               >
                 {section.cta}

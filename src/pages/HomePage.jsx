@@ -356,10 +356,7 @@ export default function HomePage() {
           <h2 className="font-heading text-2xl font-semibold text-zx-text">{page.cta?.title}</h2>
           <p className="mt-2 max-w-2xl text-zx-text-muted">{page.cta?.subtitle}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link
-              to={page.cta?.primary?.path || '/product'}
-              className="zx-button zx-button-primary"
-            >
+            <Link to={page.cta?.primary?.path || '/erp'} className="zx-button zx-button-primary">
               {page.cta?.primary?.label}
             </Link>
             <Link

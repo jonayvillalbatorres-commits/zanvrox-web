@@ -65,10 +65,7 @@ export default function AboutPage() {
         <div className="zx-card">
           <SectionHeading title={page.cta?.title} subtitle={page.cta?.subtitle} />
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link
-              to={page.cta?.primary?.path || '/product'}
-              className="zx-button zx-button-primary"
-            >
+            <Link to={page.cta?.primary?.path || '/erp'} className="zx-button zx-button-primary">
               {page.cta?.primary?.label}
             </Link>
             <Link

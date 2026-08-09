@@ -94,7 +94,7 @@ export default function ProductVideo({ video }) {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link to={video?.primaryCta?.path || '/product'} className="zx-button zx-button-primary">
+          <Link to={video?.primaryCta?.path || '/erp'} className="zx-button zx-button-primary">
             {video?.primaryCta?.label || 'Explore product'}
           </Link>
           {secondaryIsExternal ? (
