@@ -1,4 +1,5 @@
 import siteContentEn from './siteContent.en';
+import { applyCanonicalCommercialFacts } from './applyCanonicalCommercialFacts';
 
 export const ERP_LANGUAGE_SET = [
   { code: 'en', label: 'English', flag: 'CA', primary: true, erpLocale: 'en-CA' },
@@ -106,7 +107,9 @@ export const getCachedContent = (languageCode) => {
 
   const english = CONTENT_BY_LANGUAGE.en;
   const localized = CONTENT_BY_LANGUAGE[normalized] || english;
-  const merged = normalized === 'en' ? english : deepMerge(english, localized);
+  const merged = applyCanonicalCommercialFacts(
+    normalized === 'en' ? english : deepMerge(english, localized)
+  );
 
   if (normalized !== 'en' && import.meta.env.DEV) {
     const missing = collectMissingKeys(english, localized);

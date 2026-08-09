@@ -1,3 +1,5 @@
+import { WORKFORCE_PLANS } from '../../../packages/commercial-config/index.js';
+
 const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://zanvrox.com').replace(/\/$/, '');
 
 export const createFaqSchema = (items = []) => ({
@@ -74,8 +76,8 @@ export const workforceSoftwareSchema = {
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'CAD',
-    lowPrice: 29,
-    highPrice: 79,
+    lowPrice: WORKFORCE_PLANS.starter.monthlyCad,
+    highPrice: WORKFORCE_PLANS.business.monthlyCad,
   },
   featureList: [
     'Location-aware clock in and clock out',

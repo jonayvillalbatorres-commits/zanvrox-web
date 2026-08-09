@@ -297,7 +297,7 @@ const siteContentFr = {
         subtitle:
           'Le site fixe les attentes en amont pour que les petites equipes sachent ce qui se passe apres l inscription.',
         items: [
-          'Finance Core inclut un onboarding autonome et un support email avec reponse sous 48 h.',
+          'Finance inclut un onboarding autonome et un support email avec reponse sous 48 h.',
           'Operations ajoute un support email prioritaire avec reponse sous 24 h.',
           'Enterprise inclut une assistance d onboarding et un canal de support direct.',
         ],
@@ -307,7 +307,7 @@ const siteContentFr = {
         subtitle: 'Le support est defini directement afin que l evaluation reste realiste.',
         tiers: [
           {
-            name: 'Finance Core',
+            name: 'Finance',
             body: 'Support email, reponse sous 48 h, accompagnement d onboarding autonome.',
           },
           {
@@ -359,7 +359,7 @@ const siteContentFr = {
           {
             question: 'Quel support faut-il attendre ?',
             answer:
-              'Finance Core inclut un support email sous 48 h, Operations inclut un support email prioritaire sous 24 h et Enterprise inclut une aide d onboarding ainsi qu un canal de support direct.',
+              'Finance inclut un support email sous 48 h, Operations inclut un support email prioritaire sous 24 h et Enterprise inclut une aide d onboarding ainsi qu un canal de support direct.',
           },
         ],
       },

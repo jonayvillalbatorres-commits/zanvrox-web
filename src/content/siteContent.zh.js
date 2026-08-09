@@ -243,7 +243,7 @@ const siteContentZh = {
         title: '默认自助，需要时再引导',
         subtitle: '网站会提前设定预期，让小团队清楚注册之后会发生什么。',
         items: [
-          'Finance Core 包含自主配置 onboarding 与 48 小时电子邮件支持。',
+          'Finance 包含自主配置 onboarding 与 48 小时电子邮件支持。',
           'Operations 提供 24 小时优先电子邮件支持。',
           'Enterprise 包含 onboarding 协助与直接支持通道。',
         ],
@@ -253,7 +253,7 @@ const siteContentZh = {
         subtitle: '支持方式被直接写明，让评估过程更贴近实际。',
         tiers: [
           {
-            name: 'Finance Core',
+            name: 'Finance',
             body: '电子邮件支持，48 小时响应，并提供自主配置 onboarding 指引。',
           },
           { name: 'Operations', body: '优先级电子邮件支持，24 小时响应，并提供更强的运营指导。' },
@@ -298,7 +298,7 @@ const siteContentZh = {
           {
             question: '我们应当期待什么样的支持？',
             answer:
-              'Finance Core 提供 48 小时电子邮件支持，Operations 提供 24 小时优先电子邮件支持，Enterprise 则包含 onboarding 协助与直接支持通道。',
+              'Finance 提供 48 小时电子邮件支持，Operations 提供 24 小时优先电子邮件支持，Enterprise 则包含 onboarding 协助与直接支持通道。',
           },
         ],
       },
