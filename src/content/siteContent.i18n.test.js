@@ -20,6 +20,9 @@ const rawContentByLanguage = {
 const requiredPageKeys = [
   'home',
   'product',
+  'workforce',
+  'workforceRestaurants',
+  'workforceBeta',
   'pricing',
   'resources',
   'security',
@@ -103,7 +106,7 @@ const englishStringReuseRatio = (localized) => {
 const visibleContentRoots = ['labels', 'navItems', 'brand', 'footer', 'seo'];
 
 const ignoredStringLeafPath = (path) =>
-  /(?:^|\.)(path|slug|kind|status|type|previewType|imageKey|emailValue|passwordValue|headquarters)$/.test(
+  /(?:^|\.)(path|slug|kind|status|type|previewType|imageKey|emailValue|passwordValue|headquarters|consentPrivacyPath)$/.test(
     path
   ) ||
   path === 'brand.name' ||
@@ -189,26 +192,31 @@ const englishTermHits = (content) => {
   );
 };
 
+const pricingGroupContract = (group) => ({
+  tierSlugs: group.tiers.map((tier) => tier.slug),
+  tiers: group.tiers.map((tier) => ({
+    slug: tier.slug,
+    monthlyKind: tier.monthly?.kind,
+    monthlyAmount: tier.monthly?.amount ?? null,
+    annualKind: tier.annual?.kind,
+    annualAmount: tier.annual?.amount ?? null,
+    annualNoteNumbers: extractNumbers(tier.annual?.note),
+    includedCount: tier.included?.length,
+  })),
+  comparisonValueMatrix: group.comparison.rows.map((row) =>
+    row.values.map(comparisonValueSignature)
+  ),
+});
+
 const pricingContract = (content) => {
   const pricing = content.pages.pricing;
 
   return {
-    tierSlugs: pricing.tiers.map((tier) => tier.slug),
-    tiers: pricing.tiers.map((tier) => ({
-      slug: tier.slug,
-      monthlyKind: tier.monthly?.kind,
-      monthlyAmount: tier.monthly?.amount ?? null,
-      annualKind: tier.annual?.kind,
-      annualAmount: tier.annual?.amount ?? null,
-      annualNoteNumbers: extractNumbers(tier.annual?.note),
-      includedCount: tier.included?.length,
-    })),
+    workforce: pricingGroupContract(pricing.workforce),
+    erp: pricingGroupContract(pricing.erp),
     payrollPriceNumbers: extractNumbers(pricing.payrollAddon.priceLabel),
     payrollAnnualPriceNumbers: extractNumbers(pricing.payrollAddon.annualPriceLabel),
     onboardingPriceNumbers: extractNumbers(pricing.onboardingPackage.priceLabel),
-    comparisonValueMatrix: pricing.comparison.rows.map((row) =>
-      row.values.map(comparisonValueSignature)
-    ),
   };
 };
 
