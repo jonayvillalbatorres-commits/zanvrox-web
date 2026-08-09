@@ -442,7 +442,7 @@ const siteContentZh = {
         },
         financeStandalone: {
           title: 'Finance 与 Workforce 可独立购买',
-          body: 'Finance 不包含 Workforce。你可以单独购买 Finance 加 Workforce 独立计划，无需承诺升级到 Business 或 Operations。',
+          body: 'Finance 不包含 Workforce，也不享有 Workforce 优惠。你可以按标准的独立定价单独购买 Finance 加 ZANVROX Workforce，无需承诺升级到 Business 或 Operations。',
         },
       },
       workforce: {
@@ -453,6 +453,8 @@ const siteContentZh = {
         launchOfferNote: '此处显示的定价仅供参考；实际计费以你开始订阅时确认为准。',
         popularLabel: '最受欢迎',
         priceSuffixMonthly: '/月 每地点',
+        priceSuffixAnnual: '/年 每地点',
+        annualDisplayMode: 'total',
         billedMonthlyLabel: '月付',
         billedAnnuallyLabel: '年付',
         fromLabel: '起',
@@ -477,8 +479,9 @@ const siteContentZh = {
             annual: {
               kind: 'fixed',
               amount: 29,
+              totalAmount: 290,
               badge: '2 个月免费',
-              note: '按年计费为每地点 CAD 290。',
+              note: '相当于按月费率支付 10 个月，2 个月免费。',
             },
             included: ['打卡上下班', '地点验证', '工时表', '排班', '任务'],
             ctaLabel: '从 Starter 开始',
@@ -494,8 +497,9 @@ const siteContentZh = {
             annual: {
               kind: 'fixed',
               amount: 49,
+              totalAmount: 490,
               badge: '2 个月免费',
-              note: '按年计费为每地点 CAD 490。',
+              note: '相当于按月费率支付 10 个月，2 个月免费。',
             },
             included: [
               '包含 Starter 的全部内容',
@@ -517,8 +521,9 @@ const siteContentZh = {
             annual: {
               kind: 'fixed',
               amount: 79,
+              totalAmount: 790,
               badge: '2 个月免费',
-              note: '按年计费为每地点 CAD 790。',
+              note: '相当于按月费率支付 10 个月，2 个月免费。',
             },
             included: [
               '包含 Team 的全部内容',
@@ -1032,14 +1037,15 @@ const siteContentZh = {
           message: '还有其他我们需要了解的信息吗？',
         },
         errors: {
-          restaurantName: '请输入餐厅名称。',
-          contactName: '请输入联系人姓名。',
+          restaurantName: '请输入餐厅名称（2-120 个字符）。',
+          contactName: '请输入联系人姓名（2-120 个字符）。',
           email: '请输入有效的企业邮箱。',
-          city: '请输入所在城市。',
-          employeeCount: '请输入员工人数。',
-          locationCount: '请输入地点数量。',
+          city: '请输入所在城市（2-120 个字符）。',
+          employeeCount: '请输入有效的员工人数（1-10000）。',
+          locationCount: '请输入有效的地点数量（1-1000）。',
           currentMethod: '请告诉我们你当前的考勤记录方式。',
-          participantCount: '请输入预计可参与的员工人数。',
+          participantCount: '请输入有效的可参与员工人数。',
+          participantCountExceedsEmployees: '参与人数不能超过员工总数。',
           message: '留言请控制在 2000 个字符以内。',
           consent: '申请 Beta 测试需要同意此条款。',
           website: '触发了反垃圾保护。',
@@ -1433,10 +1439,33 @@ const siteContentZh = {
         updated: '2026 年 3 月 5 日',
         updatedLabel: '最后更新',
         paragraphs: [
-          '本网站用于提供 ZANVROX ERP 的产品信息和商业评估线索表单。',
+          '本网站为 ZANVROX ERP 和 ZANVROX Workforce 提供产品信息、产品评估资源、联系表单和 Beta 计划申请表单。',
           '网站内容仅供参考，不构成具有约束力的产品承诺。',
           '产品范围与商业条款以签署的协议为准。',
         ],
+      },
+      accountDeletion: {
+        title: '申请删除账户',
+        updated: '2026 年 8 月 7 日',
+        updatedLabel: '最后更新',
+        intro: '删除你的 ZANVROX 员工端、管理者端或 ERP 登录账户。',
+        selfServiceTitle: '自助删除',
+        selfServiceBody:
+          '最快捷、最安全的方式是登录后打开“设置”，选择“账户删除”。应用会验证你的身份，并让你跟踪或取消处理中的请求。',
+        steps: [
+          '登录你的 ZANVROX 账户。',
+          '打开“设置”。',
+          '选择“账户删除”。',
+          '确认身份并提交请求。',
+        ],
+        emailFallbackTitle: '如果你无法登录',
+        emailFallbackBody:
+          '请使用与你账户绑定的邮箱地址发送邮件至 support@zanvrox.com，邮件主题请填写“Account deletion request”（账户删除请求）。我们可能会要求进一步验证身份。',
+        retentionTitle: '我们会保留哪些信息',
+        retentionBody:
+          '我们会删除或匿名化登录身份、个人资料、设备订阅等不需要保留的信息。Payroll、税务、雇佣、财务、库存追溯、安全和审计记录可能会在法律要求的期限内以受限访问方式予以保留。',
+        appLinkLabel: '打开账户删除页面',
+        appLinkPath: 'https://app.zanvrox.com/account-deletion',
       },
     },
     notFound: {
@@ -1548,6 +1577,11 @@ const siteContentZh = {
       title: '服务条款 | ZANVROX',
       description: '规范使用 ZANVROX 网站及材料的服务条款。',
       path: '/legal/terms',
+    },
+    accountDeletion: {
+      title: '账户删除 | ZANVROX',
+      description: '了解如何申请删除 ZANVROX 账户及相关数据。',
+      path: '/account-deletion',
     },
   },
 };

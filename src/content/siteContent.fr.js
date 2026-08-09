@@ -546,7 +546,7 @@ const siteContentFr = {
         },
         financeStandalone: {
           title: 'Finance et Workforce, independamment',
-          body: 'Finance n inclut pas Workforce. Vous pouvez acheter Finance et un plan Workforce autonome sans aucune obligation de passer a Business ou Operations.',
+          body: 'Finance n inclut ni Workforce ni de reduction sur Workforce. Vous pouvez acheter Finance et ZANVROX Workforce a la tarification standard autonome, sans aucune obligation de passer a Business ou Operations.',
         },
       },
       workforce: {
@@ -560,6 +560,8 @@ const siteContentFr = {
           'La tarification indiquee ici est informative ; la facturation est confirmee au demarrage.',
         popularLabel: 'Le plus populaire',
         priceSuffixMonthly: '/mois par emplacement',
+        priceSuffixAnnual: '/an par emplacement',
+        annualDisplayMode: 'total',
         billedMonthlyLabel: 'Facturation mensuelle',
         billedAnnuallyLabel: 'Facturation annuelle',
         fromLabel: 'A partir de',
@@ -586,8 +588,9 @@ const siteContentFr = {
             annual: {
               kind: 'fixed',
               amount: 29,
+              totalAmount: 290,
               badge: '2 mois offerts',
-              note: 'Facture annuellement a CAD 290 par emplacement.',
+              note: 'Equivaut a 10 mois de facturation mensuelle. 2 mois offerts.',
             },
             included: [
               'Pointage (entree/sortie)',
@@ -610,8 +613,9 @@ const siteContentFr = {
             annual: {
               kind: 'fixed',
               amount: 49,
+              totalAmount: 490,
               badge: '2 mois offerts',
-              note: 'Facture annuellement a CAD 490 par emplacement.',
+              note: 'Equivaut a 10 mois de facturation mensuelle. 2 mois offerts.',
             },
             included: [
               'Tout ce qui est inclus dans Starter',
@@ -634,8 +638,9 @@ const siteContentFr = {
             annual: {
               kind: 'fixed',
               amount: 79,
+              totalAmount: 790,
               badge: '2 mois offerts',
-              note: 'Facture annuellement a CAD 790 par emplacement.',
+              note: 'Equivaut a 10 mois de facturation mensuelle. 2 mois offerts.',
             },
             included: [
               'Tout ce qui est inclus dans Team',
@@ -1245,14 +1250,16 @@ const siteContentFr = {
           message: 'Autre chose que nous devrions savoir ?',
         },
         errors: {
-          restaurantName: 'Saisissez le nom de votre restaurant.',
-          contactName: 'Saisissez un nom de contact.',
+          restaurantName: 'Saisissez le nom de votre restaurant (2 a 120 caracteres).',
+          contactName: 'Saisissez un nom de contact (2 a 120 caracteres).',
           email: 'Saisissez un email professionnel valide.',
-          city: 'Saisissez votre ville.',
-          employeeCount: 'Saisissez le nombre d employes.',
-          locationCount: 'Saisissez le nombre d emplacements.',
+          city: 'Saisissez votre ville (2 a 120 caracteres).',
+          employeeCount: 'Saisissez un nombre d employes valide (1 a 10000).',
+          locationCount: 'Saisissez un nombre d emplacements valide (1 a 1000).',
           currentMethod: 'Indiquez votre methode actuelle de suivi du temps.',
-          participantCount: 'Indiquez combien d employes pourraient participer.',
+          participantCount: 'Saisissez un nombre valide d employes participants.',
+          participantCountExceedsEmployees:
+            'Le nombre de participants ne peut pas depasser le nombre d employes.',
           message: 'Gardez le message sous 2000 caracteres.',
           consent: 'Le consentement est requis pour postuler a la beta.',
           website: 'La protection anti-spam a ete declenchee.',
@@ -1715,10 +1722,33 @@ const siteContentFr = {
         updated: '5 mars 2026',
         updatedLabel: 'Derniere mise a jour',
         paragraphs: [
-          'Ce site fournit des informations produit et des formulaires de prise de contact pour l evaluation commerciale de ZANVROX ERP.',
+          'Ce site fournit des informations produit, des ressources d evaluation produit, des formulaires de contact et des formulaires de candidature au programme beta pour ZANVROX ERP et ZANVROX Workforce.',
           'Le contenu du site est informatif et ne constitue pas un engagement produit contraignant.',
           'Le perimetre produit et les conditions commerciales sont finalises dans des accords signes.',
         ],
+      },
+      accountDeletion: {
+        title: 'Demander la suppression du compte',
+        updated: '7 aout 2026',
+        updatedLabel: 'Derniere mise a jour',
+        intro: 'Supprimez votre compte de connexion ZANVROX Employe, Gestionnaire ou ERP.',
+        selfServiceTitle: 'Suppression en libre-service',
+        selfServiceBody:
+          'La methode la plus rapide et la plus sure consiste a vous connecter, ouvrir Parametres, puis selectionner Suppression du compte. L application verifiera votre identite et vous permettra de suivre ou d annuler une demande en cours.',
+        steps: [
+          'Connectez-vous a votre compte ZANVROX.',
+          'Ouvrez Parametres.',
+          'Selectionnez Suppression du compte.',
+          'Confirmez votre identite et envoyez la demande.',
+        ],
+        emailFallbackTitle: 'Si vous ne pouvez pas vous connecter',
+        emailFallbackBody:
+          'Envoyez un email a support@zanvrox.com depuis l adresse enregistree sur votre compte, avec pour objet « Account deletion request ». Nous pourrions demander une verification d identite supplementaire.',
+        retentionTitle: 'Ce que nous conservons',
+        retentionBody:
+          'Nous supprimons ou anonymisons l identite de connexion, le profil personnel, les abonnements des appareils et les informations qui ne sont pas tenues d etre conservees. Les dossiers de paie, fiscaux, d emploi, financiers, de tracabilite d inventaire, de securite et d audit peuvent etre conserves pour les durees legalement requises avec un acces restreint.',
+        appLinkLabel: 'Ouvrir la page de suppression du compte',
+        appLinkPath: 'https://app.zanvrox.com/account-deletion',
       },
     },
     notFound: {
@@ -1838,6 +1868,11 @@ const siteContentFr = {
       title: 'Conditions d utilisation | ZANVROX',
       description: 'Conditions d utilisation regissant le site ZANVROX et ses contenus.',
       path: '/legal/terms',
+    },
+    accountDeletion: {
+      title: 'Suppression de compte | ZANVROX',
+      description: 'Comment demander la suppression d un compte ZANVROX et des donnees associees.',
+      path: '/account-deletion',
     },
   },
 };

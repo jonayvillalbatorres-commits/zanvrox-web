@@ -553,7 +553,7 @@ const siteContentEs = {
         },
         financeStandalone: {
           title: 'Finanzas y Workforce, de forma independiente',
-          body: 'Finanzas no incluye Workforce. Puedes contratar Finanzas más un plan independiente de Workforce sin ninguna obligación de pasar a Negocio u Operaciones.',
+          body: 'Finanzas no incluye Workforce ni un descuento en Workforce. Puedes contratar Finanzas más ZANVROX Workforce al precio estándar independiente, sin ninguna obligación de pasar a Negocio u Operaciones.',
         },
       },
       workforce: {
@@ -567,6 +567,8 @@ const siteContentEs = {
           'El precio mostrado aquí es informativo; la facturación se confirma cuando empiezas.',
         popularLabel: 'Más popular',
         priceSuffixMonthly: '/mes por ubicación',
+        priceSuffixAnnual: '/año por ubicación',
+        annualDisplayMode: 'total',
         billedMonthlyLabel: 'Facturación mensual',
         billedAnnuallyLabel: 'Facturación anual',
         fromLabel: 'Desde',
@@ -593,8 +595,9 @@ const siteContentEs = {
             annual: {
               kind: 'fixed',
               amount: 29,
+              totalAmount: 290,
               badge: '2 meses gratis',
-              note: 'Facturado anualmente a CAD 290 por ubicación.',
+              note: 'Equivale a 10 meses de facturación mensual. 2 meses gratis.',
             },
             included: [
               'Fichaje de entrada / salida',
@@ -617,8 +620,9 @@ const siteContentEs = {
             annual: {
               kind: 'fixed',
               amount: 49,
+              totalAmount: 490,
               badge: '2 meses gratis',
-              note: 'Facturado anualmente a CAD 490 por ubicación.',
+              note: 'Equivale a 10 meses de facturación mensual. 2 meses gratis.',
             },
             included: [
               'Todo lo incluido en Inicial',
@@ -641,8 +645,9 @@ const siteContentEs = {
             annual: {
               kind: 'fixed',
               amount: 79,
+              totalAmount: 790,
               badge: '2 meses gratis',
-              note: 'Facturado anualmente a CAD 790 por ubicación.',
+              note: 'Equivale a 10 meses de facturación mensual. 2 meses gratis.',
             },
             included: [
               'Todo lo incluido en Equipo',
@@ -1261,14 +1266,16 @@ const siteContentEs = {
           message: '¿Algo más que debamos saber?',
         },
         errors: {
-          restaurantName: 'Introduce el nombre de tu restaurante.',
-          contactName: 'Introduce un nombre de contacto.',
+          restaurantName: 'Introduce el nombre de tu restaurante (2-120 caracteres).',
+          contactName: 'Introduce un nombre de contacto (2-120 caracteres).',
           email: 'Introduce un correo empresarial válido.',
-          city: 'Introduce tu ciudad.',
-          employeeCount: 'Introduce el número de empleados.',
-          locationCount: 'Introduce el número de ubicaciones.',
+          city: 'Introduce tu ciudad (2-120 caracteres).',
+          employeeCount: 'Introduce un número de empleados válido (1-10000).',
+          locationCount: 'Introduce un número de ubicaciones válido (1-1000).',
           currentMethod: 'Cuéntanos tu método actual de control horario.',
-          participantCount: 'Introduce cuántos empleados podrían participar.',
+          participantCount: 'Introduce un número válido de empleados participantes.',
+          participantCountExceedsEmployees:
+            'El número de participantes no puede superar el número de empleados.',
           message: 'Mantén el mensaje por debajo de 2000 caracteres.',
           consent: 'El consentimiento es obligatorio para solicitar la beta.',
           website: 'Se activó la protección antispam.',
@@ -1734,10 +1741,33 @@ const siteContentEs = {
         updated: '5 de marzo de 2026',
         updatedLabel: 'Última actualización',
         paragraphs: [
-          'Este sitio proporciona información del producto y formularios de captación comercial para la evaluación de ZANVROX ERP.',
+          'Este sitio web proporciona información del producto, recursos de evaluación del producto, formularios de contacto y formularios de solicitud del programa beta para ZANVROX ERP y ZANVROX Workforce.',
           'El contenido del sitio web es informativo y no constituye un compromiso vinculante de producto.',
           'El alcance del producto y las condiciones comerciales se cierran en acuerdos firmados.',
         ],
+      },
+      accountDeletion: {
+        title: 'Solicitar la eliminación de la cuenta',
+        updated: '7 de agosto de 2026',
+        updatedLabel: 'Última actualización',
+        intro: 'Elimina tu cuenta de acceso de Empleado, Gerente o ERP de ZANVROX.',
+        selfServiceTitle: 'Eliminación autogestionada',
+        selfServiceBody:
+          'El método más rápido y seguro es iniciar sesión, abrir Configuración y seleccionar Eliminación de cuenta. La aplicación verificará tu identidad y te permitirá seguir o cancelar una solicitud pendiente.',
+        steps: [
+          'Inicia sesión en tu cuenta de ZANVROX.',
+          'Abre Configuración.',
+          'Selecciona Eliminación de cuenta.',
+          'Confirma tu identidad y envía la solicitud.',
+        ],
+        emailFallbackTitle: 'Si no puedes iniciar sesión',
+        emailFallbackBody:
+          'Envía un correo a support@zanvrox.com desde la dirección registrada en tu cuenta y usa "Solicitud de eliminación de cuenta" como asunto. Podemos solicitar verificación de identidad adicional.',
+        retentionTitle: 'Qué conservamos',
+        retentionBody:
+          'Eliminamos o anonimizamos la identidad de acceso, el perfil personal, las suscripciones del dispositivo y la información que no es necesario conservar. Los registros de nómina, impuestos, empleo, financieros, trazabilidad de inventario, seguridad y auditoría pueden conservarse durante los períodos legalmente exigidos con acceso restringido.',
+        appLinkLabel: 'Abrir la página de eliminación de cuenta',
+        appLinkPath: 'https://app.zanvrox.com/account-deletion',
       },
     },
     notFound: {
@@ -1858,6 +1888,11 @@ const siteContentEs = {
       description:
         'Términos del servicio que regulan el uso del sitio web y los materiales de ZANVROX.',
       path: '/legal/terms',
+    },
+    accountDeletion: {
+      title: 'Eliminación de cuenta | ZANVROX',
+      description: 'Cómo solicitar la eliminación de una cuenta de ZANVROX y sus datos asociados.',
+      path: '/account-deletion',
     },
   },
 };

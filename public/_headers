@@ -1,3 +1,7 @@
+# This marketing site (zanvrox.com) never requests browser geolocation
+# itself -- ZANVROX Workforce's location-aware clock-in/out runs inside the
+# mobile/web app, not this public site -- so geolocation stays blocked here
+# intentionally, along with camera/microphone.
 /*
   Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://flagcdn.com https://zanvrox.com; media-src 'self'; font-src 'self' data:; connect-src 'self'; upgrade-insecure-requests
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload

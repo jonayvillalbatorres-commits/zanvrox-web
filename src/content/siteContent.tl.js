@@ -876,7 +876,7 @@ const siteContentTl = {
         },
         financeStandalone: {
           title: 'Pundasyong Pinansyal at Workforce, hiwalay',
-          body: 'Hindi kasama ang Workforce sa Pundasyong Pinansyal. Maaari kang bumili ng Pundasyong Pinansyal kasama ang hiwalay na plano ng Workforce nang walang obligasyong umakyat sa Negosyo o Operasyon.',
+          body: 'Hindi kasama sa Pundasyong Pinansyal ang Workforce o anumang diskuwento sa Workforce. Maaari kang bumili ng Pundasyong Pinansyal kasama ang ZANVROX Workforce sa karaniwang presyo nito bilang hiwalay na plano, nang walang obligasyong umakyat sa Negosyo o Operasyon.',
         },
       },
       workforce: {
@@ -890,6 +890,8 @@ const siteContentTl = {
           'Ang presyong ipinapakita rito ay pang-impormasyon lamang; kinukumpirma ang pagsingil kapag nagsimula ka na.',
         popularLabel: 'Pinakasikat',
         priceSuffixMonthly: '/buwan bawat lokasyon',
+        priceSuffixAnnual: '/taon bawat lokasyon',
+        annualDisplayMode: 'total',
         billedMonthlyLabel: 'Buwanang pagsingil',
         billedAnnuallyLabel: 'Taunang pagsingil',
         fromLabel: 'Mula',
@@ -916,8 +918,9 @@ const siteContentTl = {
             annual: {
               kind: 'fixed',
               amount: 29,
+              totalAmount: 290,
               badge: '2 buwang libre',
-              note: 'Sinisingil taun-taon sa CAD 290 bawat lokasyon.',
+              note: 'Katumbas ng 10 buwan ng buwanang pagsingil. 2 buwang libre.',
             },
             included: [
               'Pagtala ng oras ng pagpasok / paglabas',
@@ -940,8 +943,9 @@ const siteContentTl = {
             annual: {
               kind: 'fixed',
               amount: 49,
+              totalAmount: 490,
               badge: '2 buwang libre',
-              note: 'Sinisingil taun-taon sa CAD 490 bawat lokasyon.',
+              note: 'Katumbas ng 10 buwan ng buwanang pagsingil. 2 buwang libre.',
             },
             included: [
               'Lahat ng nasa Panimula',
@@ -964,8 +968,9 @@ const siteContentTl = {
             annual: {
               kind: 'fixed',
               amount: 79,
+              totalAmount: 790,
               badge: '2 buwang libre',
-              note: 'Sinisingil taun-taon sa CAD 790 bawat lokasyon.',
+              note: 'Katumbas ng 10 buwan ng buwanang pagsingil. 2 buwang libre.',
             },
             included: [
               'Lahat ng nasa Pangkat',
@@ -1596,14 +1601,16 @@ const siteContentTl = {
           message: 'May iba pa bang dapat naming malaman?',
         },
         errors: {
-          restaurantName: 'Ilagay ang pangalan ng iyong restawran.',
-          contactName: 'Ilagay ang pangalan ng taong maaaring lapitan.',
+          restaurantName: 'Ilagay ang pangalan ng iyong restawran (2-120 na character).',
+          contactName: 'Ilagay ang pangalan ng taong maaaring lapitan (2-120 na character).',
           email: 'Maglagay ng wastong elektronikong liham ng negosyo.',
-          city: 'Ilagay ang iyong lungsod.',
-          employeeCount: 'Ilagay ang bilang ng empleyado.',
-          locationCount: 'Ilagay ang bilang ng lokasyon.',
+          city: 'Ilagay ang iyong lungsod (2-120 na character).',
+          employeeCount: 'Ilagay ang wastong bilang ng empleyado (1-10000).',
+          locationCount: 'Ilagay ang wastong bilang ng lokasyon (1-1000).',
           currentMethod: 'Sabihin sa amin ang kasalukuyan mong paraan ng pagsubaybay sa oras.',
-          participantCount: 'Ilagay kung ilang empleyado ang maaaring makilahok.',
+          participantCount: 'Ilagay ang wastong bilang ng empleyadong lalahok.',
+          participantCountExceedsEmployees:
+            'Hindi maaaring lumampas sa bilang ng empleyado ang bilang ng lalahok.',
           message: 'Panatilihing mas maikli sa 2000 character ang mensahe.',
           consent: 'Kailangan ang pahintulot para mag-apply sa beta.',
           website: 'Na-trigger ang proteksyon laban sa spam.',
@@ -1953,10 +1960,34 @@ const siteContentTl = {
         updated: 'Marso 5, 2026',
         updatedLabel: 'Huling in-update',
         paragraphs: [
-          'Nagbibigay ang pook na ito ng impormasyon sa produkto at mga form sa pagtanggap ng potensyal na kliyente para sa komersyal na pagsusuri ng ZANVROX ERP.',
+          'Nagbibigay ang pook-sapot na ito ng impormasyon sa produkto, sanggunian para sa pagsusuri ng produkto, mga form ng pakikipag-ugnayan, at mga form ng aplikasyon para sa beta na programa ng ZANVROX ERP at ZANVROX Workforce.',
           'Pang-impormasyon lamang ang laman ng pook-sapot at hindi ito bumubuo ng nakabibigkis na pangako sa produkto.',
           'Pinal ang saklaw ng produkto at mga tuntuning pangkomersyo sa mga pinirmahang kasunduan.',
         ],
+      },
+      accountDeletion: {
+        title: 'Humiling ng pagbura ng account',
+        updated: 'Agosto 7, 2026',
+        updatedLabel: 'Huling in-update',
+        intro:
+          'Burahin ang iyong account sa pagpasok bilang Empleyado, Tagapamahala, o ERP ng ZANVROX.',
+        selfServiceTitle: 'Awtomatikong pagbura',
+        selfServiceBody:
+          'Ang pinakamabilis at pinakaligtas na paraan ay ang mag-log in, buksan ang Mga Pagsasaayos, at piliin ang Pagbura ng account. Papatunayan ng aplikasyon ang iyong pagkakakilanlan at maaari mong subaybayan o kanselahin ang isang nakabinbing kahilingan.',
+        steps: [
+          'Mag-log in sa iyong account sa ZANVROX.',
+          'Buksan ang Mga Pagsasaayos.',
+          'Piliin ang Pagbura ng account.',
+          'Kumpirmahin ang iyong pagkakakilanlan at isumite ang kahilingan.',
+        ],
+        emailFallbackTitle: 'Kung hindi ka makapag-log in',
+        emailFallbackBody:
+          'Padalhan ng elektronikong liham ang support@zanvrox.com mula sa address na nakarehistro sa iyong account at gamitin ang "Kahilingan sa pagbura ng account" bilang paksa. Maaari kaming humingi ng karagdagang patunay ng pagkakakilanlan.',
+        retentionTitle: 'Ano ang itinatago namin',
+        retentionBody:
+          'Binubura o ginagawang hindi nakikilala namin ang pagkakakilanlan sa pagpasok, personal na profile, mga subscription ng device, at impormasyong hindi na kailangang itago. Maaaring itago ang mga talaan ng pasahod, buwis, pagtatrabaho, pananalapi, pagsubaybay ng imbentaryo, seguridad, at pagsusuri sa loob ng legal na hinihinging panahon nang may limitadong pagpasok.',
+        appLinkLabel: 'Buksan ang pahina ng pagbura ng account',
+        appLinkPath: 'https://app.zanvrox.com/account-deletion',
       },
     },
     notFound: {
@@ -2077,6 +2108,11 @@ const siteContentTl = {
       description:
         'Mga tuntunin ng serbisyo na namamahala sa paggamit ng pook-sapot at materyal ng ZANVROX.',
       path: '/legal/terms',
+    },
+    accountDeletion: {
+      title: 'Pagbura ng Account | ZANVROX',
+      description: 'Paano humiling ng pagbura ng account sa ZANVROX at kaugnay na datos.',
+      path: '/account-deletion',
     },
   },
 };

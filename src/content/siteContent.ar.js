@@ -762,7 +762,7 @@ const siteContentAr = {
         },
         financeStandalone: {
           title: 'Finance وWorkforce، بشكل مستقل',
-          body: 'لا يشمل Finance خطة Workforce. يمكنك شراء Finance بالإضافة إلى خطة Workforce مستقلة دون أي التزام بالترقية إلى Business أو Operations.',
+          body: 'لا يشمل Finance خطة Workforce ولا أي خصم على Workforce. يمكنك شراء Finance بالإضافة إلى ZANVROX Workforce بالتسعير المستقل القياسي، دون أي التزام بالترقية إلى Business أو Operations.',
         },
       },
       workforce: {
@@ -774,6 +774,8 @@ const siteContentAr = {
         launchOfferNote: 'الأسعار المعروضة هنا استرشادية؛ يتم تأكيد الفوترة عند البدء.',
         popularLabel: 'الأكثر شيوعا',
         priceSuffixMonthly: '/شهر لكل موقع',
+        priceSuffixAnnual: '/سنة لكل موقع',
+        annualDisplayMode: 'total',
         billedMonthlyLabel: 'فوترة شهرية',
         billedAnnuallyLabel: 'فوترة سنوية',
         fromLabel: 'من',
@@ -798,8 +800,9 @@ const siteContentAr = {
             annual: {
               kind: 'fixed',
               amount: 29,
+              totalAmount: 290,
               badge: 'شهران مجانيان',
-              note: 'يفوتر سنويا بقيمة CAD 290 لكل موقع.',
+              note: 'ما يعادل 10 أشهر من الفوترة الشهرية. توفير 2 شهر مجانًا.',
             },
             included: [
               'تسجيل الدخول / الخروج',
@@ -821,8 +824,9 @@ const siteContentAr = {
             annual: {
               kind: 'fixed',
               amount: 49,
+              totalAmount: 490,
               badge: 'شهران مجانيان',
-              note: 'يفوتر سنويا بقيمة CAD 490 لكل موقع.',
+              note: 'ما يعادل 10 أشهر من الفوترة الشهرية. توفير 2 شهر مجانًا.',
             },
             included: [
               'كل ما في Starter',
@@ -844,8 +848,9 @@ const siteContentAr = {
             annual: {
               kind: 'fixed',
               amount: 79,
+              totalAmount: 790,
               badge: 'شهران مجانيان',
-              note: 'يفوتر سنويا بقيمة CAD 790 لكل موقع.',
+              note: 'ما يعادل 10 أشهر من الفوترة الشهرية. توفير 2 شهر مجانًا.',
             },
             included: [
               'كل ما في Team',
@@ -1428,14 +1433,15 @@ const siteContentAr = {
           message: 'هل هناك أي شيء آخر يجب أن نعرفه؟',
         },
         errors: {
-          restaurantName: 'أدخل اسم مطعمك.',
-          contactName: 'أدخل اسم جهة اتصال.',
+          restaurantName: 'أدخل اسم مطعمك (2-120 حرفا).',
+          contactName: 'أدخل اسم جهة اتصال (2-120 حرفا).',
           email: 'أدخل بريدا إلكترونيا صالحا للعمل.',
-          city: 'أدخل مدينتك.',
-          employeeCount: 'أدخل عدد الموظفين.',
-          locationCount: 'أدخل عدد المواقع.',
+          city: 'أدخل مدينتك (2-120 حرفا).',
+          employeeCount: 'أدخل عددا صالحا للموظفين (1-10000).',
+          locationCount: 'أدخل عددا صالحا للمواقع (1-1000).',
           currentMethod: 'أخبرنا بطريقة تتبع الوقت الحالية لديك.',
-          participantCount: 'أدخل عدد الموظفين الذين يمكنهم المشاركة.',
+          participantCount: 'أدخل عددا صالحا للموظفين المشاركين.',
+          participantCountExceedsEmployees: 'لا يمكن أن يتجاوز عدد المشاركين عدد الموظفين.',
           message: 'اجعل الرسالة أقل من 2000 حرف.',
           consent: 'الموافقة مطلوبة للتقديم للنسخة التجريبية.',
           website: 'تم تفعيل حماية البريد المزعج.',
@@ -1762,10 +1768,33 @@ const siteContentAr = {
         updated: '5 مارس 2026',
         updatedLabel: 'آخر تحديث',
         paragraphs: [
-          'يوفر هذا الموقع معلومات منتج ونماذج استقبال فرص للتقييم التجاري لنظام ZANVROX ERP.',
+          'يوفر هذا الموقع معلومات المنتج وموارد تقييم المنتج ونماذج التواصل ونماذج التقديم لبرنامج النسخة التجريبية لنظام ZANVROX ERP وZANVROX Workforce.',
           'محتوى الموقع معلوماتي ولا يشكل التزاما ملزما بالمنتج.',
           'يتم إنهاء نطاق المنتج والشروط التجارية في اتفاقيات موقعة.',
         ],
+      },
+      accountDeletion: {
+        title: 'طلب حذف الحساب',
+        updated: '7 أغسطس 2026',
+        updatedLabel: 'آخر تحديث',
+        intro: 'احذف حساب تسجيل الدخول الخاص بك في ZANVROX سواء كان حساب موظف أو مدير أو حساب ERP.',
+        selfServiceTitle: 'الحذف الذاتي',
+        selfServiceBody:
+          'أسرع الطرق وأكثرها أمانا هي تسجيل الدخول، وفتح الإعدادات، واختيار حذف الحساب. سيتحقق التطبيق من هويتك ويتيح لك متابعة طلب معلق أو إلغاءه.',
+        steps: [
+          'سجّل الدخول إلى حسابك في ZANVROX.',
+          'افتح الإعدادات.',
+          'اختر حذف الحساب.',
+          'أكّد هويتك وأرسل الطلب.',
+        ],
+        emailFallbackTitle: 'إذا تعذر عليك تسجيل الدخول',
+        emailFallbackBody:
+          'راسل support@zanvrox.com من العنوان المسجل لحسابك واستخدم "طلب حذف الحساب" كموضوع للرسالة. قد نطلب تحققا إضافيا من الهوية.',
+        retentionTitle: 'ما نحتفظ به',
+        retentionBody:
+          'نحذف أو نُخفي هوية تسجيل الدخول والملف الشخصي واشتراكات الأجهزة والمعلومات غير المطلوب الاحتفاظ بها. قد يتم الاحتفاظ بسجلات Payroll والضرائب والتوظيف والمالية وتتبع المخزون والأمان والتدقيق للفترات المطلوبة قانونا مع وصول مقيد.',
+        appLinkLabel: 'افتح صفحة حذف الحساب',
+        appLinkPath: 'https://app.zanvrox.com/account-deletion',
       },
     },
     notFound: {
@@ -1882,6 +1911,11 @@ const siteContentAr = {
       title: 'شروط الخدمة | ZANVROX',
       description: 'شروط الخدمة التي تحكم استخدام موقع ZANVROX ومواده.',
       path: '/legal/terms',
+    },
+    accountDeletion: {
+      title: 'حذف الحساب | ZANVROX',
+      description: 'كيفية طلب حذف حساب ZANVROX والبيانات المرتبطة به.',
+      path: '/account-deletion',
     },
   },
 };

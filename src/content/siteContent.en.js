@@ -798,7 +798,7 @@ const siteContentEn = {
         },
         financeStandalone: {
           title: 'Finance and Workforce, independently',
-          body: 'Finance does not include Workforce. You can buy Finance plus a Workforce standalone plan without any obligation to upgrade to Business or Operations.',
+          body: 'Finance does not include Workforce or a Workforce discount. You can buy Finance plus ZANVROX Workforce at standard standalone pricing, with no obligation to upgrade to Business or Operations.',
         },
       },
       workforce: {
@@ -811,6 +811,8 @@ const siteContentEn = {
           'Pricing shown here is informational; billing is confirmed when you start.',
         popularLabel: 'Most popular',
         priceSuffixMonthly: '/month per location',
+        priceSuffixAnnual: '/year per location',
+        annualDisplayMode: 'total',
         billedMonthlyLabel: 'Monthly billing',
         billedAnnuallyLabel: 'Annual billing',
         fromLabel: 'From',
@@ -837,8 +839,9 @@ const siteContentEn = {
             annual: {
               kind: 'fixed',
               amount: 29,
+              totalAmount: 290,
               badge: '2 months free',
-              note: 'Billed annually at CAD 290 per location.',
+              note: 'Equivalent to 10 months of monthly billing. 2 months free.',
             },
             included: [
               'Clock in / out',
@@ -861,8 +864,9 @@ const siteContentEn = {
             annual: {
               kind: 'fixed',
               amount: 49,
+              totalAmount: 490,
               badge: '2 months free',
-              note: 'Billed annually at CAD 490 per location.',
+              note: 'Equivalent to 10 months of monthly billing. 2 months free.',
             },
             included: [
               'Everything in Starter',
@@ -885,8 +889,9 @@ const siteContentEn = {
             annual: {
               kind: 'fixed',
               amount: 79,
+              totalAmount: 790,
               badge: '2 months free',
-              note: 'Billed annually at CAD 790 per location.',
+              note: 'Equivalent to 10 months of monthly billing. 2 months free.',
             },
             included: [
               'Everything in Team',
@@ -1461,14 +1466,16 @@ const siteContentEn = {
           message: 'Anything else we should know?',
         },
         errors: {
-          restaurantName: 'Enter your restaurant name.',
-          contactName: 'Enter a contact name.',
+          restaurantName: 'Enter your restaurant name (2-120 characters).',
+          contactName: 'Enter a contact name (2-120 characters).',
           email: 'Enter a valid business email.',
-          city: 'Enter your city.',
-          employeeCount: 'Enter the number of employees.',
-          locationCount: 'Enter the number of locations.',
+          city: 'Enter your city (2-120 characters).',
+          employeeCount: 'Enter a valid number of employees (1-10000).',
+          locationCount: 'Enter a valid number of locations (1-1000).',
           currentMethod: 'Tell us your current time tracking method.',
-          participantCount: 'Enter how many employees could participate.',
+          participantCount: 'Enter a valid number of participating employees.',
+          participantCountExceedsEmployees:
+            'The number of participants cannot exceed the number of employees.',
           message: 'Keep the message under 2000 characters.',
           consent: 'Consent is required to apply for the beta.',
           website: 'Spam protection triggered.',
@@ -1807,10 +1814,33 @@ const siteContentEn = {
         updated: 'August 7, 2026',
         updatedLabel: 'Last updated',
         paragraphs: [
-          'This site provides product information and lead intake forms for ZANVROX ERP commercial evaluation.',
+          'This website provides product information, product evaluation resources, contact forms, and beta-program application forms for ZANVROX ERP and ZANVROX Workforce.',
           'Website content is informational and does not constitute a binding product commitment.',
           'Product scope and commercial terms are finalized in signed agreements.',
         ],
+      },
+      accountDeletion: {
+        title: 'Request account deletion',
+        updated: 'August 7, 2026',
+        updatedLabel: 'Last updated',
+        intro: 'Delete your ZANVROX Employee, Manager, or ERP sign-in account.',
+        selfServiceTitle: 'Self-service deletion',
+        selfServiceBody:
+          'The fastest and most secure method is to sign in, open Settings, and select Account deletion. The application will verify your identity and let you track or cancel a pending request.',
+        steps: [
+          'Sign in to your ZANVROX account.',
+          'Open Settings.',
+          'Select Account deletion.',
+          'Confirm your identity and submit the request.',
+        ],
+        emailFallbackTitle: 'If you cannot sign in',
+        emailFallbackBody:
+          'Email support@zanvrox.com from the address registered to your account and use "Account deletion request" as the subject. We may request additional identity verification.',
+        retentionTitle: 'What we keep',
+        retentionBody:
+          'We delete or anonymize the sign-in identity, personal profile, device subscriptions, and information that is not required to be retained. Payroll, tax, employment, financial, inventory traceability, security, and audit records may be retained for legally required periods with restricted access.',
+        appLinkLabel: 'Open the account deletion page',
+        appLinkPath: 'https://app.zanvrox.com/account-deletion',
       },
     },
     notFound: {
@@ -1928,6 +1958,11 @@ const siteContentEn = {
       title: 'Terms of Service | ZANVROX',
       description: 'Terms of service governing use of ZANVROX website and materials.',
       path: '/legal/terms',
+    },
+    accountDeletion: {
+      title: 'Account Deletion | ZANVROX',
+      description: 'How to request deletion of a ZANVROX account and associated data.',
+      path: '/account-deletion',
     },
   },
 };
