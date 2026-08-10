@@ -1410,6 +1410,8 @@ const siteContentEn = {
       cta: {
         title: 'Start with Workforce',
         subtitle: 'Add the ERP when you need it.',
+        accessNote:
+          'Managers manage the company, team, and schedules. Employees get their own Workforce access to clock in, view schedules, and manage their workday.',
         primary: { label: 'Start with Workforce', path: '/workforce/pricing' },
         secondary: { label: 'Workforce for Restaurants', path: '/workforce/restaurants' },
       },

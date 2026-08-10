@@ -27,6 +27,13 @@ describe('/workforce CTAs', () => {
     expect(links.length).toBeGreaterThan(0);
     links.forEach((link) => expect(link).toHaveAttribute('href', '/workforce/beta'));
   });
+
+  test('explains the Manager vs Employee access split once, near the final CTA', async () => {
+    renderWithProviders(<WorkforcePage />, '/workforce');
+    expect(
+      await screen.findByText(/Managers manage the company, team, and schedules/i)
+    ).toBeInTheDocument();
+  });
 });
 
 describe('/workforce/restaurants CTAs during the beta phase', () => {

@@ -998,6 +998,8 @@ const siteContentZh = {
       cta: {
         title: '从 Workforce 开始',
         subtitle: '在需要时再加入 ERP。',
+        accessNote:
+          '经理负责管理公司、团队和排班。员工拥有自己独立的 Workforce 访问权限，用于打卡、查看排班和管理工作日。',
         primary: { label: '从 Workforce 开始', path: '/workforce/pricing' },
         secondary: { label: '面向餐饮的 Workforce', path: '/workforce/restaurants' },
       },

@@ -1397,6 +1397,8 @@ const siteContentPa = {
       cta: {
         title: 'Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ',
         subtitle: "ਲੋੜ ਪੈਣ 'ਤੇ ERP ਸ਼ਾਮਲ ਕਰੋ।",
+        accessNote:
+          'ਮੈਨੇਜਰ ਕੰਪਨੀ, ਟੀਮ ਅਤੇ ਸ਼ਿਫਟਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਦੇ ਹਨ। ਮੁਲਾਜ਼ਮਾਂ ਕੋਲ ਕਲੌਕ ਇਨ/ਆਊਟ ਕਰਨ, ਸ਼ਿਫਟਾਂ ਵੇਖਣ ਅਤੇ ਆਪਣੇ ਕੰਮ ਦੇ ਦਿਨ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਲਈ ਆਪਣੀ ਵੱਖਰੀ Workforce ਪਹੁੰਚ ਹੁੰਦੀ ਹੈ।',
         primary: { label: 'Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ', path: '/workforce/pricing' },
         secondary: { label: 'ਰੈਸਟੋਰੈਂਟਾਂ ਲਈ Workforce', path: '/workforce/restaurants' },
       },

@@ -92,6 +92,9 @@ export default function WorkforcePage() {
         <div className="zx-cta-panel rounded-3xl border border-zx-border p-8 shadow-panel">
           <h2 className="font-heading text-2xl font-semibold text-zx-text">{page.cta?.title}</h2>
           <p className="mt-3 max-w-2xl text-sm text-zx-text-muted">{page.cta?.subtitle}</p>
+          {page.cta?.accessNote ? (
+            <p className="mt-2 max-w-2xl text-xs text-zx-text-muted">{page.cta.accessNote}</p>
+          ) : null}
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               to={page.cta?.primary?.path || '/pricing'}

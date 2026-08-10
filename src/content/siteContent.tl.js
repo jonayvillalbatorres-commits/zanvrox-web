@@ -1521,6 +1521,8 @@ const siteContentTl = {
       cta: {
         title: 'Magsimula sa Workforce',
         subtitle: 'Idagdag ang ERP kapag kailangan mo na.',
+        accessNote:
+          'Pinamamahalaan ng mga manager ang kumpanya, koponan, at mga iskedyul. Ang mga empleyado ay may sarili nilang Workforce access para mag-clock in/out, tingnan ang mga iskedyul, at pamahalaan ang kanilang araw ng trabaho.',
         primary: { label: 'Magsimula sa Workforce', path: '/workforce/pricing' },
         secondary: { label: 'Workforce para sa mga Restawran', path: '/workforce/restaurants' },
       },

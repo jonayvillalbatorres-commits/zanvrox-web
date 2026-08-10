@@ -1174,6 +1174,8 @@ const siteContentFr = {
       cta: {
         title: 'Commencer avec Workforce',
         subtitle: 'Ajoutez l ERP lorsque vous en avez besoin.',
+        accessNote:
+          "Les gestionnaires gèrent l'entreprise, l'équipe et les horaires. Les employés disposent de leur propre accès Workforce pour pointer, consulter leurs horaires et gérer leur journée de travail.",
         primary: { label: 'Commencer avec Workforce', path: '/workforce/pricing' },
         secondary: { label: 'Workforce pour restaurants', path: '/workforce/restaurants' },
       },

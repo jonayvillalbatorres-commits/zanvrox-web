@@ -1366,6 +1366,8 @@ const siteContentAr = {
       cta: {
         title: 'ابدأ مع Workforce',
         subtitle: 'أضف ERP عندما تحتاج إليه.',
+        accessNote:
+          'يدير المدراء الشركة والفريق والجداول الزمنية. يملك الموظفون وصولهم الخاص إلى Workforce لتسجيل الحضور والانصراف ومشاهدة الجداول وإدارة يوم عملهم.',
         primary: { label: 'ابدأ مع Workforce', path: '/workforce/pricing' },
         secondary: { label: 'Workforce للمطاعم', path: '/workforce/restaurants' },
       },

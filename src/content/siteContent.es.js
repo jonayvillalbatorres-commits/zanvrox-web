@@ -1187,6 +1187,8 @@ const siteContentEs = {
       cta: {
         title: 'Empieza con Workforce',
         subtitle: 'Añade el ERP cuando lo necesites.',
+        accessNote:
+          'Los gestores administran la empresa, el equipo y los horarios. Los empleados tienen su propio acceso a Workforce para fichar, consultar sus horarios y gestionar su jornada.',
         primary: { label: 'Empezar con Workforce', path: '/workforce/pricing' },
         secondary: { label: 'Workforce para restaurantes', path: '/workforce/restaurants' },
       },
