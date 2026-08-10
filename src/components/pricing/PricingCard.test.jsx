@@ -40,15 +40,17 @@ describe('PricingCard annual display', () => {
     expect(screen.getByText(/billed annually at cad 1,969/i)).toBeInTheDocument();
   });
 
-  test('routes self-serve Workforce to login with Workforce purchase intent (not straight to billing) and keeps ERP promotion context', () => {
+  test('routes self-serve Workforce to the Workforce manager sign-in with purchase intent (not the ERP login, not straight to billing) and keeps ERP promotion context', () => {
     const workforce = renderCard(pricing.workforce, 'workforce-starter', BILLING_PERIODS.annual);
     const workforceHref = workforce.container.querySelector('a').getAttribute('href');
     const url = new URL(workforceHref);
-    // Anonymous visitors must never link straight to /settings/billing (it
-    // requires an authenticated org admin/accounting member and would just
-    // dead-end on the ERP login with no context). They go to /login with the
-    // plan intent attached instead -- see createWorkforceCheckoutUrl.
-    expect(url.pathname).toBe('/login');
+    // Anonymous visitors must never link straight to /manager/settings/billing
+    // (it requires an authenticated org member and would just dead-end with
+    // no context), and must never land on the ERP's generic /login (it looks
+    // like ERP, not Workforce). They go to the Workforce-branded
+    // /manager/login with the plan intent attached instead -- see
+    // createWorkforceCheckoutUrl.
+    expect(url.pathname).toBe('/manager/login');
     expect(url.searchParams.get('product')).toBe('workforce');
     expect(url.searchParams.get('plan')).toBe('starter');
     expect(url.searchParams.get('period')).toBe('annual');

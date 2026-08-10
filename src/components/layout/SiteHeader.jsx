@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { createDemoWorkspaceUrl, createWorkforceCheckoutUrl } from '../../utils/publicApp';
+import { createDemoWorkspaceUrl, createWorkforceLoginUrl } from '../../utils/publicApp';
 import { isWorkforceHost } from '../../utils/workforceHost';
 
 const PRIMARY_LANGUAGE_CODES = ['en', 'fr'];
@@ -27,7 +27,7 @@ export default function SiteHeader() {
   const navItems = (isWorkforce ? content?.workforceNav?.items : content?.navItems) || [];
   const erpLink = isWorkforce ? content?.workforceNav?.erpLink : null;
   const labels = content?.labels || {};
-  const workforceLoginUrl = createWorkforceCheckoutUrl({ language, source: 'site-header' });
+  const workforceLoginUrl = createWorkforceLoginUrl({ language, source: 'site-header' });
 
   const primaryLanguages = PRIMARY_LANGUAGE_CODES.map((code) =>
     languages.find((option) => option.code === code)
@@ -261,7 +261,7 @@ export default function SiteHeader() {
             {isWorkforce ? (
               <div className="mt-2 grid gap-2">
                 <a
-                  href={createWorkforceCheckoutUrl({ language, source: 'site-header-mobile' })}
+                  href={createWorkforceLoginUrl({ language, source: 'site-header-mobile' })}
                   onClick={() => setOpen(false)}
                   className="zx-button zx-button-secondary w-full justify-center"
                 >

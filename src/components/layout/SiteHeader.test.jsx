@@ -57,4 +57,20 @@ describe('SiteHeader on the workforce.zanvrox.com host', () => {
     expect(erpLinks.length).toBeGreaterThan(0);
     expect(erpLinks[0]).toHaveAttribute('href', '/erp');
   });
+
+  test('Log in goes to the Workforce-branded manager sign-in, never the generic ERP login, and carries no purchase intent', async () => {
+    vi.stubGlobal('location', { hostname: 'workforce.zanvrox.com' });
+    renderHeader();
+
+    const loginLinks = await screen.findAllByRole('link', { name: /log in/i });
+    expect(loginLinks.length).toBeGreaterThan(0);
+    loginLinks.forEach((link) => {
+      const url = new URL(link.getAttribute('href'));
+      expect(url.pathname).toBe('/manager/login');
+      // A plain header "Log in" click has no selected plan -- it must not
+      // carry product=workforce, or an existing customer signing in just to
+      // check their dashboard would be redirected to billing instead.
+      expect(url.searchParams.get('product')).toBeNull();
+    });
+  });
 });
