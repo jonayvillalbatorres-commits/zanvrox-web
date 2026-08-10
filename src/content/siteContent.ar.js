@@ -14,6 +14,9 @@ const siteContentAr = {
     reviewResources: 'عرض الموارد',
     language: 'اللغة',
     requestQuote: 'التحدث مع المبيعات',
+    login: 'تسجيل الدخول',
+    requestBeta: 'طلب النسخة التجريبية',
+    support: 'الدعم',
   },
   navItems: [
     { label: 'الرئيسية', path: '/' },
@@ -25,6 +28,17 @@ const siteContentAr = {
     { label: 'من نحن', path: '/about' },
     { label: 'التواصل', path: '/contact' },
   ],
+  workforceNav: {
+    items: [
+      { label: 'Workforce', path: '/workforce' },
+      { label: 'الميزات', path: '/workforce#features' },
+      { label: 'المطاعم', path: '/workforce/restaurants' },
+      { label: 'الأسعار', path: '/workforce/pricing' },
+      { label: 'تجريبي', path: '/workforce/beta' },
+      { label: 'الأمان', path: '/security' },
+    ],
+    erpLink: { label: 'ZANVROX ERP', path: '/erp' },
+  },
   brand: {
     name: 'ZANVROX',
     tagline: 'نظام ERP كندي للعمليات للشركات الصغيرة والمتوسطة النامية',
@@ -732,6 +746,27 @@ const siteContentAr = {
       },
       note: 'توصيات AI مساعدة فقط. تبقى الإجراءات التشغيلية والامتثالية النهائية مؤكدة من المستخدم.',
     },
+    pricingHub: {
+      heroTitle: 'منتجان. قائمتا أسعار مستقلتان.',
+      heroSubtitle:
+        'اختر ZANVROX Workforce لعمليات الورديات الميدانية، أو ZANVROX ERP للمالية وعمليات الأعمال، أو كليهما. لكل منتج صفحة أسعار مستقلة.',
+      erpCard: {
+        eyebrow: 'ZANVROX ERP',
+        title: 'المالية وعمليات الأعمال',
+        body: 'المحاسبة والفوترة والمشتريات والمخزون والتقارير لفرق الشركات الصغيرة والمتوسطة الكندية.',
+        bullets: ['Finance', 'Business', 'Operations', 'Enterprise'],
+        cta: { label: 'عرض أسعار ERP', path: '/erp/pricing' },
+      },
+      workforceCard: {
+        eyebrow: 'ZANVROX Workforce',
+        title: 'إدارة فرق العمل الميدانية',
+        body: 'تسجيل الدخول والخروج، الجداول، المهام وسجلات الدوام، بسعر لكل موقع.',
+        bullets: ['Starter', 'Team', 'Business', 'Multi-location'],
+        cta: { label: 'عرض أسعار Workforce', path: '/workforce/pricing' },
+      },
+      differenceNote:
+        'يُباع ZANVROX ERP وZANVROX Workforce وتُحدد أسعارهما بشكل مستقل. تشمل خطط ERP المؤهلة خصمًا أو شمولًا لـ Workforce — راجع أسعار ERP للاطلاع على تفاصيل العروض المجمعة.',
+    },
     pricing: {
       heroTitle: 'أسعار ZANVROX ERP وZANVROX Workforce.',
       heroSubtitle:
@@ -911,6 +946,27 @@ const siteContentAr = {
             'تشمل الفوترة السنوية شهرين مجانيين (10 أشهر من السعر الشهري).',
           ],
           annualNote: 'تشمل خطط Workforce السنوية شهرين مجانيين.',
+        },
+        betaBanner: {
+          eyebrow: 'مطاعم أونتاريو',
+          title: 'جرّب Workforce مجانًا لمدة 14 يومًا قبل الشراء',
+          body: 'يمكن لمطاعم أونتاريو التقديم للنسخة التجريبية الخاصة: دون أي التزام بالشراء، مع 6 أشهر مجانية بعد الإطلاق العام.',
+          cta: { label: 'التقديم للنسخة التجريبية المجانية', path: '/workforce/beta' },
+        },
+        faq: {
+          title: 'أسئلة حول أسعار Workforce',
+          items: [
+            {
+              question: 'هل يمكنني شراء Workforce دون ERP؟',
+              answer:
+                'نعم. يتوفر ZANVROX Workforce كخطة مستقلة، بسعر لكل موقع، دون الحاجة لشراء أو الترقية إلى أي خطة ERP.',
+            },
+            {
+              question: 'هل تستخدم ZANVROX ERP بالفعل؟',
+              answer:
+                'تشمل خطة Operations ZANVROX Workforce للموظفين والمواقع المشمولة بذلك الاشتراك في ERP. تحصل خطة Business على خصم 50% على خطة Workforce المستقلة المؤهلة. راجع أسعار ERP لمزيد من التفاصيل.',
+            },
+          ],
         },
       },
       erp: {
@@ -1203,7 +1259,7 @@ const siteContentAr = {
       heroTitle: 'أدر كل وردية بفوضى أقل.',
       heroSubtitle:
         'تسجيل الدخول والخروج، الجداول، المهام، وسجلات الدوام لفرق الخط الأمامي — كلها متصلة في تطبيق عمل واحد وبسيط.',
-      heroPrimaryCta: { label: 'ابدأ مع Workforce', path: '/pricing#workforce-pricing' },
+      heroPrimaryCta: { label: 'ابدأ مع Workforce', path: '/workforce/pricing' },
       heroSecondaryCta: {
         label: 'انضم إلى النسخة التجريبية لمطاعم أونتاريو',
         path: '/workforce/beta',
@@ -1220,7 +1276,7 @@ const siteContentAr = {
       existingCustomer: {
         title: 'هل تستخدم ZANVROX ERP بالفعل؟',
         body: 'Workforce مشمول مع خطط ERP المؤهلة.',
-        cta: { label: 'عرض خطط ERP التي تشمل Workforce', path: '/pricing#erp-pricing' },
+        cta: { label: 'عرض خطط ERP التي تشمل Workforce', path: '/erp/pricing' },
       },
       sections: {
         eyebrow: 'ما الذي يغطيه Workforce',
@@ -1310,7 +1366,7 @@ const siteContentAr = {
       cta: {
         title: 'ابدأ مع Workforce',
         subtitle: 'أضف ERP عندما تحتاج إليه.',
-        primary: { label: 'ابدأ مع Workforce', path: '/pricing#workforce-pricing' },
+        primary: { label: 'ابدأ مع Workforce', path: '/workforce/pricing' },
         secondary: { label: 'Workforce للمطاعم', path: '/workforce/restaurants' },
       },
     },
@@ -1319,11 +1375,8 @@ const siteContentAr = {
       heroTitle: 'مبني لواقع ورديات المطاعم.',
       heroSubtitle:
         'تسجيلات الدخول والجداول وسجلات الدوام والمهام اليومية دون جداول بيانات أو سجلات دوام ورقية أو أدوات منفصلة.',
-      heroPrimaryCta: { label: 'ابدأ مع Workforce', path: '/pricing#workforce-pricing' },
-      heroSecondaryCta: {
-        label: 'انضم إلى النسخة التجريبية لمطاعم أونتاريو',
-        path: '/workforce/beta',
-      },
+      heroPrimaryCta: { label: 'التقديم للنسخة التجريبية المجانية', path: '/workforce/beta' },
+      heroSecondaryCta: { label: 'عرض أسعار Workforce', path: '/workforce/pricing' },
       heroPreview: {
         title: 'لمحة عن الوردية',
         type: 'workforce',
@@ -1375,9 +1428,9 @@ const siteContentAr = {
       },
       cta: {
         title: 'أحضر Workforce إلى مطعمك',
-        subtitle: 'ابدأ مع Workforce، أو قدّم أولا للنسخة التجريبية لمطاعم أونتاريو.',
-        primary: { label: 'ابدأ مع Workforce', path: '/pricing#workforce-pricing' },
-        secondary: { label: 'انضم إلى النسخة التجريبية لمطاعم أونتاريو', path: '/workforce/beta' },
+        subtitle: 'قدّم للنسخة التجريبية المجانية لمطاعم أونتاريو، أو ابدأ مع Workforce اليوم.',
+        primary: { label: 'التقديم للنسخة التجريبية المجانية', path: '/workforce/beta' },
+        secondary: { label: 'عرض أسعار Workforce', path: '/workforce/pricing' },
       },
     },
     workforceBeta: {
@@ -1842,6 +1895,30 @@ const siteContentAr = {
       { label: 'الشروط', path: '/legal/terms' },
       { label: 'حذف الحساب', path: '/account-deletion' },
     ],
+    workforce: {
+      sections: [
+        {
+          title: 'Workforce',
+          links: [
+            { label: 'Workforce', path: '/workforce' },
+            { label: 'الأسعار', path: '/workforce/pricing' },
+            { label: 'المطاعم', path: '/workforce/restaurants' },
+            { label: 'تجريبي', path: '/workforce/beta' },
+            { label: 'الأمان', path: '/security' },
+          ],
+        },
+        {
+          title: 'الدعم',
+          links: [
+            { label: 'الدعم', path: '/contact' },
+            { label: 'الخصوصية', path: '/legal/privacy' },
+            { label: 'الشروط', path: '/legal/terms' },
+            { label: 'حذف الحساب', path: '/account-deletion' },
+          ],
+        },
+      ],
+      erpLink: { label: 'ZANVROX ERP', path: '/erp' },
+    },
   },
   seo: {
     home: {

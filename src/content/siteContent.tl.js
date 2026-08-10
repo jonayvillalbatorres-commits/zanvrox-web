@@ -15,6 +15,9 @@ const siteContentTl = {
     reviewResources: 'Tingnan ang mga sanggunian',
     language: 'Wika',
     requestQuote: 'Makipag-usap sa benta',
+    login: 'Mag-log in',
+    requestBeta: 'Humiling ng beta',
+    support: 'Suporta',
   },
   navItems: [
     { label: 'Simula', path: '/' },
@@ -26,6 +29,17 @@ const siteContentTl = {
     { label: 'Tungkol', path: '/about' },
     { label: 'Ugnayan', path: '/contact' },
   ],
+  workforceNav: {
+    items: [
+      { label: 'Workforce', path: '/workforce' },
+      { label: 'Mga Tampok', path: '/workforce#features' },
+      { label: 'Mga Restawran', path: '/workforce/restaurants' },
+      { label: 'Presyo', path: '/workforce/pricing' },
+      { label: 'Beta', path: '/workforce/beta' },
+      { label: 'Seguridad', path: '/security' },
+    ],
+    erpLink: { label: 'ZANVROX ERP', path: '/erp' },
+  },
   brand: {
     ...base.brand,
     tagline: 'Pinagsamang kontrol sa ERP para sa maliliit at katamtamang negosyo sa Canada',
@@ -844,6 +858,27 @@ const siteContentTl = {
       },
       note: 'Pang-alalay ang mga rekomendasyon ng AI. Ang huling aksyong pang-operasyon at pang-pagsunod ay nananatiling kinukumpirma ng gumagamit.',
     },
+    pricingHub: {
+      heroTitle: 'Dalawang produkto. Dalawang hiwalay na listahan ng presyo.',
+      heroSubtitle:
+        'Piliin ang ZANVROX Workforce para sa mga shift ng tauhan sa harapan, ang ZANVROX ERP para sa pananalapi at operasyon ng negosyo, o pareho. May sariling pahina ng presyo ang bawat isa.',
+      erpCard: {
+        eyebrow: 'ZANVROX ERP',
+        title: 'Pananalapi at operasyon ng negosyo',
+        body: 'Pagtutuos, pagsingil, pagbili, imbentaryo, at ulat para sa maliliit at katamtamang negosyo sa Canada.',
+        bullets: ['Pundasyong Pinansyal', 'Negosyo', 'Operasyon', 'Pasadya'],
+        cta: { label: 'Tingnan ang presyo ng ERP', path: '/erp/pricing' },
+      },
+      workforceCard: {
+        eyebrow: 'ZANVROX Workforce',
+        title: 'Pamamahala ng tauhan sa harapan',
+        body: 'Pagtala ng oras, iskedyul, gawain, at listahan ng oras, may presyo bawat lokasyon.',
+        bullets: ['Panimula', 'Pangkat', 'Negosyo', 'Maramihang Lokasyon'],
+        cta: { label: 'Tingnan ang presyo ng Workforce', path: '/workforce/pricing' },
+      },
+      differenceNote:
+        'Hiwalay na ibinebenta at pinepresyuhan ang ZANVROX ERP at ZANVROX Workforce. Ang mga karapat-dapat na plano ng ERP ay may diskuwento o kasamang Workforce — tingnan ang presyo ng ERP para sa detalye.',
+    },
     pricing: {
       ...base.pages.pricing,
       heroTitle: 'Presyo para sa ZANVROX ERP at ZANVROX Workforce.',
@@ -1032,6 +1067,27 @@ const siteContentTl = {
             'Kasama sa taunang pagsingil ang dalawang buwang libre (10 buwan ng buwanang halaga).',
           ],
           annualNote: 'Kasama sa taunang mga plano ng Workforce ang dalawang buwang libre.',
+        },
+        betaBanner: {
+          eyebrow: 'Mga restawran sa Ontario',
+          title: 'Subukan nang libre ang Workforce sa loob ng 14 na araw bago bumili',
+          body: 'Maaaring mag-apply ang mga restawran sa Ontario para sa pribadong beta: walang obligasyong bumili, at 6 na buwang libre pagkatapos ng pampublikong paglulunsad.',
+          cta: { label: 'Mag-apply para sa libreng beta', path: '/workforce/beta' },
+        },
+        faq: {
+          title: 'Mga tanong tungkol sa presyo ng Workforce',
+          items: [
+            {
+              question: 'Maaari ko bang bilhin ang Workforce nang wala ang ERP?',
+              answer:
+                'Oo. Available ang ZANVROX Workforce bilang hiwalay na plano, may presyo bawat lokasyon, nang hindi kinakailangang bumili o mag-upgrade sa anumang plano ng ERP.',
+            },
+            {
+              question: 'Gumagamit ka na ba ng ZANVROX ERP?',
+              answer:
+                'Kasama sa Operasyon ang ZANVROX Workforce para sa mga empleyado at lokasyong saklaw ng subscription na iyon sa ERP. Karapat-dapat ang Negosyo sa 50% diskuwento sa hiwalay na plano ng Workforce. Tingnan ang presyo ng ERP para sa detalye.',
+            },
+          ],
         },
       },
       erp: {
@@ -1347,7 +1403,7 @@ const siteContentTl = {
       heroTitle: 'Patakbuhin ang bawat shift nang mas kaunti ang gulo.',
       heroSubtitle:
         'Pagtala ng oras ng pagpasok at paglabas, iskedyul, mga gawain, at listahan ng oras para sa mga tauhan sa harapan — lahat konektado sa iisang simpleng app para sa lugar-trabaho.',
-      heroPrimaryCta: { label: 'Magsimula sa Workforce', path: '/pricing#workforce-pricing' },
+      heroPrimaryCta: { label: 'Magsimula sa Workforce', path: '/workforce/pricing' },
       heroSecondaryCta: {
         label: 'Sumali sa Beta ng Restawran sa Ontario',
         path: '/workforce/beta',
@@ -1366,7 +1422,7 @@ const siteContentTl = {
         body: 'Kasama ang Workforce sa mga karapat-dapat na plano ng ERP.',
         cta: {
           label: 'Tingnan ang mga plano ng ERP na may kasamang Workforce',
-          path: '/pricing#erp-pricing',
+          path: '/erp/pricing',
         },
       },
       sections: {
@@ -1465,7 +1521,7 @@ const siteContentTl = {
       cta: {
         title: 'Magsimula sa Workforce',
         subtitle: 'Idagdag ang ERP kapag kailangan mo na.',
-        primary: { label: 'Magsimula sa Workforce', path: '/pricing#workforce-pricing' },
+        primary: { label: 'Magsimula sa Workforce', path: '/workforce/pricing' },
         secondary: { label: 'Workforce para sa mga Restawran', path: '/workforce/restaurants' },
       },
     },
@@ -1474,11 +1530,8 @@ const siteContentTl = {
       heroTitle: 'Ginawa para sa katotohanan ng mga shift sa restawran.',
       heroSubtitle:
         'Pagtala ng oras ng pagpasok, iskedyul, listahan ng oras, at araw-araw na gawain nang walang spreadsheet, papel na listahan ng oras, o magkakahiwalay na kasangkapan.',
-      heroPrimaryCta: { label: 'Magsimula sa Workforce', path: '/pricing#workforce-pricing' },
-      heroSecondaryCta: {
-        label: 'Sumali sa Beta ng Restawran sa Ontario',
-        path: '/workforce/beta',
-      },
+      heroPrimaryCta: { label: 'Mag-apply para sa libreng beta', path: '/workforce/beta' },
+      heroSecondaryCta: { label: 'Tingnan ang presyo ng Workforce', path: '/workforce/pricing' },
       heroPreview: {
         title: 'Paunang tanaw ng shift',
         type: 'workforce',
@@ -1536,9 +1589,10 @@ const siteContentTl = {
       },
       cta: {
         title: 'Dalhin ang Workforce sa iyong restawran',
-        subtitle: 'Magsimula sa Workforce, o mag-apply muna sa Beta ng Restawran sa Ontario.',
-        primary: { label: 'Magsimula sa Workforce', path: '/pricing#workforce-pricing' },
-        secondary: { label: 'Sumali sa Beta ng Restawran sa Ontario', path: '/workforce/beta' },
+        subtitle:
+          'Mag-apply para sa libreng Beta ng Restawran sa Ontario, o magsimula sa Workforce ngayon.',
+        primary: { label: 'Mag-apply para sa libreng beta', path: '/workforce/beta' },
+        secondary: { label: 'Tingnan ang presyo ng Workforce', path: '/workforce/pricing' },
       },
     },
     workforceBeta: {
@@ -2035,6 +2089,30 @@ const siteContentTl = {
       { label: 'Mga Tuntunin', path: '/legal/terms' },
       { label: 'Pagbura ng account', path: '/account-deletion' },
     ],
+    workforce: {
+      sections: [
+        {
+          title: 'Workforce',
+          links: [
+            { label: 'Workforce', path: '/workforce' },
+            { label: 'Presyo', path: '/workforce/pricing' },
+            { label: 'Mga Restawran', path: '/workforce/restaurants' },
+            { label: 'Beta', path: '/workforce/beta' },
+            { label: 'Seguridad', path: '/security' },
+          ],
+        },
+        {
+          title: 'Suporta',
+          links: [
+            { label: 'Suporta', path: '/contact' },
+            { label: 'Pagkapribado', path: '/legal/privacy' },
+            { label: 'Mga Tuntunin', path: '/legal/terms' },
+            { label: 'Pagbura ng account', path: '/account-deletion' },
+          ],
+        },
+      ],
+      erpLink: { label: 'ZANVROX ERP', path: '/erp' },
+    },
   },
   seo: {
     home: {

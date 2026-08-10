@@ -40,12 +40,18 @@ describe('PricingCard annual display', () => {
     expect(screen.getByText(/billed annually at cad 1,969/i)).toBeInTheDocument();
   });
 
-  test('routes self-serve Workforce to billing and keeps ERP promotion context', () => {
+  test('routes self-serve Workforce to login with Workforce purchase intent (not straight to billing) and keeps ERP promotion context', () => {
     const workforce = renderCard(pricing.workforce, 'workforce-starter', BILLING_PERIODS.annual);
     const workforceHref = workforce.container.querySelector('a').getAttribute('href');
-    expect(workforceHref).toBe(
-      'https://app.zanvrox.com/settings/billing?plan=starter&period=annual'
-    );
+    const url = new URL(workforceHref);
+    // Anonymous visitors must never link straight to /settings/billing (it
+    // requires an authenticated org admin/accounting member and would just
+    // dead-end on the ERP login with no context). They go to /login with the
+    // plan intent attached instead -- see createWorkforceCheckoutUrl.
+    expect(url.pathname).toBe('/login');
+    expect(url.searchParams.get('product')).toBe('workforce');
+    expect(url.searchParams.get('plan')).toBe('starter');
+    expect(url.searchParams.get('period')).toBe('annual');
     workforce.unmount();
 
     const erp = renderCard(pricing.erp, 'finance', BILLING_PERIODS.annual);

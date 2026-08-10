@@ -9,6 +9,9 @@ const siteContentFr = {
     reviewResources: 'Voir les ressources',
     language: 'Langue',
     requestQuote: 'Parler aux ventes',
+    login: 'Se connecter',
+    requestBeta: 'Demander la beta',
+    support: 'Assistance',
   },
   navItems: [
     { label: 'Accueil', path: '/' },
@@ -20,6 +23,17 @@ const siteContentFr = {
     { label: 'A propos', path: '/about' },
     { label: 'Contact', path: '/contact' },
   ],
+  workforceNav: {
+    items: [
+      { label: 'Workforce', path: '/workforce' },
+      { label: 'Fonctionnalites', path: '/workforce#features' },
+      { label: 'Restaurants', path: '/workforce/restaurants' },
+      { label: 'Tarifs', path: '/workforce/pricing' },
+      { label: 'Beta', path: '/workforce/beta' },
+      { label: 'Securite', path: '/security' },
+    ],
+    erpLink: { label: 'ZANVROX ERP', path: '/erp' },
+  },
   brand: {
     name: 'ZANVROX',
     tagline: 'Controle ERP integre pour les PME canadiennes',
@@ -515,6 +529,27 @@ const siteContentFr = {
         secondary: { label: 'Contacter l equipe', path: '/contact' },
       },
     },
+    pricingHub: {
+      heroTitle: 'Deux produits. Deux grilles tarifaires independantes.',
+      heroSubtitle:
+        'Choisissez ZANVROX Workforce pour les operations de terrain par quart, ZANVROX ERP pour la finance et les operations d entreprise, ou les deux. Chacun a sa propre page de tarifs.',
+      erpCard: {
+        eyebrow: 'ZANVROX ERP',
+        title: 'Finance et operations d entreprise',
+        body: 'Comptabilite, facturation, achats, inventaire et reporting pour les equipes PME canadiennes.',
+        bullets: ['Finance', 'Business', 'Operations', 'Enterprise'],
+        cta: { label: 'Voir les tarifs ERP', path: '/erp/pricing' },
+      },
+      workforceCard: {
+        eyebrow: 'ZANVROX Workforce',
+        title: 'Gestion des equipes de terrain',
+        body: 'Pointage, plannings, taches et feuilles de temps, tarifie par etablissement.',
+        bullets: ['Starter', 'Team', 'Business', 'Multi-location'],
+        cta: { label: 'Voir les tarifs Workforce', path: '/workforce/pricing' },
+      },
+      differenceNote:
+        'ZANVROX ERP et ZANVROX Workforce sont vendus et tarifes independamment. Les plans ERP eligibles incluent une remise ou une inclusion Workforce — voir les tarifs ERP pour le detail des offres groupees.',
+    },
     pricing: {
       heroTitle: 'Tarifs pour ZANVROX ERP et ZANVROX Workforce.',
       heroSubtitle:
@@ -702,6 +737,27 @@ const siteContentFr = {
             'La facturation annuelle inclut deux mois offerts (10 mois du tarif mensuel).',
           ],
           annualNote: 'Les plans Workforce annuels incluent deux mois offerts.',
+        },
+        betaBanner: {
+          eyebrow: 'Restaurants de l Ontario',
+          title: 'Essayez Workforce gratuitement pendant 14 jours avant d acheter',
+          body: 'Les restaurants de l Ontario peuvent postuler a la beta privee : aucun engagement d achat, et 6 mois gratuits apres le lancement public.',
+          cta: { label: 'Postuler a la beta gratuite', path: '/workforce/beta' },
+        },
+        faq: {
+          title: 'Questions sur les tarifs Workforce',
+          items: [
+            {
+              question: 'Puis-je acheter Workforce sans l ERP ?',
+              answer:
+                'Oui. ZANVROX Workforce est disponible en plan autonome, tarife par etablissement, sans obligation d acheter ou de passer a un plan ERP.',
+            },
+            {
+              question: 'Vous utilisez deja ZANVROX ERP ?',
+              answer:
+                'Operations inclut ZANVROX Workforce pour les employes et etablissements couverts par cet abonnement ERP. Business donne droit a 50% de remise sur un plan Workforce autonome eligible. Voir les tarifs ERP pour le detail.',
+            },
+          ],
         },
       },
       erp: {
@@ -1003,7 +1059,7 @@ const siteContentFr = {
       heroTitle: 'Gerez chaque quart avec moins de chaos.',
       heroSubtitle:
         'Pointage, plannings, taches et feuilles de temps pour les equipes de terrain — tout connecte dans une seule application simple.',
-      heroPrimaryCta: { label: 'Commencer avec Workforce', path: '/pricing#workforce-pricing' },
+      heroPrimaryCta: { label: 'Commencer avec Workforce', path: '/workforce/pricing' },
       heroSecondaryCta: {
         label: 'Rejoindre la beta restaurants de l Ontario',
         path: '/workforce/beta',
@@ -1020,7 +1076,7 @@ const siteContentFr = {
       existingCustomer: {
         title: 'Vous utilisez deja ZANVROX ERP ?',
         body: 'Workforce est inclus avec les plans ERP eligibles.',
-        cta: { label: 'Voir les plans ERP incluant Workforce', path: '/pricing#erp-pricing' },
+        cta: { label: 'Voir les plans ERP incluant Workforce', path: '/erp/pricing' },
       },
       sections: {
         eyebrow: 'Ce que couvre Workforce',
@@ -1118,7 +1174,7 @@ const siteContentFr = {
       cta: {
         title: 'Commencer avec Workforce',
         subtitle: 'Ajoutez l ERP lorsque vous en avez besoin.',
-        primary: { label: 'Commencer avec Workforce', path: '/pricing#workforce-pricing' },
+        primary: { label: 'Commencer avec Workforce', path: '/workforce/pricing' },
         secondary: { label: 'Workforce pour restaurants', path: '/workforce/restaurants' },
       },
     },
@@ -1127,11 +1183,8 @@ const siteContentFr = {
       heroTitle: 'Concu pour la realite des quarts en restaurant.',
       heroSubtitle:
         'Pointages, plannings, feuilles de temps et taches quotidiennes sans feuilles de calcul, feuilles de temps papier ni outils deconnectes.',
-      heroPrimaryCta: { label: 'Commencer avec Workforce', path: '/pricing#workforce-pricing' },
-      heroSecondaryCta: {
-        label: 'Rejoindre la beta restaurants de l Ontario',
-        path: '/workforce/beta',
-      },
+      heroPrimaryCta: { label: 'Postuler a la beta gratuite', path: '/workforce/beta' },
+      heroSecondaryCta: { label: 'Voir les tarifs Workforce', path: '/workforce/pricing' },
       heroPreview: {
         title: 'Apercu du quart',
         type: 'workforce',
@@ -1190,9 +1243,9 @@ const siteContentFr = {
       cta: {
         title: 'Apportez Workforce a votre restaurant',
         subtitle:
-          'Commencez avec Workforce, ou postulez d abord a la beta restaurants de l Ontario.',
-        primary: { label: 'Commencer avec Workforce', path: '/pricing#workforce-pricing' },
-        secondary: { label: 'Rejoindre la beta restaurants de l Ontario', path: '/workforce/beta' },
+          'Postulez a la beta gratuite des restaurants de l Ontario, ou commencez avec Workforce des aujourd hui.',
+        primary: { label: 'Postuler a la beta gratuite', path: '/workforce/beta' },
+        secondary: { label: 'Voir les tarifs Workforce', path: '/workforce/pricing' },
       },
     },
     workforceBeta: {
@@ -1796,6 +1849,30 @@ const siteContentFr = {
       { label: 'Conditions', path: '/legal/terms' },
       { label: 'Suppression de compte', path: '/account-deletion' },
     ],
+    workforce: {
+      sections: [
+        {
+          title: 'Workforce',
+          links: [
+            { label: 'Workforce', path: '/workforce' },
+            { label: 'Tarifs', path: '/workforce/pricing' },
+            { label: 'Restaurants', path: '/workforce/restaurants' },
+            { label: 'Beta', path: '/workforce/beta' },
+            { label: 'Securite', path: '/security' },
+          ],
+        },
+        {
+          title: 'Assistance',
+          links: [
+            { label: 'Assistance', path: '/contact' },
+            { label: 'Confidentialite', path: '/legal/privacy' },
+            { label: 'Conditions', path: '/legal/terms' },
+            { label: 'Suppression de compte', path: '/account-deletion' },
+          ],
+        },
+      ],
+      erpLink: { label: 'ZANVROX ERP', path: '/erp' },
+    },
   },
   seo: {
     home: {
@@ -1835,10 +1912,22 @@ const siteContentFr = {
       path: '/security',
     },
     pricing: {
-      title: 'Tarifs | ZANVROX',
+      title: 'Tarifs | ZANVROX ERP et ZANVROX Workforce',
       description:
-        'Consultez les tarifs publics en CAD pour ZANVROX Workforce (Starter, Team, Business) et ZANVROX ERP (Finance, Business, Operations, Enterprise), l add-on paie et Guided Implementation en option.',
+        'ZANVROX ERP et ZANVROX Workforce sont tarifes independamment. Consultez les tarifs ERP (Finance, Business, Operations, Enterprise) ou Workforce (Starter, Team, Business, Multi-location) en CAD.',
       path: '/pricing',
+    },
+    workforcePricing: {
+      title: 'Tarifs ZANVROX Workforce | Starter, Team, Business',
+      description:
+        'Tarifs CAD par etablissement pour ZANVROX Workforce : Starter, Team, Business, et plans Multi-location sur devis. Aucun achat ERP requis.',
+      path: '/workforce/pricing',
+    },
+    erpPricing: {
+      title: 'Tarifs ZANVROX ERP | Finance, Business, Operations, Enterprise',
+      description:
+        'Tarifs CAD pour ZANVROX ERP : Finance, Business, Operations et Enterprise, plus l add-on paie et Guided Implementation en option.',
+      path: '/erp/pricing',
     },
     resources: {
       title: 'Ressources | ZANVROX',

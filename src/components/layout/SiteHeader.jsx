@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { createDemoWorkspaceUrl } from '../../utils/publicApp';
+import { createDemoWorkspaceUrl, createWorkforceCheckoutUrl } from '../../utils/publicApp';
+import { isWorkforceHost } from '../../utils/workforceHost';
 
 const PRIMARY_LANGUAGE_CODES = ['en', 'fr'];
 const FLAG_COUNTRY_BY_LANGUAGE = {
@@ -20,8 +21,13 @@ export default function SiteHeader() {
   const languageMenuRef = useRef(null);
 
   const { language, setLanguage, content, languages } = useLanguage();
-  const navItems = content?.navItems || [];
+  const isWorkforce = isWorkforceHost(
+    typeof window !== 'undefined' ? window.location.hostname : ''
+  );
+  const navItems = (isWorkforce ? content?.workforceNav?.items : content?.navItems) || [];
+  const erpLink = isWorkforce ? content?.workforceNav?.erpLink : null;
   const labels = content?.labels || {};
+  const workforceLoginUrl = createWorkforceCheckoutUrl({ language, source: 'site-header' });
 
   const primaryLanguages = PRIMARY_LANGUAGE_CODES.map((code) =>
     languages.find((option) => option.code === code)
@@ -173,12 +179,37 @@ export default function SiteHeader() {
               </div>
             ) : null}
           </div>
-          <a
-            href={createDemoWorkspaceUrl({ source: 'site-header' })}
-            className="zx-button zx-button-primary h-9 px-3 py-2 text-xs"
-          >
-            {labels.tryDemo || labels.reviewResources || 'Try demo'}
-          </a>
+          {isWorkforce ? (
+            <>
+              {erpLink ? (
+                <Link
+                  to={erpLink.path}
+                  className="px-2 text-xs font-medium text-zx-text-muted transition hover:text-zx-text"
+                >
+                  {erpLink.label}
+                </Link>
+              ) : null}
+              <a
+                href={workforceLoginUrl}
+                className="zx-button zx-button-secondary h-9 px-3 py-2 text-xs"
+              >
+                {labels.login || 'Log in'}
+              </a>
+              <Link
+                to="/workforce/beta"
+                className="zx-button zx-button-primary h-9 px-3 py-2 text-xs"
+              >
+                {labels.requestBeta || 'Request beta'}
+              </Link>
+            </>
+          ) : (
+            <a
+              href={createDemoWorkspaceUrl({ source: 'site-header' })}
+              className="zx-button zx-button-primary h-9 px-3 py-2 text-xs"
+            >
+              {labels.tryDemo || labels.reviewResources || 'Try demo'}
+            </a>
+          )}
         </div>
       </div>
 
@@ -227,13 +258,41 @@ export default function SiteHeader() {
                 ))}
               </div>
             </div>
-            <a
-              href={createDemoWorkspaceUrl({ source: 'site-header-mobile' })}
-              onClick={() => setOpen(false)}
-              className="zx-button zx-button-primary mt-2 w-full justify-center"
-            >
-              {labels.tryDemo || labels.reviewResources || 'Try demo'}
-            </a>
+            {isWorkforce ? (
+              <div className="mt-2 grid gap-2">
+                <a
+                  href={createWorkforceCheckoutUrl({ language, source: 'site-header-mobile' })}
+                  onClick={() => setOpen(false)}
+                  className="zx-button zx-button-secondary w-full justify-center"
+                >
+                  {labels.login || 'Log in'}
+                </a>
+                <Link
+                  to="/workforce/beta"
+                  onClick={() => setOpen(false)}
+                  className="zx-button zx-button-primary w-full justify-center"
+                >
+                  {labels.requestBeta || 'Request beta'}
+                </Link>
+                {erpLink ? (
+                  <Link
+                    to={erpLink.path}
+                    onClick={() => setOpen(false)}
+                    className="px-2 py-1 text-center text-xs font-medium text-zx-text-muted"
+                  >
+                    {erpLink.label}
+                  </Link>
+                ) : null}
+              </div>
+            ) : (
+              <a
+                href={createDemoWorkspaceUrl({ source: 'site-header-mobile' })}
+                onClick={() => setOpen(false)}
+                className="zx-button zx-button-primary mt-2 w-full justify-center"
+              >
+                {labels.tryDemo || labels.reviewResources || 'Try demo'}
+              </a>
+            )}
           </div>
         </nav>
       ) : null}

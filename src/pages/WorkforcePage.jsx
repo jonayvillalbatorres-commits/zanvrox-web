@@ -48,7 +48,7 @@ export default function WorkforcePage() {
         </section>
       ) : null}
 
-      <section className="section-shell">
+      <section id="features" className="section-shell">
         <SectionHeading
           eyebrow={page.sections?.eyebrow}
           title={page.sections?.title}

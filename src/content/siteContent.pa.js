@@ -15,6 +15,9 @@ const siteContentPa = {
     reviewResources: 'ਸਾਧਨ ਵੇਖੋ',
     language: 'ਭਾਸ਼ਾ',
     requestQuote: 'ਵਿਕਰੀ ਟੀਮ ਨਾਲ ਗੱਲ ਕਰੋ',
+    login: 'ਲੌਗ ਇਨ ਕਰੋ',
+    requestBeta: 'ਬੀਟਾ ਲਈ ਬੇਨਤੀ ਕਰੋ',
+    support: 'ਸਹਾਇਤਾ',
   },
   navItems: [
     { label: 'ਮੁੱਖ ਪੰਨਾ', path: '/' },
@@ -26,6 +29,17 @@ const siteContentPa = {
     { label: 'ਸਾਡੇ ਬਾਰੇ', path: '/about' },
     { label: 'ਸੰਪਰਕ', path: '/contact' },
   ],
+  workforceNav: {
+    items: [
+      { label: 'Workforce', path: '/workforce' },
+      { label: 'ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ', path: '/workforce#features' },
+      { label: 'ਰੈਸਟੋਰੈਂਟ', path: '/workforce/restaurants' },
+      { label: 'ਕੀਮਤਾਂ', path: '/workforce/pricing' },
+      { label: 'ਬੀਟਾ', path: '/workforce/beta' },
+      { label: 'ਸੁਰੱਖਿਆ', path: '/security' },
+    ],
+    erpLink: { label: 'ZANVROX ERP', path: '/erp' },
+  },
   brand: {
     ...base.brand,
     tagline: 'ਕੈਨੇਡਾ ਦੇ ਛੋਟੇ ਅਤੇ ਦਰਮਿਆਨੇ ਕਾਰੋਬਾਰਾਂ ਲਈ ਇਕੱਠਾ ERP ਨਿਯੰਤਰਣ',
@@ -763,6 +777,27 @@ const siteContentPa = {
       },
       note: 'AI ਸਿਫਾਰਸ਼ਾਂ ਸਹਾਇਕ ਹਨ। ਆਖ਼ਰੀ ਕਾਰਜਕਾਰੀ ਅਤੇ ਨਿਯਮ-ਪਾਲਣਾ ਕਾਰਵਾਈਆਂ ਹਾਲੇ ਵੀ ਵਰਤੋਂਕਾਰ-ਪੁਸ਼ਟੀਤ ਰਹਿੰਦੀਆਂ ਹਨ।',
     },
+    pricingHub: {
+      heroTitle: 'ਦੋ ਉਤਪਾਦ। ਦੋ ਵੱਖਰੀਆਂ ਕੀਮਤ ਸੂਚੀਆਂ।',
+      heroSubtitle:
+        'ਸਾਹਮਣੇ ਦੀ ਲਾਈਨ ਦੇ ਸ਼ਿਫਟ ਕਾਰਜਾਂ ਲਈ ZANVROX Workforce ਚੁਣੋ, ਵਿੱਤ ਅਤੇ ਕਾਰੋਬਾਰੀ ਕਾਰਜ-ਚਲਾਣ ਲਈ ZANVROX ERP, ਜਾਂ ਦੋਵੇਂ। ਹਰੇਕ ਦਾ ਆਪਣਾ ਕੀਮਤ ਪੰਨਾ ਹੈ।',
+      erpCard: {
+        eyebrow: 'ZANVROX ERP',
+        title: 'ਵਿੱਤ ਅਤੇ ਕਾਰੋਬਾਰੀ ਕਾਰਜ-ਚਲਾਣ',
+        body: 'ਕੈਨੇਡੀਅਨ SMB ਟੀਮਾਂ ਲਈ ਲੇਖਾ, ਬਿਲਿੰਗ, ਖਰੀਦ, ਭੰਡਾਰ ਅਤੇ ਰਿਪੋਰਟਿੰਗ।',
+        bullets: ['ਵਿੱਤ', 'ਕਾਰੋਬਾਰ', 'ਕਾਰਜ-ਚਲਾਣ', 'ਵੱਡੀ ਸੰਸਥਾ'],
+        cta: { label: 'ERP ਕੀਮਤਾਂ ਵੇਖੋ', path: '/erp/pricing' },
+      },
+      workforceCard: {
+        eyebrow: 'ZANVROX Workforce',
+        title: 'ਸਾਹਮਣੇ ਦੀ ਲਾਈਨ ਟੀਮ ਪ੍ਰਬੰਧਨ',
+        body: 'ਕਲਾਕ-ਇਨ/ਆਊਟ, ਸਮਾਂ-ਸੂਚੀਆਂ, ਕੰਮ ਅਤੇ ਸਮਾਂ-ਸ਼ੀਟਾਂ, ਹਰੇਕ ਟਿਕਾਣੇ ਮੁਤਾਬਕ ਕੀਮਤ।',
+        bullets: ['ਸਟਾਰਟਰ', 'ਟੀਮ', 'ਕਾਰੋਬਾਰ', 'ਕਈ-ਸਥਾਨ'],
+        cta: { label: 'Workforce ਕੀਮਤਾਂ ਵੇਖੋ', path: '/workforce/pricing' },
+      },
+      differenceNote:
+        'ZANVROX ERP ਅਤੇ ZANVROX Workforce ਵੱਖਰੇ ਤੌਰ ਤੇ ਵੇਚੇ ਅਤੇ ਕੀਮਤ ਕੀਤੇ ਜਾਂਦੇ ਹਨ। ਯੋਗ ERP ਯੋਜਨਾਵਾਂ ਵਿੱਚ Workforce ਛੋਟ ਜਾਂ ਸ਼ਮੂਲੀਅਤ ਸ਼ਾਮਲ ਹੈ — ਵੇਰਵਿਆਂ ਲਈ ERP ਕੀਮਤਾਂ ਵੇਖੋ।',
+    },
     pricing: {
       heroTitle: 'ZANVROX ERP ਅਤੇ ZANVROX Workforce ਲਈ ਕੀਮਤਾਂ।',
       heroSubtitle:
@@ -942,6 +977,27 @@ const siteContentPa = {
             'ਸਾਲਾਨਾ ਬਿਲਿੰਗ ਵਿੱਚ ਦੋ ਮਹੀਨੇ ਮੁਫ਼ਤ ਸ਼ਾਮਲ ਹਨ (ਮਹੀਨਾਵਾਰ ਦਰ ਦੇ 10 ਮਹੀਨੇ)।',
           ],
           annualNote: 'ਸਾਲਾਨਾ Workforce ਯੋਜਨਾਵਾਂ ਵਿੱਚ ਦੋ ਮਹੀਨੇ ਮੁਫ਼ਤ ਸ਼ਾਮਲ ਹਨ।',
+        },
+        betaBanner: {
+          eyebrow: 'ਓਨਟਾਰੀਓ ਰੈਸਟੋਰੈਂਟ',
+          title: 'ਖਰੀਦਣ ਤੋਂ ਪਹਿਲਾਂ 14 ਦਿਨਾਂ ਲਈ Workforce ਮੁਫ਼ਤ ਅਜ਼ਮਾਓ',
+          body: 'ਓਨਟਾਰੀਓ ਦੇ ਰੈਸਟੋਰੈਂਟ ਨਿੱਜੀ ਬੀਟਾ ਲਈ ਅਰਜ਼ੀ ਦੇ ਸਕਦੇ ਹਨ: ਕੋਈ ਖਰੀਦ ਵਚਨਬੱਧਤਾ ਨਹੀਂ, ਅਤੇ ਜਨਤਕ ਸ਼ੁਰੂਆਤ ਤੋਂ ਬਾਅਦ 6 ਮਹੀਨੇ ਮੁਫ਼ਤ।',
+          cta: { label: 'ਮੁਫ਼ਤ ਬੀਟਾ ਲਈ ਅਰਜ਼ੀ ਦਿਓ', path: '/workforce/beta' },
+        },
+        faq: {
+          title: 'Workforce ਕੀਮਤਾਂ ਬਾਰੇ ਸਵਾਲ',
+          items: [
+            {
+              question: 'ਕੀ ਮੈਂ ERP ਬਿਨਾਂ Workforce ਖਰੀਦ ਸਕਦਾ ਹਾਂ?',
+              answer:
+                'ਹਾਂ। ZANVROX Workforce ਇੱਕ ਸੁਤੰਤਰ ਯੋਜਨਾ ਵਜੋਂ ਉਪਲਬਧ ਹੈ, ਹਰੇਕ ਟਿਕਾਣੇ ਮੁਤਾਬਕ ਕੀਮਤ, ਕਿਸੇ ਵੀ ERP ਯੋਜਨਾ ਖਰੀਦਣ ਜਾਂ ਅਪਗ੍ਰੇਡ ਕਰਨ ਦੀ ਲੋੜ ਤੋਂ ਬਿਨਾਂ।',
+            },
+            {
+              question: 'ਕੀ ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ ZANVROX ERP ਵਰਤ ਰਹੇ ਹੋ?',
+              answer:
+                'ਕਾਰਜ-ਚਲਾਣ ਯੋਜਨਾ ਵਿੱਚ ਉਸ ERP ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਦੁਆਰਾ ਕਵਰ ਕੀਤੇ ਕਰਮਚਾਰੀਆਂ ਅਤੇ ਟਿਕਾਣਿਆਂ ਲਈ ZANVROX Workforce ਸ਼ਾਮਲ ਹੈ। ਕਾਰੋਬਾਰ ਯੋਗ ਸੁਤੰਤਰ Workforce ਯੋਜਨਾ ਤੇ 50% ਛੋਟ ਦਾ ਹੱਕਦਾਰ ਹੈ। ਵੇਰਵਿਆਂ ਲਈ ERP ਕੀਮਤਾਂ ਵੇਖੋ।',
+            },
+          ],
         },
       },
       erp: {
@@ -1234,7 +1290,7 @@ const siteContentPa = {
       heroTitle: 'ਹਰ ਸ਼ਿਫਟ ਘੱਟ ਗੜਬੜ ਨਾਲ ਚਲਾਓ।',
       heroSubtitle:
         'ਸਾਹਮਣੇ ਦੀ ਲਾਈਨ ਦੀਆਂ ਟੀਮਾਂ ਲਈ ਕਲਾਕ-ਇਨ ਅਤੇ ਆਊਟ, ਸਮਾਂ-ਸੂਚੀਆਂ, ਕੰਮ ਅਤੇ ਸਮਾਂ-ਸ਼ੀਟਾਂ — ਸਭ ਇਕੋ ਸਾਦੇ ਕੰਮ-ਥਾਂ ਐਪ ਵਿੱਚ ਜੁੜੇ।',
-      heroPrimaryCta: { label: 'Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ', path: '/pricing#workforce-pricing' },
+      heroPrimaryCta: { label: 'Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ', path: '/workforce/pricing' },
       heroSecondaryCta: {
         label: 'ਓਨਟਾਰੀਓ ਰੈਸਟੋਰੈਂਟ ਬੀਟਾ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ',
         path: '/workforce/beta',
@@ -1251,7 +1307,7 @@ const siteContentPa = {
       existingCustomer: {
         title: 'ਕੀ ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ ZANVROX ERP ਵਰਤ ਰਹੇ ਹੋ?',
         body: 'ਯੋਗ ERP ਯੋਜਨਾਵਾਂ ਨਾਲ Workforce ਸ਼ਾਮਲ ਹੈ।',
-        cta: { label: 'Workforce ਸ਼ਾਮਲ ਵਾਲੀਆਂ ERP ਯੋਜਨਾਵਾਂ ਵੇਖੋ', path: '/pricing#erp-pricing' },
+        cta: { label: 'Workforce ਸ਼ਾਮਲ ਵਾਲੀਆਂ ERP ਯੋਜਨਾਵਾਂ ਵੇਖੋ', path: '/erp/pricing' },
       },
       sections: {
         eyebrow: 'Workforce ਕੀ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ',
@@ -1341,7 +1397,7 @@ const siteContentPa = {
       cta: {
         title: 'Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ',
         subtitle: "ਲੋੜ ਪੈਣ 'ਤੇ ERP ਸ਼ਾਮਲ ਕਰੋ।",
-        primary: { label: 'Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ', path: '/pricing#workforce-pricing' },
+        primary: { label: 'Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ', path: '/workforce/pricing' },
         secondary: { label: 'ਰੈਸਟੋਰੈਂਟਾਂ ਲਈ Workforce', path: '/workforce/restaurants' },
       },
     },
@@ -1350,11 +1406,8 @@ const siteContentPa = {
       heroTitle: 'ਰੈਸਟੋਰੈਂਟ ਸ਼ਿਫਟਾਂ ਦੀ ਅਸਲੀਅਤ ਲਈ ਬਣਾਇਆ।',
       heroSubtitle:
         'ਸਪ੍ਰੈਡਸ਼ੀਟਾਂ, ਕਾਗਜ਼ੀ ਸਮਾਂ-ਸ਼ੀਟਾਂ ਜਾਂ ਵੱਖ-ਵੱਖ ਸਾਧਨਾਂ ਤੋਂ ਬਿਨਾਂ ਕਲਾਕ-ਇਨ, ਸਮਾਂ-ਸੂਚੀਆਂ, ਸਮਾਂ-ਸ਼ੀਟਾਂ ਅਤੇ ਰੋਜ਼ਾਨਾ ਕੰਮ।',
-      heroPrimaryCta: { label: 'Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ', path: '/pricing#workforce-pricing' },
-      heroSecondaryCta: {
-        label: 'ਓਨਟਾਰੀਓ ਰੈਸਟੋਰੈਂਟ ਬੀਟਾ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ',
-        path: '/workforce/beta',
-      },
+      heroPrimaryCta: { label: 'ਮੁਫ਼ਤ ਬੀਟਾ ਲਈ ਅਰਜ਼ੀ ਦਿਓ', path: '/workforce/beta' },
+      heroSecondaryCta: { label: 'Workforce ਕੀਮਤਾਂ ਵੇਖੋ', path: '/workforce/pricing' },
       heroPreview: {
         title: 'ਸ਼ਿਫਟ ਝਲਕ',
         type: 'workforce',
@@ -1400,9 +1453,9 @@ const siteContentPa = {
       },
       cta: {
         title: 'ਆਪਣੇ ਰੈਸਟੋਰੈਂਟ ਵਿੱਚ Workforce ਲਿਆਓ',
-        subtitle: 'Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ, ਜਾਂ ਪਹਿਲਾਂ ਓਨਟਾਰੀਓ ਰੈਸਟੋਰੈਂਟ ਬੀਟਾ ਲਈ ਅਰਜ਼ੀ ਦਿਓ।',
-        primary: { label: 'Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ', path: '/pricing#workforce-pricing' },
-        secondary: { label: 'ਓਨਟਾਰੀਓ ਰੈਸਟੋਰੈਂਟ ਬੀਟਾ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ', path: '/workforce/beta' },
+        subtitle: 'ਮੁਫ਼ਤ ਓਨਟਾਰੀਓ ਰੈਸਟੋਰੈਂਟ ਬੀਟਾ ਲਈ ਅਰਜ਼ੀ ਦਿਓ, ਜਾਂ ਅੱਜ ਹੀ Workforce ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ।',
+        primary: { label: 'ਮੁਫ਼ਤ ਬੀਟਾ ਲਈ ਅਰਜ਼ੀ ਦਿਓ', path: '/workforce/beta' },
+        secondary: { label: 'Workforce ਕੀਮਤਾਂ ਵੇਖੋ', path: '/workforce/pricing' },
       },
     },
     workforceBeta: {
@@ -1890,6 +1943,30 @@ const siteContentPa = {
       { label: 'ਸ਼ਰਤਾਂ', path: '/legal/terms' },
       { label: 'ਖਾਤਾ ਮਿਟਾਉਣਾ', path: '/account-deletion' },
     ],
+    workforce: {
+      sections: [
+        {
+          title: 'Workforce',
+          links: [
+            { label: 'Workforce', path: '/workforce' },
+            { label: 'ਕੀਮਤਾਂ', path: '/workforce/pricing' },
+            { label: 'ਰੈਸਟੋਰੈਂਟ', path: '/workforce/restaurants' },
+            { label: 'ਬੀਟਾ', path: '/workforce/beta' },
+            { label: 'ਸੁਰੱਖਿਆ', path: '/security' },
+          ],
+        },
+        {
+          title: 'ਸਹਾਇਤਾ',
+          links: [
+            { label: 'ਸਹਾਇਤਾ', path: '/contact' },
+            { label: 'ਗੋਪਨੀਯਤਾ', path: '/legal/privacy' },
+            { label: 'ਸ਼ਰਤਾਂ', path: '/legal/terms' },
+            { label: 'ਖਾਤਾ ਮਿਟਾਉਣਾ', path: '/account-deletion' },
+          ],
+        },
+      ],
+      erpLink: { label: 'ZANVROX ERP', path: '/erp' },
+    },
   },
   seo: {
     home: {

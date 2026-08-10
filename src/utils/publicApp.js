@@ -47,3 +47,25 @@ export const resolvePublicAppLink = (path, params = {}) => {
 };
 
 export const createDemoWorkspaceUrl = (params = {}) => buildDemoUrl('/login', params);
+
+// Sends a visitor who picked a Workforce plan on the public site to the ERP's
+// login/signup screen with the plan intent attached as context (product,
+// plan slug, billing period). This intentionally never links straight to
+// /settings/billing: that page requires an authenticated org member, so an
+// anonymous visitor would otherwise land on a bare login screen with no idea
+// why. The login page reads these params to show Workforce-specific context
+// and carries the intent through signup/org-creation back to billing, where
+// the user still has to click to start checkout -- Stripe price, quantity,
+// and customer resolution stay fully server-side either way.
+export const createWorkforceCheckoutUrl = ({ plan, period, language, source } = {}) => {
+  const url = new URL(
+    '/login',
+    PUBLIC_APP_URL.endsWith('/') ? PUBLIC_APP_URL : `${PUBLIC_APP_URL}/`
+  );
+  url.searchParams.set('product', 'workforce');
+  if (plan) url.searchParams.set('plan', String(plan).trim().toLowerCase());
+  if (period) url.searchParams.set('period', String(period).trim().toLowerCase());
+  if (source) url.searchParams.set('source', String(source).trim().toLowerCase());
+  if (language) url.searchParams.set('lang', String(language).trim().toLowerCase());
+  return url.toString();
+};

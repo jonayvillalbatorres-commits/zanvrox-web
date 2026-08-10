@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import Card from '../ui/Card';
 import { BILLING_PERIODS, CONTACT_PROMOS, createContactDemoLink } from '../../utils/contactDemo';
+import { createWorkforceCheckoutUrl } from '../../utils/publicApp';
 
 function CheckIcon({ className = '' }) {
   return (
@@ -84,7 +85,12 @@ export default function PricingCard({
   const selfServeCheckoutUrl =
     pricing?.locationBasis === 'per_location' &&
     ['starter', 'team', 'business'].includes(workforceSlug)
-      ? `https://app.zanvrox.com/settings/billing?plan=${encodeURIComponent(workforceSlug)}&period=${encodeURIComponent(billingPeriod)}`
+      ? createWorkforceCheckoutUrl({
+          plan: workforceSlug,
+          period: billingPeriod,
+          language,
+          source: 'workforce-pricing',
+        })
       : null;
 
   return (

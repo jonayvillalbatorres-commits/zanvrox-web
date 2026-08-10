@@ -9,6 +9,8 @@ const ProductPage = lazy(() => import('./pages/ProductPage'));
 const WorkforcePage = lazy(() => import('./pages/WorkforcePage'));
 const WorkforceRestaurantsPage = lazy(() => import('./pages/WorkforceRestaurantsPage'));
 const WorkforceBetaPage = lazy(() => import('./pages/WorkforceBetaPage'));
+const WorkforcePricingPage = lazy(() => import('./pages/WorkforcePricingPage'));
+const ErpPricingPage = lazy(() => import('./pages/ErpPricingPage'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
 const ResourcesPage = lazy(() => import('./pages/ResourcesPage'));
 const SecurityArchitecturePage = lazy(() => import('./pages/SecurityArchitecturePage'));
@@ -45,9 +47,11 @@ export default function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HostAwareRoute path="/" element={<HomePage />} />} />
           <Route path="/erp" element={<ProductPage />} />
+          <Route path="/erp/pricing" element={<ErpPricingPage />} />
           <Route path="/workforce" element={<WorkforcePage />} />
           <Route path="/workforce/restaurants" element={<WorkforceRestaurantsPage />} />
           <Route path="/workforce/beta" element={<WorkforceBetaPage />} />
+          <Route path="/workforce/pricing" element={<WorkforcePricingPage />} />
           <Route
             path="/restaurants"
             element={<HostAwareRoute path="/restaurants" element={<NotFoundPage />} />}
@@ -56,7 +60,10 @@ export default function App() {
             path="/beta"
             element={<HostAwareRoute path="/beta" element={<NotFoundPage />} />}
           />
-          <Route path="/pricing" element={<PricingPage />} />
+          <Route
+            path="/pricing"
+            element={<HostAwareRoute path="/pricing" element={<PricingPage />} />}
+          />
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/security" element={<SecurityArchitecturePage />} />
           <Route path="/about" element={<AboutPage />} />

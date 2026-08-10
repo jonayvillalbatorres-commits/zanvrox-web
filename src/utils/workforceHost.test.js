@@ -22,15 +22,19 @@ describe('getWorkforceHostRedirect', () => {
       '/workforce/restaurants'
     );
     expect(getWorkforceHostRedirect('/beta', 'workforce.zanvrox.com')).toBe('/workforce/beta');
+    expect(getWorkforceHostRedirect('/pricing', 'workforce.zanvrox.com')).toBe(
+      '/workforce/pricing'
+    );
   });
 
   it('does not redirect on the main domain', () => {
     expect(getWorkforceHostRedirect('/', 'zanvrox.com')).toBeNull();
     expect(getWorkforceHostRedirect('/restaurants', 'zanvrox.com')).toBeNull();
+    expect(getWorkforceHostRedirect('/pricing', 'zanvrox.com')).toBeNull();
   });
 
   it('does not redirect paths with no alias, even on the workforce subdomain', () => {
-    expect(getWorkforceHostRedirect('/pricing', 'workforce.zanvrox.com')).toBeNull();
     expect(getWorkforceHostRedirect('/workforce', 'workforce.zanvrox.com')).toBeNull();
+    expect(getWorkforceHostRedirect('/workforce/pricing', 'workforce.zanvrox.com')).toBeNull();
   });
 });

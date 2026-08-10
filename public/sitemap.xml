@@ -4,7 +4,22 @@
     <loc>https://zanvrox.com/</loc>
   </url>
   <url>
-    <loc>https://zanvrox.com/product</loc>
+    <loc>https://zanvrox.com/erp</loc>
+  </url>
+  <url>
+    <loc>https://zanvrox.com/erp/pricing</loc>
+  </url>
+  <url>
+    <loc>https://zanvrox.com/workforce</loc>
+  </url>
+  <url>
+    <loc>https://zanvrox.com/workforce/pricing</loc>
+  </url>
+  <url>
+    <loc>https://zanvrox.com/workforce/restaurants</loc>
+  </url>
+  <url>
+    <loc>https://zanvrox.com/workforce/beta</loc>
   </url>
   <url>
     <loc>https://zanvrox.com/pricing</loc>
@@ -26,5 +41,8 @@
   </url>
   <url>
     <loc>https://zanvrox.com/legal/terms</loc>
+  </url>
+  <url>
+    <loc>https://zanvrox.com/account-deletion</loc>
   </url>
 </urlset>

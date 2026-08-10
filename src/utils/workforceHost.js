@@ -7,6 +7,7 @@ const WORKFORCE_HOST_ALIASES = Object.freeze({
   '/': '/workforce',
   '/restaurants': '/workforce/restaurants',
   '/beta': '/workforce/beta',
+  '/pricing': '/workforce/pricing',
 });
 
 // On workforce.zanvrox.com, short paths alias into the corresponding

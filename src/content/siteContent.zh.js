@@ -9,6 +9,9 @@ const siteContentZh = {
     reviewResources: '查看资源',
     language: '语言',
     requestQuote: '联系销售',
+    login: '登录',
+    requestBeta: '申请 Beta',
+    support: '支持',
   },
   navItems: [
     { label: '首页', path: '/' },
@@ -20,6 +23,17 @@ const siteContentZh = {
     { label: '关于', path: '/about' },
     { label: '联系', path: '/contact' },
   ],
+  workforceNav: {
+    items: [
+      { label: 'Workforce', path: '/workforce' },
+      { label: '功能', path: '/workforce#features' },
+      { label: '餐饮', path: '/workforce/restaurants' },
+      { label: '定价', path: '/workforce/pricing' },
+      { label: 'Beta', path: '/workforce/beta' },
+      { label: '安全', path: '/security' },
+    ],
+    erpLink: { label: 'ZANVROX ERP', path: '/erp' },
+  },
   brand: {
     name: 'ZANVROX',
     tagline: '面向加拿大中小企业团队的一体化 ERP 控制',
@@ -412,6 +426,27 @@ const siteContentZh = {
         secondary: { label: '联系团队', path: '/contact' },
       },
     },
+    pricingHub: {
+      heroTitle: '两款产品，两套独立定价。',
+      heroSubtitle:
+        '选择 ZANVROX Workforce 用于一线班次运营，选择 ZANVROX ERP 用于财务与业务运营，或两者兼选。每款产品都有独立的定价页面。',
+      erpCard: {
+        eyebrow: 'ZANVROX ERP',
+        title: '财务与业务运营',
+        body: '面向加拿大中小企业团队的会计、开票、采购、库存与报表。',
+        bullets: ['Finance', 'Business', 'Operations', 'Enterprise'],
+        cta: { label: '查看 ERP 定价', path: '/erp/pricing' },
+      },
+      workforceCard: {
+        eyebrow: 'ZANVROX Workforce',
+        title: '一线班次管理',
+        body: '打卡、排班、任务与工时表，按门店计价。',
+        bullets: ['Starter', 'Team', 'Business', 'Multi-location'],
+        cta: { label: '查看 Workforce 定价', path: '/workforce/pricing' },
+      },
+      differenceNote:
+        'ZANVROX ERP 与 ZANVROX Workforce 独立销售、独立计价。符合条件的 ERP 计划可享受 Workforce 折扣或包含权益 — 详情请见 ERP 定价页面。',
+    },
     pricing: {
       heroTitle: 'ZANVROX ERP 与 ZANVROX Workforce 的定价。',
       heroSubtitle:
@@ -579,6 +614,27 @@ const siteContentZh = {
             '年付方案包含两个月免费（相当于按月费率支付 10 个月）。',
           ],
           annualNote: 'Workforce 年付方案包含两个月免费。',
+        },
+        betaBanner: {
+          eyebrow: '安大略餐饮',
+          title: '购买前先免费试用 Workforce 14 天',
+          body: '安大略的餐厅可以申请私密 Beta 计划：无需承诺购买，公开发布后可获得 6 个月免费使用。',
+          cta: { label: '申请免费 Beta', path: '/workforce/beta' },
+        },
+        faq: {
+          title: 'Workforce 定价常见问题',
+          items: [
+            {
+              question: '可以不购买 ERP 只买 Workforce 吗？',
+              answer:
+                '可以。ZANVROX Workforce 提供独立计价方案，按门店收费，无需购买或升级任何 ERP 计划。',
+            },
+            {
+              question: '已经在使用 ZANVROX ERP？',
+              answer:
+                'Operations 计划为该 ERP 订阅覆盖的员工和门店包含 ZANVROX Workforce。Business 计划可为符合条件的 Workforce 独立方案享受 50% 折扣。详情请见 ERP 定价页面。',
+            },
+          ],
         },
       },
       erp: {
@@ -858,7 +914,7 @@ const siteContentZh = {
       heroTitle: '让每个班次都少一点混乱。',
       heroSubtitle:
         '在一个简单的工作应用中完成一线团队的打卡上下班、排班、任务与工时表——全部互联互通。',
-      heroPrimaryCta: { label: '从 Workforce 开始', path: '/pricing#workforce-pricing' },
+      heroPrimaryCta: { label: '从 Workforce 开始', path: '/workforce/pricing' },
       heroSecondaryCta: { label: '加入安大略餐饮 Beta 计划', path: '/workforce/beta' },
       heroPreview: {
         title: '班次预览',
@@ -872,7 +928,7 @@ const siteContentZh = {
       existingCustomer: {
         title: '已经在使用 ZANVROX ERP？',
         body: '符合条件的 ERP 计划已包含 Workforce。',
-        cta: { label: '查看已包含 Workforce 的 ERP 计划', path: '/pricing#erp-pricing' },
+        cta: { label: '查看已包含 Workforce 的 ERP 计划', path: '/erp/pricing' },
       },
       sections: {
         eyebrow: 'Workforce 覆盖的内容',
@@ -942,7 +998,7 @@ const siteContentZh = {
       cta: {
         title: '从 Workforce 开始',
         subtitle: '在需要时再加入 ERP。',
-        primary: { label: '从 Workforce 开始', path: '/pricing#workforce-pricing' },
+        primary: { label: '从 Workforce 开始', path: '/workforce/pricing' },
         secondary: { label: '面向餐饮的 Workforce', path: '/workforce/restaurants' },
       },
     },
@@ -951,8 +1007,8 @@ const siteContentZh = {
       heroTitle: '为真实的餐饮班次而打造。',
       heroSubtitle:
         '无需电子表格、纸质工时表或彼此割裂的工具，即可完成打卡、排班、工时表与日常任务。',
-      heroPrimaryCta: { label: '从 Workforce 开始', path: '/pricing#workforce-pricing' },
-      heroSecondaryCta: { label: '加入安大略餐饮 Beta 计划', path: '/workforce/beta' },
+      heroPrimaryCta: { label: '申请免费 Beta', path: '/workforce/beta' },
+      heroSecondaryCta: { label: '查看 Workforce 定价', path: '/workforce/pricing' },
       heroPreview: {
         title: '班次预览',
         type: 'workforce',
@@ -980,9 +1036,9 @@ const siteContentZh = {
       },
       cta: {
         title: '把 Workforce 带到你的餐厅',
-        subtitle: '从 Workforce 开始，或先申请加入安大略餐饮 Beta 计划。',
-        primary: { label: '从 Workforce 开始', path: '/pricing#workforce-pricing' },
-        secondary: { label: '加入安大略餐饮 Beta 计划', path: '/workforce/beta' },
+        subtitle: '申请免费的安大略餐饮 Beta 计划，或立即开始使用 Workforce。',
+        primary: { label: '申请免费 Beta', path: '/workforce/beta' },
+        secondary: { label: '查看 Workforce 定价', path: '/workforce/pricing' },
       },
     },
     workforceBeta: {
@@ -1513,6 +1569,30 @@ const siteContentZh = {
       { label: '条款', path: '/legal/terms' },
       { label: '账户删除', path: '/account-deletion' },
     ],
+    workforce: {
+      sections: [
+        {
+          title: 'Workforce',
+          links: [
+            { label: 'Workforce', path: '/workforce' },
+            { label: '定价', path: '/workforce/pricing' },
+            { label: '餐饮', path: '/workforce/restaurants' },
+            { label: 'Beta', path: '/workforce/beta' },
+            { label: '安全', path: '/security' },
+          ],
+        },
+        {
+          title: '支持',
+          links: [
+            { label: '支持', path: '/contact' },
+            { label: '隐私', path: '/legal/privacy' },
+            { label: '条款', path: '/legal/terms' },
+            { label: '账户删除', path: '/account-deletion' },
+          ],
+        },
+      ],
+      erpLink: { label: 'ZANVROX ERP', path: '/erp' },
+    },
   },
   seo: {
     home: {
@@ -1548,10 +1628,22 @@ const siteContentZh = {
       path: '/security',
     },
     pricing: {
-      title: '定价 | ZANVROX',
+      title: '定价 | ZANVROX ERP 与 ZANVROX Workforce',
       description:
-        '查看 ZANVROX Workforce（Starter、Team、Business）与 ZANVROX ERP（Finance、Business、Operations、Enterprise）的公开 CAD 定价、Payroll add-on 以及可选的 Guided Implementation。',
+        'ZANVROX ERP 与 ZANVROX Workforce 独立定价。查看 ERP 定价（Finance、Business、Operations、Enterprise）或 Workforce 定价（Starter、Team、Business、Multi-location），单位为 CAD。',
       path: '/pricing',
+    },
+    workforcePricing: {
+      title: 'ZANVROX Workforce 定价 | Starter、Team、Business',
+      description:
+        'ZANVROX Workforce 按门店计价（CAD）：Starter、Team、Business，以及定制的 Multi-location 方案。无需购买 ERP。',
+      path: '/workforce/pricing',
+    },
+    erpPricing: {
+      title: 'ZANVROX ERP 定价 | Finance、Business、Operations、Enterprise',
+      description:
+        'ZANVROX ERP 的 CAD 定价：Finance、Business、Operations 与 Enterprise，另有 Payroll add-on 与可选的 Guided Implementation。',
+      path: '/erp/pricing',
     },
     resources: {
       title: '资源 | ZANVROX',

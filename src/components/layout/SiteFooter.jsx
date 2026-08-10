@@ -1,10 +1,15 @@
 import { Link } from 'react-router';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { isWorkforceHost } from '../../utils/workforceHost';
 
 export default function SiteFooter() {
   const { content } = useLanguage();
   const footer = content?.footer || {};
-  const footerSections = footer.sections || [];
+  const isWorkforce = isWorkforceHost(
+    typeof window !== 'undefined' ? window.location.hostname : ''
+  );
+  const footerSections = (isWorkforce ? footer.workforce?.sections : footer.sections) || [];
+  const erpLink = isWorkforce ? footer.workforce?.erpLink : null;
 
   return (
     <footer className="mt-20 border-t border-zx-border bg-zx-surface backdrop-blur">
@@ -28,6 +33,14 @@ export default function SiteFooter() {
           >
             {footer.email}
           </a>
+          {erpLink ? (
+            <Link
+              to={erpLink.path}
+              className="inline-block text-xs text-zx-text-muted underline decoration-dotted transition hover:text-zx-text"
+            >
+              {erpLink.label}
+            </Link>
+          ) : null}
         </div>
 
         {footerSections.length ? (
