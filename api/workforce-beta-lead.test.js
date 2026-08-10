@@ -1,9 +1,11 @@
 let handler;
 
+// Mirrors what Vercel's Node.js function runtime actually hands the handler:
+// a pre-parsed `body` object, not a Fetch-style `.json()` method.
 const buildRequest = ({ method = 'POST', body = {}, origin = 'https://zanvrox.com' } = {}) => ({
   method,
   headers: { origin },
-  json: async () => body,
+  body,
 });
 
 const buildResponse = () => {

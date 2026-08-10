@@ -55,17 +55,19 @@ describe('contact lead endpoint security', () => {
     const { default: handler } = await import('./contact-lead.js');
     const harness = responseHarness();
     harness.result.response = harness.response;
+    // Mirrors what Vercel's Node.js function runtime actually hands the
+    // handler: a pre-parsed `body` object, not a Fetch-style `.json()` method.
     const request = {
       method: 'POST',
       headers: { origin: 'https://zanvrox.com' },
-      json: async () => ({
+      body: {
         type: 'contact',
         payload: validPayload(),
         context: { planLabel: '<b>Business</b>' },
         subject: 'ATTACKER SUBJECT',
         body: 'ATTACKER BODY',
         html: '<script>ATTACKER HTML</script>',
-      }),
+      },
     };
 
     await handler(request, harness.response);
@@ -95,7 +97,7 @@ describe('contact lead endpoint security', () => {
         {
           method: 'POST',
           headers: { origin: 'https://zanvrox.com' },
-          json: async () => ({ payload }),
+          body: { payload },
         },
         harness.response
       );

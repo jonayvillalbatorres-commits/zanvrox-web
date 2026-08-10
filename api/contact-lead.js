@@ -34,12 +34,29 @@ const createHeaders = (origin = '') => {
   return headers;
 };
 
+// Vercel's Node.js function runtime (the default here -- no `export const
+// config = { runtime: 'edge' }`) pre-parses a JSON request body into
+// `request.body`; unlike an Edge function or a browser `Request`, it has no
+// `.json()` method. Reading `request.body` first is what actually works in
+// production; the raw-string and `.json()` fallbacks only exist for
+// robustness (an unparsed body, or a future Edge runtime).
 const readJson = async (request) => {
-  try {
-    return await request.json();
-  } catch {
-    return null;
+  if (request.body && typeof request.body === 'object') return request.body;
+  if (typeof request.body === 'string' && request.body.trim()) {
+    try {
+      return JSON.parse(request.body);
+    } catch {
+      return null;
+    }
   }
+  if (typeof request.json === 'function') {
+    try {
+      return await request.json();
+    } catch {
+      return null;
+    }
+  }
+  return null;
 };
 
 const buildHtml = ({ type, payload, context }) => {
