@@ -1,4 +1,4 @@
-import { WORKFORCE_PLANS } from '../../../packages/commercial-config/index.js';
+import { WORKFORCE_PLANS } from '../commercial-config/index.js';
 
 const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://zanvrox.com').replace(/\/$/, '');
 

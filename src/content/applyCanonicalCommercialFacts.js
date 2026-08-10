@@ -4,7 +4,7 @@ import {
   GUIDED_IMPLEMENTATION,
   PAYROLL_ADD_ON,
   WORKFORCE_PLANS,
-} from '../../../packages/commercial-config/index.js';
+} from '../commercial-config/index.js';
 
 const workforceKey = (slug) =>
   String(slug || '')

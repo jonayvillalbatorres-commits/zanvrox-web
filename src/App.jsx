@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router';
 import MainLayout from './components/layout/MainLayout';
 import { usePreviewCopy } from './content/previewCopy';
+import { getWorkforceHostRedirect } from './utils/workforceHost';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const ProductPage = lazy(() => import('./pages/ProductPage'));
@@ -27,16 +28,34 @@ function RouteFallback() {
   );
 }
 
+// On workforce.zanvrox.com, a handful of short paths alias into the
+// corresponding zanvrox.com/workforce/* route so this single build serves
+// both hosts without a second app. On every other host these paths render
+// their normal element unchanged.
+function HostAwareRoute({ path, element }) {
+  const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
+  const redirectTo = getWorkforceHostRedirect(path, hostname);
+  return redirectTo ? <Navigate to={redirectTo} replace /> : element;
+}
+
 export default function App() {
   return (
     <Suspense fallback={<RouteFallback />}>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HostAwareRoute path="/" element={<HomePage />} />} />
           <Route path="/erp" element={<ProductPage />} />
           <Route path="/workforce" element={<WorkforcePage />} />
           <Route path="/workforce/restaurants" element={<WorkforceRestaurantsPage />} />
           <Route path="/workforce/beta" element={<WorkforceBetaPage />} />
+          <Route
+            path="/restaurants"
+            element={<HostAwareRoute path="/restaurants" element={<NotFoundPage />} />}
+          />
+          <Route
+            path="/beta"
+            element={<HostAwareRoute path="/beta" element={<NotFoundPage />} />}
+          />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/security" element={<SecurityArchitecturePage />} />
