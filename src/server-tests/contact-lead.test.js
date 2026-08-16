@@ -52,7 +52,7 @@ describe('contact lead endpoint security', () => {
       json: async () => ({ id: 'email_test' }),
     });
     vi.stubGlobal('fetch', fetchMock);
-    const { default: handler } = await import('./contact-lead.js');
+    const { default: handler } = await import('../../api/contact-lead.js');
     const harness = responseHarness();
     harness.result.response = harness.response;
     // Mirrors what Vercel's Node.js function runtime actually hands the
@@ -85,7 +85,7 @@ describe('contact lead endpoint security', () => {
   test('rejects missing time trap, honeypot, and overlong fields before delivery', async () => {
     const fetchMock = vi.fn();
     vi.stubGlobal('fetch', fetchMock);
-    const { default: handler } = await import('./contact-lead.js');
+    const { default: handler } = await import('../../api/contact-lead.js');
     for (const payload of [
       { ...validPayload(), startedAt: 0 },
       { ...validPayload(), website: 'spam.example' },

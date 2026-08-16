@@ -66,7 +66,7 @@ beforeAll(async () => {
   delete process.env.WORKFORCE_BETA_NOTIFICATION_EMAIL;
   delete process.env.CONTACT_NOTIFICATION_EMAIL;
   vi.resetModules();
-  ({ default: handler } = await import('./workforce-beta-lead.js'));
+  ({ default: handler } = await import('../../api/workforce-beta-lead.js'));
 });
 
 afterEach(() => {
