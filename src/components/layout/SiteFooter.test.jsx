@@ -34,7 +34,7 @@ describe('SiteFooter on the workforce.zanvrox.com host', () => {
 
     expect(await screen.findAllByText('Workforce')).not.toHaveLength(0);
     expect(screen.getAllByText('Support').length).toBeGreaterThan(0);
-    expect(screen.queryByRole('link', { name: 'Beta' })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Beta' })).toHaveAttribute('href', '/workforce/beta');
     expect(screen.getAllByRole('link', { name: 'Restaurants' }).length).toBeGreaterThan(0);
     const securityLinks = screen.getAllByRole('link', { name: 'Security' });
     expect(securityLinks.length).toBeGreaterThan(0);

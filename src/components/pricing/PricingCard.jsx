@@ -98,17 +98,13 @@ export default function PricingCard({
 
   return (
     <Card
-      className={`zx-pricing-card zx-pricing-card--${visualTone} relative flex h-full flex-col ${
-        isPopular
-          ? 'border-zx-accent bg-zx-surface-strong shadow-[0_0_0_1px_rgba(49,179,255,0.35),0_24px_60px_rgba(2,8,24,0.65)] lg:scale-[1.02]'
-          : ''
-      }`}
+      className={`zx-pricing-card zx-pricing-card--${visualTone} ${
+        isPopular ? 'zx-pricing-card--popular lg:scale-[1.02]' : ''
+      } relative flex h-full flex-col`}
     >
       <div className="absolute -top-3 left-5 flex flex-wrap gap-2">
         {isPopular ? (
-          <span className="zx-badge border-zx-accent bg-zx-accent/10 text-zx-accent">
-            {pricing?.popularLabel}
-          </span>
+          <span className="zx-badge zx-popular-badge">{pricing?.popularLabel}</span>
         ) : null}
         {activePricing?.badge ? (
           <span className="zx-badge zx-warning-soft text-zx-warning">{activePricing.badge}</span>

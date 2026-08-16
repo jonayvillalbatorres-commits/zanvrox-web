@@ -21,12 +21,12 @@ describe('/workforce CTAs', () => {
     links.forEach((link) => expect(link).toHaveAttribute('href', '/workforce/pricing'));
   });
 
-  test('offers the broader industry overview instead of an Ontario beta', async () => {
+  test('offers both the broader industry overview and Canada-wide beta', async () => {
     renderWithProviders(<WorkforcePage />, '/workforce');
     const links = await screen.findAllByRole('link', { name: /see who workforce is for/i });
     expect(links.length).toBeGreaterThan(0);
     links.forEach((link) => expect(link).toHaveAttribute('href', '/workforce#industries'));
-    expect(screen.queryByRole('link', { name: /beta/i })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /beta/i })).toHaveAttribute('href', '/workforce/beta');
   });
 
   test('explains the Manager vs Employee access split once, near the final CTA', async () => {
@@ -43,7 +43,6 @@ describe('/workforce/restaurants Canada-wide CTAs', () => {
     const startLinks = await screen.findAllByRole('link', { name: /start with workforce/i });
     expect(startLinks.length).toBeGreaterThan(0);
     startLinks.forEach((link) => expect(link).toHaveAttribute('href', '/workforce/pricing'));
-    expect(screen.queryByRole('link', { name: /beta/i })).not.toBeInTheDocument();
   });
 
   test('Workforce pricing is offered only as the secondary CTA', async () => {
@@ -55,10 +54,10 @@ describe('/workforce/restaurants Canada-wide CTAs', () => {
 });
 
 describe('/workforce/pricing is available Canada-wide', () => {
-  test('does not show the retired beta callout', async () => {
+  test('shows the Canada-wide beta callout', async () => {
     renderWithProviders(<WorkforcePricingPage />, '/workforce/pricing');
     await screen.findAllByText('Starter');
-    expect(screen.queryByRole('link', { name: /beta/i })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /beta/i })).toHaveAttribute('href', '/workforce/beta');
   });
 
   test('does not show any ERP pricing tier', async () => {

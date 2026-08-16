@@ -111,17 +111,20 @@ describe('public app routes', () => {
     ).toBeInTheDocument();
   });
 
-  test('redirects the retired /workforce/beta route to the Canada-wide Workforce page', async () => {
+  test('renders the Canada-wide Workforce beta application', async () => {
     const content = getCachedContent('en');
     renderApp('/workforce/beta');
     expect(
       await screen.findByRole(
         'heading',
-        { name: content.pages.workforce.heroTitle },
+        { name: content.pages.workforceBeta.heroTitle },
         { timeout: 5000 }
       )
     ).toBeInTheDocument();
-    expect(screen.queryByText(/Ontario.*beta/i)).not.toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: content.pages.workforceBeta.form.title })
+    ).toBeInTheDocument();
+    expect(document.querySelector('main')?.textContent).not.toMatch(/Ontario/i);
   });
 });
 

@@ -286,20 +286,28 @@ describe('siteContent i18n coverage', () => {
     });
   });
 
-  test('retires the Ontario beta campaign in every visible language', async () => {
+  test('publishes the Canada-wide beta campaign in every visible language', async () => {
+    const ontarioNames = /Ontario|安大略|ਓਨਟਾਰੀਓ|أونتاريو/i;
     await Promise.all(
       ERP_LANGUAGE_SET.map(async ({ code }) => {
         const content = await loadContent(code);
 
-        expect(content.pages.workforceBeta).toBeUndefined();
-        expect(content.seo.workforceBeta).toBeUndefined();
-        expect(content.pages.home.restaurantBetaBanner).toBeNull();
-        expect(content.pages.workforce.restaurantBetaBanner).toBeNull();
-        expect(content.pages.pricing.workforce.betaBanner).toBeNull();
+        expect(content.pages.workforceBeta.form.fields.businessName).toBeTruthy();
+        expect(content.seo.workforceBeta.path).toBe('/workforce/beta');
+        expect(content.pages.home.restaurantBetaBanner.cta.path).toBe('/workforce/beta');
+        expect(content.pages.workforce.restaurantBetaBanner.cta.path).toBe('/workforce/beta');
+        expect(content.pages.pricing.workforce.betaBanner.cta.path).toBe('/workforce/beta');
         expect(content.workforceNav.items.some((item) => item.path === '/workforce/beta')).toBe(
-          false
+          true
         );
-        expect(JSON.stringify(content)).not.toContain('/workforce/beta');
+        const publishedBetaCopy = JSON.stringify({
+          page: content.pages.workforceBeta,
+          seo: content.seo.workforceBeta,
+          homeBanner: content.pages.home.restaurantBetaBanner,
+          workforceBanner: content.pages.workforce.restaurantBetaBanner,
+          pricingBanner: content.pages.pricing.workforce.betaBanner,
+        });
+        expect(publishedBetaCopy).not.toMatch(ontarioNames);
       })
     );
   });

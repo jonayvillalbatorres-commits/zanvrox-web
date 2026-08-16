@@ -20,6 +20,17 @@ export default function MainLayout() {
     }
   }, [language, location.search, setLanguage]);
 
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const targetId = decodeURIComponent(location.hash.slice(1));
+    const frame = window.requestAnimationFrame(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [location.hash, location.pathname]);
+
   return (
     <div className="min-h-screen bg-zx-bg text-zx-text">
       <SiteHeader />

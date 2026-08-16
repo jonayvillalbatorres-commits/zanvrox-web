@@ -30,12 +30,12 @@ describe('SiteHeader on the main zanvrox.com host', () => {
 });
 
 describe('SiteHeader on the workforce.zanvrox.com host', () => {
-  test('shows Workforce-specific nav without the retired beta campaign', async () => {
+  test('shows Workforce-specific nav with the Canada-wide beta', async () => {
     vi.stubGlobal('location', { hostname: 'workforce.zanvrox.com' });
     renderHeader();
 
     expect(await screen.findAllByRole('link', { name: 'Restaurants' })).not.toHaveLength(0);
-    expect(screen.queryByRole('link', { name: 'Beta' })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Beta' })).toHaveAttribute('href', '/workforce/beta');
     // ERP is not part of the primary Workforce nav pills anymore.
     expect(screen.queryByRole('link', { name: 'ERP' })).not.toBeInTheDocument();
   });

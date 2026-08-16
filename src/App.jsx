@@ -8,6 +8,7 @@ const HomePage = lazy(() => import('./pages/HomePage'));
 const ProductPage = lazy(() => import('./pages/ProductPage'));
 const WorkforcePage = lazy(() => import('./pages/WorkforcePage'));
 const WorkforceRestaurantsPage = lazy(() => import('./pages/WorkforceRestaurantsPage'));
+const WorkforceBetaPage = lazy(() => import('./pages/WorkforceBetaPage'));
 const WorkforcePricingPage = lazy(() => import('./pages/WorkforcePricingPage'));
 const ErpPricingPage = lazy(() => import('./pages/ErpPricingPage'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
@@ -49,7 +50,7 @@ export default function App() {
           <Route path="/erp/pricing" element={<ErpPricingPage />} />
           <Route path="/workforce" element={<WorkforcePage />} />
           <Route path="/workforce/restaurants" element={<WorkforceRestaurantsPage />} />
-          <Route path="/workforce/beta" element={<Navigate to="/workforce" replace />} />
+          <Route path="/workforce/beta" element={<WorkforceBetaPage />} />
           <Route path="/workforce/pricing" element={<WorkforcePricingPage />} />
           <Route
             path="/restaurants"

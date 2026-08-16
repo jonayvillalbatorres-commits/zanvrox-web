@@ -436,12 +436,6 @@ const RESTAURANT_LAUNCH_COPY = {
   tl: 'Ginawa para sa mga restaurant team sa buong Canada, na may flexible na plan para sa bawat yugto ng paglago.',
 };
 
-const withoutBetaLinks = (sections = []) =>
-  sections.map((section) => ({
-    ...section,
-    links: (section.links || []).filter((link) => link.path !== '/workforce/beta'),
-  }));
-
 export function applyWorkforceProductEnhancements(content, language = 'en') {
   const copy = structuredClone(content);
   const enhancement = WORKFORCE_ENHANCEMENTS[language] || WORKFORCE_ENHANCEMENTS.en;
@@ -482,18 +476,6 @@ export function applyWorkforceProductEnhancements(content, language = 'en') {
   if (pricing) {
     pricing.betaBanner = null;
     pricing.capabilityNote = enhancement.pricingNote;
-  }
-
-  if (copy?.pages) delete copy.pages.workforceBeta;
-  if (copy?.seo) delete copy.seo.workforceBeta;
-  if (copy?.workforceNav?.items) {
-    copy.workforceNav.items = copy.workforceNav.items.filter(
-      (item) => item.path !== '/workforce/beta'
-    );
-  }
-  if (copy?.footer?.sections) copy.footer.sections = withoutBetaLinks(copy.footer.sections);
-  if (copy?.footer?.workforce?.sections) {
-    copy.footer.workforce.sections = withoutBetaLinks(copy.footer.workforce.sections);
   }
 
   return copy;

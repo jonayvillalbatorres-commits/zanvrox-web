@@ -21,7 +21,7 @@ describe('getWorkforceHostRedirect', () => {
     expect(getWorkforceHostRedirect('/restaurants', 'workforce.zanvrox.com')).toBe(
       '/workforce/restaurants'
     );
-    expect(getWorkforceHostRedirect('/beta', 'workforce.zanvrox.com')).toBe('/workforce');
+    expect(getWorkforceHostRedirect('/beta', 'workforce.zanvrox.com')).toBe('/workforce/beta');
     expect(getWorkforceHostRedirect('/pricing', 'workforce.zanvrox.com')).toBe(
       '/workforce/pricing'
     );
