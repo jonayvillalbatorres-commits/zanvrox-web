@@ -20,7 +20,7 @@ export default function BriefRequestForm({ formContent, leadContext = null }) {
   const errorMessages = useMemo(() => formContent?.errors || {}, [formContent?.errors]);
 
   const fieldClass =
-    'zx-form-field w-full rounded-xl border px-4 py-3 text-sm text-zx-text outline-none transition';
+    'zx-form-field w-full rounded-xl border px-4 py-3 text-sm outline-none transition';
 
   const liveErrors = useMemo(() => validateLeadPayload(form, errorMessages), [errorMessages, form]);
 
