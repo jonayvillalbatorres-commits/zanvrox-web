@@ -28,13 +28,13 @@ describe('SiteFooter on the main zanvrox.com host', () => {
 });
 
 describe('SiteFooter on the workforce.zanvrox.com host', () => {
-  test('prioritizes Workforce, Pricing, Restaurants, Beta, Security, Support, and legal', async () => {
+  test('prioritizes Workforce, Pricing, Restaurants, Security, Support, and legal', async () => {
     vi.stubGlobal('location', { hostname: 'workforce.zanvrox.com' });
     renderFooter();
 
     expect(await screen.findAllByText('Workforce')).not.toHaveLength(0);
     expect(screen.getAllByText('Support').length).toBeGreaterThan(0);
-    expect(screen.getAllByRole('link', { name: 'Beta' }).length).toBeGreaterThan(0);
+    expect(screen.queryByRole('link', { name: 'Beta' })).not.toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: 'Restaurants' }).length).toBeGreaterThan(0);
     const securityLinks = screen.getAllByRole('link', { name: 'Security' });
     expect(securityLinks.length).toBeGreaterThan(0);

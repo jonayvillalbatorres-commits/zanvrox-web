@@ -5,7 +5,6 @@ const NEW_PAGE_SEO_KEYS = [
   'product',
   'workforce',
   'workforceRestaurants',
-  'workforceBeta',
   'pricing',
   'privacy',
   'terms',
@@ -35,7 +34,7 @@ describe('SEO metadata', () => {
     expect(seo.product.path).toBe('/erp');
     expect(seo.workforce.path).toBe('/workforce');
     expect(seo.workforceRestaurants.path).toBe('/workforce/restaurants');
-    expect(seo.workforceBeta.path).toBe('/workforce/beta');
+    expect(seo.workforceBeta).toBeUndefined();
     expect(seo.accountDeletion.path).toBe('/account-deletion');
   });
 

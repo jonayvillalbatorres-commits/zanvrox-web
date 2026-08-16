@@ -1,5 +1,4 @@
 import siteContentEn from './siteContent.en';
-import { applyWorkforceBetaCampaign } from './workforceBetaCampaign';
 
 const base = siteContentEn;
 
@@ -2000,4 +1999,4 @@ const siteContentAr = {
   },
 };
 
-export default applyWorkforceBetaCampaign(siteContentAr, 'ar');
+export default siteContentAr;

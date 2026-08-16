@@ -83,7 +83,7 @@ export default function WorkforceRestaurantsPage() {
               {page.cta?.primary?.label}
             </Link>
             <Link
-              to={page.cta?.secondary?.path || '/workforce/beta'}
+              to={page.cta?.secondary?.path || '/workforce/pricing'}
               className="zx-button zx-button-secondary"
             >
               {page.cta?.secondary?.label}

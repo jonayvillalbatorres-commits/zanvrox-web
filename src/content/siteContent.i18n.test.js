@@ -286,41 +286,22 @@ describe('siteContent i18n coverage', () => {
     });
   });
 
-  test('ships the Ontario small-business beta campaign and complete form in every language', () => {
-    const businessTypeKeys = [
-      'placeholder',
-      'restaurant',
-      'cafe',
-      'bar',
-      'retail_store',
-      'small_shop',
-      'small_warehouse',
-      'other',
-    ];
+  test('retires the Ontario beta campaign in every visible language', async () => {
+    await Promise.all(
+      ERP_LANGUAGE_SET.map(async ({ code }) => {
+        const content = await loadContent(code);
 
-    ERP_LANGUAGE_SET.forEach(({ code }) => {
-      const content = rawContentByLanguage[code];
-      const beta = content.pages.workforceBeta;
-      const form = beta.form;
-      const campaignText = JSON.stringify({
-        beta,
-        workforce: content.pages.workforce,
-        pricingBanner: content.pages.pricing.workforce.betaBanner,
-        seo: content.seo.workforceBeta,
-      });
-
-      expect(form.fields.businessName).toBeTruthy();
-      expect(form.fields.businessType).toBeTruthy();
-      expect(form.fields.restaurantName).toBeUndefined();
-      expect(form.placeholders.businessName).toBeTruthy();
-      expect(form.errors.businessName).toBeTruthy();
-      expect(form.errors.businessType).toBeTruthy();
-      expect(Object.keys(form.businessTypes).sort()).toEqual(businessTypeKeys.sort());
-      expect(beta.badges).toHaveLength(3);
-      expect(beta.terms.items).toHaveLength(6);
-      expect(content.seo.workforceBeta.path).toBe('/workforce/beta');
-      expect(campaignText).not.toMatch(/Ontario Restaurant Beta/i);
-    });
+        expect(content.pages.workforceBeta).toBeUndefined();
+        expect(content.seo.workforceBeta).toBeUndefined();
+        expect(content.pages.home.restaurantBetaBanner).toBeNull();
+        expect(content.pages.workforce.restaurantBetaBanner).toBeNull();
+        expect(content.pages.pricing.workforce.betaBanner).toBeNull();
+        expect(content.workforceNav.items.some((item) => item.path === '/workforce/beta')).toBe(
+          false
+        );
+        expect(JSON.stringify(content)).not.toContain('/workforce/beta');
+      })
+    );
   });
 
   test('keeps Punjabi and Filipino visible copy free of English business terminology', () => {

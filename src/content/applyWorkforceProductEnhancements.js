@@ -426,15 +426,39 @@ const WORKFORCE_ENHANCEMENTS = {
   },
 };
 
+const RESTAURANT_LAUNCH_COPY = {
+  en: 'Built for restaurant teams across Canada, with flexible plans for every stage of growth.',
+  fr: 'Conçu pour les équipes de restauration partout au Canada, avec des forfaits flexibles pour chaque étape de croissance.',
+  es: 'Creado para equipos de restaurantes de todo Canadá, con planes flexibles para cada etapa de crecimiento.',
+  zh: '为加拿大各地的餐饮团队打造，并提供适合每个成长阶段的灵活方案。',
+  pa: 'ਪੂਰੇ ਕੈਨੇਡਾ ਦੀਆਂ ਰੈਸਟੋਰੈਂਟ ਟੀਮਾਂ ਲਈ ਬਣਾਇਆ, ਵਿਕਾਸ ਦੇ ਹਰ ਪੜਾਅ ਵਾਸਤੇ ਲਚਕੀਲੇ ਪਲਾਨਾਂ ਨਾਲ।',
+  ar: 'مصمم لفرق المطاعم في جميع أنحاء كندا، مع خطط مرنة لكل مرحلة من مراحل النمو.',
+  tl: 'Ginawa para sa mga restaurant team sa buong Canada, na may flexible na plan para sa bawat yugto ng paglago.',
+};
+
+const withoutBetaLinks = (sections = []) =>
+  sections.map((section) => ({
+    ...section,
+    links: (section.links || []).filter((link) => link.path !== '/workforce/beta'),
+  }));
+
 export function applyWorkforceProductEnhancements(content, language = 'en') {
   const copy = structuredClone(content);
   const enhancement = WORKFORCE_ENHANCEMENTS[language] || WORKFORCE_ENHANCEMENTS.en;
   const workforce = copy?.pages?.workforce;
+  const restaurants = copy?.pages?.workforceRestaurants;
   const pricing = copy?.pages?.pricing?.workforce;
+
+  if (copy?.pages?.home) copy.pages.home.restaurantBetaBanner = null;
 
   if (workforce) {
     workforce.industries = enhancement.industries;
     workforce.capabilities = enhancement.capabilities;
+    workforce.heroSecondaryCta = {
+      label: enhancement.secondaryCta,
+      path: '/workforce#industries',
+    };
+    workforce.restaurantBetaBanner = null;
     workforce.cta = {
       ...workforce.cta,
       secondary: {
@@ -445,7 +469,32 @@ export function applyWorkforceProductEnhancements(content, language = 'en') {
     };
   }
 
-  if (pricing) pricing.capabilityNote = enhancement.pricingNote;
+  if (restaurants) {
+    restaurants.heroPrimaryCta = { ...workforce?.heroPrimaryCta };
+    restaurants.cta = {
+      ...restaurants.cta,
+      subtitle: RESTAURANT_LAUNCH_COPY[language] || RESTAURANT_LAUNCH_COPY.en,
+      primary: { ...workforce?.heroPrimaryCta },
+      secondary: { ...restaurants.heroSecondaryCta },
+    };
+  }
+
+  if (pricing) {
+    pricing.betaBanner = null;
+    pricing.capabilityNote = enhancement.pricingNote;
+  }
+
+  if (copy?.pages) delete copy.pages.workforceBeta;
+  if (copy?.seo) delete copy.seo.workforceBeta;
+  if (copy?.workforceNav?.items) {
+    copy.workforceNav.items = copy.workforceNav.items.filter(
+      (item) => item.path !== '/workforce/beta'
+    );
+  }
+  if (copy?.footer?.sections) copy.footer.sections = withoutBetaLinks(copy.footer.sections);
+  if (copy?.footer?.workforce?.sections) {
+    copy.footer.workforce.sections = withoutBetaLinks(copy.footer.workforce.sections);
+  }
 
   return copy;
 }

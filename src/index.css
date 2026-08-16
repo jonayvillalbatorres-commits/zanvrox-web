@@ -315,14 +315,36 @@
     position: relative;
     overflow: hidden;
     margin-block: 2rem;
-    border-block: 1px solid rgba(49, 179, 255, 0.24);
+    border-block: 1px solid #d7c7ad;
     background:
-      radial-gradient(circle at 8% 15%, rgba(49, 179, 255, 0.2), transparent 31%),
-      radial-gradient(circle at 92% 88%, rgba(57, 211, 162, 0.16), transparent 32%),
-      linear-gradient(135deg, #09182b 0%, #101a35 48%, #092529 100%);
+      radial-gradient(circle at 8% 15%, rgba(49, 179, 255, 0.13), transparent 31%),
+      radial-gradient(circle at 92% 88%, rgba(57, 211, 162, 0.12), transparent 32%),
+      linear-gradient(135deg, #fbf7ef 0%, #f7f1e6 50%, #f1eadc 100%);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.025);
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      0 28px 70px rgba(1, 7, 21, 0.28);
+  }
+
+  .zx-pricing-band .text-zx-text {
+    color: #10203a;
+  }
+
+  .zx-pricing-band .text-zx-text-muted {
+    color: #526079;
+  }
+
+  .zx-pricing-band .text-zx-accent {
+    color: #076b9f;
+  }
+
+  .zx-pricing-band .text-zx-accent-alt,
+  .zx-pricing-band .text-zx-success {
+    color: #08765b;
+  }
+
+  .zx-pricing-band .zx-badge {
+    border-color: #77a8c4;
+    background: rgba(255, 255, 255, 0.66);
   }
 
   .zx-pricing-intro {
@@ -337,72 +359,101 @@
     padding-left: 0;
   }
 
-  .zx-pricing-card {
+  .zx-pricing-band .zx-pricing-card {
     --plan-accent: 49 179 255;
-    border-color: rgb(var(--plan-accent) / 0.38);
-    background:
-      linear-gradient(180deg, rgb(var(--plan-accent) / 0.08), transparent 28%),
-      rgba(11, 20, 38, 0.95);
+    border-color: rgb(var(--plan-accent) / 0.62);
+    background: linear-gradient(180deg, rgb(var(--plan-accent) / 0.1), transparent 34%), #fffdf9;
+    box-shadow:
+      0 18px 38px rgba(20, 35, 55, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9);
   }
 
-  .zx-pricing-card--team {
+  .zx-pricing-band .zx-pricing-card--team {
     --plan-accent: 121 111 255;
+    background: linear-gradient(160deg, #eef2ff, #f7f3ff 72%);
   }
 
-  .zx-pricing-card--business {
-    --plan-accent: 57 211 162;
+  .zx-pricing-band .zx-pricing-card--business {
+    --plan-accent: 24 156 119;
+    background: linear-gradient(160deg, #e9f7f1, #f8fcf8 72%);
   }
 
-  .zx-pricing-card--multi-location {
-    --plan-accent: 240 179 76;
+  .zx-pricing-band .zx-pricing-card--multi-location {
+    --plan-accent: 188 132 40;
+    background: linear-gradient(160deg, #f8edd8, #fffaf0 72%);
   }
 
-  .zx-pricing-card:hover {
+  .zx-pricing-band .zx-pricing-card:hover {
     border-color: rgb(var(--plan-accent) / 0.7);
     box-shadow:
-      0 28px 58px rgba(1, 7, 21, 0.66),
+      0 28px 58px rgba(30, 42, 60, 0.2),
       0 0 0 1px rgb(var(--plan-accent) / 0.12);
   }
 
   .zx-price-panel {
     border-color: rgb(var(--plan-accent) / 0.42);
-    background: linear-gradient(145deg, rgb(var(--plan-accent) / 0.13), rgba(8, 17, 33, 0.84));
+    background: linear-gradient(145deg, rgb(var(--plan-accent) / 0.12), rgba(255, 255, 255, 0.82));
   }
 
   .zx-price-meta {
     border-color: rgb(var(--plan-accent) / 0.25);
-    background: rgba(5, 12, 25, 0.58);
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  .zx-pricing-band .zx-button-secondary {
+    border-color: #19365a;
+    color: #f9f4e9;
+    background: linear-gradient(180deg, #1b3d68, #102744);
+  }
+
+  .zx-pricing-band [class*='bg-zx-surface'] {
+    border-color: #c7bda9;
+    color: #526079;
+    background-color: rgba(255, 255, 255, 0.68);
   }
 
   .zx-form-card {
-    border-color: rgba(93, 139, 211, 0.55);
+    border-color: #d7c7ad;
     background:
-      radial-gradient(circle at 100% 0%, rgba(49, 179, 255, 0.13), transparent 34%),
-      linear-gradient(145deg, rgba(17, 31, 54, 0.98), rgba(8, 16, 31, 0.96));
+      radial-gradient(circle at 100% 0%, rgba(49, 179, 255, 0.12), transparent 34%),
+      linear-gradient(145deg, #fbf7ef, #f4ecde);
+    box-shadow:
+      0 26px 56px rgba(1, 7, 21, 0.34),
+      inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  }
+
+  .zx-form-card .text-zx-text {
+    color: #10203a;
+  }
+
+  .zx-form-card .text-zx-text-muted {
+    color: #526079;
   }
 
   .zx-form-field {
-    border-color: rgba(119, 153, 207, 0.55);
-    background: rgba(4, 11, 23, 0.82);
+    border-color: #b9aa91;
+    color: #10203a;
+    background: rgba(255, 255, 255, 0.9);
     box-shadow:
-      inset 0 1px 4px rgba(0, 0, 0, 0.28),
-      0 1px 0 rgba(255, 255, 255, 0.03);
+      inset 0 1px 3px rgba(37, 50, 70, 0.08),
+      0 1px 0 rgba(255, 255, 255, 0.9);
   }
 
   .zx-form-field::placeholder {
-    color: rgba(180, 198, 226, 0.68);
+    color: #758198;
   }
 
   .zx-form-field:hover {
-    border-color: rgba(103, 182, 236, 0.74);
+    border-color: #4c8db8;
   }
 
   .zx-form-field:focus {
-    border-color: var(--zx-accent);
-    background: rgba(7, 18, 35, 0.98);
+    border-color: #168ac8;
+    color: #0b1730;
+    background: #ffffff;
     box-shadow:
-      0 0 0 3px rgba(49, 179, 255, 0.18),
-      0 12px 28px rgba(0, 7, 22, 0.28);
+      0 0 0 3px rgba(22, 138, 200, 0.19),
+      0 12px 28px rgba(32, 48, 70, 0.14);
   }
 }
 

@@ -31,7 +31,7 @@ install`, `npm run dev`, `npm run build`, and `npm run test:run` all work
 ## Routing
 
 Client-side routes (React Router) covering `/`, `/erp`, `/workforce`,
-`/workforce/restaurants`, `/workforce/beta`, `/pricing`, and the rest of the
+`/workforce/restaurants`, `/workforce/pricing`, `/pricing`, and the rest of the
 public site are declared in `src/App.jsx`. `vercel.json` rewrites all paths
 to `/index.html` so direct navigation to any of these routes works instead of
 returning a Vercel 404.
@@ -44,7 +44,7 @@ render time and, only on `workforce.zanvrox.com`, redirects:
 
 - `/` → `/workforce`
 - `/restaurants` → `/workforce/restaurants`
-- `/beta` → `/workforce/beta`
+- `/beta` → `/workforce` (retired beta campaign)
 
 On `zanvrox.com` these paths behave exactly as before. To enable the
 subdomain in Vercel, add `workforce.zanvrox.com` as an extra Domain on the

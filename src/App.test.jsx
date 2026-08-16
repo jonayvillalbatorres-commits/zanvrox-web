@@ -111,21 +111,17 @@ describe('public app routes', () => {
     ).toBeInTheDocument();
   });
 
-  test('renders the /workforce/beta route with beta terms and no public closed-testing link', async () => {
+  test('redirects the retired /workforce/beta route to the Canada-wide Workforce page', async () => {
     const content = getCachedContent('en');
     renderApp('/workforce/beta');
     expect(
       await screen.findByRole(
         'heading',
-        { name: content.pages.workforceBeta.heroTitle },
+        { name: content.pages.workforce.heroTitle },
         { timeout: 5000 }
       )
     ).toBeInTheDocument();
-
-    expect(screen.getByText('14-day beta')).toBeInTheDocument();
-    expect(screen.getByText('6 months free after launch')).toBeInTheDocument();
-    expect(screen.queryByText(/play\.google\.com/i)).not.toBeInTheDocument();
-    expect(screen.queryByText(/closed testing/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Ontario.*beta/i)).not.toBeInTheDocument();
   });
 });
 

@@ -30,22 +30,25 @@ describe('SiteHeader on the main zanvrox.com host', () => {
 });
 
 describe('SiteHeader on the workforce.zanvrox.com host', () => {
-  test('shows Workforce-specific nav instead of the corporate nav', async () => {
+  test('shows Workforce-specific nav without the retired beta campaign', async () => {
     vi.stubGlobal('location', { hostname: 'workforce.zanvrox.com' });
     renderHeader();
 
-    expect(await screen.findAllByRole('link', { name: 'Beta' })).not.toHaveLength(0);
-    expect(screen.getAllByRole('link', { name: 'Restaurants' }).length).toBeGreaterThan(0);
+    expect(await screen.findAllByRole('link', { name: 'Restaurants' })).not.toHaveLength(0);
+    expect(screen.queryByRole('link', { name: 'Beta' })).not.toBeInTheDocument();
     // ERP is not part of the primary Workforce nav pills anymore.
     expect(screen.queryByRole('link', { name: 'ERP' })).not.toBeInTheDocument();
   });
 
-  test('offers Request beta and Log in instead of the ERP demo-workspace CTA', async () => {
+  test('offers Start with Workforce and Log in instead of a beta CTA', async () => {
     vi.stubGlobal('location', { hostname: 'workforce.zanvrox.com' });
     renderHeader();
 
-    expect(await screen.findAllByRole('link', { name: /request beta/i })).not.toHaveLength(0);
+    expect(await screen.findAllByRole('link', { name: /start with workforce/i })).not.toHaveLength(
+      0
+    );
     expect(screen.getAllByRole('link', { name: /log in/i }).length).toBeGreaterThan(0);
+    expect(screen.queryByRole('link', { name: /request beta/i })).not.toBeInTheDocument();
     expect(screen.queryByRole('link', { name: /open workspace/i })).not.toBeInTheDocument();
   });
 

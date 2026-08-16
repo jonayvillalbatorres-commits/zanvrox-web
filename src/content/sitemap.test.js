@@ -14,7 +14,6 @@ const REQUIRED_ROUTES = [
   '/workforce',
   '/workforce/pricing',
   '/workforce/restaurants',
-  '/workforce/beta',
   '/pricing',
   '/resources',
   '/security',
@@ -32,6 +31,7 @@ describe('sitemap.xml', () => {
 
   it('does not list the legacy /product redirect (it 302s, not a canonical page)', () => {
     expect(sitemap).not.toContain('https://zanvrox.com/product<');
+    expect(sitemap).not.toContain('https://zanvrox.com/workforce/beta<');
   });
 });
 

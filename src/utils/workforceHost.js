@@ -6,7 +6,7 @@ export const isWorkforceHost = (hostname = '') =>
 const WORKFORCE_HOST_ALIASES = Object.freeze({
   '/': '/workforce',
   '/restaurants': '/workforce/restaurants',
-  '/beta': '/workforce/beta',
+  '/beta': '/workforce',
   '/pricing': '/workforce/pricing',
 });
 

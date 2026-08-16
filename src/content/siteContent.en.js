@@ -1,5 +1,3 @@
-import { applyWorkforceBetaCampaign } from './workforceBetaCampaign';
-
 const siteContentEn = {
   locale: 'en',
   localeLabel: 'English',
@@ -2069,4 +2067,4 @@ const siteContentEn = {
   },
 };
 
-export default applyWorkforceBetaCampaign(siteContentEn, 'en');
+export default siteContentEn;

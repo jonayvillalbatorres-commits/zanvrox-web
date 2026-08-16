@@ -196,10 +196,10 @@ export default function SiteHeader() {
                 {labels.login || 'Log in'}
               </a>
               <Link
-                to="/workforce/beta"
+                to="/workforce/pricing"
                 className="zx-button zx-button-primary h-9 px-3 py-2 text-xs"
               >
-                {labels.requestBeta || 'Request beta'}
+                {content?.pages?.workforce?.heroPrimaryCta?.label || 'Start with Workforce'}
               </Link>
             </>
           ) : (
@@ -268,11 +268,11 @@ export default function SiteHeader() {
                   {labels.login || 'Log in'}
                 </a>
                 <Link
-                  to="/workforce/beta"
+                  to="/workforce/pricing"
                   onClick={() => setOpen(false)}
                   className="zx-button zx-button-primary w-full justify-center"
                 >
-                  {labels.requestBeta || 'Request beta'}
+                  {content?.pages?.workforce?.heroPrimaryCta?.label || 'Start with Workforce'}
                 </Link>
                 {erpLink ? (
                   <Link

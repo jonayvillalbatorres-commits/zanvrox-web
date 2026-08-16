@@ -21,11 +21,12 @@ describe('/workforce CTAs', () => {
     links.forEach((link) => expect(link).toHaveAttribute('href', '/workforce/pricing'));
   });
 
-  test('the Ontario Small Business Beta CTA leads to /workforce/beta', async () => {
+  test('offers the broader industry overview instead of an Ontario beta', async () => {
     renderWithProviders(<WorkforcePage />, '/workforce');
-    const links = await screen.findAllByRole('link', { name: /ontario small business beta/i });
+    const links = await screen.findAllByRole('link', { name: /see who workforce is for/i });
     expect(links.length).toBeGreaterThan(0);
-    links.forEach((link) => expect(link).toHaveAttribute('href', '/workforce/beta'));
+    links.forEach((link) => expect(link).toHaveAttribute('href', '/workforce#industries'));
+    expect(screen.queryByRole('link', { name: /beta/i })).not.toBeInTheDocument();
   });
 
   test('explains the Manager vs Employee access split once, near the final CTA', async () => {
@@ -36,12 +37,13 @@ describe('/workforce CTAs', () => {
   });
 });
 
-describe('/workforce/restaurants CTAs during the beta phase', () => {
-  test('the primary CTA is the free beta application, not a purchase link', async () => {
+describe('/workforce/restaurants Canada-wide CTAs', () => {
+  test('the primary CTA starts with Workforce pricing', async () => {
     renderWithProviders(<WorkforceRestaurantsPage />, '/workforce/restaurants');
-    const betaLinks = await screen.findAllByRole('link', { name: /free beta/i });
-    expect(betaLinks.length).toBeGreaterThan(0);
-    betaLinks.forEach((link) => expect(link).toHaveAttribute('href', '/workforce/beta'));
+    const startLinks = await screen.findAllByRole('link', { name: /start with workforce/i });
+    expect(startLinks.length).toBeGreaterThan(0);
+    startLinks.forEach((link) => expect(link).toHaveAttribute('href', '/workforce/pricing'));
+    expect(screen.queryByRole('link', { name: /beta/i })).not.toBeInTheDocument();
   });
 
   test('Workforce pricing is offered only as the secondary CTA', async () => {
@@ -52,11 +54,11 @@ describe('/workforce/restaurants CTAs during the beta phase', () => {
   });
 });
 
-describe('/workforce/pricing surfaces the beta', () => {
-  test('shows a beta callout linking to /workforce/beta', async () => {
+describe('/workforce/pricing is available Canada-wide', () => {
+  test('does not show the retired beta callout', async () => {
     renderWithProviders(<WorkforcePricingPage />, '/workforce/pricing');
-    const betaLink = await screen.findByRole('link', { name: /apply for the free beta/i });
-    expect(betaLink).toHaveAttribute('href', '/workforce/beta');
+    await screen.findAllByText('Starter');
+    expect(screen.queryByRole('link', { name: /beta/i })).not.toBeInTheDocument();
   });
 
   test('does not show any ERP pricing tier', async () => {

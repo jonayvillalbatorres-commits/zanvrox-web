@@ -36,27 +36,6 @@ export default function WorkforcePricingPage() {
         preview={{ type: 'workforce' }}
       />
 
-      {workforce.betaBanner ? (
-        <section className="section-shell">
-          <div className="zx-glass-strip flex flex-wrap items-center justify-between gap-4 px-5 py-5">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-zx-accent">
-                {workforce.betaBanner.eyebrow}
-              </p>
-              <p className="mt-1 font-heading text-base font-semibold text-zx-text">
-                {workforce.betaBanner.title}
-              </p>
-              <p className="mt-1 text-sm text-zx-text-muted">{workforce.betaBanner.body}</p>
-            </div>
-            {workforce.betaBanner.cta ? (
-              <Link to={workforce.betaBanner.cta.path} className="zx-button zx-button-primary">
-                {workforce.betaBanner.cta.label}
-              </Link>
-            ) : null}
-          </div>
-        </section>
-      ) : null}
-
       <section className="zx-pricing-band">
         <div className="section-shell">
           <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
