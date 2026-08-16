@@ -75,8 +75,34 @@ export default function WorkforcePage() {
         </div>
       </section>
 
-      <section className="section-shell">
-        <div className="zx-card">
+      {page.capabilities ? (
+        <section className="zx-capabilities-band">
+          <div className="section-shell">
+            <SectionHeading
+              eyebrow={page.capabilities.eyebrow}
+              title={page.capabilities.title}
+              subtitle={page.capabilities.subtitle}
+            />
+            <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+              {(page.capabilities.items || []).map((item) => (
+                <article key={item.title} className="zx-capability-card">
+                  <span className="zx-capability-code" aria-hidden="true">
+                    {item.code}
+                  </span>
+                  <h3 className="mt-5 font-heading text-lg font-semibold text-zx-text">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-zx-text-muted">{item.body}</p>
+                  <p className="zx-capability-note">{item.note}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <section id="industries" className="section-shell scroll-mt-28">
+        <div className="zx-card zx-industries-card">
           <SectionHeading title={page.industries?.title} subtitle={page.industries?.subtitle} />
           <div className="mt-6 flex flex-wrap gap-2">
             {(page.industries?.items || []).map((item) => (
@@ -103,7 +129,7 @@ export default function WorkforcePage() {
               {page.cta?.primary?.label}
             </Link>
             <Link
-              to={page.cta?.secondary?.path || '/workforce/restaurants'}
+              to={page.cta?.secondary?.path || '/workforce#industries'}
               className="zx-button zx-button-secondary"
             >
               {page.cta?.secondary?.label}

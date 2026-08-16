@@ -20,7 +20,7 @@ export default function DemoForm({ formContent, leadContext = null }) {
   const fields = useMemo(() => formContent?.fields || {}, [formContent?.fields]);
 
   const fieldClass =
-    'w-full rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3 text-sm text-zx-text outline-none transition focus:border-zx-accent focus:ring-2 focus:ring-zx-accent';
+    'zx-form-field w-full rounded-xl border px-4 py-3 text-sm text-zx-text outline-none transition';
 
   const liveErrors = useMemo(() => validateLeadPayload(form, errorMessages), [errorMessages, form]);
 
@@ -72,7 +72,7 @@ export default function DemoForm({ formContent, leadContext = null }) {
   };
 
   return (
-    <section className="zx-card" id="demo-form">
+    <section className="zx-card zx-form-card" id="demo-form">
       <h2 className="font-heading text-2xl font-semibold text-zx-text">{formContent?.title}</h2>
       <p className="mt-2 text-sm text-zx-text-muted">{formContent?.helper}</p>
 

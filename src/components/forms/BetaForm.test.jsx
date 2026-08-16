@@ -33,10 +33,8 @@ describe('BetaForm', () => {
     const user = userEvent.setup();
     renderForm();
 
-    await user.type(
-      screen.getByLabelText(formContent.fields.restaurantName),
-      'Maple Street Kitchen'
-    );
+    await user.type(screen.getByLabelText(formContent.fields.businessName), 'Maple Street Kitchen');
+    await user.selectOptions(screen.getByLabelText(formContent.fields.businessType), 'restaurant');
     await user.type(screen.getByLabelText(formContent.fields.contactName), 'Jordan Smith');
     await user.type(screen.getByLabelText(formContent.fields.email), 'jordan@maplestreet.example');
     await user.type(screen.getByLabelText(formContent.fields.city), 'Toronto');
@@ -68,10 +66,8 @@ describe('BetaForm', () => {
     const user = userEvent.setup();
     renderForm();
 
-    await user.type(
-      screen.getByLabelText(formContent.fields.restaurantName),
-      'Maple Street Kitchen'
-    );
+    await user.type(screen.getByLabelText(formContent.fields.businessName), 'Maple Street Kitchen');
+    await user.selectOptions(screen.getByLabelText(formContent.fields.businessType), 'restaurant');
     await user.type(screen.getByLabelText(formContent.fields.contactName), 'Jordan Smith');
     await user.type(screen.getByLabelText(formContent.fields.email), 'jordan@maplestreet.example');
     await user.type(screen.getByLabelText(formContent.fields.city), 'Toronto');

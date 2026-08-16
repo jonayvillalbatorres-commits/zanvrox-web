@@ -2,12 +2,14 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router';
 import { submitBetaLead } from '../../utils/betaLead';
 import {
+  BETA_BUSINESS_TYPES,
   createBetaLeadInitialState,
   validateBetaLeadPayload,
 } from '../../utils/betaLeadValidation';
 
 const FIELD_ORDER = [
-  'restaurantName',
+  'businessName',
+  'businessType',
   'contactName',
   'email',
   'city',
@@ -35,7 +37,7 @@ export default function BetaForm({ formContent }) {
   const fields = useMemo(() => formContent?.fields || {}, [formContent?.fields]);
 
   const fieldClass =
-    'w-full rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3 text-sm text-zx-text outline-none transition focus:border-zx-accent focus:ring-2 focus:ring-zx-accent aria-[invalid=true]:border-zx-danger';
+    'zx-form-field w-full rounded-xl border px-4 py-3 text-sm text-zx-text outline-none transition aria-[invalid=true]:border-zx-danger';
 
   const liveErrors = useMemo(
     () => validateBetaLeadPayload(form, errorMessages),
@@ -99,7 +101,7 @@ export default function BetaForm({ formContent }) {
   const describedBy = (name) => (errors[name] ? errorId(name) : undefined);
 
   return (
-    <section className="zx-card" id="beta-form">
+    <section className="zx-card zx-form-card" id="beta-form">
       <h2 className="font-heading text-2xl font-semibold text-zx-text">{formContent?.title}</h2>
       <p className="mt-2 text-sm text-zx-text-muted">{formContent?.helper}</p>
 
@@ -132,29 +134,53 @@ export default function BetaForm({ formContent }) {
         <input type="hidden" name="startedAt" value={form.startedAt} readOnly />
 
         <div className="grid gap-4 sm:grid-cols-2">
-          <label
-            htmlFor={fieldId('restaurantName')}
-            className="space-y-2 text-sm text-zx-text-muted"
-          >
-            {fields.restaurantName}
+          <label htmlFor={fieldId('businessName')} className="space-y-2 text-sm text-zx-text-muted">
+            {fields.businessName}
             <input
-              id={fieldId('restaurantName')}
-              name="restaurantName"
-              value={form.restaurantName}
+              id={fieldId('businessName')}
+              name="businessName"
+              value={form.businessName}
               onChange={setField}
               className={fieldClass}
-              placeholder={placeholders.restaurantName}
+              placeholder={placeholders.businessName}
               autoComplete="organization"
-              aria-invalid={Boolean(errors.restaurantName)}
-              aria-describedby={describedBy('restaurantName')}
+              aria-invalid={Boolean(errors.businessName)}
+              aria-describedby={describedBy('businessName')}
             />
-            {errors.restaurantName ? (
-              <span id={errorId('restaurantName')} className="text-xs text-zx-danger">
-                {errors.restaurantName}
+            {errors.businessName ? (
+              <span id={errorId('businessName')} className="text-xs text-zx-danger">
+                {errors.businessName}
               </span>
             ) : null}
           </label>
 
+          <label htmlFor={fieldId('businessType')} className="space-y-2 text-sm text-zx-text-muted">
+            {fields.businessType}
+            <select
+              id={fieldId('businessType')}
+              name="businessType"
+              value={form.businessType}
+              onChange={setField}
+              className={fieldClass}
+              aria-invalid={Boolean(errors.businessType)}
+              aria-describedby={describedBy('businessType')}
+            >
+              <option value="">{formContent?.businessTypes?.placeholder}</option>
+              {BETA_BUSINESS_TYPES.map((businessType) => (
+                <option key={businessType} value={businessType}>
+                  {formContent?.businessTypes?.[businessType]}
+                </option>
+              ))}
+            </select>
+            {errors.businessType ? (
+              <span id={errorId('businessType')} className="text-xs text-zx-danger">
+                {errors.businessType}
+              </span>
+            ) : null}
+          </label>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
           <label htmlFor={fieldId('contactName')} className="space-y-2 text-sm text-zx-text-muted">
             {fields.contactName}
             <input

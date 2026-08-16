@@ -21,9 +21,9 @@ describe('/workforce CTAs', () => {
     links.forEach((link) => expect(link).toHaveAttribute('href', '/workforce/pricing'));
   });
 
-  test('the Ontario Restaurant Beta CTA leads to /workforce/beta', async () => {
+  test('the Ontario Small Business Beta CTA leads to /workforce/beta', async () => {
     renderWithProviders(<WorkforcePage />, '/workforce');
-    const links = await screen.findAllByRole('link', { name: /ontario restaurant beta/i });
+    const links = await screen.findAllByRole('link', { name: /ontario small business beta/i });
     expect(links.length).toBeGreaterThan(0);
     links.forEach((link) => expect(link).toHaveAttribute('href', '/workforce/beta'));
   });

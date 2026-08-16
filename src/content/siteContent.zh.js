@@ -1,3 +1,5 @@
+import { applyWorkforceBetaCampaign } from './workforceBetaCampaign';
+
 const siteContentZh = {
   locale: 'zh',
   localeLabel: '中文',
@@ -1680,4 +1682,4 @@ const siteContentZh = {
   },
 };
 
-export default siteContentZh;
+export default applyWorkforceBetaCampaign(siteContentZh, 'zh');

@@ -30,7 +30,8 @@ const buildResponse = () => {
 };
 
 const validPayload = (overrides = {}) => ({
-  restaurantName: 'Maple Street Kitchen',
+  businessName: 'Maple Street Kitchen',
+  businessType: 'restaurant',
   contactName: 'Jordan Smith',
   email: 'jordan@maplestreet.example',
   city: 'Toronto',
@@ -97,7 +98,53 @@ describe('workforce-beta-lead endpoint security', () => {
 
     const sent = getSentResendBody();
     expect(sent.text).not.toBe('HACKED BODY');
-    expect(sent.text).toContain('Restaurant name: Maple Street Kitchen');
+    expect(sent.text).toContain('Business name: Maple Street Kitchen');
+    expect(sent.text).toContain('Business type: restaurant');
+  });
+
+  test('accepts every supported small-business type', async () => {
+    for (const businessType of [
+      'restaurant',
+      'cafe',
+      'bar',
+      'retail_store',
+      'small_shop',
+      'small_warehouse',
+      'other',
+    ]) {
+      mockSuccessfulResend();
+      const response = buildResponse();
+      await handler(buildRequest({ body: { payload: validPayload({ businessType }) } }), response);
+      expect(response.statusCode).toBe(200);
+      expect(getSentResendBody().text).toContain(`Business type: ${businessType}`);
+    }
+  });
+
+  test('rejects an unsupported business type', async () => {
+    const response = buildResponse();
+    await handler(
+      buildRequest({ body: { payload: validPayload({ businessType: 'enterprise_chain' }) } }),
+      response
+    );
+
+    expect(response.statusCode).toBe(400);
+    expect(response.body.fieldErrors.businessType).toBeTruthy();
+  });
+
+  test('keeps legacy restaurant applications compatible', async () => {
+    mockSuccessfulResend();
+    const legacy = validPayload();
+    delete legacy.businessName;
+    delete legacy.businessType;
+    const response = buildResponse();
+    await handler(
+      buildRequest({ body: { payload: { ...legacy, restaurantName: 'Legacy Restaurant' } } }),
+      response
+    );
+
+    expect(response.statusCode).toBe(200);
+    expect(getSentResendBody().text).toContain('Business name: Legacy Restaurant');
+    expect(getSentResendBody().text).toContain('Business type: restaurant');
   });
 
   test('client-supplied from is ignored', async () => {
@@ -133,7 +180,7 @@ describe('workforce-beta-lead endpoint security', () => {
     const response = buildResponse();
     await handler(
       buildRequest({
-        body: { payload: validPayload({ restaurantName: '<b>Bold</b> Diner' }) },
+        body: { payload: validPayload({ businessName: '<b>Bold</b> Diner' }) },
       }),
       response
     );

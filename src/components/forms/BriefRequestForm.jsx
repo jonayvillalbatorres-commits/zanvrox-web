@@ -20,7 +20,7 @@ export default function BriefRequestForm({ formContent, leadContext = null }) {
   const errorMessages = useMemo(() => formContent?.errors || {}, [formContent?.errors]);
 
   const fieldClass =
-    'w-full rounded-xl border border-zx-border bg-zx-surface-strong px-4 py-3 text-sm text-zx-text outline-none transition focus:border-zx-accent focus:ring-2 focus:ring-zx-accent';
+    'zx-form-field w-full rounded-xl border px-4 py-3 text-sm text-zx-text outline-none transition';
 
   const liveErrors = useMemo(() => validateLeadPayload(form, errorMessages), [errorMessages, form]);
 
@@ -71,7 +71,7 @@ export default function BriefRequestForm({ formContent, leadContext = null }) {
   };
 
   return (
-    <section className="zx-card" id="technical-brief">
+    <section className="zx-card zx-form-card" id="technical-brief">
       <h2 className="font-heading text-2xl font-semibold text-zx-text">{formContent?.title}</h2>
       <p className="mt-2 text-sm text-zx-text-muted">{formContent?.helper}</p>
 

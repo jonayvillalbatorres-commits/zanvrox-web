@@ -82,6 +82,9 @@ export default function PricingCard({
     hash: 'demo-form',
   });
   const workforceSlug = String(tier?.slug || '').replace(/^workforce-/, '');
+  const visualTone = ['starter', 'team', 'business', 'multi-location'].includes(workforceSlug)
+    ? workforceSlug
+    : 'default';
   const selfServeCheckoutUrl =
     pricing?.locationBasis === 'per_location' &&
     ['starter', 'team', 'business'].includes(workforceSlug)
@@ -95,7 +98,7 @@ export default function PricingCard({
 
   return (
     <Card
-      className={`relative flex h-full flex-col ${
+      className={`zx-pricing-card zx-pricing-card--${visualTone} relative flex h-full flex-col ${
         isPopular
           ? 'border-zx-accent bg-zx-surface-strong shadow-[0_0_0_1px_rgba(49,179,255,0.35),0_24px_60px_rgba(2,8,24,0.65)] lg:scale-[1.02]'
           : ''
@@ -117,7 +120,7 @@ export default function PricingCard({
         <p className="mt-2 text-sm text-zx-text-muted">{tier?.summary}</p>
       </div>
 
-      <div className="mt-6 rounded-2xl border border-zx-border bg-zx-surface-strong/80 p-4">
+      <div className="zx-price-panel mt-6 rounded-2xl border p-4">
         <p className="text-xs uppercase tracking-[0.14em] text-zx-text-muted">
           {isAnnual ? pricing?.billedAnnuallyLabel : pricing?.billedMonthlyLabel}
         </p>
@@ -141,13 +144,13 @@ export default function PricingCard({
       </div>
 
       <div className="mt-5 grid gap-3 text-sm text-zx-text-muted sm:grid-cols-2">
-        <div className="rounded-xl border border-zx-border bg-zx-surface-strong/70 px-3 py-3">
+        <div className="zx-price-meta rounded-xl border px-3 py-3">
           <p className="text-xs uppercase tracking-[0.14em] text-zx-text-muted">
             {pricing?.entitiesIncludedLabel}
           </p>
           <p className="mt-2 font-medium text-zx-text">{tier?.entitiesLabel}</p>
         </div>
-        <div className="rounded-xl border border-zx-border bg-zx-surface-strong/70 px-3 py-3">
+        <div className="zx-price-meta rounded-xl border px-3 py-3">
           <p className="text-xs uppercase tracking-[0.14em] text-zx-text-muted">
             {pricing?.usersIncludedLabel}
           </p>

@@ -1,12 +1,22 @@
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 
 const STRING_LIMITS = {
-  restaurantName: { min: 2, max: 120 },
+  businessName: { min: 2, max: 120 },
   contactName: { min: 2, max: 120 },
   city: { min: 2, max: 120 },
   currentMethod: { min: 1, max: 200 },
   message: { min: 0, max: 2000 },
 };
+
+export const BETA_BUSINESS_TYPES = [
+  'restaurant',
+  'cafe',
+  'bar',
+  'retail_store',
+  'small_shop',
+  'small_warehouse',
+  'other',
+];
 
 const EMAIL_MAX_LENGTH = 254;
 
@@ -19,6 +29,9 @@ const NUMERIC_LIMITS = {
 const normalizeString = (value) => String(value ?? '').trim();
 
 const collapseWhitespace = (value) => normalizeString(value).replace(/\s+/g, ' ');
+
+const normalizeBusinessType = (payload) =>
+  collapseWhitespace(payload?.businessType || (payload?.restaurantName ? 'restaurant' : ''));
 
 export const escapeHtml = (value) =>
   String(value ?? '').replace(
@@ -40,7 +53,8 @@ const parseBoundedInteger = (value, { min, max }) => {
 };
 
 export const createBetaLeadInitialState = () => ({
-  restaurantName: '',
+  businessName: '',
+  businessType: '',
   contactName: '',
   email: '',
   city: '',
@@ -56,7 +70,8 @@ export const createBetaLeadInitialState = () => ({
 
 export const validateBetaLeadPayload = (payload, messages = {}) => {
   const next = {};
-  const restaurantName = collapseWhitespace(payload?.restaurantName);
+  const businessName = collapseWhitespace(payload?.businessName || payload?.restaurantName);
+  const businessType = normalizeBusinessType(payload);
   const contactName = collapseWhitespace(payload?.contactName);
   const email = normalizeString(payload?.email);
   const city = collapseWhitespace(payload?.city);
@@ -72,10 +87,13 @@ export const validateBetaLeadPayload = (payload, messages = {}) => {
   );
 
   if (
-    restaurantName.length < STRING_LIMITS.restaurantName.min ||
-    restaurantName.length > STRING_LIMITS.restaurantName.max
+    businessName.length < STRING_LIMITS.businessName.min ||
+    businessName.length > STRING_LIMITS.businessName.max
   ) {
-    next.restaurantName = messages.restaurantName || 'Enter your restaurant name.';
+    next.businessName = messages.businessName || 'Enter your business name.';
+  }
+  if (!BETA_BUSINESS_TYPES.includes(businessType)) {
+    next.businessType = messages.businessType || 'Select your business type.';
   }
   if (
     contactName.length < STRING_LIMITS.contactName.min ||
@@ -127,10 +145,13 @@ export const validateBetaLeadPayload = (payload, messages = {}) => {
 
 // Assumes validateBetaLeadPayload(payload) returned no errors.
 export const sanitizeBetaLeadPayload = (payload) => ({
-  restaurantName: collapseWhitespace(payload?.restaurantName).slice(
+  businessName: collapseWhitespace(payload?.businessName || payload?.restaurantName).slice(
     0,
-    STRING_LIMITS.restaurantName.max
+    STRING_LIMITS.businessName.max
   ),
+  businessType: BETA_BUSINESS_TYPES.includes(normalizeBusinessType(payload))
+    ? normalizeBusinessType(payload)
+    : 'other',
   contactName: collapseWhitespace(payload?.contactName).slice(0, STRING_LIMITS.contactName.max),
   email: normalizeString(payload?.email).toLowerCase().slice(0, EMAIL_MAX_LENGTH),
   city: collapseWhitespace(payload?.city).slice(0, STRING_LIMITS.city.max),
@@ -146,17 +167,18 @@ export const sanitizeBetaLeadPayload = (payload) => ({
 
 export const createBetaLeadSubject = ({ payload }) => {
   const safe = sanitizeBetaLeadPayload(payload);
-  const restaurantName = safe.restaurantName || 'Unknown restaurant';
+  const businessName = safe.businessName || 'Unknown business';
   const city = safe.city || 'Unknown city';
 
-  return `[ZANVROX] Ontario Workforce beta application - ${restaurantName} - ${city}`;
+  return `[ZANVROX] Ontario Workforce beta application - ${businessName} - ${city}`;
 };
 
 export const serializeBetaLeadBody = ({ payload }) => {
   const safe = sanitizeBetaLeadPayload(payload);
   const lines = [
     'Lead type: workforce-beta',
-    `Restaurant name: ${safe.restaurantName}`,
+    `Business name: ${safe.businessName}`,
+    `Business type: ${safe.businessType}`,
     `Contact name: ${safe.contactName}`,
     `Business email: ${safe.email}`,
     `City: ${safe.city}`,
@@ -179,8 +201,9 @@ export const createBetaLeadHtml = ({ payload }) => {
 
   return `
     <div style="font-family:Arial,sans-serif;line-height:1.5;color:#0f172a">
-      <h2 style="margin:0 0 16px">ZANVROX Workforce - Ontario Restaurant Beta application</h2>
-      <p><strong>Restaurant name:</strong> ${escapeHtml(safe.restaurantName)}</p>
+      <h2 style="margin:0 0 16px">ZANVROX Workforce - Ontario Small Business Beta application</h2>
+      <p><strong>Business name:</strong> ${escapeHtml(safe.businessName)}</p>
+      <p><strong>Business type:</strong> ${escapeHtml(safe.businessType)}</p>
       <p><strong>Contact name:</strong> ${escapeHtml(safe.contactName)}</p>
       <p><strong>Business email:</strong> ${escapeHtml(safe.email)}</p>
       <p><strong>City:</strong> ${escapeHtml(safe.city)}</p>

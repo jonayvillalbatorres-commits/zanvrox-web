@@ -236,6 +236,32 @@ describe('siteContent i18n pricing', () => {
 });
 
 describe('siteContent i18n coverage', () => {
+  test('ships the new Workforce capabilities and broader industry positioning in every language', async () => {
+    const english = await loadContent('en');
+
+    await Promise.all(
+      ERP_LANGUAGE_SET.map(async ({ code }) => {
+        const content = await loadContent(code);
+        const workforce = content.pages.workforce;
+
+        expect(workforce.capabilities.items).toHaveLength(5);
+        expect(workforce.industries.items).toHaveLength(8);
+        expect(workforce.cta.secondary.path).toBe('/workforce#industries');
+        expect(content.pages.pricing.workforce.capabilityNote.body).toBeTruthy();
+
+        if (code !== 'en') {
+          expect(workforce.capabilities.title).not.toBe(english.pages.workforce.capabilities.title);
+          expect(workforce.industries.subtitle).not.toBe(
+            english.pages.workforce.industries.subtitle
+          );
+          expect(content.pages.pricing.workforce.capabilityNote.title).not.toBe(
+            english.pages.pricing.workforce.capabilityNote.title
+          );
+        }
+      })
+    );
+  });
+
   test('keeps visible languages populated with the same main page sections as English', () => {
     ERP_LANGUAGE_SET.forEach(({ code }) => {
       const localized = rawContentByLanguage[code];
@@ -257,6 +283,43 @@ describe('siteContent i18n coverage', () => {
       );
 
       expect(missing).toEqual([]);
+    });
+  });
+
+  test('ships the Ontario small-business beta campaign and complete form in every language', () => {
+    const businessTypeKeys = [
+      'placeholder',
+      'restaurant',
+      'cafe',
+      'bar',
+      'retail_store',
+      'small_shop',
+      'small_warehouse',
+      'other',
+    ];
+
+    ERP_LANGUAGE_SET.forEach(({ code }) => {
+      const content = rawContentByLanguage[code];
+      const beta = content.pages.workforceBeta;
+      const form = beta.form;
+      const campaignText = JSON.stringify({
+        beta,
+        workforce: content.pages.workforce,
+        pricingBanner: content.pages.pricing.workforce.betaBanner,
+        seo: content.seo.workforceBeta,
+      });
+
+      expect(form.fields.businessName).toBeTruthy();
+      expect(form.fields.businessType).toBeTruthy();
+      expect(form.fields.restaurantName).toBeUndefined();
+      expect(form.placeholders.businessName).toBeTruthy();
+      expect(form.errors.businessName).toBeTruthy();
+      expect(form.errors.businessType).toBeTruthy();
+      expect(Object.keys(form.businessTypes).sort()).toEqual(businessTypeKeys.sort());
+      expect(beta.badges).toHaveLength(3);
+      expect(beta.terms.items).toHaveLength(6);
+      expect(content.seo.workforceBeta.path).toBe('/workforce/beta');
+      expect(campaignText).not.toMatch(/Ontario Restaurant Beta/i);
     });
   });
 

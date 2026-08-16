@@ -107,7 +107,7 @@ describe('pricing amounts', () => {
       });
   });
 
-  test('Ontario Restaurant Beta states 14-day beta and 6 months free after launch', () => {
+  test('Ontario Small Business Beta states 14-day beta and 6 months free after launch', () => {
     const beta = getCachedContent('en').pages.workforceBeta;
     expect(beta.badges).toContain('14-day beta');
     expect(beta.badges).toContain('6 months free after launch');
