@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { trackMetaStandardEvent } from '../../utils/metaPixel';
 import { Link } from 'react-router';
 import { submitBetaLead } from '../../utils/betaLead';
 import {
@@ -80,6 +81,7 @@ export default function BetaForm({ formContent }) {
 
     try {
       await submitBetaLead({ payload: form });
+      trackMetaStandardEvent('Lead', { content_name: 'workforce_beta' });
       setSubmitted(true);
       setForm(createBetaLeadInitialState());
       setErrors({});
