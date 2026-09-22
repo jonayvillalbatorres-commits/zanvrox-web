@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { trackMetaStandardEvent } from '../../utils/metaPixel';
 import { submitContactLead } from '../../utils/contactLead';
 import {
   createLeadInitialState,
@@ -54,6 +55,7 @@ export default function DemoForm({ formContent, leadContext = null }) {
         payload: form,
         context: leadContext,
       });
+      trackMetaStandardEvent('Lead', { content_name: 'demo_request' });
       setSubmitted(true);
       setForm(createLeadInitialState());
       setErrors({});
