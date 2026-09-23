@@ -9,7 +9,7 @@ const siteContentAr = {
   labels: {
     menu: 'القائمة',
     bookDemo: 'جولة موجهة',
-    tryDemo: 'فتح مساحة التقييم',
+    tryDemo: 'جرّب ZANVROX',
     getTechnicalBrief: 'التواصل مع الفريق',
     reviewResources: 'عرض الموارد',
     language: 'اللغة',
@@ -367,11 +367,11 @@ const siteContentAr = {
     product: {
       ...base.pages.product,
       heroKicker: 'ZANVROX ERP',
-      heroTitle: 'شغّل المالية والعمليات وWorkforce من منصة واحدة متصلة.',
+      heroTitle: 'أدر أعمالك من نظام واحد مترابط.',
       heroSubtitle:
-        'ZANVROX ERP منصة محكومة لفرق SMB الكندية تغطي المالية والفوترة والمصروفات والعملاء والموردين والمشتريات والمخزون والمواقع والعمليات والتقارير وسير عمل Payroll وZANVROX Workforce.',
+        'المالية والمخزون والمشتريات والموظفون والتقارير والعمليات — كلها مترابطة ليعرف فريقك ما يحدث دون التنقل بين أدوات متعددة.',
       heroPrimaryCta: { label: 'عرض الأسعار', path: '/pricing' },
-      heroSecondaryCta: { label: 'فتح مساحة التقييم', path: '/resources#demo-environment' },
+      heroSecondaryCta: { label: 'جرّب ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
         ...base.pages.product.heroPreview,
         title: 'لمحة عن العمليات',
@@ -604,8 +604,8 @@ const siteContentAr = {
     },
     security: {
       ...base.pages.security,
-      heroTitle: 'الأمان والمعمارية حسب التصميم.',
-      heroSubtitle: 'حدود المستأجرين ووصول بأقل صلاحية وسلوك معاملات قابل للتدقيق.',
+      heroTitle: 'أمان يمكنك فهمه.',
+      heroSubtitle: 'ضوابط واضحة للوصول وعزل المؤسسات والإجراءات الحساسة والتدقيق — من دون ادعاءات غامضة.',
       overview: {
         title: 'نظرة عامة على الأمان',
         subtitle: 'ملخص محافظ للضوابط المرئية حاليا في المنتج وسير التسليم.',
@@ -766,9 +766,9 @@ const siteContentAr = {
         'يُباع ZANVROX ERP وZANVROX Workforce وتُحدد أسعارهما بشكل مستقل. تشمل خطط ERP المؤهلة خصمًا أو شمولًا لـ Workforce — راجع أسعار ERP للاطلاع على تفاصيل العروض المجمعة.',
     },
     pricing: {
-      heroTitle: 'أسعار ZANVROX ERP وZANVROX Workforce.',
+      heroTitle: 'أسعار بسيطة. ابدأ بما تحتاجه.',
       heroSubtitle:
-        'ابدأ بـWorkforce لعمليات الورديات الميدانية، أو بـZANVROX ERP للمالية وعمليات الأعمال، أو بكليهما معا. أسعار CAD شفافة لفرق SMB الكندية.',
+        'اختر Workforce أو ERP أو كليهما. أسعار واضحة بالدولار الكندي، دون مسار إعداد مخفي، مع إمكانية التوسع عند الحاجة.',
       pricingNote:
         'الأسعار بالدولار الكندي. الضرائب غير مشمولة. قد يختلف التسعير لعمليات النشر المؤسسية أو ذات الحجم الكبير. Payroll إضافة منفصلة. يساعد ZANVROX على تنظيم سير العمل المالي وPayroll وWorkforce، لكنه لا يحل محل المشورة المحاسبية أو القانونية أو الضريبية.',
       upgradePath: {
@@ -1511,9 +1511,9 @@ const siteContentAr = {
     },
     resources: {
       ...base.pages.resources,
-      heroTitle: 'موارد لتقييم المنتج ومراجعة الأمان وتخطيط rollout.',
+      heroTitle: 'كل ما تحتاجه لتقييم ZANVROX.',
       heroSubtitle:
-        'استخدم هذه المواد العامة لمراجعة ملاءمة المنتج وموقف الأمان وخيارات التقييم قبل طلب نقاش أعمق.',
+        'شاهد المنتج، وراجع الأمان، وجرّب العرض، وقرر إن كان ZANVROX مناسباً لعملك — دون حجز مكالمة أولاً.',
       sections: [
         {
           title: 'نظرة المنتج وموارد التقييم',
@@ -1600,11 +1600,11 @@ const siteContentAr = {
     about: {
       ...base.pages.about,
       heroKicker: 'عن ZANVROX',
-      heroTitle: 'نظام ERP عملي موضوع لrollout موثوق، لا لاستعراض مؤسسي.',
+      heroTitle: 'مصمم لتبسيط إدارة الأعمال.',
       heroSubtitle:
-        'يقدم ZANVROX كنظام ERP حديث لفرق SMB الكندية التي تريد تحكما تشغيليا أدق وأنظمة أقل انفصالا ومسار دعم أوضح.',
-      heroPrimaryCta: { label: 'استكشاف المنتج', path: '/erp' },
-      heroSecondaryCta: { label: 'التواصل مع الفريق', path: '/contact' },
+        'يجمع ZANVROX المالية والأفراد والعمليات لفرق الشركات الكندية الصغيرة والمتوسطة التي تريد أدوات أقل وتحكماً أكبر.',
+      heroPrimaryCta: { label: 'استكشف ZANVROX', path: '/erp' },
+      heroSecondaryCta: { label: 'تواصل معنا', path: '/contact' },
       heroPreview: {
         ...base.pages.about.heroPreview,
         title: 'لقطة عن التموضع',
@@ -1660,12 +1660,12 @@ const siteContentAr = {
     },
     contact: {
       ...base.pages.contact,
-      heroTitle: 'تواصل مع الفريق فقط عندما تحتاج إلى مساعدة في سؤال تقييم حقيقي.',
+      heroTitle: 'تحتاج مساعدة في القرار؟ ابدأ هنا.',
       heroSubtitle:
-        'المسار المقصود هو نظرة المنتج، استكشاف المنتج، مراجعة الأسعار، التقييم عبر المتصفح، ثم التواصل الاختياري أو طلب جولة موجهة.',
+        'جرّب المنتج أولاً، راجع الأسعار، أو أرسل لنا سؤالاً محدداً. ويمكنك طلب جولة موجهة متى أردت.',
       conversion: {
-        title: 'مسار التقييم الموصى به',
-        subtitle: 'يقلل هذا الاجتماعات غير الضرورية ويمنح سياقا أفضل عندما يتواصل أحدهم.',
+        title: 'اختر الخطوة التالية المناسبة لك.',
+        subtitle: 'يمكنك استكشاف ZANVROX بنفسك أو طلب المساعدة في أي وقت. لا مكالمات مبيعات غير ضرورية.',
         cards: [
           { title: 'شاهد نظرة المنتج', body: 'ابدأ بالفيديو لفهم نموذج التشغيل وموقف المنتج.' },
           {
