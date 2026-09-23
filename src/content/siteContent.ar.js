@@ -49,13 +49,11 @@ const siteContentAr = {
     ...base.pages,
     home: {
       ...base.pages.home,
-      heroKicker: 'نظام ERP كندي للمالية والعمليات والتحكم التشغيلي',
-      heroTitle:
-        'شغل المالية والمخزون وسير عمل Payroll والعمليات في نظام ERP واحد محكوم بدلا من خمسة أدوات منفصلة.',
-      heroSubtitle:
-        'يساعد ZANVROX فرق SMB الكندية على توحيد المحاسبة والفوترة والمشتريات والمخزون والإنتاج والموافقات ودعم سير العمل الضريبي دون مشروع تنفيذ ثقيل.',
-      heroPrimaryCta: { label: 'عرض نظرة المنتج', path: '/#product-overview' },
-      heroSecondaryCta: { label: 'فتح مساحة التقييم', path: '/resources#demo-environment' },
+      heroKicker: 'مصمم للشركات الكندية الصغيرة',
+      heroTitle: 'أعمالك كلها. أخيراً في مكان واحد.',
+      heroSubtitle: 'المالية والموظفون والمخزون والجداول والعمليات — كلها مترابطة في نظام بسيط، لتقضي وقتاً أقل في إدارة البرامج ووقتاً أكثر في إدارة أعمالك.',
+      heroPrimaryCta: { label: 'اكتشف كيف يعمل ZANVROX', path: '/#product-overview' },
+      heroSecondaryCta: { label: 'جرّب ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
         ...base.pages.home.heroPreview,
         title: 'لمحة عن الضرائب والتحكم',
