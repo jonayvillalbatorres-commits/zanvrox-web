@@ -216,13 +216,13 @@
   }
 
   .zx-success-soft {
-    border-color: rgba(39, 197, 139, 0.45);
-    background: rgba(39, 197, 139, 0.12);
+    border-color: rgba(8, 117, 88, 0.24);
+    background: rgba(39, 197, 139, 0.08);
   }
 
   .zx-warning-soft {
-    border-color: rgba(240, 179, 76, 0.4);
-    background: rgba(240, 179, 76, 0.12);
+    border-color: rgba(154, 103, 12, 0.24);
+    background: rgba(240, 179, 76, 0.09);
   }
 
   .zx-cta-panel {
@@ -338,7 +338,7 @@
     --plan-accent: 49 179 255;
     border: 1px solid rgb(var(--plan-accent) / 0.52);
     color: #13213b;
-    background: linear-gradient(180deg, rgb(var(--plan-accent) / 0.075), transparent 32%), #fbf7ee;
+    background: linear-gradient(180deg, rgb(var(--plan-accent) / 0.055), transparent 34%), #ffffff;
     box-shadow:
       0 18px 44px rgba(42, 62, 82, 0.10),
       inset 0 1px 0 rgba(255, 255, 255, 0.96);
@@ -569,6 +569,28 @@
 }
 
 @media (max-width: 768px) {
+  .section-shell {
+    padding-top: 2rem;
+    padding-bottom: 2.75rem;
+  }
+
+  .hero-grid {
+    border-radius: 1.35rem;
+    padding: 2rem 1.25rem;
+  }
+
+  .zx-card {
+    padding: 1.25rem;
+  }
+
+  .zx-product-stage {
+    transform: none;
+  }
+
+  .zx-button {
+    min-height: 2.75rem;
+  }
+
   .hero-grid::before,
   .hero-grid::after {
     display: none;
