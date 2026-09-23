@@ -340,7 +340,7 @@
     color: #13213b;
     background: linear-gradient(180deg, rgb(var(--plan-accent) / 0.075), transparent 32%), #fbf7ee;
     box-shadow:
-      0 22px 48px rgba(0, 7, 20, 0.32),
+      0 18px 44px rgba(42, 62, 82, 0.10),
       inset 0 1px 0 rgba(255, 255, 255, 0.96);
   }
 
@@ -360,8 +360,8 @@
     border: 2px solid #dc3f45;
     box-shadow:
       0 0 0 1px rgba(255, 180, 183, 0.22),
-      0 28px 64px rgba(0, 7, 20, 0.42),
-      0 12px 34px rgba(220, 63, 69, 0.16);
+      0 26px 58px rgba(42, 62, 82, 0.14),
+      0 12px 28px rgba(220, 63, 69, 0.10);
   }
 
   .zx-pricing-band .zx-pricing-card .text-zx-text {
@@ -414,10 +414,31 @@
   }
 
   .zx-pricing-band [class*='bg-zx-surface'] {
-    border-color: #c7bda9;
+    border-color: rgba(25, 47, 74, 0.10);
     color: #526079;
-    background-color: rgba(255, 255, 255, 0.68);
+    background-color: rgba(255, 255, 255, 0.82);
   }
+
+  .zx-form-card h2 {
+    color: #122033;
+    letter-spacing: -0.02em;
+  }
+
+  .zx-form-card label {
+    color: #4f6075;
+  }
+
+  .zx-form-card .zx-button {
+    min-height: 2.9rem;
+  }
+
+  .zx-marketing-surface {
+    border: 1px solid rgba(25, 47, 74, 0.09);
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 48px rgba(42, 62, 82, 0.08);
+  }
+
 
   .zx-form-card {
     border-color: rgba(25, 47, 74, 0.10);
