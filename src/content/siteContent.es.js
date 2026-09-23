@@ -9,7 +9,7 @@ const siteContentEs = {
   labels: {
     menu: 'Menú',
     bookDemo: 'Recorrido guiado',
-    tryDemo: 'Abrir espacio de trabajo',
+    tryDemo: 'Probar ZANVROX',
     getTechnicalBrief: 'Contactar al equipo',
     reviewResources: 'Ver recursos',
     language: 'Idioma',
@@ -390,12 +390,12 @@ const siteContentEs = {
     product: {
       heroKicker: 'ZANVROX ERP',
       heroTitle:
-        'Gestiona finanzas, operaciones y equipo de trabajo desde una sola plataforma conectada.',
+        'Gestiona tu negocio desde un solo sistema conectado.',
       heroSubtitle:
-        'ZANVROX ERP es una plataforma controlada para equipos pyme canadienses que cubre finanzas, facturación, gastos, clientes y proveedores, compras, inventario, ubicaciones, operaciones, informes, flujos de nómina y ZANVROX Workforce.',
+        'Finanzas, inventario, compras, empleados, informes y operaciones — todo conectado para que tu equipo sepa qué ocurre sin saltar entre herramientas.',
       heroPrimaryCta: { label: 'Ver precios', path: '/pricing' },
       heroSecondaryCta: {
-        label: 'Abrir espacio de evaluación',
+        label: 'Probar ZANVROX',
         path: '/resources#demo-environment',
       },
       heroPreview: {
@@ -553,9 +553,9 @@ const siteContentEs = {
         'ZANVROX ERP y ZANVROX Workforce se venden y cobran de forma independiente. Los planes ERP elegibles incluyen un descuento o inclusión de Workforce — consulta los precios de ERP para ver el detalle de los paquetes.',
     },
     pricing: {
-      heroTitle: 'Precios para ZANVROX ERP y ZANVROX Workforce.',
+      heroTitle: 'Precios sencillos. Empieza por lo que necesitas.',
       heroSubtitle:
-        'Empieza con Workforce para operaciones de turnos de primera línea, con ZANVROX ERP para finanzas y operaciones de negocio, o con ambos juntos. Precios transparentes en CAD para equipos pyme canadienses.',
+        'Elige Workforce, ERP o ambos. Precios claros en CAD, sin costes ocultos de implantación y con espacio para crecer.',
       pricingNote:
         'Precios en dólares canadienses. Impuestos no incluidos. El precio puede variar para despliegues empresariales o de alto volumen. La nómina es un complemento separado. ZANVROX ayuda a organizar flujos financieros, de nómina y de personal, pero no sustituye el asesoramiento contable, legal ni fiscal.',
       upgradePath: {
@@ -1343,9 +1343,9 @@ const siteContentEs = {
     },
     resources: {
       heroTitle:
-        'Recursos para evaluación de producto, revisión de seguridad y planificación de despliegue.',
+        'Todo lo que necesitas para evaluar ZANVROX.',
       heroSubtitle:
-        'Usa estos materiales públicos para revisar encaje de producto, postura de seguridad y opciones de evaluación antes de solicitar una conversación más profunda.',
+        'Mira el producto, revisa la seguridad, prueba la demo y decide si ZANVROX encaja en tu negocio — sin tener que reservar una llamada.',
       sections: [
         {
           title: 'Resumen del producto y recursos de evaluación',
@@ -1433,9 +1433,9 @@ const siteContentEs = {
       },
     },
     security: {
-      heroTitle: 'Seguridad y arquitectura por diseño.',
+      heroTitle: 'Seguridad que se entiende.',
       heroSubtitle:
-        'Límites entre organizaciones, acceso de mínimo privilegio y comportamiento transaccional auditable.',
+        'Controles claros de acceso, aislamiento entre empresas, acciones sensibles y auditoría — explicados sin promesas vagas.',
       overview: {
         title: 'Resumen de seguridad',
         subtitle:
@@ -1557,11 +1557,11 @@ const siteContentEs = {
     about: {
       heroKicker: 'Acerca de ZANVROX',
       heroTitle:
-        'Un ERP práctico posicionado para un despliegue creíble, no para teatralidad empresarial.',
+        'Creado para hacer más sencillo gestionar un negocio.',
       heroSubtitle:
-        'ZANVROX se presenta como un ERP moderno para equipos pyme canadienses que quieren un control operativo más estricto, menos sistemas desconectados y una ruta de soporte más clara.',
-      heroPrimaryCta: { label: 'Explorar producto', path: '/erp' },
-      heroSecondaryCta: { label: 'Contactar al equipo', path: '/contact' },
+        'ZANVROX reúne finanzas, personas y operaciones para pymes canadienses que quieren menos herramientas desconectadas y más control.',
+      heroPrimaryCta: { label: 'Explorar ZANVROX', path: '/erp' },
+      heroSecondaryCta: { label: 'Contactarnos', path: '/contact' },
       heroPreview: {
         title: 'Resumen de posicionamiento',
         type: 'reports',
@@ -1621,13 +1621,13 @@ const siteContentEs = {
     },
     contact: {
       heroTitle:
-        'Contacta al equipo solo cuando necesites ayuda con una pregunta real de evaluación.',
+        '¿Necesitas ayuda para decidir? Empieza aquí.',
       heroSubtitle:
-        'La ruta prevista es resumen del producto, exploración del producto, revisión de precios, evaluación en navegador y después contacto opcional o solicitud de recorrido guiado.',
+        'Prueba primero el producto, revisa los precios o envíanos una pregunta concreta. Puedes pedir un recorrido guiado cuando quieras.',
       conversion: {
-        title: 'Flujo de evaluación recomendado',
+        title: 'Elige el siguiente paso que mejor te encaje.',
         subtitle:
-          'Esto reduce reuniones innecesarias y da mejor contexto cuando alguien finalmente se pone en contacto.',
+          'Puedes explorar ZANVROX por tu cuenta o pedir ayuda en cualquier momento. Sin llamadas comerciales innecesarias.',
         cards: [
           {
             title: 'Ver resumen del producto',
