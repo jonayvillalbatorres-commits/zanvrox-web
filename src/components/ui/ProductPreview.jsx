@@ -44,8 +44,8 @@ export default function ProductPreview({
   const label = PREVIEW_LABELS[type] || PREVIEW_LABELS.accounting;
 
   return (
-    <div className="overflow-hidden rounded-xl border border-zx-border bg-zx-bg/80 shadow-[0_18px_36px_rgba(2,8,24,0.5)]">
-      <div className="flex items-center justify-between border-b border-zx-border bg-zx-surface px-3 py-2">
+    <div className="overflow-hidden rounded-2xl border border-zx-border bg-white shadow-[0_18px_42px_rgba(42,62,82,0.12)]">
+      <div className="flex items-center justify-between border-b border-zx-border bg-[#f7f9fb] px-3 py-2">
         <div className="flex items-center gap-1">
           <span className="h-2.5 w-2.5 rounded-full bg-zx-danger/80" />
           <span className="h-2.5 w-2.5 rounded-full bg-zx-warning/80" />

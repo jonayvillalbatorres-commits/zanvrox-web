@@ -4,7 +4,7 @@ const siteContentFr = {
   labels: {
     menu: 'Menu',
     bookDemo: 'Presentation guidee',
-    tryDemo: 'Ouvrir l espace',
+    tryDemo: 'Essayer ZANVROX',
     getTechnicalBrief: 'Contacter l equipe',
     reviewResources: 'Voir les ressources',
     language: 'Langue',
@@ -42,16 +42,11 @@ const siteContentFr = {
   },
   pages: {
     home: {
-      heroKicker: 'ERP canadien pour la finance, les operations et l auditabilite',
-      heroTitle:
-        'Pilotez la finance et les operations dans un ERP maitrise au lieu de cinq outils deconnectes.',
-      heroSubtitle:
-        'ZANVROX aide les PME canadiennes a centraliser la comptabilite, la facturation, les achats, l inventaire, la production, les approbations et la conformite sans projet d implementation lourd.',
-      heroPrimaryCta: { label: 'Voir l apercu produit', path: '/#product-overview' },
-      heroSecondaryCta: {
-        label: 'Ouvrir l espace d evaluation',
-        path: '/resources#demo-environment',
-      },
+      heroKicker: 'Conçu pour les petites entreprises canadiennes',
+      heroTitle: 'Toute votre entreprise. Enfin au même endroit.',
+      heroSubtitle: 'Finances, employés, stocks, horaires et opérations — connectés dans un système simple pour passer moins de temps à gérer des logiciels et plus de temps à gérer votre entreprise.',
+      heroPrimaryCta: { label: 'Voir comment fonctionne ZANVROX', path: '/#product-overview' },
+      heroSecondaryCta: { label: 'Essayer ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
         title: 'Apercu fiscal et controle',
         caption: 'En direct dans l ERP',
@@ -388,12 +383,12 @@ const siteContentFr = {
     product: {
       heroKicker: 'ZANVROX ERP',
       heroTitle:
-        'Pilotez la finance, les operations et la main-d oeuvre depuis une seule plateforme connectee.',
+        'Gérez votre entreprise depuis un seul système connecté.',
       heroSubtitle:
-        'ZANVROX ERP est une plateforme controlee pour les PME canadiennes qui couvre la finance, la facturation, les depenses, les clients et fournisseurs, les achats, l inventaire, les emplacements, les operations, le reporting, les workflows de paie et ZANVROX Workforce.',
+        'Finances, stocks, achats, employés, rapports et opérations — connectés pour que votre équipe voie ce qui se passe sans jongler entre plusieurs outils.',
       heroPrimaryCta: { label: 'Voir les tarifs', path: '/pricing' },
       heroSecondaryCta: {
-        label: 'Ouvrir l espace d evaluation',
+        label: 'Essayer ZANVROX',
         path: '/resources#demo-environment',
       },
       heroPreview: {
@@ -551,9 +546,9 @@ const siteContentFr = {
         'ZANVROX ERP et ZANVROX Workforce sont vendus et tarifes independamment. Les plans ERP eligibles incluent une remise ou une inclusion Workforce — voir les tarifs ERP pour le detail des offres groupees.',
     },
     pricing: {
-      heroTitle: 'Tarifs pour ZANVROX ERP et ZANVROX Workforce.',
+      heroTitle: 'Des tarifs simples. Commencez par ce dont vous avez besoin.',
       heroSubtitle:
-        'Commencez avec Workforce pour les operations de terrain par quart, avec ZANVROX ERP pour la finance et les operations d entreprise, ou avec les deux ensemble. Une tarification CAD transparente pour les equipes PME canadiennes.',
+        'Choisissez Workforce, ERP ou les deux. Des prix clairs en CAD, sans parcours d\'installation caché, avec la possibilité d\'évoluer.',
       pricingNote:
         'Prix en dollars canadiens. Taxes non incluses. La tarification peut varier pour les deploiements d entreprise ou a fort volume. La paie est un add-on distinct. ZANVROX aide a organiser les workflows financiers, de paie et de main-d oeuvre, mais ne remplace pas les conseils comptables, juridiques ou fiscaux.',
       upgradePath: {
@@ -1331,9 +1326,9 @@ const siteContentFr = {
     },
     resources: {
       heroTitle:
-        'Ressources pour l evaluation produit, la revue securite et la planification du deploiement.',
+        'Tout ce qu’il faut pour évaluer ZANVROX.',
       heroSubtitle:
-        'Utilisez ces materiaux publics pour evaluer l adequation produit, la posture securite et les options d evaluation avant de demander une discussion plus approfondie.',
+        'Découvrez le produit, la sécurité, la démo et décidez si ZANVROX convient à votre entreprise — sans devoir réserver un appel.',
       sections: [
         {
           title: 'Apercu produit et ressources d evaluation',
@@ -1421,9 +1416,9 @@ const siteContentFr = {
       },
     },
     security: {
-      heroTitle: 'Securite et architecture par conception.',
+      heroTitle: 'Une sécurité facile à comprendre.',
       heroSubtitle:
-        'Isolation entre organisations, acces de moindre privilege et comportement transactionnel auditable.',
+        'Des contrôles clairs pour les accès, l’isolation des organisations, les actions sensibles et l’auditabilité — sans promesses vagues.',
       overview: {
         title: 'Apercu securite',
         subtitle:
@@ -1541,11 +1536,11 @@ const siteContentFr = {
     about: {
       heroKicker: 'A propos de ZANVROX',
       heroTitle:
-        'Un ERP pratique positionne pour un deploiement credible, pas pour le theatre d entreprise.',
+        'Conçu pour simplifier la gestion d’une entreprise.',
       heroSubtitle:
-        'ZANVROX est presente comme un ERP moderne pour les PME canadiennes qui veulent un controle operationnel plus ferme, moins de systemes deconnectes et un parcours de support plus clair.',
-      heroPrimaryCta: { label: 'Explorer le produit', path: '/erp' },
-      heroSecondaryCta: { label: 'Contacter l equipe', path: '/contact' },
+        'ZANVROX réunit finances, équipes et opérations pour les PME canadiennes qui veulent moins d’outils dispersés et plus de contrôle.',
+      heroPrimaryCta: { label: 'Découvrir ZANVROX', path: '/erp' },
+      heroSecondaryCta: { label: 'Nous contacter', path: '/contact' },
       heroPreview: {
         title: 'Synthese de positionnement',
         type: 'reports',
@@ -1606,13 +1601,13 @@ const siteContentFr = {
     },
     contact: {
       heroTitle:
-        'Contactez l equipe seulement lorsque vous avez besoin d aide pour une vraie question d evaluation.',
+        'Besoin d’aide pour décider ? Commencez ici.',
       heroSubtitle:
-        'Le parcours prevu est apercu produit, exploration du produit, revue des tarifs, evaluation dans le navigateur, puis contact optionnel ou demande de presentation guidee.',
+        'Essayez d’abord le produit, consultez les tarifs ou posez-nous une question précise. Une présentation guidée est disponible quand vous le souhaitez.',
       conversion: {
-        title: 'Parcours d evaluation recommande',
+        title: 'Choisissez la prochaine étape qui vous convient.',
         subtitle:
-          'Cela reduit les reunions inutiles et fournit un meilleur contexte lorsqu une personne prend finalement contact.',
+          'Explorez ZANVROX seul ou demandez de l’aide à tout moment. Aucun appel commercial inutile.',
         cards: [
           {
             title: 'Voir l apercu produit',

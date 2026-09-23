@@ -6,8 +6,8 @@ export default function SectionHeading({ eyebrow, title, subtitle }) {
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="font-heading text-2xl font-semibold text-zx-text sm:text-3xl">{title}</h2>
-      {subtitle ? <p className="text-base text-zx-text-muted">{subtitle}</p> : null}
+      <h2 className="font-heading text-3xl font-semibold tracking-[-0.025em] text-zx-text sm:text-4xl">{title}</h2>
+      {subtitle ? <p className="text-base leading-7 text-zx-text-muted sm:text-lg">{subtitle}</p> : null}
     </div>
   );
 }

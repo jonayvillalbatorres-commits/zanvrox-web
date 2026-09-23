@@ -62,7 +62,7 @@ export default function SiteHeader() {
   return (
     <header
       dir="ltr"
-      className="sticky top-0 z-40 border-b border-zx-border bg-zx-bg backdrop-blur-xl"
+      className="sticky top-0 z-40 border-b border-zx-border bg-white/90 backdrop-blur-xl"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="group flex shrink-0 items-center gap-3">
@@ -88,7 +88,7 @@ export default function SiteHeader() {
           {labels.menu || 'Menu'}
         </button>
 
-        <nav className="zx-glass-strip mx-2 hidden min-w-0 flex-1 items-center justify-center gap-0.5 overflow-hidden p-1 md:flex">
+        <nav className="mx-4 hidden min-w-0 flex-1 items-center justify-center gap-1 md:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.path}
@@ -97,8 +97,8 @@ export default function SiteHeader() {
               className={({ isActive }) =>
                 `inline-flex h-8 items-center justify-center whitespace-nowrap rounded-lg px-2 text-[12px] font-medium leading-none transition xl:px-2.5 xl:text-[13px] ${
                   isActive
-                    ? 'bg-zx-accent text-zx-bg shadow-[0_8px_14px_rgba(23,151,234,0.3)]'
-                    : 'text-zx-text-muted hover:bg-zx-surface hover:text-zx-text'
+                    ? 'text-zx-accent'
+                    : 'text-zx-text-muted hover:text-zx-text'
                 }`
               }
             >
@@ -109,7 +109,7 @@ export default function SiteHeader() {
 
         <div className="hidden shrink-0 items-center gap-1.5 md:flex">
           <div
-            className="zx-glass-strip relative flex h-10 items-center gap-0.5 px-1 py-1"
+            className="relative flex h-10 items-center gap-0.5 rounded-full border border-zx-border bg-white/70 px-1 py-1"
             ref={languageMenuRef}
           >
             <img

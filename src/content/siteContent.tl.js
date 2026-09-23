@@ -10,7 +10,7 @@ const siteContentTl = {
     ...base.labels,
     menu: 'Talaan',
     bookDemo: 'May gabay na pagpapakita',
-    tryDemo: 'Buksan ang kapaligiran',
+    tryDemo: 'Subukan ang ZANVROX',
     getTechnicalBrief: 'Makipag-ugnayan sa pangkat',
     reviewResources: 'Tingnan ang mga sanggunian',
     language: 'Wika',
@@ -49,16 +49,11 @@ const siteContentTl = {
   pages: {
     home: {
       ...base.pages.home,
-      heroKicker: 'ERP sa Canada para sa pananalapi, operasyon, at kakayahang masuri',
-      heroTitle:
-        'Patakbuhin ang pananalapi at operasyon sa iisang kontroladong ERP sa halip na limang magkakahiwalay na kasangkapan.',
-      heroSubtitle:
-        'Tinutulungan ng ZANVROX ang maliliit at katamtamang negosyo sa Canada na pagsamahin ang pagkuwenta, pagsingil, pagbili, imbentaryo, produksyon, pag-apruba, at pagsunod sa patakaran nang walang mabigat na proyekto sa pagpapatupad.',
-      heroPrimaryCta: { label: 'Tingnan ang buod ng produkto', path: '/#product-overview' },
-      heroSecondaryCta: {
-        label: 'Buksan ang kapaligiran ng pagsusuri',
-        path: '/resources#demo-environment',
-      },
+      heroKicker: 'Ginawa para sa maliliit na negosyong Canadian',
+      heroTitle: 'Buong negosyo mo. Sa wakas, nasa iisang lugar.',
+      heroSubtitle: 'Finance, employees, inventory, schedules, at operations — magkakaugnay sa isang simpleng system para mas kaunti ang oras sa software at mas marami sa pagpapatakbo ng negosyo.',
+      heroPrimaryCta: { label: 'Tingnan kung paano gumagana ang ZANVROX', path: '/#product-overview' },
+      heroSecondaryCta: { label: 'Subukan ang ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
         ...base.pages.home.heroPreview,
         title: 'Paunang tanaw sa buwis at kontrol',
@@ -417,12 +412,12 @@ const siteContentTl = {
       ...base.pages.product,
       heroKicker: 'ZANVROX ERP',
       heroTitle:
-        'Patakbuhin ang pananalapi, operasyon, at Workforce mula sa iisang konektadong plataporma.',
+        'Patakbuhin ang negosyo mo mula sa iisang konektadong system.',
       heroSubtitle:
-        'Ang ZANVROX ERP ay kontroladong plataporma para sa maliliit at katamtamang negosyo sa Canada na sumasaklaw sa pananalapi, pagsingil, gastos, kliyente at tagapagtustos, pagbili, imbentaryo, lokasyon, operasyon, ulat, daloy ng pasahod, at ZANVROX Workforce.',
+        'Finance, inventory, purchasing, employees, reports, at operations — magkakaugnay para makita ng team mo ang nangyayari nang hindi palipat-lipat ng tools.',
       heroPrimaryCta: { label: 'Tingnan ang presyo', path: '/pricing' },
       heroSecondaryCta: {
-        label: 'Buksan ang kapaligiran ng pagsusuri',
+        label: 'Subukan ang ZANVROX',
         path: '/resources#demo-environment',
       },
       heroPreview: {
@@ -700,9 +695,9 @@ const siteContentTl = {
     },
     security: {
       ...base.pages.security,
-      heroTitle: 'Seguridad at arkitektura mula sa disenyo.',
+      heroTitle: 'Seguridad na madaling maintindihan.',
       heroSubtitle:
-        'Hangganan ng nangungupahang kapaligiran, pinakamababang pahintulot, at kilos ng transaksyon na nasusuri.',
+        'Malinaw na controls para sa access, tenant isolation, sensitibong actions, at auditability — walang malabong claims.',
       overview: {
         title: 'Buod ng seguridad',
         subtitle:
@@ -881,9 +876,9 @@ const siteContentTl = {
     },
     pricing: {
       ...base.pages.pricing,
-      heroTitle: 'Presyo para sa ZANVROX ERP at ZANVROX Workforce.',
+      heroTitle: 'Simpleng presyo. Magsimula sa kailangan mo.',
       heroSubtitle:
-        'Magsimula sa Workforce para sa mga shift ng mga tauhan sa harapan, sa ZANVROX ERP para sa pananalapi at operasyon ng negosyo, o pareho. Malinaw na presyo sa CAD para sa maliliit at katamtamang negosyo sa Canada.',
+        'Piliin ang Workforce, ERP, o pareho. Malinaw na CAD pricing, walang nakatagong setup path, at puwedeng lumaki kasabay ng negosyo.',
       pricingNote:
         'Nasa dolyar ng Canada ang mga presyo. Hindi kasama ang buwis. Maaaring mag-iba ang presyo para sa malalaking organisasyon o mataas na dami ng paggamit. Hiwalay na dagdag ang pasahod. Tinutulungan ng ZANVROX na ayusin ang mga daloy ng pananalapi, pasahod, at Workforce, ngunit hindi nito pinapalitan ang payo sa pagkuwenta, batas, o buwis.',
       upgradePath: {
@@ -1684,9 +1679,9 @@ const siteContentTl = {
     resources: {
       ...base.pages.resources,
       heroTitle:
-        'Mga sanggunian para sa pagsusuri ng produkto, pagsusuri sa seguridad, at pagpaplano ng paglulunsad.',
+        'Lahat ng kailangan para suriin ang ZANVROX.',
       heroSubtitle:
-        'Gamitin ang mga pampublikong materyal na ito para suriin ang tugma ng produkto, paninindigan sa seguridad, at mga pagpipilian sa pagsusuri bago humiling ng mas malalim na usapan.',
+        'Tingnan ang produkto, seguridad, demo, at magpasya kung bagay ang ZANVROX sa negosyo mo — nang hindi kailangang mag-book muna ng tawag.',
       sections: [
         {
           title: 'Buod ng produkto at mga sanggunian sa pagsusuri',
@@ -1777,11 +1772,11 @@ const siteContentTl = {
       ...base.pages.about,
       heroKicker: 'Tungkol sa ZANVROX',
       heroTitle:
-        'Praktikal na ERP na nakapuwesto para sa kapani-paniwalang paglulunsad, hindi para sa palabas ng malalaking organisasyon.',
+        'Ginawa para gawing mas simple ang pagpapatakbo ng negosyo.',
       heroSubtitle:
-        'Inilalahad ang ZANVROX bilang modernong ERP para sa maliliit at katamtamang negosyo sa Canada na gusto ng mas mahigpit na kontrol sa operasyon, mas kaunting magkakahiwalay na sistema, at mas malinaw na landas ng tulong.',
-      heroPrimaryCta: { label: 'Suriin ang produkto', path: '/erp' },
-      heroSecondaryCta: { label: 'Makipag-ugnayan sa pangkat', path: '/contact' },
+        'Pinag-uugnay ng ZANVROX ang finance, people, at operations para sa Canadian SMB teams na gusto ng mas kaunting kalat sa software at mas maraming control.',
+      heroPrimaryCta: { label: 'I-explore ang ZANVROX', path: '/erp' },
+      heroSecondaryCta: { label: 'Makipag-ugnayan', path: '/contact' },
       heroPreview: {
         ...base.pages.about.heroPreview,
         title: 'Maikling tanaw sa pagpoposisyon',
@@ -1843,13 +1838,13 @@ const siteContentTl = {
     contact: {
       ...base.pages.contact,
       heroTitle:
-        'Makipag-ugnayan lang sa pangkat kapag kailangan mo ng tulong sa totoong tanong sa pagsusuri.',
+        'Kailangan ng tulong sa pagdesisyon? Magsimula rito.',
       heroSubtitle:
-        'Ang nilalayong daloy ay buod ng produkto, pagsusuri ng produkto, pagsusuri ng presyo, pagsusuri sa browser, at pagkatapos ay opsyonal na ugnayan o kahilingan sa may-gabay na pagpapakita.',
+        'Subukan muna ang produkto, tingnan ang presyo, o magpadala ng partikular na tanong. Available ang guided walkthrough kapag gusto mo.',
       conversion: {
-        title: 'Inirerekomendang daloy ng pagsusuri',
+        title: 'Piliin ang susunod na hakbang na bagay sa iyo.',
         subtitle:
-          'Binabawasan nito ang hindi kailangang mga pulong at nagbibigay ng mas magandang konteksto kapag may nakipag-ugnayan na.',
+          'Puwede mong i-explore ang ZANVROX nang mag-isa o humingi ng tulong anumang oras. Walang hindi kailangang sales call.',
         cards: [
           {
             title: 'Panoorin ang buod ng produkto',
