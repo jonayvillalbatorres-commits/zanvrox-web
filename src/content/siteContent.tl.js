@@ -49,16 +49,11 @@ const siteContentTl = {
   pages: {
     home: {
       ...base.pages.home,
-      heroKicker: 'ERP sa Canada para sa pananalapi, operasyon, at kakayahang masuri',
-      heroTitle:
-        'Patakbuhin ang pananalapi at operasyon sa iisang kontroladong ERP sa halip na limang magkakahiwalay na kasangkapan.',
-      heroSubtitle:
-        'Tinutulungan ng ZANVROX ang maliliit at katamtamang negosyo sa Canada na pagsamahin ang pagkuwenta, pagsingil, pagbili, imbentaryo, produksyon, pag-apruba, at pagsunod sa patakaran nang walang mabigat na proyekto sa pagpapatupad.',
-      heroPrimaryCta: { label: 'Tingnan ang buod ng produkto', path: '/#product-overview' },
-      heroSecondaryCta: {
-        label: 'Buksan ang kapaligiran ng pagsusuri',
-        path: '/resources#demo-environment',
-      },
+      heroKicker: 'Ginawa para sa maliliit na negosyong Canadian',
+      heroTitle: 'Buong negosyo mo. Sa wakas, nasa iisang lugar.',
+      heroSubtitle: 'Finance, employees, inventory, schedules, at operations — magkakaugnay sa isang simpleng system para mas kaunti ang oras sa software at mas marami sa pagpapatakbo ng negosyo.',
+      heroPrimaryCta: { label: 'Tingnan kung paano gumagana ang ZANVROX', path: '/#product-overview' },
+      heroSecondaryCta: { label: 'Subukan ang ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
         ...base.pages.home.heroPreview,
         title: 'Paunang tanaw sa buwis at kontrol',
