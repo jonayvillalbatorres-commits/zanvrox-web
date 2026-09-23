@@ -40,7 +40,7 @@
   body {
     margin: 0;
     min-width: 320px;
-    font-family: 'Segoe UI', 'Inter', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', 'Segoe UI', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
     color: var(--zx-text);
     background:
       radial-gradient(700px 500px at 8% -12%, var(--zx-glow-blue), transparent 70%),
@@ -57,7 +57,7 @@
   h2,
   h3,
   h4 {
-    font-family: 'Segoe UI', 'Inter', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', 'Segoe UI', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
   }
 
   * {
@@ -72,11 +72,11 @@
 
 @layer components {
   .section-shell {
-    @apply mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10;
+    @apply mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16;
   }
 
   .hero-grid {
-    @apply relative overflow-hidden rounded-3xl border border-zx-border bg-zx-surface px-6 py-10 shadow-panel sm:px-10;
+    @apply relative overflow-hidden rounded-[2rem] border border-zx-border bg-zx-surface px-6 py-12 shadow-panel sm:px-10 sm:py-16 lg:px-14 lg:py-20;
     backdrop-filter: blur(16px);
     box-shadow:
       0 30px 70px rgba(2, 8, 24, 0.65),
@@ -110,6 +110,17 @@
     filter: blur(8px);
     pointer-events: none;
     animation: float-soft 10s ease-in-out infinite reverse;
+  }
+
+  .zx-product-stage {
+    transform: perspective(1400px) rotateY(-1.5deg) rotateX(0.5deg);
+    box-shadow: 0 38px 90px rgba(1, 7, 21, 0.68), 0 0 70px rgba(49, 179, 255, 0.09);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+  }
+
+  .zx-product-stage:hover {
+    transform: perspective(1400px) rotateY(0) rotateX(0) translateY(-4px);
+    box-shadow: 0 44px 100px rgba(1, 7, 21, 0.72), 0 0 85px rgba(49, 179, 255, 0.14);
   }
 
   .zx-card {
