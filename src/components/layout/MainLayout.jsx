@@ -21,7 +21,10 @@ export default function MainLayout() {
   }, [language, location.search, setLanguage]);
 
   useEffect(() => {
-    if (!location.hash) return;
+    if (!location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      return;
+    }
 
     const targetId = decodeURIComponent(location.hash.slice(1));
     const frame = window.requestAnimationFrame(() => {
