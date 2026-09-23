@@ -201,13 +201,16 @@
 
   .zx-metric-card {
     @apply rounded-xl border border-zx-border p-4;
-    background: rgba(21, 34, 60, 0.84);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    background: #f6f9fb;
+    border-color: rgba(25, 47, 74, 0.10);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95);
   }
 
   .zx-badge {
-    @apply inline-flex items-center rounded-full border border-zx-border px-3 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-zx-text-muted;
-    background: rgba(21, 34, 60, 0.72);
+    @apply inline-flex items-center rounded-full border px-3 py-1 text-[0.66rem] font-semibold uppercase tracking-[0.16em];
+    border-color: rgba(25, 47, 74, 0.10);
+    color: #607086;
+    background: #eef3f7;
     font-family:
       ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
   }
@@ -223,12 +226,11 @@
   }
 
   .zx-cta-panel {
-    background: linear-gradient(
-      110deg,
-      rgba(49, 179, 255, 0.24) 0%,
-      rgba(14, 24, 43, 0.95) 48%,
-      rgba(21, 34, 60, 0.95) 100%
-    );
+    background:
+      radial-gradient(circle at 8% 20%, rgba(91, 174, 221, 0.14), transparent 34%),
+      radial-gradient(circle at 92% 80%, rgba(88, 183, 156, 0.10), transparent 32%),
+      linear-gradient(135deg, #ffffff 0%, #f5f8fa 100%);
+    box-shadow: 0 24px 60px rgba(42, 62, 82, 0.10);
   }
 
   .zx-capabilities-band {
