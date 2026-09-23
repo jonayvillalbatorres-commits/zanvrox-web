@@ -4,7 +4,7 @@ const siteContentEn = {
   labels: {
     menu: 'Menu',
     bookDemo: 'Guided walkthrough',
-    tryDemo: 'Open workspace',
+    tryDemo: 'Try ZANVROX',
     getTechnicalBrief: 'Contact team',
     reviewResources: 'View resources',
     language: 'Language',
@@ -378,11 +378,11 @@ const siteContentEn = {
     },
     product: {
       heroKicker: 'ZANVROX ERP',
-      heroTitle: 'Run finance, operations and workforce from one connected platform.',
+      heroTitle: 'Run your business from one connected system.',
       heroSubtitle:
-        'ZANVROX ERP is a controlled platform for Canadian SMB teams covering finance, invoicing, expenses, customers and vendors, purchasing, inventory, locations, operations, reporting, payroll workflows, and ZANVROX Workforce.',
-      heroPrimaryCta: { label: 'View pricing', path: '/pricing' },
-      heroSecondaryCta: { label: 'Open evaluation workspace', path: '/resources#demo-environment' },
+        'Finance, inventory, purchasing, employees, reporting and operations — connected so your team can see what is happening without jumping between tools.',
+      heroPrimaryCta: { label: 'See pricing', path: '/pricing' },
+      heroSecondaryCta: { label: 'Try ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
         title: 'Operations preview',
         type: 'inventory',
@@ -633,9 +633,9 @@ const siteContentEn = {
       ],
     },
     security: {
-      heroTitle: 'Security and architecture by design.',
+      heroTitle: 'Security you can understand.',
       heroSubtitle:
-        'Tenant boundaries, least-privilege access, and auditable transaction behavior.',
+        'Clear controls for access, tenant isolation, sensitive actions and auditability — explained without vague claims.',
       overview: {
         title: 'Security overview',
         subtitle:
@@ -806,9 +806,9 @@ const siteContentEn = {
         'ZANVROX ERP and ZANVROX Workforce are sold and priced independently. Eligible ERP plans include a Workforce discount or inclusion — see ERP pricing for bundle details.',
     },
     pricing: {
-      heroTitle: 'Pricing for ZANVROX ERP and ZANVROX Workforce.',
+      heroTitle: 'Simple pricing. Start with what you need.',
       heroSubtitle:
-        'Start with Workforce for frontline shift operations, ZANVROX ERP for finance and business operations, or both together. Transparent CAD pricing for Canadian SMB teams.',
+        'Choose Workforce, ERP, or both. Clear CAD pricing, no hidden setup path, and room to grow when your business needs more.',
       pricingNote:
         'Prices in Canadian dollars. Taxes not included. Pricing may vary for enterprise or high-volume deployments. Payroll is a separate add-on. ZANVROX helps organize financial, payroll, and workforce workflows, but it does not replace accounting, legal, or tax advice.',
       upgradePath: {
@@ -1554,9 +1554,9 @@ const siteContentEn = {
       },
     },
     resources: {
-      heroTitle: 'Resources for product evaluation, security review, and rollout planning.',
+      heroTitle: 'Everything you need to evaluate ZANVROX.',
       heroSubtitle:
-        'Use these public materials to review product fit, security posture, and evaluation options before requesting a deeper discussion.',
+        'See the product, review security, explore the demo, and decide if ZANVROX fits your business — without booking a call first.',
       sections: [
         {
           title: 'Product overview and evaluation resources',
@@ -1645,11 +1645,11 @@ const siteContentEn = {
     },
     about: {
       heroKicker: 'About ZANVROX',
-      heroTitle: 'A practical ERP positioned for credible rollout, not enterprise theatre.',
+      heroTitle: 'Built to make running a business feel simpler.',
       heroSubtitle:
-        'ZANVROX is presented as a modern ERP for Canadian SMB teams that want tighter operational control, fewer disconnected systems, and a clearer support path.',
-      heroPrimaryCta: { label: 'Explore product', path: '/erp' },
-      heroSecondaryCta: { label: 'Contact team', path: '/contact' },
+        'ZANVROX brings finance, people and operations together for Canadian SMB teams that want less software clutter and more control.',
+      heroPrimaryCta: { label: 'Explore ZANVROX', path: '/erp' },
+      heroSecondaryCta: { label: 'Contact us', path: '/contact' },
       heroPreview: {
         title: 'Positioning snapshot',
         type: 'reports',
@@ -1708,13 +1708,13 @@ const siteContentEn = {
       },
     },
     contact: {
-      heroTitle: 'Contact the team only when you need help with a real evaluation question.',
+      heroTitle: 'Need help deciding? Start here.',
       heroSubtitle:
-        'The intended flow is product overview, product exploration, pricing review, browser-based evaluation, and then optional contact or guided walkthrough request.',
+        'Try the product first, check pricing, or send us a focused question. A guided walkthrough is available when you want one.',
       conversion: {
-        title: 'Recommended evaluation flow',
+        title: 'Choose the next step that fits you.',
         subtitle:
-          'This reduces unnecessary meetings and gives better context when someone does reach out.',
+          'You can explore ZANVROX on your own or ask for help at any point. No unnecessary sales call.',
         cards: [
           {
             title: 'Watch product overview',
