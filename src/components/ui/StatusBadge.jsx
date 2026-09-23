@@ -1,19 +1,19 @@
 const statusStyles = {
   ready: {
     icon: '🟢',
-    className: 'border-emerald-400/45 bg-emerald-500/10 text-emerald-300',
+    className: 'border-emerald-600/30 bg-emerald-50 text-emerald-800',
   },
   warning: {
     icon: '🟡',
-    className: 'border-amber-400/45 bg-amber-500/10 text-amber-300',
+    className: 'border-amber-600/30 bg-amber-50 text-amber-800',
   },
   locked: {
     icon: '🔒',
-    className: 'border-violet-400/45 bg-violet-500/10 text-violet-300',
+    className: 'border-violet-600/30 bg-violet-50 text-violet-800',
   },
   filed: {
     icon: '🧾',
-    className: 'border-sky-400/45 bg-sky-500/10 text-sky-300',
+    className: 'border-sky-600/30 bg-sky-50 text-sky-800',
   },
   info: {
     icon: 'ℹ️',
