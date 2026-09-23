@@ -4,7 +4,7 @@ const siteContentZh = {
   labels: {
     menu: '菜单',
     bookDemo: '引导式讲解',
-    tryDemo: '打开工作区',
+    tryDemo: '试用 ZANVROX',
     getTechnicalBrief: '联系团队',
     reviewResources: '查看资源',
     language: '语言',
@@ -324,11 +324,11 @@ const siteContentZh = {
     },
     product: {
       heroKicker: 'ZANVROX ERP',
-      heroTitle: '用一个互联平台统一运行财务、运营与 Workforce。',
+      heroTitle: '用一个互联的系统管理整个企业。',
       heroSubtitle:
-        'ZANVROX ERP 是面向加拿大中小企业团队的受控平台，涵盖财务、开票、费用、客户与供应商、采购、库存、地点、运营、报表、Payroll 工作流以及 ZANVROX Workforce。',
+        '财务、库存、采购、员工、报表与运营全部连接，让团队无需在多个工具之间切换也能掌握业务情况。',
       heroPrimaryCta: { label: '查看定价', path: '/pricing' },
-      heroSecondaryCta: { label: '打开评估工作区', path: '/resources#demo-environment' },
+      heroSecondaryCta: { label: '试用 ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
         title: '运营预览',
         type: 'inventory',
@@ -447,9 +447,9 @@ const siteContentZh = {
         'ZANVROX ERP 与 ZANVROX Workforce 独立销售、独立计价。符合条件的 ERP 计划可享受 Workforce 折扣或包含权益 — 详情请见 ERP 定价页面。',
     },
     pricing: {
-      heroTitle: 'ZANVROX ERP 与 ZANVROX Workforce 的定价。',
+      heroTitle: '简单定价，从你真正需要的开始。',
       heroSubtitle:
-        '面向一线排班运营的 Workforce，面向财务与业务运营的 ZANVROX ERP，或两者同时使用皆可从此开始。为加拿大中小企业团队提供透明的 CAD 定价。',
+        '选择 Workforce、ERP 或两者一起使用。清晰的加元价格，没有隐藏的实施路径，并可随业务成长扩展。',
       pricingNote:
         '价格以加元（CAD）计。不含税费。企业或大批量部署的定价可能有所不同。Payroll 为单独的 add-on。ZANVROX 帮助组织财务、Payroll 和劳动力工作流，但不能替代会计、法律或税务建议。',
       upgradePath: {
@@ -1118,8 +1118,8 @@ const siteContentZh = {
       },
     },
     resources: {
-      heroTitle: '面向产品评估、安全审查和部署规划的资源。',
-      heroSubtitle: '使用这些公开材料，在申请更深入讨论之前先审查产品匹配度、安全定位和评估方式。',
+      heroTitle: '评估 ZANVROX 所需的一切。',
+      heroSubtitle: '查看产品、了解安全性、体验演示，并判断 ZANVROX 是否适合你的业务——无需先预约销售电话。',
       sections: [
         {
           title: '产品概览与评估资源',
@@ -1199,8 +1199,8 @@ const siteContentZh = {
       },
     },
     security: {
-      heroTitle: '从设计开始就考虑安全与架构。',
-      heroSubtitle: '组织边界、最小权限访问以及可审计的交易行为。',
+      heroTitle: '看得懂的安全。',
+      heroSubtitle: '清楚说明访问控制、租户隔离、敏感操作与审计机制，不做含糊承诺。',
       overview: {
         title: '安全概览',
         subtitle: '对当前产品和交付流程中可见控制项的保守摘要。',
@@ -1292,11 +1292,11 @@ const siteContentZh = {
     },
     about: {
       heroKicker: '关于 ZANVROX',
-      heroTitle: '这是一个为可信部署而定位的务实 ERP，而不是企业级戏剧化包装。',
+      heroTitle: '让企业管理变得更简单。',
       heroSubtitle:
-        'ZANVROX 被呈现为一款现代 ERP，适合希望获得更强运营控制、更少割裂系统以及更清晰支持路径的加拿大中小企业团队。',
-      heroPrimaryCta: { label: '浏览产品', path: '/erp' },
-      heroSecondaryCta: { label: '联系团队', path: '/contact' },
+        'ZANVROX 将财务、人员与运营连接起来，帮助加拿大中小企业减少工具混乱并获得更多控制。',
+      heroPrimaryCta: { label: '了解 ZANVROX', path: '/erp' },
+      heroSecondaryCta: { label: '联系我们', path: '/contact' },
       heroPreview: {
         title: '定位快照',
         type: 'reports',
@@ -1346,12 +1346,12 @@ const siteContentZh = {
       },
     },
     contact: {
-      heroTitle: '只有在你确实需要帮助解答评估问题时，再联系团队。',
+      heroTitle: '需要帮助做决定？从这里开始。',
       heroSubtitle:
-        '推荐路径是先看产品概览、浏览产品、查看定价、进行浏览器评估，然后再选择可选联系或引导式讲解。',
+        '先体验产品、查看价格，或向我们提出具体问题。需要时可随时申请引导式演示。',
       conversion: {
-        title: '推荐评估流程',
-        subtitle: '这样可以减少不必要的会议，并在真正联系时提供更好的上下文。',
+        title: '选择最适合你的下一步。',
+        subtitle: '你可以自行探索 ZANVROX，也可以随时寻求帮助，无需不必要的销售电话。',
         cards: [
           { title: '观看产品概览', body: '先通过视频理解运营模型和产品定位。' },
           { title: '浏览功能', body: '使用产品、定价和安全页面，在不通话的情况下评估整套体系。' },
