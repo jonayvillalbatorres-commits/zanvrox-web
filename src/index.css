@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --zx-bg: #050912;
-  --zx-bg-soft: #0b1221;
-  --zx-surface: rgba(14, 24, 43, 0.8);
-  --zx-surface-strong: rgba(21, 34, 60, 0.9);
-  --zx-border: rgba(86, 116, 170, 0.35);
-  --zx-text: #edf4ff;
-  --zx-text-muted: #a3b7d9;
-  --zx-accent: #31b3ff;
-  --zx-accent-strong: #1797ea;
-  --zx-accent-alt: #39d3a2;
+  --zx-bg: #f7f8f6;
+  --zx-bg-soft: #eef3f7;
+  --zx-surface: rgba(255, 255, 255, 0.92);
+  --zx-surface-strong: rgba(245, 248, 250, 0.98);
+  --zx-border: rgba(25, 47, 74, 0.12);
+  --zx-text: #122033;
+  --zx-text-muted: #5f6f82;
+  --zx-accent: #1779ba;
+  --zx-accent-strong: #0d639c;
+  --zx-accent-alt: #2d9b82;
   --zx-success: #27c58b;
   --zx-warning: #f0b34c;
   --zx-danger: #f76d72;
-  --zx-glow-blue: rgba(49, 179, 255, 0.35);
-  --zx-glow-green: rgba(57, 211, 162, 0.26);
-  --zx-glow-gold: rgba(240, 179, 76, 0.2);
+  --zx-glow-blue: rgba(91, 174, 221, 0.16);
+  --zx-glow-green: rgba(88, 183, 156, 0.12);
+  --zx-glow-gold: rgba(233, 189, 103, 0.10);
   --zx-space-1: 0.25rem;
   --zx-space-2: 0.5rem;
   --zx-space-3: 0.75rem;
@@ -42,11 +42,7 @@
     min-width: 320px;
     font-family: 'Inter', 'Segoe UI', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
     color: var(--zx-text);
-    background:
-      radial-gradient(700px 500px at 8% -12%, var(--zx-glow-blue), transparent 70%),
-      radial-gradient(680px 520px at 88% -18%, var(--zx-glow-green), transparent 75%),
-      radial-gradient(700px 460px at 50% 100%, var(--zx-glow-gold), transparent 80%),
-      linear-gradient(180deg, #08101f 0%, var(--zx-bg) 45%, #060b16 100%), var(--zx-bg);
+    background:\n      radial-gradient(900px 520px at 8% -10%, var(--zx-glow-blue), transparent 72%),\n      radial-gradient(800px 500px at 92% 0%, var(--zx-glow-green), transparent 76%),\n      linear-gradient(180deg, #fbfcfa 0%, var(--zx-bg) 55%, #f2f6f7 100%);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -76,12 +72,7 @@
   }
 
   .hero-grid {
-    @apply relative overflow-hidden rounded-[2rem] border border-zx-border bg-zx-surface px-6 py-12 shadow-panel sm:px-10 sm:py-16 lg:px-14 lg:py-20;
-    backdrop-filter: blur(16px);
-    box-shadow:
-      0 30px 70px rgba(2, 8, 24, 0.65),
-      inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    animation: slide-up 0.7s ease-out;
+    @apply relative overflow-hidden rounded-[2rem] border border-zx-border bg-zx-surface px-6 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-20;\n    backdrop-filter: blur(16px);\n    box-shadow: 0 28px 80px rgba(42, 62, 82, 0.10), inset 0 1px 0 rgba(255,255,255,0.9);\n    animation: slide-up 0.7s ease-out;
   }
 
   .hero-grid::before {
@@ -92,7 +83,7 @@
     width: 14rem;
     height: 14rem;
     border-radius: 999px;
-    background: radial-gradient(circle, rgba(49, 179, 255, 0.45), transparent 68%);
+    background: radial-gradient(circle, rgba(84, 176, 222, 0.22), transparent 68%);
     filter: blur(8px);
     pointer-events: none;
     animation: float-soft 8s ease-in-out infinite;
@@ -106,7 +97,7 @@
     width: 12rem;
     height: 12rem;
     border-radius: 999px;
-    background: radial-gradient(circle, rgba(57, 211, 162, 0.35), transparent 68%);
+    background: radial-gradient(circle, rgba(76, 176, 145, 0.16), transparent 68%);
     filter: blur(8px);
     pointer-events: none;
     animation: float-soft 10s ease-in-out infinite reverse;
@@ -114,21 +105,19 @@
 
   .zx-product-stage {
     transform: perspective(1400px) rotateY(-1.5deg) rotateX(0.5deg);
-    box-shadow: 0 38px 90px rgba(1, 7, 21, 0.68), 0 0 70px rgba(49, 179, 255, 0.09);
+    box-shadow: 0 30px 70px rgba(34, 55, 78, 0.16), 0 0 0 1px rgba(23,121,186,0.04);
     transition: transform 0.45s ease, box-shadow 0.45s ease;
   }
 
   .zx-product-stage:hover {
     transform: perspective(1400px) rotateY(0) rotateX(0) translateY(-4px);
-    box-shadow: 0 44px 100px rgba(1, 7, 21, 0.72), 0 0 85px rgba(49, 179, 255, 0.14);
+    box-shadow: 0 38px 85px rgba(34, 55, 78, 0.20), 0 0 0 1px rgba(23,121,186,0.08);
   }
 
   .zx-card {
     @apply rounded-2xl border border-zx-border bg-zx-surface p-6 shadow-panel;
     backdrop-filter: blur(14px);
-    box-shadow:
-      0 22px 48px rgba(2, 8, 24, 0.58),
-      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow: 0 16px 42px rgba(42, 62, 82, 0.08), inset 0 1px 0 rgba(255,255,255,0.9);
     transition:
       transform 0.28s ease,
       border-color 0.28s ease,
@@ -138,9 +127,7 @@
   .zx-card:hover {
     transform: translateY(-3px);
     border-color: rgba(79, 131, 215, 0.58);
-    box-shadow:
-      0 26px 54px rgba(2, 8, 24, 0.65),
-      0 0 0 1px rgba(49, 179, 255, 0.08);
+    box-shadow: 0 22px 50px rgba(42, 62, 82, 0.12), 0 0 0 1px rgba(23,121,186,0.06);
   }
 
   .zx-button {
@@ -171,27 +158,23 @@
 
   .zx-button-primary {
     @apply border-zx-accent text-zx-bg;
-    background: linear-gradient(115deg, #61c8ff 0%, #31b3ff 45%, #39d3a2 120%);
+    background: linear-gradient(115deg, #1f86c6 0%, #1779ba 58%, #2d9b82 125%);
     box-shadow:
-      0 14px 28px rgba(23, 151, 234, 0.38),
+      0 12px 26px rgba(23, 121, 186, 0.20),
       inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
 
   .zx-button-primary:hover {
     transform: translateY(-2px);
-    border-color: #75d3ff;
+    border-color: #0d639c;
     box-shadow:
-      0 18px 34px rgba(23, 151, 234, 0.48),
+      0 16px 30px rgba(23, 121, 186, 0.26),
       0 0 0 1px rgba(57, 211, 162, 0.14);
   }
 
   .zx-button-secondary {
     @apply text-zx-text hover:border-zx-accent;
-    border-color: rgba(118, 154, 216, 0.55);
-    background: linear-gradient(180deg, rgba(31, 49, 82, 0.92), rgba(17, 29, 52, 0.96));
-    box-shadow:
-      0 10px 22px rgba(2, 8, 24, 0.28),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    border-color: rgba(25,47,74,0.16);\n    background: rgba(255,255,255,0.86);\n    box-shadow: 0 8px 22px rgba(42,62,82,0.07);
   }
 
   .zx-button-secondary:hover {
@@ -202,10 +185,9 @@
 
   .zx-glass-strip {
     @apply rounded-2xl border border-zx-border backdrop-blur-md;
-    background: rgba(14, 24, 43, 0.82);
+    background: rgba(255, 255, 255, 0.76);
     box-shadow:
-      0 18px 40px rgba(2, 8, 24, 0.45),
-      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      0 12px 30px rgba(42,62,82,0.07),\n      inset 0 1px 0 rgba(255,255,255,0.9);
   }
 
   .zx-metric-card {
