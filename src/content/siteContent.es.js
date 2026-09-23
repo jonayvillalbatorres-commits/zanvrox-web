@@ -47,16 +47,11 @@ const siteContentEs = {
   },
   pages: {
     home: {
-      heroKicker: 'ERP canadiense para finanzas, operaciones y auditabilidad',
-      heroTitle:
-        'Gestiona finanzas y operaciones en un único ERP controlado en lugar de cinco herramientas desconectadas.',
-      heroSubtitle:
-        'ZANVROX ayuda a los equipos pyme canadienses a centralizar contabilidad, facturación, compras, inventario, producción, aprobaciones y cumplimiento sin un proyecto de implementación pesado.',
-      heroPrimaryCta: { label: 'Ver resumen del producto', path: '/#product-overview' },
-      heroSecondaryCta: {
-        label: 'Abrir espacio de evaluación',
-        path: '/resources#demo-environment',
-      },
+      heroKicker: 'Creado para pequeñas empresas canadienses',
+      heroTitle: 'Todo tu negocio. Por fin en un solo lugar.',
+      heroSubtitle: 'Finanzas, empleados, inventario, horarios y operaciones — conectados en un sistema sencillo para que dediques menos tiempo al software y más a tu negocio.',
+      heroPrimaryCta: { label: 'Ver cómo funciona ZANVROX', path: '/#product-overview' },
+      heroSecondaryCta: { label: 'Probar ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
         title: 'Vista previa fiscal y de control',
         caption: 'En vivo dentro del ERP',
