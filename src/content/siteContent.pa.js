@@ -49,12 +49,11 @@ const siteContentPa = {
   pages: {
     home: {
       ...base.pages.home,
-      heroKicker: 'ਵਿੱਤ, ਕਾਰਜ-ਚਲਾਣ ਅਤੇ ਜਾਂਚ-ਯੋਗਤਾ ਲਈ ਕੈਨੇਡਾ ਦਾ ERP',
-      heroTitle: 'ਪੰਜ ਵੱਖਰੇ ਸਾਧਨਾਂ ਦੀ ਥਾਂ ਵਿੱਤ ਅਤੇ ਕਾਰਜ-ਚਲਾਣ ਇਕੋ ਨਿਯੰਤਰਿਤ ERP ਵਿੱਚ ਚਲਾਓ।',
-      heroSubtitle:
-        'ZANVROX ਕੈਨੇਡਾ ਦੇ ਛੋਟੇ ਅਤੇ ਦਰਮਿਆਨੇ ਕਾਰੋਬਾਰਾਂ ਨੂੰ ਲੇਖਾ-ਜੋਖਾ, ਬਿੱਲਿੰਗ, ਖਰੀਦ, ਭੰਡਾਰ, ਉਤਪਾਦਨ, ਮਨਜ਼ੂਰੀਆਂ ਅਤੇ ਨਿਯਮ-ਪਾਲਣਾ ਇਕੋ ਥਾਂ ਲਿਆਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ, ਉਹ ਵੀ ਭਾਰੀ ਲਾਗੂਕਰਨ ਪ੍ਰੋਜੈਕਟ ਤੋਂ ਬਿਨਾਂ।',
-      heroPrimaryCta: { label: 'ਉਤਪਾਦ ਦਾ ਸੰਖੇਪ ਵੇਖੋ', path: '/#product-overview' },
-      heroSecondaryCta: { label: 'ਮੁਲਾਂਕਣ ਕੰਮ-ਥਾਂ ਖੋਲ੍ਹੋ', path: '/resources#demo-environment' },
+      heroKicker: 'ਕੈਨੇਡੀਅਨ ਛੋਟੇ ਕਾਰੋਬਾਰਾਂ ਲਈ ਬਣਾਇਆ ਗਿਆ',
+      heroTitle: 'ਤੁਹਾਡਾ ਪੂਰਾ ਕਾਰੋਬਾਰ। ਆਖਿਰਕਾਰ ਇੱਕੋ ਥਾਂ \'ਤੇ।',
+      heroSubtitle: 'ਵਿੱਤ, ਕਰਮਚਾਰੀ, ਇਨਵੈਂਟਰੀ, ਸ਼ਡਿਊਲ ਅਤੇ ਓਪਰੇਸ਼ਨ — ਇੱਕ ਸਧਾਰਣ ਸਿਸਟਮ ਵਿੱਚ ਜੁੜੇ ਹੋਏ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਸੌਫਟਵੇਅਰ ਸੰਭਾਲਣ ਵਿੱਚ ਘੱਟ ਅਤੇ ਕਾਰੋਬਾਰ ਚਲਾਉਣ ਵਿੱਚ ਵੱਧ ਸਮਾਂ ਲਗਾਓ।',
+      heroPrimaryCta: { label: 'ਵੇਖੋ ZANVROX ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ', path: '/#product-overview' },
+      heroSecondaryCta: { label: 'ZANVROX ਅਜ਼ਮਾਓ', path: '/resources#demo-environment' },
       heroPreview: {
         ...base.pages.home.heroPreview,
         title: 'ਟੈਕਸ ਅਤੇ ਨਿਯੰਤਰਣ ਦੀ ਝਲਕ',
