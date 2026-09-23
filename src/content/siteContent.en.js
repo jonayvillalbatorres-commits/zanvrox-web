@@ -45,28 +45,28 @@ const siteContentEn = {
   },
   pages: {
     home: {
-      heroKicker: 'Canadian ERP for finance, operations, and operational control',
+      heroKicker: 'Built for Canadian small businesses',
       heroTitle:
         'Run finance, inventory, payroll workflows, and operations in one controlled ERP instead of five disconnected tools.',
       heroSubtitle:
         'ZANVROX helps Canadian SMB teams centralize accounting, invoicing, purchasing, inventory, production, approvals, and tax workflow support without a heavy implementation project.',
-      heroPrimaryCta: { label: 'View product overview', path: '/#product-overview' },
-      heroSecondaryCta: { label: 'Open evaluation workspace', path: '/resources#demo-environment' },
+      heroPrimaryCta: { label: 'See how ZANVROX works', path: '/#product-overview' },
+      heroSecondaryCta: { label: 'Try ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
-        title: 'Tax and control preview',
-        caption: 'Live inside the ERP',
+        title: 'Your business at a glance',
+        caption: 'One connected workspace',
         callouts: [
-          { status: 'ready', text: 'GST/HST + PST/QST reporting' },
-          { status: 'ready', text: 'Audit trail and approvals' },
+          { status: 'ready', text: 'Finance ready' },
+          { status: 'ready', text: 'Operations connected' },
         ],
       },
       video: {
-        title: 'Product walkthrough with real workflow context',
+        title: 'See your business come together',
         subtitle:
           'A short walkthrough of finance, operations, Canadian tax flows, and payroll readiness.',
         windowLabel: 'Product video',
         duration: '90 sec',
-        overlayLabel: 'View product walkthrough',
+        overlayLabel: 'Watch ZANVROX in action',
         fallbackLabel: 'Poster preview available',
         hasRealVideo: true,
         chapters: [
@@ -77,8 +77,8 @@ const siteContentEn = {
           'Payroll workbench',
           'Reports and approvals',
         ],
-        primaryCta: { label: 'Explore product', path: '/erp' },
-        secondaryCta: { label: 'Open evaluation workspace', path: '/resources#demo-environment' },
+        primaryCta: { label: 'Explore ZANVROX', path: '/erp' },
+        secondaryCta: { label: 'Try it yourself', path: '/resources#demo-environment' },
       },
       trustSignals: [
         'Provider-backed official workflows remain intact where required.',
@@ -114,24 +114,24 @@ const siteContentEn = {
         note: 'Start with Workforce. Add the ERP when you need it. Already running your business on ZANVROX? Workforce comes included with Operations.',
       },
       evaluationPath: {
-        eyebrow: 'Product-led funnel',
-        title: 'Evaluate without booking a meeting first',
-        subtitle: 'The site is built to reduce unnecessary calls and let teams self-qualify.',
+        eyebrow: 'See it. Try it. Decide.',
+        title: 'No sales call required to see if it fits.',
+        subtitle: 'Explore the product on your own. Ask for help only when you want it.',
         cards: [
           {
-            title: '1. Watch the overview',
+            title: '1. See it in action',
             body: 'Start with the product video to understand how finance, operations, tax, and payroll fit together.',
           },
           {
-            title: '2. Explore the product',
+            title: '2. Explore what you need',
             body: 'Review feature groups, screenshots, and governance controls by module and business process.',
           },
           {
-            title: '3. Open the evaluation workspace',
+            title: '3. Try ZANVROX yourself',
             body: 'Use the browser-based workspace with fictional data to validate navigation, role fit, and workflow coverage.',
           },
           {
-            title: '4. Request help only if needed',
+            title: '4. Talk to us when you are ready',
             body: 'Use the optional contact or demo form once your team has a concrete evaluation question.',
           },
         ],
@@ -326,7 +326,7 @@ const siteContentEn = {
         ],
       },
       demoEnvironment: {
-        title: 'Open the ZANVROX evaluation workspace',
+        title: 'Try ZANVROX for yourself',
         subtitle:
           'Use a browser-based workspace with fictional data before requesting a guided walkthrough.',
         emailLabel: 'Demo user',
@@ -334,7 +334,7 @@ const siteContentEn = {
         passwordLabel: 'Password',
         passwordValue: 'Set during signup',
         note: 'Browser-based evaluation only. This workspace stays separate from implementation planning and production expectations.',
-        cta: { label: 'Open evaluation workspace', path: '/resources#demo-environment' },
+        cta: { label: 'Open the demo', path: '/resources#demo-environment' },
       },
       restaurantBetaBanner: {
         eyebrow: 'Ontario restaurants',
