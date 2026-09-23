@@ -26,21 +26,21 @@ export default function PageHero({ title, subtitle, primaryCta, secondaryCta, ki
   };
 
   return (
-    <section className="section-shell pt-10 sm:pt-14">
+    <section className="section-shell pt-6 sm:pt-10 lg:pt-14">
       <div className="hero-grid">
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div className="space-y-6">
+        <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-14">
+          <div className="space-y-7">
             {kicker ? (
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zx-accent">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zx-accent">
                 {kicker}
               </p>
             ) : null}
-            <h1 className="font-heading text-4xl font-semibold text-zx-text sm:text-5xl">
+            <h1 className="max-w-4xl font-heading text-5xl font-semibold leading-[0.98] tracking-[-0.045em] text-zx-text sm:text-6xl lg:text-7xl">
               {title}
             </h1>
-            <p className="max-w-3xl text-lg text-zx-text-muted">{subtitle}</p>
+            <p className="max-w-2xl text-lg leading-8 text-zx-text-muted sm:text-xl">{subtitle}</p>
             {(primaryCta || secondaryCta) && (
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 pt-1">
                 {primaryCta ? renderCta(primaryCta, 'zx-button zx-button-primary') : null}
                 {secondaryCta ? renderCta(secondaryCta, 'zx-button zx-button-secondary') : null}
               </div>
@@ -48,7 +48,7 @@ export default function PageHero({ title, subtitle, primaryCta, secondaryCta, ki
           </div>
 
           <aside className="reveal-up">
-            <div className="relative overflow-hidden rounded-2xl border border-zx-border bg-zx-surface-strong p-4 shadow-panel backdrop-blur-lg">
+            <div className="zx-product-stage relative overflow-hidden rounded-[1.75rem] border border-zx-border bg-zx-surface-strong p-3 shadow-panel backdrop-blur-lg sm:p-5">
               <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-zx-accent/20 to-transparent" />
               <div className="relative z-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zx-accent">
