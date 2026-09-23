@@ -41,12 +41,11 @@ const siteContentZh = {
   },
   pages: {
     home: {
-      heroKicker: '面向加拿大财务、运营与可审计性的 ERP',
-      heroTitle: '用一套受控 ERP 统一财务与运营，而不是依赖五个彼此割裂的工具。',
-      heroSubtitle:
-        'ZANVROX 帮助加拿大中小企业将会计、开票、采购、库存、生产、审批与合规集中到一起，无需沉重的实施项目。',
-      heroPrimaryCta: { label: '查看产品概览', path: '/#product-overview' },
-      heroSecondaryCta: { label: '打开评估工作区', path: '/resources#demo-environment' },
+      heroKicker: '专为加拿大小型企业打造',
+      heroTitle: '整个企业，终于尽在一处。',
+      heroSubtitle: '财务、员工、库存、排班和运营连接在一个简单的系统中，让你少花时间管理软件，多花时间经营业务。',
+      heroPrimaryCta: { label: '了解 ZANVROX 如何运作', path: '/#product-overview' },
+      heroSecondaryCta: { label: '试用 ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
         title: '税务与控制预览',
         caption: '直接呈现在 ERP 中',
