@@ -47,9 +47,9 @@ const siteContentEn = {
     home: {
       heroKicker: 'Built for Canadian small businesses',
       heroTitle:
-        'Run finance, inventory, payroll workflows, and operations in one controlled ERP instead of five disconnected tools.',
+        'Your whole business. Finally in one place.',
       heroSubtitle:
-        'ZANVROX helps Canadian SMB teams centralize accounting, invoicing, purchasing, inventory, production, approvals, and tax workflow support without a heavy implementation project.',
+        'Finance, employees, inventory, schedules and operations — connected in one simple system so you can spend less time managing software and more time running your business.',
       heroPrimaryCta: { label: 'See how ZANVROX works', path: '/#product-overview' },
       heroSecondaryCta: { label: 'Try ZANVROX', path: '/resources#demo-environment' },
       heroPreview: {
